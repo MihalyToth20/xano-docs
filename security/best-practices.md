@@ -53,3 +53,19 @@ On certain Xano plans, you have the ability to enable security policy enforcemen
 **Authentication Enforcement** enables requiring your team members to authenticate using one or more of the enabled services you choose.
 
 **Allowed SSO Hosts** enforces the email address domains allowed when team members log in. As an example, if we wanted our team members to only authenticate using Github accounts that use a xano.com email address, we could check Github under Authentication Enforcement, and add xano.com as an allowed SSO host.
+
+### Sensitive Data Flagging
+
+Xano maintains a [request history](../maintenance-monitoring-and-logging/request-history.md) of incoming requests and executions of your function stacks. To ensure that no sensitive data is logged in the request history, you can enable the **Sensitive Data** flag on that database field to ensure it is not logged.
+
+In the settings for the field you would like to hide, enable the **Sensitive Data** flag.&#x20;
+
+<div align="left"><figure><img src="../.gitbook/assets/CleanShot 2025-02-24 at 09.01.32.png" alt=""><figcaption></figcaption></figure></div>
+
+**Sensitive Data Flag - Disabled**
+
+<div align="left"><figure><img src="../.gitbook/assets/CleanShot 2025-02-24 at 09.29.37.png" alt="" width="323"><figcaption></figcaption></figure></div>
+
+**Sensitive Data Flag - Enabled**
+
+<div align="left"><figure><img src="../.gitbook/assets/CleanShot 2025-02-24 at 09.30.04.png" alt="" width="322"><figcaption></figcaption></figure></div>
