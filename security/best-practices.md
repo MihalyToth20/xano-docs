@@ -4,6 +4,8 @@ icon: lock-hashtag
 
 # Best Practices
 
+### Authentication
+
 Authentication is handled by **JWE** tokens, which is an industry standard.&#x20;
 
 **Authentication** is how a user logs in or signs up to an application. Xano provides secure out-of-the-box authentication via JWE (JSON Web Encryption) tokens. JWE tokens are self-contained and provide data integrity, authenticity, non-repudiation, and confidentiality.&#x20;
@@ -56,7 +58,11 @@ On certain Xano plans, you have the ability to enable security policy enforcemen
 
 ### Sensitive Data Flagging
 
-Xano maintains a [request history](../maintenance-monitoring-and-logging/request-history.md) of incoming requests and executions of your function stacks. To ensure that no sensitive data is logged in the request history, you can enable the **Sensitive Data** flag on that database field to ensure it is not logged.
+Xano maintains a [request history](../maintenance-monitoring-and-logging/request-history.md) of incoming requests of your APIs. To ensure that no sensitive data is not logged in the request history, you can enable the **Sensitive Data** flag on that database field to ensure it is not stored.
+
+{% hint style="info" %}
+The **sensitive data** flag only impacts the inputs of a request when using database link, which automatically creates inputs for you based on database fields; you will want to ensure that the sensitive data is not returned elsewhere in your function stack.
+{% endhint %}
 
 In the settings for the field you would like to hide, enable the **Sensitive Data** flag.&#x20;
 

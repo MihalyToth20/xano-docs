@@ -43,6 +43,8 @@ Query parameters and the request body are kind of the same thing, but sent in an
 
 * **Query parameters** live as part of the request URL. If the API URL is `https://myapi.com/getThings` and expects you to send a thingId with your request, you would append it to the URL with `?thingId=99`, so your full request URL would be `https://myapi.com/getThings?thingId=99.` You would typically use query parameters for GET and DELETE endpoints.
 * **Request Body** is like a set of query parameters, but sent as a JSON object. It's more flexible when sending complex data types, such as lists, nested objects, or files.
+
+In the Xano visual builder, these are known as **inputs**. You can add inputs manually, or add a **Database Link** input to automatically populate and sync all fields from a database table.
 {% endstep %}
 
 {% step %}
