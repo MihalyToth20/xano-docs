@@ -107,7 +107,7 @@ This is the instance URL and our realtime connection hash that we are using to e
 We also need to define a channel for our messages to live in.
 
 ```javascript
-const marvelChannel = this.xanoClient.channel("marvel-chat-room");
+const marvelChannel = xanoClient.channel("marvel-chat-room");
 ```
 
 <details>

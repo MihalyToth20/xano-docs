@@ -2,6 +2,8 @@
 
 {% hint style="info" %}
 At this time, Static IP is only available for instances in the United States, Saudi Arabia, France, Indonesia, South Korea, and Japan.
+
+For users who have had long-standing instances on the United States region, you may not immediately have Static IP available as an option. Please reach out to our Support team for further clarification and next steps.
 {% endhint %}
 
 Static IP address is available on any paid plan address for outgoing API requests. This is commonly required by 3rd party API providers requiring an IP whitelist.
