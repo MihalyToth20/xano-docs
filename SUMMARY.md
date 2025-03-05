@@ -266,3 +266,9 @@
 ## Security
 
 * [Best Practices](security/best-practices.md)
+
+***
+
+* [xano](xano/README.md)
+  * [instances](xano/instances/README.md)
+    * [API Rate Limit](xano/instances/api-rate-limit.md)
