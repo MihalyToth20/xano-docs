@@ -269,6 +269,5 @@
 
 ***
 
-* [xano](xano/README.md)
-  * [instances](xano/instances/README.md)
-    * [API Rate Limit](xano/instances/api-rate-limit.md)
+* [instances](instances/README.md)
+  * [API Rate Limit](instances/api-rate-limit.md)
