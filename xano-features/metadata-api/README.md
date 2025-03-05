@@ -10,156 +10,218 @@ The Metadata API is in beta and is subject to changes including access.
 
 The Metadata API (Beta) enables you to interact with your Xano workspace schema and content programmatically. The Metadata API includes a comprehensive collection of API endpoints designed to add and modify database tables, schemas, and more.
 
-To find the Metadata API Swagger Documentation, select the style to open the Instance settings panel and select **Metadata API**.
+The Metadata API is also used in some cases to facilitate an integration with Xano by providing the integration partner with your Metadata API access token.
 
-<figure><img src="../../.gitbook/assets/CleanShot 2023-04-11 at 15.16.20.png" alt=""><figcaption><p>Open Instance settings.</p></figcaption></figure>
+## Getting Started with the Metadata API
 
-<figure><img src="../../.gitbook/assets/CleanShot 2023-04-11 at 15.17.24.png" alt=""><figcaption><p>Select Metadata API.</p></figcaption></figure>
+### Generate an Access Token
 
-It can be accessed by entering your Instance domain appended by **/api:meta**. For example:
+An access token is required for any request you send to the Metadata API.
 
-Instance domain:
+{% stepper %}
+{% step %}
+### Click ![](<../../.gitbook/assets/CleanShot 2025-03-04 at 19.15.50.png>) in the lower-left corner and choose Instances
 
-<pre><code><strong>https://xabc-1yz2-abcd.xano.io
-</strong></code></pre>
 
-Metadata API Swagger documentation:
+{% endstep %}
+
+{% step %}
+### Click :gear: next to your instance and choose Metadata API from the panel that opens
+{% endstep %}
+
+{% step %}
+### Click ![](<../../.gitbook/assets/CleanShot 2025-03-04 at 19.19.08.png>)
+
+
+{% endstep %}
+
+{% step %}
+### Click ![](<../../.gitbook/assets/CleanShot 2025-03-04 at 19.19.36.png>)
+
+
+{% endstep %}
+
+{% step %}
+### Give your access token a name
+
+Access tokens can have different **scopes**, or permissions, defined. Giving each access token a recognizable name is important for you to quickly recognize which access tokens are created for specific purposes.
+{% endstep %}
+
+{% step %}
+### Select the expiry for your access token
+
+By default, Xano will revoke your Metadata API access token after 7 days, which means if you need to access the API again, you would have to generate a new token.
+
+You can choose your own expiry duration; anything from **1 hour** to **never expire**.
+
+{% hint style="warning" %}
+Use caution when defining extended expiry or setting tokens to never expire. Token rotation is good security practice.
+
+You can always revoke a token at any time.
+{% endhint %}
+{% endstep %}
+
+{% step %}
+### Define the scopes for your token
+
+The scopes tell Xano what this token has access to. Each scope has 4 options:
+
+**C (Create)** - Determines whether or not this token can create new data
+
+**R (Read)** - Determines whether or not this token can read existing data
+
+**U (Update)** - Determines whether or not this token can update existing data
+
+**D (Delete)** - Determines whether or not this token can delete data.
+
+{% hint style="info" %}
+<mark style="color:green;">**Hint**</mark>
+
+You can hover over each permission to quickly add or remove all four types of scope.
+
+<img src="../../.gitbook/assets/CleanShot 2025-03-04 at 19.25.43.png" alt="" data-size="original">
+{% endhint %}
+
+Each scope has their own API endpoints associated with them. If you aren't sure which scopes you need for this token, use the reference below for additional information.
+
+<table><thead><tr><th width="194">Scope</th><th>Description</th></tr></thead><tbody><tr><td>Database</td><td>Access any of the content in your Xano database</td></tr><tr><td>Content</td><td>Access any content outside of the database or function stacks, such as branches, data sources, and realtime</td></tr><tr><td>Live Data Source</td><td>Access the data inside of your currently live data source</td></tr><tr><td>API Groups</td><td>Access API Groups and APIs</td></tr><tr><td>Functions</td><td>Access custom functions</td></tr><tr><td>Addons</td><td>Access addons</td></tr><tr><td>Task</td><td>Access background tasks</td></tr><tr><td>Files</td><td>Access file storage</td></tr><tr><td>Request History</td><td>Access request history</td></tr></tbody></table>
+{% endstep %}
+
+{% step %}
+### Once you've set up your token, click ![](<../../.gitbook/assets/CleanShot 2025-03-04 at 19.32.32.png>)
+
+You will be shown your new access token. Click the ![](<../../.gitbook/assets/CleanShot 2025-03-04 at 19.32.56.png>) button to copy it to your clipboard.
+
+{% hint style="danger" %}
+**You will only be shown this token once, so make sure to copy it and store it in a safe place.**
+
+If you lose the token, you should revoke it and create a new one.
+{% endhint %}
+{% endstep %}
+{% endstepper %}
+
+## Using your Access Token in Requests
+
+The token should be sent as a header in the following format:
 
 ```
-https://xabc-1yz2-abcd.xano.io/api:meta
+Authorization: Bearer your_token_here
 ```
 
-Using the Metadata API will update your Xano database in real time. For example, if you modify content in a database table via the Metadata API, the change will be reflected immediately without needing to refresh.
+## Revoking an Access Token
 
-The Metadata API is flexible regarding sending input values. It allows you to not need to send everything when making an update. For example, if you are updating a schema and want to just update the name then you can only send the updated name and the other metadata of the schema will remain unchanged.&#x20;
+When you access the metadata API panel, you can review all of your currently issued tokens and their scopes.
+
+By choosing a token and clicking ![](<../../.gitbook/assets/CleanShot 2025-03-04 at 19.34.48.png>) you can immediately revoke that token from use.
+
+***
+
+## The Account API
+
+The Account API allows you access to various settings and information about your Xano account.
+
+{% hint style="danger" %}
+Please use extreme caution when sharing your Metadata API access tokens, as they can provide access to all of your Xano data.
+{% endhint %}
+
+### Account API Endpoints
+
+<details>
+
+<summary>Account Information</summary>
+
+{% include "../../.gitbook/includes/metadata-api-account.md" %}
+
+</details>
+
+<details>
+
+<summary>Instances</summary>
+
+{% include "../../.gitbook/includes/metadata-api-instances.md" %}
+
+</details>
+
+<details>
+
+<summary>Snippets</summary>
+
+{% include "../../.gitbook/includes/metadata-api-snippets.md" %}
+
+</details>
+
+***
+
+## The Instance API
+
+The Instance API allows you to access data inside of your Xano instances, such as your database, files, and function stacks.
+
+<details>
+
+<summary>API Groups</summary>
+
+{% include "../../.gitbook/includes/metadata-api-api-groups.md" %}
+
+</details>
+
+<details>
+
+<summary>APIs</summary>
+
+{% include "../../.gitbook/includes/metadata-api-apis.md" %}
+
+</details>
+
+<details>
+
+<summary>Workspace</summary>
+
+{% include "../../.gitbook/includes/metadata-api-workspace.md" %}
+
+</details>
+
+<details>
+
+<summary>Tables</summary>
+
+{% include "../../.gitbook/includes/metadata-api-tables.md" %}
+
+</details>
+
+<details>
+
+<summary>Functions</summary>
+
+{% include "../../.gitbook/includes/metadata-api-functions.md" %}
+
+</details>
+
+<details>
+
+<summary>Tasks</summary>
+
+{% include "../../.gitbook/includes/metadata-api-tasks.md" %}
+
+</details>
+
+<details>
+
+<summary>Files</summary>
+
+{% include "../../.gitbook/includes/metadata-api-files.md" %}
+
+</details>
+
+<details>
+
+<summary>Realtime</summary>
+
+{% include "../../.gitbook/includes/metadata-api-realtime.md" %}
+
+</details>
+
+The Metadata API is flexible regarding sending input values. You only need to send the values required to process your request. For example, if you are updating a schema and want to just update the name, then you only need to send the updated name and the other metadata of the schema will remain unchanged.&#x20;
 
 {% hint style="success" %}
-For implementations wanting an easier way to integrate, it may be useful to start out with the Master Metadata API below. This way the only prompt from the user will be to get their access token, and then you use the Master Metadata API to get the Metadata API for the chosen instance.
+For partners wanting an easier way to integrate, it may be useful to start out with the Account API. This way the only prompt from the user will be to get their access token, and then you can use the Account API to get a list of the user's instances, leading to the Instance API for workspaces, tables, and APIs.
 {% endhint %}
-
-## Master Metadata API
-
-The [Master Metadata API](./#master-metadata-api) is useful for listing Instances of an account in a UI. It has the ability to browse Instances or retrieve a specific Instance. The Swagger documentation can be accessed at the following URL:
-
-```
-https://app.xano.com/api:meta
-```
-
-<figure><img src="../../.gitbook/assets/CleanShot 2023-04-21 at 09.57.47.png" alt=""><figcaption><p>Master Metadata API for browsing and retrieving Instances.</p></figcaption></figure>
-
-## Authentication
-
-### Personal Access Token
-
-The Metadata API requires a Personal Access Token to authenticate.&#x20;
-
-You can create up to 10 Personal Access Tokens, which can be given different [scopes](./#scopes) to create, read, update, or delete via the Metadata API. Personal Access Tokens will also obey permissions from [RBAC](../../team-collaboration/role-based-access-control-rbac.md) settings (premium add-on). For example, if you don't have access to the database via RBAC then neither will your Personal Access Token. A read-only scope is available, which is especially useful for a 3rd party application you want to give access to but need to restrict edits, deleting, or creating content.&#x20;
-
-{% hint style="warning" %}
-Personal Access Tokens represent your account. Make sure use the appropriate [scopes](./#scopes) are used. Do not give out Personal Access Tokens without ensuring proper intent for them to be used.
-{% endhint %}
-
-Personal Access Tokens can be created from the [Account page](https://app.xano.com/admin/account) by selecting **Manage Access Tokens**.
-
-<figure><img src="../../.gitbook/assets/CleanShot 2023-04-11 at 15.19.06.png" alt=""><figcaption><p>Select Manage Access Tokens from the Account page.</p></figcaption></figure>
-
-Next, click **+ New Access Token**.
-
-<figure><img src="../../.gitbook/assets/CleanShot 2023-04-11 at 15.22.02.png" alt=""><figcaption><p>Create a New Access Token.</p></figcaption></figure>
-
-Provide the token with a name and optionally deactivate scopes. [Scopes](./#scopes) are like permissions for the tokens, by default, the token will have full access.
-
-<figure><img src="../../.gitbook/assets/CleanShot 2023-04-21 at 09.47.26.png" alt=""><figcaption><p>Optional scopes for the token.</p></figcaption></figure>
-
-{% hint style="warning" %}
-Once created, the token will be shown. **The token will only be shown once, so be sure to copy it and store it securely.**&#x20;
-{% endhint %}
-
-<figure><img src="../../.gitbook/assets/CleanShot 2023-04-11 at 15.27.02.png" alt=""><figcaption><p>Copy the token and secure it in a safe place.</p></figcaption></figure>
-
-### Scopes
-
-Scopes are like permissions for the token. They define what access the token has with the Metadata API. By default, all scopes are selected meaning the token has full access. The scopes can be customized for the following objects:
-
-**Workspace Content** - Database records. (API Endpoints in the **table/content** group.)
-
-**Workspace Database** - Database tables, schema, and indexes.
-
-**Workspace Files** - Files and media.
-
-**Workspace Request History** - API Request History.
-
-The scope permissions for each object include:
-
-* Create - permission for the token to create the specified object.
-* Read - permission for the token to read the specified object.
-* Update - permission for the token to update or modify the specified object.
-* Delete - permission for the token to delete the specified object.
-
-### Authorize
-
-Once you have an access token, use the Authorize button in Swagger to enter the token and authenticate in order to use the Metadata API.
-
-#### Swagger
-
-<figure><img src="../../.gitbook/assets/CleanShot 2023-04-12 at 14.36.21.png" alt=""><figcaption></figcaption></figure>
-
-Enter the token and select Authorize.
-
-<figure><img src="../../.gitbook/assets/CleanShot 2023-04-12 at 14.37.20.png" alt=""><figcaption></figcaption></figure>
-
-#### Header - Authorization: Bearer
-
-When setting up the calls to the various API Endpoints of the Metadata API outside of Swagger, authentication follows the Authorization: Bearer method in the request header. For example:
-
-```
-Authorization: Bearer <PERSONAL_ACCESS_TOKEN>
-```
-
-### /auth/me
-
-Validate the Access Token and identify the account details.
-
-<figure><img src="../../.gitbook/assets/CleanShot 2023-04-11 at 19.07.21@2x.png" alt=""><figcaption></figcaption></figure>
-
-## File
-
-Interacts with the files and media of a workspace.
-
-<figure><img src="../../.gitbook/assets/CleanShot 2023-04-21 at 11.01.11.png" alt=""><figcaption></figcaption></figure>
-
-## Request History
-
-Interacts with the API Request History of a workspace.
-
-<figure><img src="../../.gitbook/assets/CleanShot 2023-04-21 at 10.17.47.png" alt=""><figcaption></figcaption></figure>
-
-## Table/Content
-
-Interacts with the content (database records) of a database table.
-
-<figure><img src="../../.gitbook/assets/CleanShot 2023-04-21 at 10.14.43.png" alt=""><figcaption></figcaption></figure>
-
-## Table/Index
-
-Interacts with the indexes of a database table.
-
-<figure><img src="../../.gitbook/assets/CleanShot 2023-04-11 at 19.02.10@2x.png" alt=""><figcaption></figcaption></figure>
-
-## Table
-
-Interacts with database tables of a workspace.
-
-<figure><img src="../../.gitbook/assets/CleanShot 2023-04-11 at 19.03.50@2x.png" alt=""><figcaption></figcaption></figure>
-
-## Table/Schema/Type
-
-Creates the various schema types available for a workspace table.
-
-<figure><img src="../../.gitbook/assets/CleanShot 2023-04-21 at 10.15.47.png" alt=""><figcaption></figcaption></figure>
-
-## Table/Schema
-
-Reads, updates, and deletes the schema of a database table.
-
-<figure><img src="../../.gitbook/assets/CleanShot 2023-04-11 at 19.06.10@2x.png" alt=""><figcaption></figcaption></figure>
