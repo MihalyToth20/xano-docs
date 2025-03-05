@@ -146,7 +146,35 @@ This will tell Xano to keep the rest of the object the same, and only update the
 
 ***
 
-### Keyboard Navigation
+## Copy and Paste
+
+You can copy and paste function stacks in Xano, enabling speedy development across environments.
+
+Copy and paste works inside of your own function stacks, as well as copying and pasting between workspaces and instances.
+
+{% hint style="success" %}
+**Hint**
+
+If you need to reuse logic in more than one place, it is recommended to utilize [Custom Functions.](../functions/custom-functions.md)
+{% endhint %}
+
+### Selecting Functions
+
+You can hold **Shift** and click on individual functions to select them.
+
+<figure><img src="../../.gitbook/assets/CleanShot 2025-03-04 at 20.11.25.gif" alt=""><figcaption></figcaption></figure>
+
+Alternatively, you can also hold **Shift** and click + drag to select multiple functions.
+
+<figure><img src="../../.gitbook/assets/CleanShot 2025-03-04 at 20.12.31.gif" alt=""><figcaption></figcaption></figure>
+
+Click your desired option ![](<../../.gitbook/assets/CleanShot 2025-03-04 at 20.13.26.png>) or use keyboard shortcuts for your operating system of choice. **Crtl+C / Crtl+X** on Windows, or **Cmd+C / Cmd+X** on Mac.
+
+When you're ready to paste, you can do so with the same standard keyboard shortcut: **Crtl+V / Cmd+V**.
+
+***
+
+## Keyboard Navigation
 
 | Section             | Key            | Action                                                                  |
 | ------------------- | -------------- | ----------------------------------------------------------------------- |
