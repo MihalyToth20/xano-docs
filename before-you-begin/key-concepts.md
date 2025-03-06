@@ -11,6 +11,10 @@ description: >-
 
 ### :desktop: Instance
 
+{% embed url="https://youtu.be/nBW9XuzKBAE" %}
+
+
+
 Your Xano instance is the heart of everything you do in Xano. An **instance** is a dedicated server that we manage for you and it contains all of your Xano data, including APIs, databases, user data, and more.
 
 On all of our paid plans, each instance has its own dedicated resources, is always available, and completely isolated from other Xano users. This means that even if, in the rare occurrence that one user experiences an issue with their own Xano backend, it won't impact anybody else.
@@ -20,6 +24,8 @@ On our free plan, you are on a shared instance with other Xano users.
 ***
 
 ### :open\_file\_folder: Workspace
+
+{% embed url="https://youtu.be/lCIjFBVJ8HM" %}
 
 In your Xano instance, you can have multiple **workspaces**. Think of a workspace as a separate container for each project you're building in Xano. Your workspaces are completely isolated from each other, but all share the same compute resources provided by your instance.
 
@@ -35,6 +41,8 @@ Think of the backend as the brains of a website or app. It's all the behind-the-
 
 ### 📱 Frontend
 
+{% embed url="https://youtu.be/ddwSQ2d5rng" %}
+
 The frontend is everything you see and interact with on a website or app. It's the pretty face that greets you when you land on a page. This includes the layout, colors, buttons, and forms you fill out. A good frontend makes using a website feel smooth and intuitive, like a well-designed cockpit in an airplane. It's all about creating a great user experience.
 
 ***
@@ -49,6 +57,8 @@ A database is essentially a digital warehouse for information. It's where websit
 
 ### 🔌 API
 
+{% embed url="https://youtu.be/ROCHqKMwtBM" %}
+
 {% include "../.gitbook/includes/definition-of-an-api.md" %}
 
 ***
@@ -62,6 +72,8 @@ Variables are temporary and exist only while a workflow is running, used for sto
 ***
 
 ### 🗃️ JSON
+
+{% embed url="https://youtu.be/ouVQFne9IpI" %}
 
 JSON is a handy way of formatting data that's easy for both humans and computers to understand. JSON organizes information into simple key-value pairs, kind of like a really well-structured grocery list. It's lightweight and flexible, which is why developers love using it to pass data between servers and web applications.
 
