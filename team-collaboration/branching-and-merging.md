@@ -201,6 +201,36 @@ Once satisfied with all the updates included in the merge select **publish** to 
 
 <figure><img src="../.gitbook/assets/CleanShot 2023-02-01 at 15.17.32.png" alt=""><figcaption><p>Select Publish to merge the Branches.</p></figcaption></figure>
 
+## Dealing with Merge Conflicts
+
+{% stepper %}
+{% step %}
+### Compare the differences between the branches to see where the conflict lies
+
+Learn more about comparing branches [here](branching-and-merging.md#compare-differences-compare-branches).
+{% endstep %}
+
+{% step %}
+### If you receive a merge conflict notice but there is no apparent conflict, you might have a function stack with the same name, but a different GUID.
+
+{% hint style="danger" %}
+**If you aren't sure updating the GUID is necessary in your situation, please reach out to support before proceeding.**
+{% endhint %}
+
+Head to the settings of the function stack and choose **Security**.
+
+<div align="left"><figure><img src="../.gitbook/assets/CleanShot 2025-03-07 at 15.57.40.png" alt=""><figcaption></figcaption></figure></div>
+
+You can update the GUID in the **destination branch** to match the function stack of the same name from the **source branch**&#x20;
+
+<div align="left"><figure><img src="../.gitbook/assets/CleanShot 2025-03-07 at 15.59.04.png" alt="" width="274"><figcaption></figcaption></figure></div>
+{% endstep %}
+{% endstepper %}
+
+
+
+
+
 ## Workspace Triggers
 
 From your workspace settings, you have the option to enable triggers based on certain events.&#x20;

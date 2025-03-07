@@ -17,6 +17,10 @@ File storage has two essential components:
 
 While the files themselves are not stored in your database, if you choose to reference a file in a database record, it will be storing the **metadata**, or general information about the file, such as the filename, size, file type, and a URL to access the file.
 
+{% hint style="success" %}
+**Review all of the available functions for working with files** [**here**](../the-function-stack/functions/file-storage.md)**.**
+{% endhint %}
+
 ## Public vs Private Storage
 
 It's important to note that files uploaded to Xano have static URLs — this means that once a user has a URL to a file stored in your Xano backend, that URL will always be accessible without any kind of authentication or other checks to determine if it should be accessed.

@@ -175,6 +175,7 @@ Geography fields in Xano can contain different types of information, all based a
     "data": {
         "lng": 128.233455,
         "lat": 39.391205
+    }
 }
 ```
 

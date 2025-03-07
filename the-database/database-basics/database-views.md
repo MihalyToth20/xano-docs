@@ -43,4 +43,10 @@ Take note of how the button in the control bar has changed. You'll now see the n
 {% endstep %}
 {% endstepper %}
 
+{% hint style="warning" %}
+Some complex data types, like filtering by arrays, is not currently possible. If you're trying to filter something and not receiving the expected results, please reach out to support or use a [function stack](../../the-function-stack/functions/database-requests/query-all-records/) instead.
+{% endhint %}
+
+
+
 [^1]: An alias is used in advanced scenarios, when you are running direct database queries or external connections to your Xano database.

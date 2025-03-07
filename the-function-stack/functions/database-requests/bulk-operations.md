@@ -8,6 +8,14 @@ description: Perform actions on multiple records at once.
 
 Using bulk operations in Xano is largely the same between operation types. Each function expects an array of data or a custom query that it will use to apply the bulk operation, with the exception of Clear All Records.
 
+The available bulk operations are:
+
+* **Bulk Add Records**
+* **Bulk Delete Records**
+* **Bulk Patch Records**
+* **Bulk Update Records**
+* **Clear App Records**
+
 For operations like Bulk Delete, use the custom query expression to determine which records to delete.
 
 <div align="left"><figure><img src="../../../.gitbook/assets/image (6).png" alt="" width="294"><figcaption></figcaption></figure></div>

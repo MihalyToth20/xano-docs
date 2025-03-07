@@ -147,6 +147,10 @@ We will then set up our filter as follows:
 
 Pops the last element of the Array off and returns it.
 
+{% hint style="warning" %}
+Please note that Xano's **pop** filter does NOT remote the item from the array.
+{% endhint %}
+
 <figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.34.27.png" alt=""><figcaption></figcaption></figure>
 
 ***

@@ -48,6 +48,10 @@ After Realtime is enabled, you'll need to define some channel permissions. For a
 
 We've made using Xano Realtime as easy as possible to build into your application by integrating it into our Xano SDK.&#x20;
 
+{% hint style="success" %}
+**Access the Xano SDK** [**here**](https://go.xano.co/sdk)**.**
+{% endhint %}
+
 If you aren't familiar with Javascript, **that's okay**. We hope to have more direct integrations with your favorite frontends in the near future. Each code snippet is broken down into a special **Code Explanation** section to help you understand what's going on.
 
 To get started, import the SDK to your project by...
