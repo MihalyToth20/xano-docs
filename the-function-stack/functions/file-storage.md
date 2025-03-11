@@ -57,6 +57,65 @@ The Content Upload Functions are:
 * **Zip: Extract Zip File Resource** - Used to extract a zip file and generate separate file resources for each file extracted
 * **Zip: View Contents** - Show details about the files contained inside of a zip file
 
+## Serving File Downloads
+
+There are a couple of different ways you can serve downloads of files, depending on your use case.
+
+{% stepper %}
+{% step %}
+### Provide the URL for your frontend to process.
+
+When you use one of the **Create Metadata** steps to store the file in your Xano files library, it returns a **path** key which contains a path to the file.
+
+Returning a complete URL requires prepending this path with the URL to your Xano instance.
+
+If our metadata looks like this...
+
+```json
+{
+    "access":"public",
+    "path":"/vault/T3q1DKy7/MA_gz1v6HaNQnLEf6xZqVtrOVII/1Rl7QA../form_submission_1741703680742.pdf",
+    "name":"form_submission_1741703680742.pdf",
+    "type":"pdf",
+    "size":3247192,
+    "mime":"application/pdf",
+    "meta":{
+        "validated":false
+        }
+    }
+```
+
+...our full URL would look like this:
+
+```
+https://my-xano-instance.xano.io/vault/T3q1DKy7/MA_gz1v6HaNQnLEf6xZqVtrOVII/1Rl7QA../form_submission_1741703680742.pdf
+```
+{% endstep %}
+
+{% step %}
+### Serve the raw file contents for direct download.
+
+If you want an API call to immediately initiate a file download, add the following headers to your function stack using the [**HTTP Header**](utility-functions.md#http-header) function.
+
+1. `Content-Disposition: attachment; filename="replaceme"`
+2. `Content-Type: application/octet-stream`
+
+These headers will tell any browser accessing the API that we're serving a direct download. Just make sure to change "replaceme" to the actual filename you are serving.
+
+Add a **Get File Resource Data** function so we have the raw file data to be delivered.
+
+Finally, in your response, return the .`data` path from the output of **Get File Resource Data**.
+
+Your function stack should look something like this:
+
+<figure><img src="../../.gitbook/assets/CleanShot 2025-03-11 at 09.39.47.png" alt=""><figcaption></figcaption></figure>
+
+To ensure it's working as expected, when you run it in Xano, you should see a **Download** button available in the Run panel.
+
+<div align="left"><figure><img src="../../.gitbook/assets/CleanShot 2025-03-11 at 09.40.41.png" alt="" width="450"><figcaption></figcaption></figure></div>
+{% endstep %}
+{% endstepper %}
+
 ## Private File Storage <a href="#private-file-storage" id="private-file-storage"></a>
 
 Private file storage is available as a premium add-on for our Launch plans, or included with **Scale** or HIPAA compliance.
