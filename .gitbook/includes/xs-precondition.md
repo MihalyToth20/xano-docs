@@ -12,11 +12,11 @@ precondition if ("a" == 1) {
 }
 ```
 
-| Parameter   | Purpose                                   | Example                                        |
-| ----------- | ----------------------------------------- | ---------------------------------------------- |
-| error\_type | The type of error to throw                | `"notfound"`, `"forbidden"`, `"invalid"`       |
-| error       | The error message to display              | `"Resource not found"`, `"Access denied"`      |
-| payload     | Additional data to include with the error | `"Error details"`, `{reason: "Invalid input"}` |
+| Parameter   | Purpose                                   | Example                                                                                                                                                  |
+| ----------- | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| error\_type | The type of error to throw                | <p>Can be one of the following:<br>- standard<br>- notfound<br>- accessdenied<br>- toomamyrequests<br>- unauthorized<br>- badrequest<br>- inputerror</p> |
+| error       | The error message to display              | `"Resource not found"`, `"Access denied"`                                                                                                                |
+| payload     | Additional data to include with the error | `"Error details"`, `{reason: "Invalid input"}`                                                                                                           |
 
 <details>
 
@@ -24,7 +24,7 @@ precondition if ("a" == 1) {
 
 ```javascript
 precondition if ($user.role != "admin") {
-  error_type = "forbidden"
+  error_type = "accessdenied"
   error = "Admin access required"
   payload = {
     required_role: "admin",
