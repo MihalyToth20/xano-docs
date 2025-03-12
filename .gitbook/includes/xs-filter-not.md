@@ -14,6 +14,16 @@ title: XS Filter - not
 true|not       // Returns false
 false|not      // Returns true
 1|not          // Returns false
+
+// Example of proper boolean condition in precondition
+precondition if (`($value|not) == true`) {
+  // ...
+}
+
+// Example with multiple filters
+precondition if (`($input.email|ends_with:"@domain.com"|not) == true`) {
+  // ...
+}
 ```
 
 </details>
