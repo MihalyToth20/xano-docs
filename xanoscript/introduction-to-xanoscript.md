@@ -50,6 +50,7 @@ XanoScript will support every aspect of the Xano platform, but not everything is
 
 * Database Link
 * Table Reference fields in the database
+* // Comments in XanoScript are not supported yet.
 {% endhint %}
 
 ## Getting Started with XanoScript <a href="#getstarted" id="getstarted"></a>
