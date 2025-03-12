@@ -28,5 +28,10 @@ If the condition(s) evaluate as **false**, it will run the steps in the Else blo
 
 You can also leave either of these blocks empty if you only want to utilize one of them.
 {% endstep %}
-{% endstepper %}
 
+{% step %}
+### You can Use Else If to define multiple paths in the same conditional statement.
+
+Click ![](<../../../.gitbook/assets/CleanShot 2025-03-07 at 16.17.46.png>)to add an Else If path to your conditional statement. The process for defining the condition(s) it checks is exactly the same as before.
+{% endstep %}
+{% endstepper %}
