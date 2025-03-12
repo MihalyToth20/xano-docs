@@ -114,7 +114,7 @@ value = <<
 Multiline is **not** supported when using filters. Instead, you should use escaped line break characters.
 
 ```
-"Dear John,\nYour order will arrive by Friday.\nRegards,\nCustomer Service"|upper
+"Dear John,\nYour order will arrive by Friday.\nRegards,\nCustomer Service"|to_upper
 ```
 {% endhint %}
 
