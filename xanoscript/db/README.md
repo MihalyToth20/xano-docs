@@ -103,8 +103,7 @@ text name?                     // Not required, not nullable
 text name                      // Required, not nullable
 text ?name?                    // Optional, nullable
 text ?name                     // Required, nullable
-text name?=defaultValue        // Optional w/ default value
-text name?=defaultValue        // Required w/ default value
+text name?=defaultValue        // Default value specified
 ```
 
 #### Field Properties
