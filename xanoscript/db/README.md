@@ -93,8 +93,19 @@ schema {
 
 #### Field Modifiers
 
+Fields can be marked as **required**, **nullable**, and / or specify a default value.
+
 * `?`: Makes the field optional (nullable)
-* `?=default_value`: Makes the field optional with a default value
+* `?=default_value`: Makes the field optional with a default valu\`\`\`
+
+```
+text name?                     // Not required, not nullable
+text name                      // Required, not nullable
+text ?name?                    // Optional, nullable
+text ?name                     // Required, nullable
+text name?=defaultValue        // Optional w/ default value
+text name?=defaultValue        // Required w/ default value
+```
 
 #### Field Properties
 
