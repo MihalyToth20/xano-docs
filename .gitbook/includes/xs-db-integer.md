@@ -6,6 +6,8 @@ title: XS DB - Integer
 
 `int field_name`
 
+**For Table References:** `int field_name? { dbtable = "table_name" }`
+
 <details>
 
 <summary>Examples</summary>

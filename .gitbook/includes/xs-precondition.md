@@ -5,7 +5,7 @@ title: XS - Precondition
 # <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Precondition <a href="#xs-precondition" id="xs-precondition"></a>
 
 ```javascript
-precondition if ("a" == 1) {
+precondition `($a == 1)` {
   error_type = "notfound"
   error = "Error message to return"
   payload = "Payload"
@@ -23,7 +23,16 @@ precondition if ("a" == 1) {
 <summary>Example</summary>
 
 ```javascript
-precondition if ($user.role != "admin") {
+precondition `($user.role != "admin")` {
+  error_type = "accessdenied"
+  error = "Admin access required"
+  payload = {
+    required_role: "admin",
+    current_role: $user.role
+  }
+}
+
+precondition `($user.role != "admin")` {
   error_type = "accessdenied"
   error = "Admin access required"
   payload = {

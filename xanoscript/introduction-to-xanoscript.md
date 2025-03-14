@@ -49,7 +49,6 @@ XanoScript will support every aspect of the Xano platform, but not everything is
 ## Other Features Currently In Development
 
 * Database Link
-* Table Reference fields in the database
 * // Comments in XanoScript are not supported yet.
 {% endhint %}
 
