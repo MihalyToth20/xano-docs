@@ -74,4 +74,60 @@ You can also copy cURL commands from API documentation, and paste them using ![]
 
 #### Multipart Support <a href="#multipart-support" id="multipart-support"></a>
 
-Xano has support for sending images through the external API request function. You can send a file resource - either as an input or variable - through the parameters section of the external API request as a key-value pair or as the entire parameter (depending on what the specific API requires).
+Xano has support for sending images through the external API request function. You can send a file resource - either as an input or variable - through the parameters section of the external API request as a key-value pair or as the entire parameter (depending on what the specific API requires).\
+
+
+## Security Settings
+
+### Host Verification
+
+When an API request is sent to a secure server (you'll know if it's a secure request if the URL starts with https — most requests will), the domain's secure connection is verified using a certificate. Enabling host verification checks the certificate to make sure that it matches the domain you're sending the request to.
+
+This value can be `true` or `false`
+
+**Recommended Setting:** `true`
+
+You might want to set Host Verification to 'false' in a few specific scenarios:
+
+1. **Development and Testing Environments**: When working with development servers that use self-signed certificates or have hostnames that don't match their certificates
+2. **Internal Services with Misconfigured Certificates**: In corporate environments where internal services may have certificates that don't exactly match the hostnames used to access them, especially in legacy systems.
+3. **Troubleshooting SSL Issues**: To isolate whether hostname verification is causing connection problems when debugging API connectivity issues.
+
+### Peer Verification
+
+Secure certificates are usually issued by certain trusted authorities, such as [LetsEncrypt](https://letsencrypt.org/). Peer Verification enables checking whether or not the certificate is issued by one of these known trusted authorities, validating its authenticity.
+
+This value can be `true` or `false`
+
+**Recommended Setting:** `true`
+
+You might want to set this to false if the server you're sending the request to falls under one of the scenarios outlined above under **Host Verification**.
+
+### SSL Authentication
+
+This is a set of additional options you can use to validate the security of the request being made. The provider of the service you're calling should be able to provide these for you, if necessary.
+
+* `certificate`: The content of the client certificate file. Usually, you'd be provided with a .crt or a .pem file — just open it up in your text editor of choice and paste the contents here.
+* `certificate_pass`: Password for the certificate if it's password-protected
+* `private_key`: The contents of the private key file. Usually, you'd be provided with a .pem file for this — just open it up in your text editor of choice and paste the contents here.
+* `private_key_pass`: Password for the private key if it's password-protected
+
+### CA Certificate
+
+Custom CA certificates allow you to specify your own trusted Certificate Authority for peer verification. This is an advanced option that is useful when connecting to servers that use certificates signed by private or internal CAs — as in, a CA that is not listed as a known trusted authority.
+
+A custom certificate is usually provided as a file that you'd just open up in a text editor and paste here. It will look something like this:
+
+```
+-----BEGIN CERTIFICATE-----
+MIIDITCCAgmgAwIBAgIUJqrGM2rS34H8YryJJLAMarvab8AwDQYJKoZIhvcNAQEL
+BQAwIDEeMBwGA1UEAwwVbXlDdXN0b21DZXJ0aWZpY2F0ZUNKX...
+-----END CERTIFICATE-----
+```
+
+
+
+
+
+
+
