@@ -2,6 +2,8 @@
 title: Expression Builder
 ---
 
+## Using the Expression Builder
+
 Each conditional has four different components.
 
 **Conditional Type**

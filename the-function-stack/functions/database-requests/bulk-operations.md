@@ -16,15 +16,15 @@ The available bulk operations are:
 * **Bulk Update Records**
 * **Clear App Records**
 
-For operations like Bulk Delete, use the custom query expression to determine which records to delete.
+For **Bulk Add Records, Bulk Patch Records, and Bulk Update Records**, you'll need to provide an array of items to add or update in the table.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/image (6).png" alt="" width="294"><figcaption></figcaption></figure></div>
+**Bulk Add** and **Bulk Update** require the entire contents of the record. Make sure to include the record IDs in Bulk Update.
+
+**Bulk Patch** only requires each object to have the ID and the fields you want updated.
+
+For operations like **Bulk Delete**, use the custom query expression to determine which records to delete.
 
 {% include "../../../.gitbook/includes/expression-builder.md" %}
-
-For operations that expect an array, this array just needs to contain JSON objects with the ID of the record to target, and any associated data, such as each field to be edited in or added to the record.
-
-<div align="left"><figure><img src="../../../.gitbook/assets/CleanShot 2025-01-09 at 16.30.09.png" alt="" width="291"><figcaption></figcaption></figure></div>
 
 ## Clear All Records
 
