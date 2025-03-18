@@ -174,6 +174,49 @@ The **duplicates** parameter lets you decide to either replace headers that alre
 
 ![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FkWGM2cd8pSOO5OLWHKe6%252FCleanShot%25202024-05-14%2520at%252010.15.28.png%3Falt%3Dmedia%26token%3De364c299-980c-4b00-8153-099f53a57fec\&width=768\&dpr=4\&quality=100\&sign=db87ede2\&sv=2)
 
+<details>
+
+<summary>Examples of Custom HTTP Headers</summary>
+
+{% hint style="info" %}
+Please note that each individual header should use its own Set Header function.
+{% endhint %}
+
+**Rate Limiting**
+
+These will not enforce rate limits themselves, but it's good information to have in your headers if you are rate limiting your APIs.
+
+```
+X-Rate-Limit-Limit: 100
+X-Rate-Limit-Remaining: 95
+X-Rate-Limit-Reset: 1615560000
+```
+
+#### Serving Content Downloads
+
+If you want your API to directly serve file downloads, use this header:
+
+```
+Content-Disposition: attachment; filename="report.pdf"
+```
+
+You may also need:
+
+```
+Content-Type: text/html
+```
+
+#### Custom HTTP Status
+
+Sometimes, you might need to send an HTTP status that Xano doesn't natively offer using preconditions.
+
+```
+HTTP/1.1 201 Created
+Content-Type: application/json
+```
+
+</details>
+
 ## Get All Variables
 
 Returns all of the variables present up to that point in the function stack.
