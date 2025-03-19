@@ -1,361 +1,670 @@
 # Text
 
-Text filters enable you to transform and manipulate text.
+{% include "../../.gitbook/includes/filter-note.md" %}
 
-* [**addslashes**](text.md#addslashes) - Adds a backslash to certain special characters
-* [**capitalize**](text.md#capitalize) **-** Converts the first letter of each word to a capital letter.
-* [**concat**](text.md#concat) **-** Concatenates two values together.
-* [**contains**](text.md#contains) **-** Returns whether or not the expression is found.
-* [**convert\_encoding**](text.md#convert_encoding) - Converts a text element's encoding to another
-* [**detect\_encoding**](text.md#detect_encoding) - Returns the encoding of a text element
-* [**ends\_with**](text.md#ends_with) **-** Returns whether or not the expression is present at the end.
-* [**icontains**](text.md#icontains) **-** Returns whether or not the case-insensitive expression is found.
-* [**iends\_with**](text.md#iends_with) **-** Returns whether or not the case-insensitive expression is present at the end.
-* [**iindex**](text.md#iindex) **-** Returns the index of the case-insensitive expression or false if it can't be found.
-* [**index**](text.md#index) **-** Returns the index of the case-sensitive expression or false if it can't be found.
-* [**istarts\_with**](text.md#istarts_with) **-** Returns whether or not the case-insensitive expression is present at the beginning.
-* [**list\_encodings**](text.md#list_encodings) - Returns available encoding formats for [**convert\_encoding**](text.md#convert_encoding) and [**detect\_encoding**](text.md#detect_encoding)
-* [**ltrim**](text.md#ltrim) **-** Trim whitespace or other characters from the left side and return the result.
-* [**querystring\_parse**](text.md#querystring_parse) **-** Parses a query string from a URL into its individual key-value pairs.
-* [**regex\_get\_all\_matches**](text.md#regex_get_all_matches) **-** Return all matches performed by a regular expression on the supplied subject text.
-* [**regex\_get\_first\_match**](text.md#regex_get_first_match) **-** Return the first set of matches performed by a regular expression on the supplied subject text.
-* [**regex\_matches**](text.md#regex_matches) **-** Tests if a regular expression matches the supplied subject text.
-* [**regex\_quote**](text.md#regex_quote) **-** Update the supplied text value to be properly escaped for regular expressions.
-* [**regex\_replace**](text.md#regex_replace) **-** Perform a regular expression search and replace on the supplied subject text.
-* [**replace**](text.md#replace) **-** Replace a text phrase with another.
-* [**rtrim**](text.md#rtrim) **-** Trim whitespace or other characters from the right return the result.
-* [**split**](text.md#split) **-** Splits text into an array of text and returns the result.
-* [**sprintf**](text.md#sprintf) **-** formats text with variable substitution.
-* [**starts\_with**](text.md#starts_with) **-** Returns whether or not the expression is present at the beginning.
-* [**strlen**](text.md#strlen) **-** Returns the number of characters.
-* [**substr**](text.md#substr) **-** Extracts a section of text.
-* [**to\_lower**](text.md#to_lower) **-** Converts all characters to lower case and returns the result.
-* [**to\_upper**](text.md#to_upper) **-** Converts all characters to upper case and returns the result.
-* [**trim**](text.md#trim) **-** Trim whitespace or other characters from both sides and return the result.
-* [**url\_addarg**](text.md#url_addarg) **-** Parses a URL and returns an updated version with an encoded version of the supplied argument.
-* [**url\_delarg**](text.md#url_delarg) **-** Parses a URL and returns an updated version with the supplied argument removed.
-* [**url\_getarg**](text.md#undefined) **-** Gets the argument's value from a URL.
-* [**url\_hasarg**](text.md#url_hasarg) **-** Returns the existence of a argument in the URL.
-* [**strip\_html**](text.md#strip_html) - Parses through raw HTML and removes tags
-* [**url\_parse**](text.md#url_parse) **-** Parses a URL into its individual components.
-
-#### addslashes:
+## addslashes
 
 Adds a backslash to the following characters: single quote, double quote, backslash, and null character.
 
-<figure><img src="../../.gitbook/assets/CleanShot 2023-08-30 at 09.48.50.png" alt=""><figcaption></figcaption></figure>
+The addslashes filter is useful when preparing text for insertion into databases, JSON strings, or other contexts where special characters need to be escaped to prevent syntax errors or security vulnerabilities such as SQL injection.
 
-#### capitalize:
+Inputs:
 
-Converts the first letter of each word to a capital letter.
+* primary value: The text string to escape
 
-![Example: we have a text value of hello world and apply the capitalize filter and it becomes Hello World.](<../../.gitbook/assets/CleanShot 2022-01-14 at 11.05.41.png>)
+| Primary Value (text) | Output                |
+| -------------------- | --------------------- |
+| "Let's go"           | "Let's go"            |
+| "He said "Hello""    | "He said \\"Hello\\"" |
+| "C:\Program Files"   | "C:\\\Program Files"  |
 
-#### concat:
+## capitalize
 
-Concatenates 2 text strings together by an optional separator. The value can be any text and the separator can be anything: + , -, \_, a space, etc...
+Converts the first letter of each word to a capital letter
 
-![Example: we have a text value of hello world and apply the concat filter and it becomes hello world+Xano.](<../../.gitbook/assets/CleanShot 2022-01-14 at 11.09.10.png>)
+The capitalize filter is useful when formatting names, titles, headings, or any text that follows title case conventions, such as book titles, product names, or section headers in documents.
 
+Inputs:
 
+* primary value: The text string to capitalize
 
-#### contains:
+| Primary Value (text)  | Output                |
+| --------------------- | --------------------- |
+| "hello world"         | "Hello World"         |
+| "john smith"          | "John Smith"          |
+| "THE QUICK BROWN FOX" | "The Quick Brown Fox" |
 
-Returns whether or not the expression is found and is case-sensitive. The search term can be any string of text.\
-This returns a "true" or "false" response.&#x20;
+## concat
 
-![Example: we have a text value of hello world and apply the contains filter this returns a value of "true](<../../.gitbook/assets/CleanShot 2022-01-14 at 11.11.43.png>)
+Concatenates two values together
 
-#### convert\_encoding
+The concat filter is valuable for combining strings, such as joining first and last names, building full addresses, assembling complete URLs, or constructing formatted messages with dynamic values.
 
-Converts an encoded text element from one type of encoding to another
+Inputs:
 
-<figure><img src="../../.gitbook/assets/CleanShot 2023-04-26 at 13.25.14.png" alt=""><figcaption></figcaption></figure>
+* primary value: The first string
+* value: The second string to append to the primary value
 
-#### detect\_encoding
+| Primary Value (text)  | Other Value (text) | Separator | Output                          |
+| --------------------- | ------------------ | --------- | ------------------------------- |
+| "Hello, "             | "World!"           | " "       | "Hello, World!"                 |
+| "User"                | "John"             | ": "      | "User: John"                    |
+| "https://example.com" | "page.html"        | "/"       | "https://example.com/page.html" |
 
-Detects the encoding of a text element. Use the Encodings parameter to specify the encodings to check against, or leave blank to auto-detect
+## contains
 
-<figure><img src="../../.gitbook/assets/CleanShot 2023-04-26 at 13.26.14.png" alt=""><figcaption></figcaption></figure>
+Returns whether or not the expression is found
 
-#### ends\_with:
+The contains filter is useful for checking if a specific word or phrase exists within text, which is essential for search functionality, content filtering, conditional logic based on text content, or validating user input.
 
-Returns whether or not the expression is present at the end. The search term can be any string of text.\
-This returns a "true" or "false" response.&#x20;
+Inputs:
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.06.49.png" alt=""><figcaption></figcaption></figure>
+* primary value: The text to search within
+* substring: The text to search for
 
-#### icontains:
+| Primary Value (text)  | Other Value (substring) | Output |
+| --------------------- | ----------------------- | ------ |
+| "Hello World"         | "World"                 | true   |
+| "apple banana orange" | "cherry"                | false  |
+| "user@example.com"    | "@"                     | true   |
 
-Returns whether or not the case-insensitive expression is found. The search term can be any string of text.\
-This returns a "true" or "false" response.&#x20;
+## convert\_encoding
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.07.30.png" alt=""><figcaption></figcaption></figure>
+Convert the character encoding of the supplied text
 
-#### iends\_with:
+The convert\_encoding filter is valuable when working with data from different systems that use different character encodings, such as processing international text, handling legacy data, or ensuring compatibility across platforms with different encoding standards.
 
-Returns whether or not the case-insensitive expression is present at the end. The search term can be any string of text.\
-This returns a "true" or "false" response.&#x20;
+Inputs:
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.08.41.png" alt=""><figcaption></figcaption></figure>
+* primary value: The text to convert
+* from\_encoding: The current encoding of the text
+* to\_encoding: The target encoding to convert to
 
-#### iindex:
+| Primary Value (text) | Other Value (from\_encoding) | Other Value (to\_encoding) | Output                |
+| -------------------- | ---------------------------- | -------------------------- | --------------------- |
+| "Café"               | "UTF-8"                      | "ISO-8859-1"               | Encoded text (binary) |
+| Binary data          | "ISO-8859-1"                 | "UTF-8"                    | "Café"                |
 
-Returns the index of the case-insensitive expression or false if it can't be found. The search term can be any string of text.\
-This returns an integer value of where the character(s) exist in the string. The first character in a text string has an index of 0.
+## detect\_encoding
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.09.11.png" alt=""><figcaption></figcaption></figure>
+Detect the character encoding of the supplied text
 
-#### index:
+The detect\_encoding filter is useful when receiving text from unknown sources, such as uploaded files, API responses, or user input, and you need to determine the encoding before processing to ensure proper handling of special characters and international text.
 
-Returns the index of the case-sensitive expression or false if it can't be found.  The search term can be any string of text.\
-This returns an integer value of where the character(s) exist in the string. The first character in a text string has an index of 0.
+Inputs:
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.09.41.png" alt=""><figcaption></figcaption></figure>
+* primary value: The text to analyze
 
-#### istarts\_with:
+| Primary Value (text) | Output       |
+| -------------------- | ------------ |
+| "Hello World"        | "ASCII"      |
+| "こんにちは"              | "UTF-8"      |
+| Binary data          | "ISO-8859-1" |
 
-Returns whether or not the case-insensitive expression is present at the beginning. The search term can be any string of text.\
-This returns a "true" or "false" response.&#x20;
+## ends\_with
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.10.14.png" alt=""><figcaption></figcaption></figure>
+Returns whether or not the expression is present at the end
 
-#### list\_encodings
+The ends\_with filter is helpful for validating file extensions, checking URL patterns, verifying if text ends with specific terms (like domain names), or implementing string-based conditions that depend on the ending of text.
 
-Lists the available encodings for [detect\_encoding](text.md#detect_encoding) and [convert\_encoding](text.md#convert_encoding)
+Inputs:
 
-#### ltrim:
+* primary value: The text to check
+* suffix: The ending text to look for
 
-Trim whitespace or other characters from the left side and return the result. The mask text can be any string of text.
+| Primary Value (text) | Other Value (suffix) | Output |
+| -------------------- | -------------------- | ------ |
+| "image.jpg"          | ".jpg"               | true   |
+| "example.com"        | ".org"               | false  |
+| "Hello World"        | "World"              | true   |
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.10.49.png" alt=""><figcaption></figcaption></figure>
+## escape
 
-#### rtrim:
+Converts special characters into their escaped variants. Ex: for tabs and\
+for newlines.
 
-Trim whitespace or other characters from the right return the result. The mask text can be any string of text.
+The escape filter is essential when preparing text for environments where special characters need to be represented by escape sequences, such as JSON strings, XML documents, programming code, or any context where raw special characters might cause parsing issues.
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.10.49 (1).png" alt=""><figcaption></figcaption></figure>
+Inputs:
 
-#### querystring\_parse:
+* primary value: The text to escape
 
-Extracts query strings from a URL and places them into separate key/value pairs.\
-The example below separates a URL using the **url\_parse** filter, and then uses querystring\_parse to parse the query parameters into separate keys and values.
+| Primary Value (text)    | Output                |
+| ----------------------- | --------------------- |
+| <p>"Line1<br>Line2"</p> | "Line1\nLine2"        |
+| "Tab.    Separated"     | "Tab\tSeparated"      |
+| "Quotes "quoted""       | "Quotes \\"quoted\\"" |
 
-![The test URL](<../../.gitbook/assets/CleanShot 2022-08-01 at 17.02.24@2x.png>)
+## from\_utf8
 
-![The function and querystring\_parse filter](<../../.gitbook/assets/CleanShot 2022-08-01 at 17.03.20@2x.png>)
+Convert the supplied text from UTF-8 to its binary form (ISO-8859-1).
 
-![The result](<../../.gitbook/assets/CleanShot 2022-08-01 at 17.03.47@2x.png>)
+The from\_utf8 filter is useful when you need to convert UTF-8 encoded text to binary form, which may be necessary for certain legacy systems, binary protocol requirements, or special data transmission formats that expect ISO-8859-1 encoding.
 
-#### join:
+Inputs:
 
-Joins an array of text into text via the separator and returns the result. Theseperator text can be any string of text.\
-The array in this example is:\
-\[hello, how, are, you]&#x20;
+* primary value: The UTF-8 encoded text
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.12.23.png" alt=""><figcaption></figcaption></figure>
+| Primary Value (text) | Output                |
+| -------------------- | --------------------- |
+| "Hello World"        | Binary representation |
+| "Café"               | Binary representation |
+| "こんにちは"              | Binary representation |
 
-### Regex (Regular Expression)
+## icontains
 
-Regex or regular expression is a more advance topic that can be useful for finding patterns in text. It is a string of text that allows you to create patterns that help match, locate, and manage text.
+Returns whether or not the case-insensitive expression is found
 
-Regex typically includes something called delimiters to set the boundaries of the expression. Often times, / will be used as delimiters but almost any character can be used.
+The icontains filter is valuable for case-insensitive text searches, such as user search features, content filtering without case sensitivity, or form validation where case should not matter in determining if text contains specific terms.
 
-{% hint style="info" %}
-_Regex filters inside the Query All Records function do not use delimiters._
+Inputs:
 
-_Regex filters in any other variable, function, etc. in Xano require delimiters **(meaning you'll need to wrap your expression in / characters)** as shown in the below examples._
-{% endhint %}
+* primary value: The text to search within
+* substring: The case-insensitive text to search for
 
-Regex uses special characters, for example:
+| Primary Value (text)  | Other Value (substring) | Output |
+| --------------------- | ----------------------- | ------ |
+| "Hello World"         | "world"                 | true   |
+| "apple banana orange" | "BANANA"                | true   |
+| "user@EXAMPLE.com"    | "example"               | true   |
 
-```
-. is any character
-\d is any number
-\s is any whitespace
-\w is any word character
-* means 0 or more
-+ means 1 or more
+## iends\_with
 
-Regex uses additional special characters, these are just to name a few as an example.
-```
+Returns whether or not the case-insensitive expression is present at the end
 
-Some special characters need the \ escape character, which is why [regex\_quote](text.md#regex_quote) can be useful to determine this. For example, . and $ do but @ does not.
+The iends\_with filter is useful for case-insensitive validation of endings, such as checking file extensions regardless of case, validating domain names, or implementing any string comparison that should ignore case differences at the end of text.
 
-You can then use ( ) to group matches. For example:
+Inputs:
 
-```
-/(\w+)@\w+\.\w+/ this would get name of and full email address
+* primary value: The text to check
+* suffix: The case-insensitive ending to look for
 
+| Primary Value (text) | Other Value (suffix) | Output |
+| -------------------- | -------------------- | ------ |
+| "image.JPG"          | ".jpg"               | true   |
+| "EXAMPLE.COM"        | ".com"               | true   |
+| "Hello world"        | "WORLD"              | true   |
 
-/ is the starting delimiter
-(\w+) is a matching group, this group must be at least 1 or more word character
-@ is the symbold @
-\w+ is at least 1 or more word character
-\. is the symbol .
-\w+ is at least 1 or more word character
-/ is the ending delimiter
-```
+## iindex
 
+Returns the index of the case-insensitive expression or false if it can't be found
 
+The iindex filter is helpful for finding the position of text regardless of case, which is useful for parsing, text processing, or extracting substrings when case sensitivity is not important in determining the starting position.
 
-#### **regex\_get\_all\_matches:**
+Inputs:
+
+* primary value: The text to search within
+* substring: The case-insensitive text to locate
+
+| Primary Value (text)  | Other Value (substring) | Output |
+| --------------------- | ----------------------- | ------ |
+| "Hello World"         | "world"                 | 6      |
+| "apple banana orange" | "BANANA"                | 6      |
+| "Hello World"         | "xyz"                   | false  |
+
+## index
+
+Returns the index of the case-sensitive expression or false if it can't be found
+
+The index filter is essential for finding the exact position of text with case sensitivity, which is important for precise text processing, extracting substrings with exact matches, or implementing search functionality that respects case differences.
+
+Inputs:
+
+* primary value: The text to search within
+* substring: The case-sensitive text to locate
+
+| Primary Value (text)  | Other Value (substring) | Output |
+| --------------------- | ----------------------- | ------ |
+| "Hello World"         | "World"                 | 6      |
+| "Hello World"         | "world"                 | false  |
+| "apple banana orange" | "banana"                | 6      |
+
+## istarts\_with
+
+Returns whether or not the case-insensitive expression is present at the beginning
+
+The istarts\_with filter is valuable for case-insensitive validation of text beginnings, such as checking prefixes, validating file names, or implementing any string comparison that should ignore case differences at the start of text.
+
+Inputs:
+
+* primary value: The text to check
+* prefix: The case-insensitive beginning to look for
+
+| Primary Value (text) | Other Value (prefix) | Output |
+| -------------------- | -------------------- | ------ |
+| "Hello World"        | "hello"              | true   |
+| "EXAMPLE.com"        | "ex"                 | true   |
+| "Hello World"        | "WORLD"              | false  |
+
+## list\_encodings
+
+List support character encodings
+
+The list\_encodings filter is useful when you need to see all available character encodings supported by the system, which can help in determining which encodings to use for conversion or when working with internationalization features.
+
+Inputs:
+
+* primary value: No input required, can be empty
+
+| Primary Value | Output                                                                |
+| ------------- | --------------------------------------------------------------------- |
+| empty         | \["UTF-8", "ASCII", "ISO-8859-1", ...] (array of supported encodings) |
+
+## ltrim
+
+Trim whitespace or other characters from the left side and return the result
+
+The ltrim filter is helpful for cleaning up text by removing leading whitespace or specific characters, which is common in form data processing, CSV parsing, or any situation where leading characters need to be removed for consistent formatting.
+
+Inputs:
+
+* primary value: The text to trim
+* characters: Optional string of characters to trim (default is whitespace)
+
+| Primary Value (text) | Other Value (characters) | Output         |
+| -------------------- | ------------------------ | -------------- |
+| " Hello World"       | null                     | "Hello World"  |
+| "///path/to/file"    | "/"                      | "path/to/file" |
+| "000123"             | "0"                      | "123"          |
+
+## querystring\_parse
+
+Parses a query string from a URL into its individual key-value pairs.
+
+The querystring\_parse filter is valuable when working with URLs and needing to extract and organize query parameters, such as processing web analytics data, handling form submissions, or working with API requests that include query strings.
+
+Inputs:
+
+* primary value: The query string to parse
+
+| Primary Value (text)                  | Output                                               |
+| ------------------------------------- | ---------------------------------------------------- |
+| "name=John\&age=30"                   | {"name": "John", "age": "30"}                        |
+| "search=apple\&sort=price\&order=asc" | {"search": "apple", "sort": "price", "order": "asc"} |
+| "id=123\&id=456"                      | {"id": \["123", "456"]}                              |
+
+## regex\_get\_all\_matches
 
 Return all matches performed by a regular expression on the supplied subject text.
 
-![In this example, we are searching for all matches of /you/ which will return two matches \[you, you\].](<../../.gitbook/assets/CleanShot 2022-01-19 at 15.33.15.png>)
+The regex\_get\_all\_matches filter is essential when you need to extract all occurrences of patterns in text, such as finding all email addresses, phone numbers, dates, or any repeated pattern in content for analysis or extraction.
 
-#### **regex\_get\_first\_match:**
+Inputs:
+
+* primary value: The regex expression
+* text: The value to search
+
+| Primary Value (pattern)           | Other Value (text)                            | Output                                          |
+| --------------------------------- | --------------------------------------------- | ----------------------------------------------- |
+| "\\/\[\w.+-]+@\[\w-]+\\.\[\w.-]+/ | "Contact: john@example.com, jane@example.com" | \[\["john@example.com"], \["jane@example.com"]] |
+| "/\d{4}-\d{2}-\d{2}/"             | "Dates: 2023-01-15, 2023-02-20"               | \[\["2023-01-15"], \["2023-02-20"]]             |
+| "/\d+/"                           | "No matches here"                             | \[]                                             |
+
+## regex\_get\_first\_match
 
 Return the first set of matches performed by a regular expression on the supplied subject text.
 
-![In this example, we are searching for the phrase h with one more additional word characters. The result is how and not Hi because this is case-sensitive.](<../../.gitbook/assets/CleanShot 2022-01-19 at 15.42.26.png>)
+The regex\_get\_first\_match filter is useful when you only need the first occurrence of a pattern, such as extracting the first URL, email address, or any specific pattern from text when multiple matches are not needed.
 
-#### **regex\_matches:**
+Inputs:
 
-Tests if a regular expression matches the supplied subject text. Returns a true or false boolean.
+* primary value: The regex expression
+* text: The value to search
 
-![In this example, we are seeing if the subject matches the provided regex. The result will be true because how matches /h\w+/ which is a string starting with h and having one or more word characters after.](<../../.gitbook/assets/CleanShot 2022-01-19 at 15.44.50.png>)
+| Primary Value (pattern)          | Other Value (text)                            | Output                                |
+| -------------------------------- | --------------------------------------------- | ------------------------------------- |
+| "/\[\w.+-]+@\[\w-]+\\.\[\w.-]+/" | "Contact: john@example.com, jane@example.com" | \["john@example.com"]                 |
+| "/(\[A-Z]+)-(\d+)-(\[A-Z]+)/"    | "ID: ABC-123-XYZ"                             | \["ABC-123-XYZ", "ABC", "123", "XYZ"] |
+| "/\d+/"                          | "No matches here"                             | null                                  |
 
-#### **regex\_quote:**
+## regex\_matches
+
+Tests if a regular expression matches the supplied subject text.
+
+The regex\_matches filter is valuable for validating text against patterns, such as checking if a string matches a specific format (email, phone number, postal code) or testing if content adheres to certain structural requirements before processing.
+
+Inputs:
+
+* primary value: The regex expression
+* text: The value to check
+
+| Primary Value (pattern)            | Other Value (text) | Output |
+| ---------------------------------- | ------------------ | ------ |
+| "/^\[\w.+-]+@\[\w-]+\\.\[\w.-]+$/" | "john@example.com" | true   |
+| "/^\d{4}-\d{2}-\d{2}$/"            | "2023-01-15"       | true   |
+| "/^\d+$/"                          | "ABC123"           | false  |
+
+## regex\_quote
 
 Update the supplied text value to be properly escaped for regular expressions.
 
-![](<../../.gitbook/assets/CleanShot 2022-01-19 at 16.18.00.png>)
+The regex\_quote filter is helpful when incorporating user-provided text into regular expressions, ensuring special regex characters are escaped to be treated as literals, thus preventing syntax errors or unintended pattern behavior.
 
-![The result using / as a delimiter.](<../../.gitbook/assets/CleanShot 2022-01-19 at 16.21.54.png>)
+Inputs:
 
-#### **regex\_replace**
+* primary value: The text to escape for regex use
+
+| Primary Value (text) | Output              |
+| -------------------- | ------------------- |
+| "Hello (World)"      | "Hello \\(World\\)" |
+| "example.com"        | "example\\.com"     |
+| "$100 + 25%"         | "\\$100 \\+ 25\\%"  |
+
+## regex\_replace
 
 Perform a regular expression search and replace on the supplied subject text.
 
-![In this example, we are using /(\w+)@\w+\\.\w+/ to find an email address and using the replacement to replace it with support@xano.com. The result is please email support@xano.com](<../../.gitbook/assets/CleanShot 2022-01-19 at 16.26.05.png>)
+The regex\_replace filter is essential for advanced text transformation, such as formatting text based on patterns, standardizing formats, cleaning text with complex patterns, or any sophisticated find-and-replace operation that requires pattern matching.
 
-#### replace:
+Inputs:
 
-Replace a text phrase with another. Search can be any word in the value and the replacement can be anything.
+* primary value: The text to perform replacements on
+* pattern: The regular expression pattern to find
+* replacement: The replacement text
 
-![Example: we have a text value of hello world and apply the replace filter and it becomes hello Xano.](<../../.gitbook/assets/CleanShot 2022-01-14 at 15.28.10.png>)
+| Primary Value (pattern) | Other Value (text)       | Other Value (replacement) | Output                |
+| ----------------------- | ------------------------ | ------------------------- | --------------------- |
+| "/\d{10}/"              | "Phone: 1234567890"      | "XXX-XXX-XXXX"            | "Phone: XXX-XXX-XXXX" |
+| "/\d{4}-\d{2}-\d{2}/"   | "Date: 2023-01-15"       | "YYYY-MM-DD"              | "Date: YYYY-MM-DD"    |
+| "/\d+/"                 | "Remove all digits: 123" | ""                        |                       |
 
-#### split:
+## replace
 
-Splits text into an array of text and returns the result. The separator can be anything the words are separated by, in this example, it is the + symbol.
+Replace a text phrase with another
 
-![Example: we have a text value of hello+world and apply the split filter and it becomes \["hello", "world"\].](<../../.gitbook/assets/CleanShot 2022-01-14 at 15.30.21.png>)
+The replace filter is useful for simple text substitutions, such as correcting common spelling errors, replacing deprecated terms, standardizing terminology, or implementing basic find-and-replace functionality.
 
-#### Split and trim text into an array example
+Inputs:
 
-We can combine multiple filters to format a text string into an array.
+* primary value: The text to modify
+* search: The text to find
+* replace: The text to insert instead
 
-For example, we have the string "a , b,c,  d"
+| Primary Value (text) | Other Value (search) | Other Value (replace) | Output                 |
+| -------------------- | -------------------- | --------------------- | ---------------------- |
+| "Hello World"        | "World"              | "Universe"            | "Hello Universe"       |
+| "color color color"  | "color"              | "colour"              | "colour colour colour" |
+| "I like apples"      | "like"               | "love"                | "I love apples"        |
 
-Notice the inconsistent spaces. If all we do is use split then the spaces will persist in the array. We can combine [trim](text.md#trim) and filter\_empty filters to remove unnecessary spaces or blank values.
+## rtrim
 
-![](<../../.gitbook/assets/CleanShot 2022-04-28 at 14.46.14.png>)
+Trim whitespace or other characters from the right return the result
 
-#### sprintf
+The rtrim filter is valuable for cleaning up text by removing trailing whitespace or specific characters, which is useful in form data processing, file path normalization, or any context where trailing characters need to be removed.
 
-Formats text with variable substitution. This is helpful when wanting to substitute a URL string with a variable that either the use provides or that is gotten from the result of a previous function.\
-\
-\- **%d** is used to replace a number and will enforce a number.\
-\- **%s** is used to replace text.
+Inputs:
 
-The first example shows how to use variable substitution with a number using %d.
+* primary value: The text to trim
+* characters: Optional string of characters to trim (default is whitespace)
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.14.58.png" alt=""><figcaption></figcaption></figure>
+| Primary Value (text) | Other Value (characters) | Output         |
+| -------------------- | ------------------------ | -------------- |
+| "Hello World "       | null                     | "Hello World"  |
+| "path/to/file///"    | "/"                      | "path/to/file" |
+| "123000"             | "0"                      | "123"          |
 
-The second example will replace %s with text:
+## split
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.15.58.png" alt=""><figcaption></figcaption></figure>
+Splits text into an array of text and returns the result
 
-We can use multiple arguments on the sprintf filter to replace any number of values.&#x20;
+The split filter is essential for breaking text into parts based on a delimiter, which is useful for parsing CSV data, processing delimited lists, extracting elements from structured text, or any operation that requires dividing text into separate components.
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.16.56 (1).png" alt=""><figcaption></figcaption></figure>
+Inputs:
 
-If you have a % character in your text that you would **NOT** like to replace with the `sprintf` filter you are able to escape the filter by adding an additional % character next to the existing % character. "Example:  "%%"
+* primary value: The text to split
+* delimiter: The character or string that separates the parts
 
-#### starts\_with:
+| Primary Value (text)  | Other Value (delimiter) | Output                         |
+| --------------------- | ----------------------- | ------------------------------ |
+| "apple,banana,orange" | ","                     | \["apple", "banana", "orange"] |
+| "2023-01-15"          | "-"                     | \["2023", "01", "15"]          |
+| "Hello World"         | " "                     | \["Hello", "World"]            |
 
-Returns whether or not the expression is present at the beginning.  The search term can be any string of text and is case-sensitive.\
-This returns a "true" or "false" response.&#x20;
+## sprintf
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.17.41.png" alt=""><figcaption></figcaption></figure>
+formats text with variable substitution
 
-#### strlen:
+The sprintf filter is valuable for creating formatted text with placeholders, similar to many programming languages, which allows for precisely formatted numbers, padded text, or complex string compositions with dynamic values.
 
-Returns the number of characters.
+Use %s for string replacement and %d for integer replacement.
 
-![Example: we have a text value of hello world and apply the strlen filter and it becomes the int 11.](<../../.gitbook/assets/CleanShot 2022-01-14 at 15.36.47.png>)
+Inputs:
 
-#### strip\_accents
+* primary value: The format string with placeholders
+* values: Additional values to insert into the format
+
+| Primary Value (format) | Other Values | Output          |
+| ---------------------- | ------------ | --------------- |
+| "Hello, %s!"           | "World"      | "Hello, World!" |
+| "ID: 00%d              | 42           | "ID: 0042"      |
+
+## starts\_with
+
+Returns whether or not the expression is present at the beginning
+
+The starts\_with filter is useful for checking if text begins with specific characters or words, which is helpful for validating prefixes, checking file types, implementing pattern matching, or identifying text categories based on standard beginnings.
+
+Inputs:
+
+* primary value: The text to check
+* prefix: The beginning text to look for
+
+| Primary Value (text) | Other Value (prefix) | Output |
+| -------------------- | -------------------- | ------ |
+| "Hello World"        | "Hello"              | true   |
+| "example.com"        | "http://"            | false  |
+| "12345"              | "123"                | true   |
+
+## strip\_accents
 
 Removes accents from characters
 
-<figure><img src="../../.gitbook/assets/CleanShot 2022-10-03 at 08.54.22@2x.png" alt=""><figcaption></figcaption></figure>
+The strip\_accents filter is helpful for normalizing text by removing diacritical marks, which can be useful for search functionality, creating URL slugs, or standardizing text for comparison where accents should be ignored.
 
-#### substr:
+Inputs:
 
-Extracts a section of text. The start pos is based on the # of characters from the beginning with the first char pos= 0. The length can be an int.
+* primary value: The text with accents to normalize
 
-![Example: we have a text value of hello world and apply the substr filter and it becomes wo.](<../../.gitbook/assets/CleanShot 2022-01-14 at 15.51.52.png>)
+| Primary Value (text) | Output        |
+| -------------------- | ------------- |
+| "café"               | "cafe"        |
+| "résumé"             | "resume"      |
+| "Mötley Crüe"        | "Motley Crue" |
 
-#### to\_lower
+## strip\_html
 
-Converts all characters to lower case and returns the result.
+Removes HTML tags from a string
 
-![Example: we have a text value of HeLLo WoRlD and apply the to\_lower filter and it becomes hello world.](<../../.gitbook/assets/CleanShot 2022-01-14 at 15.53.25.png>)
+The strip\_html filter is essential when you need plain text extracted from HTML content, such as generating text previews, preparing content for search indexing, or sanitizing user input that may contain HTML markup.
 
-#### to\_upper:
+Inputs:
 
-Converts all characters to upper case and returns the result.
+* primary value: The HTML text to clean
 
-![Example: we have a text value of HeLLo WoRlD and apply the to\_upper filter and it becomes HELLO WORLD.](<../../.gitbook/assets/CleanShot 2022-01-14 at 15.55.10.png>)
+| Primary Value (text)      | Output       |
+| ------------------------- | ------------ |
+| "\<a href="#">Click here" | "Click here" |
 
-#### trim:&#x20;
+## strlen
 
-Trim whitespace or other characters from both sides and return the result. The mask text can be any string of text.
+Returns the number of characters
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 11.34.17.png" alt=""><figcaption></figcaption></figure>
+The strlen filter is useful for measuring text length, which is essential for input validation, enforcing character limits, truncating text for display, or any operation that depends on knowing the exact length of a string.
 
-#### url\_addarg:
+Inputs:
 
-Parses a URL and returns an updated version with an encoded version of the supplied parameter.\
-This filter is used to add a key(blog\_id, authorname) and a value (123 , john). Those parameters would be added as ?blog\_id=123 and ?authorname=john.
+* primary value: The text to measure
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 11.35.22.png" alt=""><figcaption></figcaption></figure>
+| Primary Value (text) | Output |
+| -------------------- | ------ |
+| "Hello World"        | 11     |
+| ""                   | 0      |
+| "12345"              | 5      |
 
-#### url\_delarg:
+## substr
 
-Parses a URL and returns an updated version with the supplied parameter removed.\
-This filter is used to delete a key(blog\_id, authorname). Those parameters would be deleted at the end of a url  as ?blog\_id or ?authorname.
+Extracts a section of text
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 11.36.01.png" alt=""><figcaption></figcaption></figure>
+The substr filter is valuable for extracting specific portions of text, such as parsing fixed-width data, truncating content to a maximum length, or isolating specific segments of structured text based on known positions.
 
-#### **url\_getarg:**
+Inputs:
 
-Returns the value of a query parameter in a URL.
+* primary value: The source text
+* start: The starting position (0-based index)
+* length: Optional number of characters to extract (if omitted, extracts to the end)
 
-![Our sample URL](<../../.gitbook/assets/image (37).png>)
+| Primary Value (text) | Other Value (start) | Other Value (length) | Output  |
+| -------------------- | ------------------- | -------------------- | ------- |
+| "Hello World"        | 6                   | 5                    | "World" |
+| "Hello World"        | 0                   | 5                    | "Hello" |
+| "Hello World"        | 6                   | null                 | "World" |
 
-![In this example, we are getting the value of the "another" query parameter.](<../../.gitbook/assets/CleanShot 2022-08-01 at 17.06.16@2x.png>)
+## to\_lower
 
-#### url\_hasarg:
+Converts all characters to lower case and returns the result
 
-Returns the existence of an arguments in the URL.
+The to\_lower filter is essential for standardizing text case, which is useful for case-insensitive comparisons, normalizing user input, ensuring consistent formatting, or any context where text should be in lowercase regardless of original casing.
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.18.30.png" alt=""><figcaption></figcaption></figure>
+Inputs:
 
-#### strip\_html:
+* primary value: The text to convert
 
-Parses raw HTML and removes HTML tags, returning the remaining text.
+| Primary Value (text) | Output        |
+| -------------------- | ------------- |
+| "Hello World"        | "hello world" |
+| "EXAMPLE.COM"        | "example.com" |
+| "CamelCase"          | "camelcase"   |
 
-For example, if you input HTML that contains a collection of \<p> tags and want to remove these and only return the text. Good to use in succession with the split filter to parse several elements and separate them into an array.
+## to\_upper
 
-![In this example, we are stripping the tags from an HTML paragraph and returning the result.](<../../.gitbook/assets/CleanShot 2022-08-02 at 09.13.48@2x.png>)
+Converts all characters to upper case and returns the result
 
-#### url\_parse
+The to\_upper filter is useful for standardizing text to uppercase, which is valuable for emphasizing text, creating headings, normalizing codes or identifiers, or any situation where consistent uppercase formatting is required.
 
-Breaks down a URL into individual components.
+Inputs:
 
-<figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 11.37.34.png" alt=""><figcaption></figcaption></figure>
+* primary value: The text to convert
 
+| Primary Value (text) | Output        |
+| -------------------- | ------------- |
+| "Hello World"        | "HELLO WORLD" |
+| "example.com"        | "EXAMPLE.COM" |
+| "CamelCase"          | "CAMELCASE"   |
+
+## to\_utf8
+
+Convert the supplied text from its binary form (ISO-8859-1) to UTF-8.
+
+The to\_utf8 filter is valuable when working with binary data that needs to be converted to UTF-8 text, which is essential for proper display of international characters, working with modern text processing systems, or ensuring compatibility with UTF-8 compliant applications.
+
+Inputs:
+
+* primary value: The binary text in ISO-8859-1 encoding
+
+| Primary Value (binary) | Output        |
+| ---------------------- | ------------- |
+| Binary data            | "Hello World" |
+| Binary data            | "Café"        |
+| Binary data            | "こんにちは"       |
+
+## trim
+
+Trim whitespace or other characters from both sides and return the result
+
+The trim filter is essential for cleaning text by removing both leading and trailing whitespace or specific characters, which is common in form data processing, text normalization, or any context where surrounding characters need to be removed.
+
+Inputs:
+
+* primary value: The text to trim
+* characters: Optional string of characters to trim (default is whitespace)
+
+| Primary Value (text) | Other Value (characters) | Output         |
+| -------------------- | ------------------------ | -------------- |
+| " Hello World "      | null                     | "Hello World"  |
+| "/path/to/file/"     | "/"                      | "path/to/file" |
+| "===Test==="         | "="                      | "Test"         |
+
+## url\_addarg
+
+Parses a URL and returns an updated version with an encoded version of the supplied argument
+
+The url\_addarg filter is useful when building or modifying URLs by adding query parameters, which is common in constructing API requests, creating shareable links with parameters, or implementing tracking with UTM parameters.
+
+Inputs:
+
+* primary value: The URL to modify
+* key: The parameter name
+* value: The parameter value
+
+| Primary Value (URL)          | Other Value (key) | Other Value (value) | Output                                 |
+| ---------------------------- | ----------------- | ------------------- | -------------------------------------- |
+| "https://example.com"        | "id"              | "123"               | "https://example.com?id=123"           |
+| "https://example.com?page=1" | "sort"            | "asc"               | "https://example.com?page=1\&sort=asc" |
+| "https://example.com"        | "q"               | "search term"       | "https://example.com?q=search%20term"  |
+
+## url\_delarg
+
+Parses a URL and returns an updated version with the supplied argument removed
+
+The url\_delarg filter is valuable when cleaning or modifying URLs by removing specific query parameters, which is useful for creating canonical URLs, removing tracking parameters, or updating existing URLs by removing unwanted or expired parameters.
+
+Inputs:
+
+* primary value: The URL to modify
+* key: The parameter name to remove
+
+| Primary Value (URL)                    | Other Value (key) | Output                         |
+| -------------------------------------- | ----------------- | ------------------------------ |
+| "https://example.com?id=123"           | "id"              | "https://example.com"          |
+| "https://example.com?page=1\&sort=asc" | "sort"            | "https://example.com?page=1"   |
+| "https://example.com?a=1\&b=2\&c=3"    | "b"               | "https://example.com?a=1\&c=3" |
+
+## url\_getarg
+
+Gets the argument's value from a URL
+
+The url\_getarg filter is essential for extracting specific query parameters from URLs, which is useful when processing incoming requests, analyzing tracking parameters, or working with parameterized links to extract the values they contain.
+
+Inputs:
+
+* primary value: The URL to parse
+* key: The parameter name to extract
+
+| Primary Value (URL)                    | Other Value (key) | Output        |
+| -------------------------------------- | ----------------- | ------------- |
+| "https://example.com?id=123"           | "id"              | "123"         |
+| "https://example.com?page=1\&sort=asc" | "sort"            | "asc"         |
+| "https://example.com?q=search%20term"  | "q"               | "search term" |
+
+## url\_hasarg
+
+Returns the existence of a argument in the URL
+
+The url\_hasarg filter is helpful for checking if a specific query parameter exists in a URL, which is valuable for conditional logic based on URL parameters, validating required parameters, or implementing feature toggles based on URL flags.
+
+Inputs:
+
+* primary value: The URL to check
+* key: The parameter name to look for
+
+| Primary Value (URL)                    | Other Value (key) | Output |
+| -------------------------------------- | ----------------- | ------ |
+| "https://example.com?id=123"           | "id"              | true   |
+| "https://example.com?page=1\&sort=asc" | "filter"          | false  |
+| "https://example.com?a=1\&b=2\&c=3"    | "b"               | true   |
+
+## url\_parse
+
+Parses a URL into its individual components.
+
+The url\_parse filter is valuable for breaking down a URL into its structural parts, which is useful for routing logic, domain validation, extracting specific portions of URLs, or any situation requiring access to the individual components of a URL.
+
+Inputs:
+
+* primary value: The URL to parse
+
+| Primary Value (URL)                                       | Output                                                                                                                                               |
+| --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "https://user:pass@example.com:8080/path?q=term#fragment" | {"scheme": "https", "host": "example.com", "port": 8080, "user": "user", "pass": "pass", "path": "/path", "query": "q=term", "fragment": "fragment"} |
+| "https://example.com/page.html"                           | {"scheme": "https", "host": "example.com", "path": "/page.html"}                                                                                     |
+| "http://subdomain.example.org:8080"                       | {"scheme": "http", "host": "subdomain.example.org", "port": 8080}                                                                                    |

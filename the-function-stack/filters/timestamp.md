@@ -1,36 +1,48 @@
 # Timestamp
 
+{% include "../../.gitbook/includes/filter-note.md" %}
+
 {% hint style="info" %}
 For information on how Xano stores, reads, and formats timestamps, visit the [Timestamp](../data-types/timestamp.md) page.
 {% endhint %}
 
-### **to\_timestamp**
+## add\_ms\_to\_timestamp
 
-In this example, the timezone UTC is important because 'last Monday' means different things depending on timezone.
+Add milliseconds to a timestamp. (negative values are ok)
 
-t's important to specify a timezone for 'last Monday' because it could 'last Monday' at 00:00:00 PST is different than 'last Monday at 00:00:00 UTC (or any other timezone). Xano stores it in Unix timestamps which is a specific number in milliseconds.
+The add\_ms\_to\_timestamp filter is useful when you need to make precise time adjustments at the millisecond level, such as in high-frequency data processing, animation timing, performance measurements, or working with time-sensitive operations like financial transactions.
 
-However, if the timezone was present like in this example, then the timezone would not have any effect.&#x20;
+Inputs:
 
-In this example 'now' would be the same Unix timestamp, regardless of timezone. Therefore, a specified timezone like UTC, is not necessary.
+* primary value: The original timestamp (epoch in milliseconds)
+* milliseconds: The number of milliseconds to add (can be negative)
 
-***
+| Primary Value (timestamp) | Other Value (milliseconds) | Output (timestamp) |
+| ------------------------- | -------------------------- | ------------------ |
+| 1698710400000             | 500                        | 1698710400500      |
+| 1698710400000             | -250                       | 1698710399750      |
+| 1698710400000             | 1500                       | 1698710401500      |
 
-### **add\_ms\_to\_timestamp**
+## add\_secs\_to\_timestamp
 
-Add milliseconds to a timestamp, (negative values are ok).
+Add seconds to a timestamp. (negative values are ok)
 
-***
+The add\_secs\_to\_timestamp filter is valuable when you need to adjust time values by seconds, such as calculating expiration times, scheduling events, determining time windows, or adjusting timestamps for different time zones.
 
-### **add\_secs\_to\_timestamp**
+Inputs:
 
-Add seconds to a timestamp, (negative values are ok).
+* primary value: The original timestamp (epoch in milliseconds)
+* seconds: The number of seconds to add (can be negative)
 
-***
+| Primary Value (timestamp) | Other Value (seconds) | Output (timestamp) |
+| ------------------------- | --------------------- | ------------------ |
+| 1698710400000             | 30                    | 1698710430000      |
+| 1698710400000             | -60                   | 1698710340000      |
+| 1698710400000             | 3600                  | 1698714000000      |
 
-### **format\_timestamp**
+## format\_timestamp
 
-Converts a timestamp into a human-readable formatted date based on the supplied format.&#x20;
+Converts a timestamp into a human readable formatted date based on the supplied format
 
 {% hint style="info" %}
 **This format follows the** [**PHP DateTime format**](https://www.php.net/manual/en/datetime.format.php)**: see the** [**full list of formatting options**](https://www.php.net/manual/en/datetime.formats.php#datetime.formats.relative)**.**
@@ -38,64 +50,50 @@ Converts a timestamp into a human-readable formatted date based on the supplied 
 [Timezone regions are listed here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 {% endhint %}
 
-**Some common examples:**
+The format\_timestamp filter is essential when displaying dates and times in user interfaces, reports, or any output where timestamps need to be presented in a human-readable format.
 
-* `M` is a short text version of a month, like **Jul,** while `m` is the numeric version like **07**
-* `Y` is the 4 digit representation like **2023**, etc. while `y` is the 2 digit version **23**
-* To achieve something like **May 4th, 2023,** you would use: `F jS, Y`
-* Other tools might use something like `YYYY-MM-DD`, but in Xano, you would use `Y-m-d`
+Inputs:
 
+* primary value: The timestamp to format (epoch in milliseconds)
+* format: The format string specifying how the timestamp should be displayed
+* timezone: The timezone to provide the formatted timestamp in
 
+| Primary Value (timestamp) | Other Value (format) | Output (formatted string)   |
+| ------------------------- | -------------------- | --------------------------- |
+| 1698710400000             | "YYYY-MM-DD"         | "2023-10-31"                |
+| 1698710400000             | "MMM D, YYYY h:mm A" | "Oct 31, 2023 12:00 AM"     |
+| 1698710400000             | "dddd, MMMM D, YYYY" | "Tuesday, October 31, 2023" |
 
+## parse\_timestamp
 
+Parse a timestamp from a flexible format.
 
-***
+The parse\_timestamp filter is valuable when working with dates and times in various string formats from different sources, allowing you to convert human-readable date strings into the epoch millisecond timestamp format used throughout Xano for storage or further processing.
 
-### **parse\_timestamp**
+Inputs:
 
-Parse a timestamp from a flexible, human-readable format into a Unix timestamp in milliseconds. This filter is sort of like the opposite of format\_timestamp. You can utilize the [PHP DateTime Format](https://www.php.net/manual/en/datetime.format.php)  character list to transform a time format into a Unix timestamp in milliseconds.&#x20;
+* primary value: The date/time string to parse
+* format: String specifying the format of the provided timestamp
+* timezone: The timezone to provide the formatted timestamp in
 
-![In this example, May 4th, 2020 is transformed into a timestamp.](<../../.gitbook/assets/CleanShot 2022-05-05 at 11.51.38.png>)
+| Primary Value (date string) | Other Value (format)  | Output (timestamp) |
+| --------------------------- | --------------------- | ------------------ |
+| "10/31/2023"                | null                  | 1698710400000      |
+| "October 31, 2023 2:30 PM"  | null                  | 1698765000000      |
+| "2023-10-31 14:30:15"       | "YYYY-MM-DD HH:mm:ss" | 1698765015000      |
 
-```
-Parse format for May 4th, 2020
-F jS, Y
-```
+## transform\_timestamp
 
-![30/03/2024 14:30:00 is parsed into a Unix timestamp in milliseconds](<../../.gitbook/assets/CleanShot 2022-05-05 at 11.58.46.png>)
+Takes a timestamp and applies a relative transformation to it. Ex. -7 days, last Monday, first day of this month
 
-```
-Parse format for 30/03/2024 14:30:00
-d/m/Y H:i:s
-```
+The transform\_timestamp filter is useful for generating relative dates based on a reference timestamp, such as calculating "last Monday," "beginning of the month," or "7 days ago" for reporting periods, scheduling, or any scenario requiring date navigation relative to a reference point.
 
-![11-27-22 5:15PM is parsed into a Unix timestamp in milliseconds.](<../../.gitbook/assets/CleanShot 2022-05-05 at 12.02.47.png>)
+Inputs:
 
-```
-Parse format for 11-27-22 5:15PM
-m-d-y g:iA
-```
+* primary value: The reference timestamp (epoch in milliseconds)
+* format: A string describing the relative transformation to apply
+* timezone: The timezone to provide the formatted timestamp in
 
-![6/1/22 07:30:00 am will be parsed into a Unix timestamp in milliseconds.](<../../.gitbook/assets/CleanShot 2022-05-05 at 14.00.43.png>)
-
-```
-Parse format for 6/1/22 07:30:00 am
-n/j/y h:i:s a
-```
-
-***
-
-### **transform\_timestamp**
-
-This allows you to use [relative time formats](https://www.php.net/manual/en/datetime.formats.php#datetime.formats.relative) that are anchored around a previous time. Use the link to see various relative time formats that Xano accepts.&#x20;
-
-***
-
-### to\_ time since epoch
-
-#### to\_ms / to\_seconds / to\_mins / to\_hours / to\_days
-
-Converts a regular expression into number of ms / secs / mins / hours / days since the UNIX epoch.
-
-For example, a value of 'yesterday', 'three days ago' or even a date such as 'January 1, 2000' are all valid inputs for these filters and can help for quick timestamp conversions.
-
+| Primary Value (timestamp) | Other Value (transformation) | Output (timestamp) |
+| ------------------------- | ---------------------------- | ------------------ |
+| 1698710400000             | "-7 days"                    | 1698105600000      |

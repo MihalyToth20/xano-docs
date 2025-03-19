@@ -1,5 +1,7 @@
 # Math
 
+{% include "../../.gitbook/includes/filter-note.md" %}
+
 {% embed url="https://youtu.be/OJtsO-R9VBI" %}
 
 ## abs
