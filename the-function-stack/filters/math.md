@@ -2,545 +2,610 @@
 
 {% embed url="https://youtu.be/OJtsO-R9VBI" %}
 
-Math filters are various operations in Xano to perform math and calculations. Like all filters you can chain math filters together and nest them inside one another to perform order of operations.
+## abs
 
-* [**abs**](math.md#abs-x) **-** Returns the absolute.
-* [**acos**](math.md#acos-x) **-** Calculates the arc cosine of the supplied value in radians.
-* [**acosh**](math.md#acosh-x) **-** Calculates the inverse hyperbolic cosine of the supplied value in radians.
-* [**add**](math.md#add-x-y) **-** Add 2 values together and return the answer
-* [**asin**](math.md#asin-x) **-** Calculates the arc sine of the supplied value in radians..
-* [**asinh**](math.md#asinh-x) **-** Calculates the inverse hyperbolic sine of the supplied value in radians.
-* [**atan**](math.md#atan-x) **-** Calculates the arc tangent of the supplied value in radians.
-* [**atanh**](math.md#atanh-x) **-** Calculates the inverse hyperbolic tangent of the supplied value in radians.
-* [**bitwise\_and**](math.md#bitwise_and-x-y) **-** Bitwise AND 2 values together and return the answer.
-* [**bitwise\_or**](math.md#bitwise_or-x-y) **-** Bitwise OR 2 values together and return the answer.
-* [**bitwise\_xor**](math.md#bitwise_xor-x-y) **-** Bitwise XOR 2 values together and return the answer.
-* [**ceil**](math.md#ceil-x) **-** Round a decimal up to its integer equivalent.
-* [**cos**](math.md#cos-x) **-** Calculates the cosine of the supplied value in radians.
-* [**deg2rad**](math.md#deg2rad-x) **-** Convert degrees to radians.
-* [**divide**](math.md#divide-x-y) **-** Divide 2 values together and return the answer.
-* [**exp**](math.md#exp-x) **-** Returns the exponent of mathematical expression "e".
-* [**floor**](math.md#floor-x) **-** Round a decimal down to its integer equivalent.
-* [**array\_max**](math.md#array_max) **-** Returns the max of the values of the array.
-* [**array\_min** ](math.md#array_min)**-**  Returns the min of the values of the array.
-* [**modulus**](math.md#modulus-x-y)**-** Modulus 2 values together and return the answer.
-* [**min**](math.md#min) - Return the min of any two values
-* [**max**](math.md#max) - Return the max of any two values
-* [**multiply**](math.md#multiply-x-y) **-** Multiply 2 values together and return the answer.
-* [**number\_format**](math.md#number_format-x-decimals-decimalpoint-separator) **-** Format a number with flexible support over decimal places, thousands separator, and decimal separator.
-* [**pow**](math.md#pow-x-exp) **-** Returns the value raised to the power of exp.
-* [**product**](math.md#product) **-** Returns the product of the values of the array.
-* [**rad2deg**](math.md#rad2deg-x) **-** Convert radians to degrees.
-* [**round**](math.md#round-x-precision) **-** Round a decimal with optional precision.
-* [**sin**](math.md#sin-x) **-** Calculates the sine of the supplied value in radians.
-* [**sqrt**](math.md#sqrt-x) **-** Returns the square root of the value
-* [**subtract**](math.md#subtract-x-y) **-** Subtract 2 values together and return the answer.
-* [**sum**](math.md#sum) **-** Returns the sum of the values of the array.
-* [**tan**](math.md#tan-x) **-** Calculates the tangent of the supplied value in radians.\
+Returns the absolute value
 
+The abs filter is useful when you need the magnitude of a value regardless of its sign. For example, when calculating distances between two points or finding the difference between two values without caring about direction.
 
-<details>
+Inputs:
 
-<summary>abs(x)</summary>
+* primary value: The number to get the absolute value of
 
-Returns the absolute value of a number
+| Input | Output |
+| ----- | ------ |
+| -5    | 5      |
+| 10    | 10     |
+| -3.14 | 3.14   |
 
-Ex: `abs(-5) -> 5`
+## acos
 
-Inputs: `x` (numeric) A single number
+Calculates the arc cosine of the supplied value in radians
 
-Output: Outputs the absolute value of the input number
+The acos filter is useful when working with trigonometric calculations, such as determining angles in navigation systems, game development for character movement, or calculating positions in geometric applications.
 
-![](<../../.gitbook/assets/image (16).png>)
+Inputs:
 
-</details>
+* primary value: A number between -1 and 1 representing a cosine value
 
-<details>
+| Input | Output             |
+| ----- | ------------------ |
+| 1     | 0                  |
+| 0     | 1.5707963267948966 |
+| -1    | 3.141592653589793  |
 
-<summary>acos(x)</summary>
+## acosh
 
-Calculates the arc cosine of the supplied value in radians.
+Calculates the inverse hyperbolic cosine of the supplied value in radians
 
-Example: Find the arc cosine of 0.5: `acos(0.5)` -> `1.0471975511965976`
+The acosh filter is useful in advanced mathematical modeling, such as in engineering calculations, physics simulations, or specialized scientific applications where hyperbolic functions are needed.
 
-Inputs: `x` (numeric) A single number in the range \[-1,1]
+Inputs:
 
-Output: Outputs the arc cosine of the input value in radians
+* primary value: A number greater than or equal to 1
 
-![](<../../.gitbook/assets/image (17).png>)
+| Input | Output             |
+| ----- | ------------------ |
+| 1     | 0                  |
+| 2     | 1.3169578969248166 |
+| 10    | 2.993222846126381  |
 
-</details>
-
-<details>
-
-<summary>acosh(x)</summary>
-
-Calculates the inverse hyperbolic cosine of the supplied value in radians.
-
-Example: Find the inverse hyperbolic cosine of 2: `acosh(2)` -> `1.3169578969248166`
-
-INPUTS: `x` (numeric) A single number
-
-OUTPUT: Outputs the inverse hyperbolic cosine of the input value
-
-</details>
-
-<details>
-
-<summary>add(x, y)</summary>
+## add
 
 Add 2 values together and return the answer
 
-Ex: `add(5,7)` -> `12`
+The add filter is useful for combining numeric values, such as calculating a total price from multiple items, combining measurements, or incrementing counters in your application.
 
-INPUTS: `x` (numeric), `y`(numeric) Two Numbers
+Inputs:
 
-OUTPUT: Outputs the sum of x and y
+* primary value: The first number in the addition
+* value: The second number to add to the primary value
 
-![](<../../.gitbook/assets/image (18).png>)
+| Input     | Output |
+| --------- | ------ |
+| 5, 3      | 8      |
+| -2, 7     | 5      |
+| 10.5, 4.2 | 14.7   |
 
-</details>
+## array\_max
 
-<details>
+Returns the max of the values of the array
 
-<summary>asin(x)</summary>
+The array\_max filter is helpful when you need to find the highest value in a collection of numbers, such as determining the highest score, finding the maximum temperature in a data set, or identifying peak values in any numerical array.
+
+Inputs:
+
+* primary value: An array of numbers
+
+| Input               | Output |
+| ------------------- | ------ |
+| \[1, 5, 3, 9, 2]    | 9      |
+| \[-10, -5, -20]     | -5     |
+| \[3.14, 2.71, 9.81] | 9.81   |
+
+## array\_min
+
+Returns the min of the values of the array
+
+The array\_min filter is valuable when you need to find the lowest value in a collection of numbers, such as determining the lowest price, finding the minimum temperature in a data set, or identifying the smallest entry in any numerical array.
+
+Inputs:
+
+* primary value: An array of numbers
+
+| Input               | Output |
+| ------------------- | ------ |
+| \[1, 5, 3, 9, 2]    | 1      |
+| \[-10, -5, -20]     | -20    |
+| \[3.14, 2.71, 9.81] | 2.71   |
+
+## asin
 
 Calculates the arc sine of the supplied value in radians
 
-Ex: `asin(0.5)` -> `0.5235987755982989`
+The asin filter is useful in trigonometric applications, such as calculating angles in physics simulations, determining trajectories in navigation, or solving geometric problems that involve angles.
 
-INPUTS: `x` (numeric) A single number
+Inputs:
 
-OUTPUT: Outputs the arc sine of the input value in radiansa
+* primary value: A number between -1 and 1 representing a sine value
 
-</details>
+| Input | Output              |
+| ----- | ------------------- |
+| 0     | 0                   |
+| 1     | 1.5707963267948966  |
+| -1    | -1.5707963267948966 |
 
-<details>
+## asinh
 
-<summary>asinh(x)</summary>
+Calculates the inverse hyperbolic sine of the supplied value in radians
 
-Calculates the inverse hyperbolic sine of the supplied value
+The asinh filter is useful in specialized mathematical applications, such as signal processing, electrical engineering calculations, or advanced scientific computations that require hyperbolic functions.
 
-Ex: `asinh(0.5)` -> `0.48121182505960347`
+Inputs:
 
-INPUTS: `x` (numeric) A single number
+* primary value: Any number
 
-OUTPUT: Outputs the inverse hyperbolic sine of the input value
+| Input | Output              |
+| ----- | ------------------- |
+| 0     | 0                   |
+| 1     | 0.8813735870195429  |
+| -2    | -1.4436354751788103 |
 
-</details>
-
-<details>
-
-<summary>atan(x)</summary>
+## atan
 
 Calculates the arc tangent of the supplied value in radians
 
-Ex: `atan(1)`-> `0.7853981633974483`
+The atan filter is useful when determining angles from slopes or ratios, such as in computer graphics for calculating rotation angles, in robotics for sensor interpretation, or in navigation systems for heading calculations.
 
-INPUTS: `x` (numeric) A single number
+Inputs:
 
-OUTPUT: Outputs the arc tangent of the input number in radianspa
+* primary value: Any number representing a tangent value
 
-</details>
+| Input | Output              |
+| ----- | ------------------- |
+| 0     | 0                   |
+| 1     | 0.7853981633974483  |
+| -1    | -0.7853981633974483 |
 
-<details>
-
-<summary>atanh(x)</summary>
+## atanh
 
 Calculates the inverse hyperbolic tangent of the supplied value in radians
 
-Ex: `atanh(0.5)` -> `0.5493061443340548`
+The atanh filter is valuable in specialized fields like electrical engineering, signal processing, and certain physics applications where hyperbolic functions are required for modeling or calculations.
 
-INPUTS: `x` (numeric) A single number
+Inputs:
 
-OUTPUT: Outputs the inverse hyperbolic tangent of the input number in radians
+* primary value: A number between -1 and 1 (exclusive)
 
-</details>
+| Input | Output              |
+| ----- | ------------------- |
+| 0     | 0                   |
+| 0.5   | 0.5493061443340548  |
+| -0.75 | -0.9729550745276566 |
 
-<details>
+## avg
 
-<summary>bitwise_and(x, y)</summary>
+Returns the average of the values of the array
+
+The avg filter is essential when you need to calculate the mean value of a set of numbers, such as finding the average score, determining average temperature over time, or calculating mean values in statistical analysis.
+
+Inputs:
+
+* primary value: An array of numbers
+
+| Input             | Output |
+| ----------------- | ------ |
+| \[1, 2, 3, 4, 5]  | 3      |
+| \[10, 20, 30, 40] | 25     |
+| \[2.5, 3.5, 4.5]  | 3.5    |
+
+## bitwise\_and
 
 Bitwise AND 2 values together and return the answer
 
-Ex: `bitwise_and(10, 2)` -> `2`
+The bitwise\_and filter is useful in operations that require bit-level manipulation, such as flag checking in permissions systems, hardware control applications, or optimization in low-level programming where individual bits need to be examined.
 
-INPUTS: `x` (numeric), `y` (numeric) Two numbers
+Inputs:
 
-OUTPUT: Outputs the result of bitwise AND operation on the input numbers
+* primary value: The first integer for the bitwise operation
+* value: The second integer to AND with the primary value
 
-![](<../../.gitbook/assets/image (19).png>)
+| Input   | Output |
+| ------- | ------ |
+| 5, 3    | 1      |
+| 12, 10  | 8      |
+| 255, 15 | 15     |
 
-</details>
-
-<details>
-
-<summary>bitwise_or(x, y)</summary>
+## bitwise\_or
 
 Bitwise OR 2 values together and return the answer
 
-Ex: `bitwise_or(10, 2)` -> `10`
+The bitwise\_or filter is valuable when you need to combine bit flags, such as setting permissions in a security system, enabling features in configuration settings, or manipulating bitmap data where individual bits represent distinct options.
 
-INPUTS: `x` (numeric), `y` (numeric) Two numbers
+Inputs:
 
-OUTPUT: Outputs the result of bitwise OR operation on the input numbers
+* primary value: The first integer for the bitwise operation
+* value: The second integer to OR with the primary value
 
-![](<../../.gitbook/assets/image (20).png>)
+| Input   | Output |
+| ------- | ------ |
+| 5, 3    | 7      |
+| 12, 10  | 14     |
+| 240, 15 | 255    |
 
-</details>
-
-<details>
-
-<summary>bitwise_xor(x, y)</summary>
+## bitwise\_xor
 
 Bitwise XOR 2 values together and return the answer
 
-Ex: `bitwise_xor(10, 2)` -> `8`
+The bitwise\_xor filter is useful in cryptographic applications, error detection, toggling states, or finding differences between binary patterns, such as in data validation or simple encryption techniques.
 
-INPUTS: `x` (numeric), `y` (numeric) Two numbers
+Inputs:
 
-OUTPUT: Outputs the result of bitwise XOR operation on the input numbers
+* primary value: The first integer for the bitwise operation
+* value: The second integer to XOR with the primary value
 
-![](<../../.gitbook/assets/image (21).png>)
+| Input    | Output |
+| -------- | ------ |
+| 5, 3     | 6      |
+| 12, 10   | 6      |
+| 255, 255 | 0      |
 
-</details>
+## ceil
 
-<details>
+Round a decimal up to its integer equivalent
 
-<summary>ceil(x)</summary>
+The ceil filter is helpful when you need to round a number up to the nearest integer, such as calculating the number of containers needed for items, determining the number of pages required for pagination, or rounding up financial values.
 
-Round a decimal up to its integer equivalent.
+Inputs:
 
-Examples: Find the ceil of 2.6: `ceil(2.6)` -> `3`
+* primary value: The number to round up
 
-INPUTS: `x` (numeric) A decimal number
+| Input | Output |
+| ----- | ------ |
+| 3.1   | 4      |
+| 7.9   | 8      |
+| -2.3  | -2     |
 
-OUTPUT: Outputs the smallest integer greater than or equal to x
+## cos
 
-![](<../../.gitbook/assets/image (22).png>)
+Calculates the cosine of the supplied value in radians
 
-</details>
+The cos filter is essential in trigonometric calculations, such as determining coordinates in circular motion, calculating projections in physics, or modeling periodic phenomena like waves or oscillations.
 
-<details>
+Inputs:
 
-<summary>cos(x)</summary>
+* primary value: An angle in radians
 
-Calculates the cosine of the supplied value in radians.
+| Input              | Output |
+| ------------------ | ------ |
+| 0                  | 1      |
+| 1.5707963267948966 | 0      |
+| 3.141592653589793  | -1     |
 
-Examples: Find the cos of 2: `cos(2)` ->  `-0.416146836547142294`
+## deg2rad
 
-INPUTS: `x` (numeric) A number in radians
+Convert degrees to radians
 
-OUTPUT: Outputs the cosine of the input number
+The deg2rad filter is useful when working with trigonometric functions that require radian inputs, such as converting user-friendly degree inputs to the radians needed for mathematical calculations in graphics, navigation, or physics simulations.
 
-</details>
+Inputs:
 
-<details>
+* primary value: An angle in degrees
 
-<summary>deg2rad(x)</summary>
+| Input | Output             |
+| ----- | ------------------ |
+| 0     | 0                  |
+| 90    | 1.5707963267948966 |
+| 180   | 3.141592653589793  |
 
-Convert degrees to radians.
+## divide
 
-Examples: Find the radians equivalent of 180 degrees: `deg2rad(180)`-> `3.141592653589793`
+Divide 2 values together and return the answer
 
-INPUTS: `x` (numeric) A number in degrees
+The divide filter is essential for calculations involving ratios, rates, or proportional values, such as determining per-unit costs, calculating percentages, or finding averages when the total and count are known separately.
 
-OUTPUT: Outputs the radians equivalent of the input number in degrees
+Inputs:
 
-</details>
+* primary value: The dividend (number being divided)
+* value: The divisor (number to divide by)
 
-<details>
+| Input | Output |
+| ----- | ------ |
+| 10, 2 | 5      |
+| 9, 3  | 3      |
+| 7, 2  | 3.5    |
 
-<summary>divide(x,y)</summary>
+## exp
 
-Divides two numbers and returns the result
+Returns the exponent of mathematical expression "e"
 
-Ex: `divide(10,2)` -> `5`
+The exp filter is valuable in calculations involving growth or decay, such as compound interest, population growth models, radioactive decay, or any application where natural exponential growth is needed.
 
-INPUTS: `x` (numeric), `y` (numeric) The numbers to be divided
+Inputs:
 
-OUTPUT: Outputs the result of x divided by y
+* primary value: The exponent to which e is raised
 
-![](<../../.gitbook/assets/image (23).png>)
+| Input | Output             |
+| ----- | ------------------ |
+| 0     | 1                  |
+| 1     | 2.718281828459045  |
+| 2     | 7.3890560989306495 |
 
-</details>
+## floor
 
-<details>
+Round a decimal down to its integer equivalent
 
-<summary>exp(x)</summary>
+The floor filter is useful when you need to round down to the nearest integer, such as truncating decimal places in financial calculations, determining complete units from fractional values, or implementing integer division behavior.
 
-Returns the value of the constant e raised to the power of x
+Inputs:
 
-Ex: `exp(2)` -> `7.38905609893065`
+* primary value: The number to round down
 
-INPUTS: `x` (numeric) The exponent to raise e to
+| Input | Output |
+| ----- | ------ |
+| 3.7   | 3      |
+| 8.1   | 8      |
+| -2.3  | -3     |
 
-OUTPUT: Outputs the result of e raised to the power of x
+## ln
 
-![](<../../.gitbook/assets/image (24).png>)
+Returns the natural logarithm
 
-</details>
+The ln filter is important in calculations involving exponential growth or decay, such as calculating compound interest over time, analyzing population growth, or solving equations where the unknown is in an exponent.
 
-<details>
+Inputs:
 
-<summary>floor(x)</summary>
+* primary value: A positive number
 
-Rounds a decimal down to its nearest integer
+| Input | Output             |
+| ----- | ------------------ |
+| 1     | 0                  |
+| 2.718 | 0.9998141515394643 |
+| 10    | 2.302585092994046  |
 
-Ex: `floor(2.6)` -> `2`
+## log
 
-INPUTS: `x` (numeric) The decimal number to be rounded
+Returns the logarithm with a custom base
 
-OUTPUT: Outputs the nearest integer that is less than or equal to x
+The log filter is valuable when working with logarithms in different bases, such as in information theory with base-2 logs, in chemistry with base-10 logs, or in custom scaling applications where a specific logarithmic base is required.
 
-![](<../../.gitbook/assets/image (25).png>)
+Inputs:
 
-</details>
+* primary value: A positive number
+* base: The base of the logarithm (default is e)
 
-<details>
+| Input   | Output |
+| ------- | ------ |
+| 100, 10 | 2      |
+| 8, 2    | 3      |
+| 81, 3   | 4      |
 
-<summary>min</summary>
+## log10
 
-Returns the minimum of two values
+Returns the Base-10 logarithm
 
-<img src="../../.gitbook/assets/CleanShot 2023-04-14 at 10.45.54.png" alt="" data-size="original">
+The log10 filter is useful in applications where powers of 10 are significant, such as in the pH scale, decibel measurements, Richter scale for earthquakes, or any calculation where order of magnitude is important.
 
-</details>
+Inputs:
 
-<details>
+* primary value: A positive number
 
-<summary>max</summary>
+| Input | Output |
+| ----- | ------ |
+| 1     | 0      |
+| 10    | 1      |
+| 100   | 2      |
 
-Returns the maximum of two values
+## max
 
-![](<../../.gitbook/assets/CleanShot 2023-04-14 at 10.46.51.png>)
+Returns the max both values
 
-</details>
+The max filter is helpful when you need to find the larger of two values, such as implementing upper bounds, determining the highest possible value between two options, or finding maximums in pairwise comparisons.
 
-<details>
+Inputs:
 
-<summary>modulus(x, y)</summary>
+* primary value: The first number to compare
+* value: The second number to compare
 
-Returns the remainder of dividing x by y.
+| Input     | Output |
+| --------- | ------ |
+| 5, 10     | 10     |
+| -3, -7    | -3     |
+| 8.2, 8.15 | 8.2    |
 
-Ex: `modulus(7,3)` -> `1`
+## min
 
-INPUTS: `x` (numeric), `y` (numeric) two numbers
+Returns the min both values
 
-OUTPUT: Outputs the remainder of x divided by y
+The min filter is useful when you need to find the smaller of two values, such as implementing lower bounds, determining the lowest possible value between two options, or finding minimums in pairwise comparisons.
 
-![](<../../.gitbook/assets/image (26).png>)
+Inputs:
 
-</details>
+* primary value: The first number to compare
+* value: The second number to compare
 
-<details>
+| Input     | Output |
+| --------- | ------ |
+| 5, 10     | 5      |
+| -3, -7    | -7     |
+| 8.2, 8.15 | 8.15   |
 
-<summary>multiply(x, y)</summary>
+## modulus
 
-Multiply 2 values together and return the answer.
+Modulus 2 values together and return the answer
 
-Ex: `multiply(2,3)` -> `6`
+The modulus filter is valuable for calculating remainders after division, such as in cycling through arrays, implementing time formats (hours, minutes, seconds), creating patterns that repeat at regular intervals, or determining if a number is even or odd.
 
-INPUTS: `x` (numeric), `y` (numeric) two numbers
+Inputs:
 
-OUTPUT: Outputs the product of the 2 input values
+* primary value: The dividend (number being divided)
+* value: The divisor (number to divide by)
 
-![](<../../.gitbook/assets/image (27).png>)
+| Input | Output |
+| ----- | ------ |
+| 7, 3  | 1      |
+| 15, 4 | 3      |
+| -8, 3 | -2     |
 
-</details>
+## multiply
 
-<details>
+Multiply 2 values together and return the answer
 
-<summary>number_format(x, decimals, decimalpoint, separator)</summary>
+The multiply filter is essential for scaling values, calculating areas, volumes, or any operation where a value needs to be repeated a certain number of times, such as determining total cost based on quantity and unit price.
+
+Inputs:
+
+* primary value: The first factor in the multiplication
+* value: The second factor to multiply by the primary value
+
+| Input  | Output |
+| ------ | ------ |
+| 4, 3   | 12     |
+| 2.5, 6 | 15     |
+| -7, 2  | -14    |
+
+## number\_format
 
 Format a number with flexible support over decimal places, thousands separator, and decimal separator.
 
-Ex: `number_format(123456789, 2, ".", ",")` -> `"123,456,789.12"`
+The number\_format filter is useful when displaying numerical data in user interfaces, financial reports, or any context where consistent formatting of numbers enhances readability, such as displaying prices, large statistics, or percentages.
 
-INPUTS: `x` (numeric) A single number to be formatted, `decimals` (numeric) Number of decimal points, `decimalpoint` (string) Decimal point separator, `separator` (string) Thousands separator
+Inputs:
 
-OUTPUT: Outputs the formatted number
+* primary value: The number to format
+* decimal\_places: Number of decimal places to display (default 0)
+* decimal\_separator: Character to use as decimal point (default ".")
+* thousands\_separator: Character to use as thousands separator (default ",")
 
-![](<../../.gitbook/assets/image (28).png>)
+| Input                | Output   |
+| -------------------- | -------- |
+| 1234.56, 2, ".", "," | 1,234.56 |
+| 1234.56, 0, ".", "," | 1,235    |
+| 1234.56, 2, ",", " " | 1 234,56 |
 
-</details>
-
-<details>
-
-<summary>pow(x, exp)</summary>
+## pow
 
 Returns the value raised to the power of exp.
 
-Ex: `pow(2,3)` -> `8`
+The pow filter is valuable for exponential calculations, such as compound interest, geometric growth, area and volume calculations, or any mathematical operation involving powers.
 
-INPUTS: `x` (numeric) A single number, the base `exp` (numeric) A single number, the exponent
+Inputs:
 
-OUTPUT: Outputs the base raised to the power of the exponent
+* primary value: The base number
+* exponent: The power to raise the base to
 
-![](<../../.gitbook/assets/image (29).png>)
+| Input  | Output       |
+| ------ | ------------ |
+| 2, 3   | 8            |
+| 10, 2  | 100          |
+| 3, 0.5 | 1.7320508075 |
 
-</details>
+## product
 
-<details>
+Returns the product of the values of the array
 
-<summary>rad2deg(x)</summary>
+The product filter is useful when you need to multiply all values in a collection, such as calculating factorial values, determining compound growth across multiple periods, or finding the total area when given multiple dimensions.
 
-Convert radians to degrees.
+Inputs:
 
-Ex: `rad2deg(pi)` -> `180`
+* primary value: An array of numbers
 
-INPUTS: `x`(numeric) A single number in radians
+| Input         | Output |
+| ------------- | ------ |
+| \[2, 3, 4]    | 24     |
+| \[1.5, 2, 3]  | 9      |
+| \[10, 0.1, 5] | 5      |
 
-OUTPUT: Outputs the input value converted to degrees
+## rad2deg
 
-</details>
+Convert radians to degrees
 
-<details>
+The rad2deg filter is helpful when converting from mathematical calculations (which typically use radians) to user-friendly degree displays, such as in navigation applications, angle measurements in user interfaces, or converting results from trigonometric functions.
 
-<summary>round(x, precision)</summary>
+Inputs:
 
-Round a decimal with optional precision.
+* primary value: An angle in radians
 
-Ex:  `round(3.14159265,3)` -> `3.142`
+| Input              | Output |
+| ------------------ | ------ |
+| 0                  | 0      |
+| 1.5707963267948966 | 90     |
+| 3.141592653589793  | 180    |
 
-INPUTS: `x`(numeric) A single number to be rounded precision (numeric) Number of decimal places to round to
+## round
 
-OUTPUT: Outputs the input value rounded to the specified number of decimal places
+Round a decimal with optional precision
 
-![](<../../.gitbook/assets/image (30).png>)
+The round filter is essential for formatting numerical values to a specific precision, such as financial calculations, scientific measurements, or any scenario where a specific number of decimal places is required.
 
-</details>
+Inputs:
 
-<details>
+* primary value: The number to round
+* precision: Number of decimal places (default 0)
 
-<summary>sin(x)</summary>
+| Input      | Output |
+| ---------- | ------ |
+| 3.14159, 2 | 3.14   |
+| 2.5, 0     | 3      |
+| -3.55, 1   | -3.6   |
 
-Calculates the sine of the supplied value in radians.
+## sin
 
-Ex: `sin(pi/2)` -> `1`
+Calculates the sine of the supplied value in radians
 
-INPUTS: `x`sqrt(x) Returns the square root of the value
+The sin filter is crucial in trigonometric applications, such as modeling wave patterns, calculating vertical components in physics, determining heights in triangulation, or generating smooth oscillatory motion in animations.
 
-Examples: Find the square root of 9: sqrt(9) OUTPUT: 3
+Inputs:
 
-INPUTS: x (numeric) A single number
+* primary value: An angle in radians
 
-OUTPUT: Outputs the square root of the input value (numeric) A single number in radians
+| Input              | Output |
+| ------------------ | ------ |
+| 0                  | 0      |
+| 1.5707963267948966 | 1      |
+| 3.141592653589793  | 0      |
 
-OUTPUT: Outputs the sine of the input value
-
-</details>
-
-<details>
-
-<summary>sqrt(x)</summary>
+## sqrt
 
 Returns the square root of the value
 
-Ex: `sqrt(9)` ->`3`
+The sqrt filter is valuable for calculations involving area-to-length conversions, calculating distances using the Pythagorean theorem, or normalizing values in statistical applications.
 
-INPUTS: `x` (numeric) A single number
+Inputs:
 
-OUTPUT: Outputs the square root of the input value
+* primary value: The non-negative number to calculate the square root of
 
-![](<../../.gitbook/assets/image (31).png>)
+| Input | Output    |
+| ----- | --------- |
+| 4     | 2         |
+| 9     | 3         |
+| 2     | 1.4142136 |
 
-</details>
+## subtract
 
-<details>
+Subtract 2 values together and return the answer
 
-<summary>subtract(x, y)</summary>
+The subtract filter is useful for calculating differences, such as determining net change, finding remaining amounts after deductions, or calculating time intervals between events.
 
-Subtract 2 values together and return the answer.
+Inputs:
 
-Ex: `subtract(10,5)` -> `5`
+* primary value: The minuend (number being subtracted from)
+* value: The subtrahend (number to subtract)
 
-INPUTS: `x` (numeric), `y`(numeric) Two numbers
+| Input    | Output |
+| -------- | ------ |
+| 10, 4    | 6      |
+| 5, 8     | -3     |
+| 3.5, 1.2 | 2.3    |
 
-OUTPUT: Outputs the result of subtracting y from x
+## sum
 
-![](<../../.gitbook/assets/image (32).png>)
+Returns the sum of the values of the array
 
-</details>
+The sum filter is essential when you need to add up all values in a collection, such as calculating total expenses, finding the sum of scores, or determining the total of any set of numerical values.
 
-<details>
+Inputs:
 
-<summary>tan(x)</summary>
+* primary value: An array of numbers
 
-Calculates the tangent of the supplied value in radians.
+| Input              | Output |
+| ------------------ | ------ |
+| \[1, 2, 3, 4, 5]   | 15     |
+| \[-1, 0, 1]        | 0      |
+| \[10.5, 20.3, 5.7] | 36.5   |
 
-Ex: `tan(pi/4)` -> `1`
+## tan
 
-INPUTS: `x` (numeric) A single number in radians
+Calculates the tangent of the supplied value in radians
 
-OUTPUT: Outputs the tangent of the input value
+The tan filter is important in trigonometric applications, such as calculating slopes, determining heights using angles and distances, or any application where the ratio of sine to cosine is needed.
 
+Inputs:
 
+* primary value: An angle in radians
 
-</details>
-
-### Special Array Math Filters:
-
-<details>
-
-<summary>array_max</summary>
-
-Finds the max value among the values of the array.
-
-Ex: `max[2,5,3]` -> `5`
-
-INPUTS: `array[x1, x2,...]` (array) an array of numbers to compare
-
-OUTPUT: Outputs the largest number among the array.
-
-![](<../../.gitbook/assets/image (33).png>)
-
-</details>
-
-<details>
-
-<summary>array_min</summary>
-
-Finds the minimum value among the values of the array.
-
-Ex: `min[2,5,3]` -> `2`
-
-INPUTS: `array[x1, x2,...]` (array) an array of numbers to compare
-
-OUTPUT: Outputs the smallest number among the array.
-
-![](<../../.gitbook/assets/image (34).png>)
-
-</details>
-
-<details>
-
-<summary>Product</summary>
-
-Returns the product of the values of the array.&#x20;
-
-Ex: `product[2,5,3]` -> `30`
-
-INPUTS: `array[x1, x2,...]` (array) an array of numbers
-
-OUTPUT: Outputs the product of the values of the array.
-
-![](<../../.gitbook/assets/image (35).png>)
-
-</details>
-
-<details>
-
-<summary>Sum</summary>
-
-Returns the sum of the values of the array.&#x20;
-
-Ex: `sum[2,5,3]` -> 10
-
-INPUTS: `array[x1, x2,...]` (array) an array of numbers
-
-OUTPUT: Outputs the sum of the values of the array.
-
-![](<../../.gitbook/assets/image (36).png>)
-
-</details>
+| Input              | Output |
+| ------------------ | ------ |
+| 0                  | 0      |
+| 0.7853981633974483 | 1      |
+| 3.141592653589793  | 0      |
