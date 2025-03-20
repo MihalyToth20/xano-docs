@@ -16,9 +16,13 @@ Click ![](<../../.gitbook/assets/CleanShot 2024-12-14 at 12.19.51.png>)in the le
 
 Click ![](<../../.gitbook/assets/CleanShot 2024-12-14 at 12.20.52.png>)in the top right corner.
 
-Choose **Import Data** to [import data from a CSV file](../migrating-your-data/csv-import-and-export.md), or **Enter Data Manually** to start with an empty table.
+Choose **Import Data** to [import data from a CSV file](../migrating-your-data/csv-import-and-export.md), or **Enter Data Manually** to start with an empty table where you can add your own data later, or generate sample data automatically.
 
-In the panel that opens, give your table a name[^1] and a descript[^2]
+{% hint style="success" %}
+&#x20;If you're just starting out, we'd recommend choosing **Enter Data Manually** and using the sample data generator. You can always import data later.
+{% endhint %}
+
+In the panel that opens, give your table a name[^1] and a description[^2]
 {% endstep %}
 
 {% step %}
@@ -33,6 +37,35 @@ The description is just for you to make notes on what this table will contain, n
 ### Choose your primary key type.
 
 The primary key is the ID of each record. Xano offers two types of primary keys to choose from.
+
+{% hint style="info" %}
+## When should you use Sequential, and when should you use UUID?
+
+When designing your database structure in Xano, choosing the right identifier type is an important decision. Here's a straightforward guide to help you decide:
+
+**Sequential IDs are best for:**
+
+* Performance-sensitive operations - they're faster to index and query
+* Human-friendly references - easier to communicate ("Please check record #42")
+* Storage efficiency - they consume less space in your database
+* When chronological order matters - the sequence reveals creation order
+* Single-database applications where centralized ID generation works well
+* Systems that benefit from predictable numbering patterns
+
+**Common use cases:** Customer IDs, order numbers, ticket systems, invoice numbers, internal record tracking
+
+**UUIDs are best for:**
+
+* Distributed systems where multiple services create records independently
+* Data synchronization across different databases or systems
+* Preventing ID guessing or enumeration attacks
+* Frontend-first workflows where IDs need to be generated before server contact
+* Multi-region deployments with separate databases
+* When you don't want to expose information about record counts
+* Scenarios where data privacy is paramount
+
+**Common use cases:** User accounts in modern applications, cross-system record tracking, session management, event logging in distributed architectures
+{% endhint %}
 
 <details>
 

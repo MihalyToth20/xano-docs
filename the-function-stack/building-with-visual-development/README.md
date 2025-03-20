@@ -60,6 +60,18 @@ You can use both mouse and keyboard navigation when working in the builder.&#x20
 
 {% @arcade/embed flowId="yy5VBgVG8IqIev0Bsf34" url="https://app.arcade.software/share/yy5VBgVG8IqIev0Bsf34" %}
 
+### Adding Functions
+
+Click <img src="../../.gitbook/assets/CleanShot 2025-03-20 at 12.06.40@2x.png" alt="" data-size="line">to add functions to your function stack. You can search for, choose, and favorite functions in the panel that appears on the right.
+
+You can also hover over an existing function and click the **+** sign to add a new function directly under it.
+
+{% hint style="success" %}
+## Not sure where to start?
+
+Xano can [auto-generate basic endpoints](apis/#auto-generated-apis) for you based on your tables.
+{% endhint %}
+
 ### Creating a Draft
 
 Once you start editing your API, a draft will automatically be created. Drafts keep track of each micro-change you (or your [team members](broken-reference)) make to a Function Stack called Revertible Changes, which you can easily roll back.
