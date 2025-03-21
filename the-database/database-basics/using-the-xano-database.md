@@ -1,5 +1,11 @@
 # Using the Xano Database
 
+{% hint style="info" %}
+**Hint**
+
+Use the :sparkles:[**AI Database Assistant**](../../xano-ai/ai-database-assistant.md) to create and update tables for you!
+{% endhint %}
+
 ## :man\_factory\_worker: Create a Database Table
 
 {% @arcade/embed flowId="lYQQDmkQE0whqrIzhV98" url="https://app.arcade.software/share/lYQQDmkQE0whqrIzhV98" fullWidth="false" %}
@@ -224,6 +230,8 @@ You can click ![](<../../.gitbook/assets/CleanShot 2025-02-10 at 11.18.05.png>) 
 ![](<../../.gitbook/assets/CleanShot 2024-12-15 at 11.51.29.png>) Make a copy of this column
 
 ![](<../../.gitbook/assets/CleanShot 2024-12-15 at 11.51.51.png>) Insert a new column directly after the selected column
+
+![](<../../.gitbook/assets/CleanShot 2025-03-07 at 16.44.57 (1).png>) Reorder your database fields. This does not impact how the data is returned in your function stacks.
 
 ![](<../../.gitbook/assets/CleanShot 2024-12-15 at 11.52.26 (1).png>) Change the data type of the column
 

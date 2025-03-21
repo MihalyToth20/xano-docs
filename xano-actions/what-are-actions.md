@@ -94,6 +94,38 @@ You can also preview your instructions using the **Preview** tab.
 
 **Video URL** - You can insert a YouTube or Loom video link here to accompany your action
 
+### Action Packages
+
+Packages can be used to bundle and install multiple Actions at once.
+
+{% stepper %}
+{% step %}
+### Click ![](<../.gitbook/assets/CleanShot 2025-03-20 at 16.07.44.png>) on the left-hand navigation.
+
+
+{% endstep %}
+
+{% step %}
+### Give your package a name, description, and check the other settings in the panel that opens.
+
+
+{% endstep %}
+
+{% step %}
+### Add Actions to your package by clicking ![](<../.gitbook/assets/CleanShot 2025-03-20 at 16.08.59.png>)
+
+You can choose to either copy the action into the package, or move it.
+
+You can also create new actions at this time specifically for your package.
+{% endstep %}
+
+{% step %}
+### When your Package is ready, click Publish, and once publishing completes, you can add it to your workspace(s).
+
+
+{% endstep %}
+{% endstepper %}
+
 ### Publishing
 
 When you publish your Action, you'll be able to review and make any changes to the documentation and certain Action settings once more before going live.

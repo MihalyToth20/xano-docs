@@ -72,6 +72,7 @@
     * [Create Variable](the-function-stack/functions/data-manipulation/create-variable.md)
     * [Update Variable](the-function-stack/functions/data-manipulation/update-variable.md)
     * [Conditional](the-function-stack/functions/data-manipulation/conditional.md)
+    * [Switch](the-function-stack/functions/data-manipulation/switch.md)
     * [Loops](the-function-stack/functions/data-manipulation/loops.md)
     * [Math](the-function-stack/functions/data-manipulation/math.md)
     * [Arrays](the-function-stack/functions/data-manipulation/arrays.md)
@@ -81,8 +82,7 @@
   * [APIs & Lambdas](the-function-stack/functions/apis-and-lambdas/README.md)
     * [Realtime Functions](the-function-stack/functions/apis-and-lambdas/realtime-functions.md)
     * [External API Request](the-function-stack/functions/apis-and-lambdas/external-api-request.md)
-    * [Lambda Functions](the-function-stack/functions/apis-and-lambdas/lambda-functions/README.md)
-      * [Libraries](the-function-stack/functions/apis-and-lambdas/lambda-functions/libraries.md)
+    * [Lambda Functions](the-function-stack/functions/apis-and-lambdas/lambda-functions.md)
   * [Data Caching (Redis)](the-function-stack/functions/data-caching-redis.md)
   * [Custom Functions](the-function-stack/functions/custom-functions.md)
   * [Utility Functions](the-function-stack/functions/utility-functions.md)
@@ -188,8 +188,12 @@
 
 ## Xano AI
 
+* [Building a Backend with AI](xano-ai/building-a-backend-with-ai.md)
+* [Get Started Assistant](xano-ai/get-started-assistant.md)
+* [AI Database Assistant](xano-ai/ai-database-assistant.md)
+* [AI Lambda Assistant](xano-ai/ai-lambda-assistant.md)
+* [AI SQL Assistant](xano-ai/ai-sql-assistant.md)
 * [Streaming APIs](xano-ai/streaming-apis.md)
-* [AI Database Generator](xano-ai/ai-database-generator.md)
 
 ## Xano Transform
 

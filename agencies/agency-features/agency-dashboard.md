@@ -1,25 +1,21 @@
 # Agency Dashboard
 
-The Agency Plan comes with Centralized Management so you can monitor and access your client instances, track commissions, invite new clients, and transfer ownership all from one interface.&#x20;
+The Agency addon comes with Centralized Management so you can monitor and access your client instances, track commissions, invite new clients, and transfer ownership all from one interface.&#x20;
 
-If you belong to an Agency plan, Centralized Management is accessible under the Agencies you manage section.
+If you have an Agency addon, Centralized Management is accessible under the Agencies you manage section.
 
 {% hint style="info" %}
-Permissions and views may vary depending on the role your Agency plan admin defines for you.
+Permissions and views may vary depending on the role your Agency admin defines for you.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/CleanShot 2023-06-26 at 11.09.15.png" alt=""><figcaption><p>Access Centralized Management</p></figcaption></figure>
 
-The Client Dashboard and Centralized Management:
+## Accessing the Agency Dashboard
 
-<figure><img src="../../.gitbook/assets/CleanShot 2023-06-26 at 14.45.35.png" alt=""><figcaption></figcaption></figure>
+From the left-hand side on the instance selection screen, click on the name of your agency, and choose Dashboard.
 
-Centralized Management gives you access and control to everything related to your Agency plan.
+<figure><img src="../../.gitbook/assets/CleanShot 2025-03-13 at 17.01.38.png" alt=""><figcaption></figcaption></figure>
 
-Click on a Client's instance to navigate to the instance to continue development work or maintenance.&#x20;
+Click on the client instance to connect to it, or access their instance settings by clicking the :gear: icon. From this screen, you can also get an overview of the client instance's usage and other metrics, giving you easy visibility into the current status.
 
-See a high-level overview of your client instance's stats. Including limitations on their usage, database, and CPU usage.
-
-[Invite new clients](client-invite.md) and manage invitations.
-
-Initiate an [ownership transfer](transfer-ownership.md) of a workspace to a client instance.
+<figure><img src="../../.gitbook/assets/CleanShot 2025-03-13 at 17.02.52.png" alt=""><figcaption></figcaption></figure>

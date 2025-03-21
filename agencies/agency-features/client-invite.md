@@ -1,54 +1,58 @@
 # Client Invite
 
-From the Instance page, enter your Agency dashboard under _Agencies you manage_ on the right side.
+## Inviting a new client
 
-![](<../../.gitbook/assets/CleanShot 2022-02-25 at 14.54.50.png>)
+You can invite a client that is new to Xano, or has an existing account already.
 
-Once inside the Agency dashboard, select _Invite a new client._
+{% stepper %}
+{% step %}
+### From the instance selection screen, access your agency dashboard.
 
-![](<../../.gitbook/assets/CleanShot 2022-02-25 at 14.57.45.png>)
+Our agency is called **Awesome Xano Agency**.
 
-Fill out the Client Invite form with the client's name and email address. You may optionally include a personal note to the client as well.&#x20;
+<div align="left"><figure><img src="../../.gitbook/assets/CleanShot 2025-03-13 at 15.56.05.png" alt="" width="218"><figcaption></figcaption></figure></div>
+{% endstep %}
 
-![](<../../.gitbook/assets/CleanShot 2022-02-25 at 16.29.49.png>)
-
-Next, select a recommended package for your client with any additional features. Send invitation and the client will be notified by email.&#x20;
-
-Your client will have final say as to which package they select.&#x20;
+{% step %}
+### Click ![](<../../.gitbook/assets/CleanShot 2025-03-13 at 15.57.04.png>) and then ![](<../../.gitbook/assets/CleanShot 2025-03-13 at 15.57.34.png>)
 
 
+{% endstep %}
 
-### Client Accepts Invitation
+{% step %}
+### Provide the client's name and email, and choose the scenario that applies to them.
 
-Once your client accepts the invitation you will be notified by email and the instance will be linked to your Agency dashboard. There are different scenarios depending if a client is brand new to Xano or already has an existing account.&#x20;
+Let us know if this is a new Xano customer, if they have a current account and just need to upgrade their plan, or if they're an existing Xano customer already on a paid plan that will suit their needs.
 
-#### The Client is Brand New to Xano
+<figure><img src="../../.gitbook/assets/CleanShot 2025-03-13 at 15.58.08.png" alt=""><figcaption></figcaption></figure>
 
-If the client is brand new to Xano, they will be required to sign up. The plan that you curated for the client will be defaulted for them to sign up but they do have the ability to change it to a different paid plan.
+By choosing **New Xano Customer** or **Upgrade Xano Customer**, you'll be able to let them know the plan that you recommend next. If you choose **Existing Xano Customer**, the invite will send right away.
 
-![](<../../.gitbook/assets/CleanShot 2022-02-25 at 16.40.10.png>)
+Just select the plan they need and click **Send Proposal to Client**
 
-#### The Client has an Existing Xano Account
+&#x20;![](<../../.gitbook/assets/CleanShot 2025-03-13 at 16.00.33.png>)
+{% endstep %}
 
-When the client has an existing Xano account, the recommended plan will be displayed. The client will choose from three options before getting started.
+{% step %}
+### On the client's side, they'll get an email to accept the invitation and purchase the plan you've recommended to them.
 
-![An existing Xano client will choose from three different options to set up and link their Instance with the Agency.](<../../.gitbook/assets/CleanShot 2022-02-25 at 16.42.40.png>)
+<figure><img src="../../.gitbook/assets/CleanShot 2025-03-13 at 16.01.36.png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
+{% endstepper %}
 
-**Option 1 - Create a brand new instance**
+## Tracking Client Invitations
 
-This option creates a brand new instance for the client from scratch. This is a new instance separate from any work previously done in the client's existing instance. The Agency will automatically be linked up to the client's new instance to assist with ongoing Xano development.
+On the Agency dashboard, you can track the status of your client invitations.
 
-**Option 2 - Upgrade an existing instance**
+<figure><img src="../../.gitbook/assets/CleanShot 2025-03-13 at 16.02.35.png" alt=""><figcaption></figcaption></figure>
 
-This option enables the client to upgrade their existing instance to the plan recommended by the Agency. It will automatically link the instance to the Agency after the upgrade is completed.&#x20;
+You can click on an invite to access more information, delete the invite, or resend it.
 
-**Option 3 - Allow the Agency to manage the existing paid instance without upgrading**
+<figure><img src="../../.gitbook/assets/CleanShot 2025-03-13 at 16.03.47.png" alt="" width="375"><figcaption></figcaption></figure>
 
-Option 3 will link the Agency to the existing paid instance (if there is one). With this option, the client does not want to upgrade to the recommended plan but instead chooses to keep their instance configuration as is.&#x20;
 
-{% hint style="info" %}
-Option 3 does not apply if the client has a Build plan. Only paid plans can be linked to an Agency.&#x20;
-{% endhint %}
+
+
 
 
 

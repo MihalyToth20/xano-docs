@@ -6,7 +6,7 @@ icon: screen-users
 
 {% embed url="https://www.youtube.com/watch?v=pcrvEjDv_t0" %}
 
-The [Agency plan](https://www.xano.com/agency/) is a unique offering specifically designed for development agencies and freelancers who are developing projects for clients.&#x20;
+The [Agency addon](https://xano.com/agency) is a unique offering specifically designed for development agencies and freelancers who are developing projects for clients.&#x20;
 
 #### Some of the unique features include:&#x20;
 

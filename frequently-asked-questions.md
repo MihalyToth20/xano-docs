@@ -1,10 +1,10 @@
 # 🌟 Frequently Asked Questions
 
-### What is Xano?
+## What is Xano?
 
 Xano is, at its core, a visual development platform for building backend solutions. Think of the backend as the powerhouse behind your application or website that handles all of the heavy lifting, data processing, and workflows.
 
-### What can I use Xano for?
+## What can I use Xano for?
 
 Xano is inherently very flexible. Here's what some of our users are utilizing Xano for:
 
@@ -13,7 +13,9 @@ Xano is inherently very flexible. Here's what some of our users are utilizing Xa
 * A data warehouse
 * Supplementing an existing system (building and deploying microservices)
 
-### How does Xano compare to other tools?
+{% include ".gitbook/includes/xano-ai-explainer.md" %}
+
+## How does Xano compare to other tools?
 
 At a high level, Xano is a complete backend platform with a focus on visual development. That means that we don't just focus on the database, nor do we just focus on workflows, and a technical background is not required.
 
@@ -25,23 +27,23 @@ Check out the links below for more specific comparisons to your tool of choice.
 :link: [**Xano vs Airtable**](https://www.xano.com/versus/xano-vs-airtable/)\
 :link: [**Xano vs Bubble**](https://www.xano.com/versus/xano-vs-bubble/)
 
-### Can I build an Enterprise-grade backend using Xano?
+## Can I build an Enterprise-grade backend using Xano?
 
 **Yes!** Xano is trusted by [many](https://www.xano.com/enterprise/) large-scale organizations, such as Qualtrics, Fluence Energy, and Heimstaden to supply their backend systems needs.
 
-### How does Xano make sure my data stays secure?
+## How does Xano make sure my data stays secure?
 
 Please see our [Trust Center](https://security.xano.com) for all Security & Compliance related questions.
 
-### Who owns my data and what I build on Xano?
+## Who owns my data and what I build on Xano?
 
 **You do.** Xano claims no ownership over what is built using our platform or any data that is ingested or distributed via your backend built on Xano.
 
-### What happens if Xano shuts down?
+## What happens if Xano shuts down?
 
 We have a comprehensive [exit plan](https://legal.xano.com/#exit-plan) in place in the unexpected scenario where we can no longer offer our services.
 
-### How do I get help?
+## How do I get help?
 
 * **Check out the Xano YouTube Channel**
   * Our YouTube channel is always being updated with tutorials, use case examples, feature announcements, and more.
@@ -51,8 +53,6 @@ We have a comprehensive [exit plan](https://legal.xano.com/#exit-plan) in place 
   * Just click the option in the lower-left corner anywhere in Xano to be connected to our support team, 24 hours a day.
 * **Join us for an Office Hours session**
   * Our Office Hours sessions are held twice-weekly and are a great place to get live help from the Xano team. Make sure to [sign up in advance](https://go.xano.co/orientation-officehours)!
-
-
 
 ## Have more questions?
 

@@ -118,3 +118,8 @@ The result returns a list from merchant where desc = Pizza.
 Direct Database Access is a premium add-on that allows you to connect directly to your Xano PostgreSQL database using an external tool. If you would like to leverage something outside of Xano to manage your database, direct database access is the feature you're looking for.
 
 The Direct Database Query function in Xano is available if you want to simply run SQL queries from inside Xano.
+
+## Using the AI SQL Assistant
+
+{% include "../../../.gitbook/includes/using-the-ai-sql-assistant.md" %}
+

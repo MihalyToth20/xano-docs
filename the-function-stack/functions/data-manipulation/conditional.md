@@ -2,6 +2,14 @@
 
 Conditional statements are used to determine what functions to run based on the outcome of an expression, or a set of expressions.
 
+{% hint style="success" %}
+**Hint**
+
+For simple comparisons with multiple options, consider using [Switch](switch.md) instead.
+{% endhint %}
+
+{% include "../../../.gitbook/includes/switch-or-conditional.md" %}
+
 {% @arcade/embed flowId="FhWQsqxH5UlL7y89PGzV" url="https://app.arcade.software/share/FhWQsqxH5UlL7y89PGzV" %}
 
 {% stepper %}
