@@ -83,6 +83,7 @@
     * [Realtime Functions](the-function-stack/functions/apis-and-lambdas/realtime-functions.md)
     * [External API Request](the-function-stack/functions/apis-and-lambdas/external-api-request.md)
     * [Lambda Functions](the-function-stack/functions/apis-and-lambdas/lambda-functions.md)
+    * [lambda-with-deno](the-function-stack/functions/apis-and-lambdas/lambda-with-deno.md)
   * [Data Caching (Redis)](the-function-stack/functions/data-caching-redis.md)
   * [Custom Functions](the-function-stack/functions/custom-functions.md)
   * [Utility Functions](the-function-stack/functions/utility-functions.md)
