@@ -17,4 +17,8 @@ title: Xano AI explainer
 * **SQL Assistant**
   * Now that your backend is up and running, maybe you'd like to add some additional, more complex database queries to your APIs. Our SQL Assistant can take your idea, generate a query to retrieve exactly the data you're looking for, and even display a list of results to make sure it's exactly what you need.\
     \
-    [ai-sql-assistant.md](../../xano-ai/ai-sql-assistant.md "mention")\
+    [ai-sql-assistant.md](../../xano-ai/ai-sql-assistant.md "mention")
+
+
+
+_Before using Xano AI, make sure to review our AI Terms & Conditions_ [_here_](https://legal.xano.com/ai-terms)_._\
