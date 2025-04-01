@@ -187,6 +187,7 @@
   * [File](xano-features/metadata-api/file.md)
   * [Request History](xano-features/metadata-api/request-history.md)
   * [Workspace Import and Export](xano-features/metadata-api/workspace-import-and-export.md)
+  * [Token Scopes Reference](xano-features/metadata-api/token-scopes-reference.md)
 
 ## Xano AI
 

@@ -18,6 +18,14 @@ The Metadata API is also used in some cases to facilitate an integration with Xa
 
 An access token is required for any request you send to the Metadata API.
 
+{% hint style="info" %}
+## Before you proceed
+
+Generating an access token requires giving it specific permissions regarding what it can access. Make sure to review available scopes before proceeding.\
+\
+[token-scopes-reference.md](token-scopes-reference.md "mention")
+{% endhint %}
+
 {% stepper %}
 {% step %}
 ### Click ![](<../../.gitbook/assets/CleanShot 2025-03-04 at 19.15.50.png>) in the lower-left corner and choose Instances
