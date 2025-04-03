@@ -9,6 +9,7 @@
 ## Before You Begin
 
 * [Using These Docs](before-you-begin/using-these-docs.md)
+* [Where should I start?](before-you-begin/where-should-i-start.md)
 * [Set Up a Free Xano Account](before-you-begin/set-up-a-free-xano-account.md)
 * [Key Concepts](before-you-begin/key-concepts.md)
 * [The Development Life Cycle](before-you-begin/the-development-life-cycle.md)
