@@ -1,3 +1,7 @@
+---
+icon: message
+---
+
 # Messaging
 
 {% hint style="success" %}

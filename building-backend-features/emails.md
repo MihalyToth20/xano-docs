@@ -1,3 +1,7 @@
+---
+icon: envelopes-bulk
+---
+
 # Emails
 
 {% hint style="success" %}

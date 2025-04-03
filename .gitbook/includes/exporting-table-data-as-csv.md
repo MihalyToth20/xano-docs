@@ -10,7 +10,7 @@ Check the ![](<../assets/CleanShot 2024-12-15 at 21.45.36.png>)option to export 
 
 You will receive an email once your export is complete.
 
-# Export Specifc Records
+# Export Specific Records
 
 Check the box next to the records you want to export and click the ![](<../assets/CleanShot 2024-12-15 at 21.50.14.png>) button.
 
