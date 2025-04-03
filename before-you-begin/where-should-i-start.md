@@ -1,3 +1,7 @@
+---
+icon: message-question
+---
+
 # Where should I start?
 
 ## I'm completely new to software development
