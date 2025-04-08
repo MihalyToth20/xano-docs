@@ -158,6 +158,8 @@ This will tell Xano to keep the rest of the object the same, and only update the
 
 ### Auto-Complete / Subpath
 
+{% include "../../.gitbook/includes/release-rollout-note.md" %}
+
 Xano keeps an understanding of the contents inside of your variables, which makes targeting data inside them easy.
 
 In this example, we have a customer variable that contains data from our database. If you want to target a specific piece of information inside of that variable, such as the customer's email or name, you can click "x properties" next to the variable name.

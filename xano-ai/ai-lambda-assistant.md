@@ -4,6 +4,8 @@ icon: sparkles
 
 # AI Lambda Assistant
 
+{% include "../.gitbook/includes/release-rollout-note.md" %}
+
 ## What can I build with the AI Lambda Assistant?
 
 The Lambda Assistant can be used to write complete Lambda functions to run right alongside the rest of your function stack.
