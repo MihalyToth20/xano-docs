@@ -72,6 +72,129 @@ Get the first entry of an Array.
 
 ***
 
+### filter\_empty\_array
+
+### filter\_empty\_object
+
+### filter\_empty\_text
+
+### filter\_false
+
+### filter\_null
+
+### filter\_zero
+
+These filters are designed to remove the corresponding values from an object or an array. Useful in scenarios where something is calling your APIs that you don't have full control over, such as a frontend platform.
+
+| Parameter    | Purpose                       |
+| ------------ | ----------------------------- |
+| parent value | The array or object to target |
+
+### Examples
+
+| Example                                                                                                                                                                                                                    | Output                                                                                                                                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p></p><pre class="language-json"><code class="lang-json"><strong>{
+</strong>        "title": "",
+        "name": false,
+        "width": 0,
+        "items": [],
+        "data": {},
+        "info": null
+}
+</code></pre> | <p><strong>filter_empty_array</strong></p><pre class="language-json"><code class="lang-json">       {
+         "title": "",
+        "name": false,
+        "width": 0,
+        "data": {},
+        "info": null
+}
+</code></pre> |
+| <pre class="language-json"><code class="lang-json"><strong>{
+</strong>        "title": "",
+        "name": false,
+        "width": 0,
+        "items": [],
+        "data": {},
+        "info": null
+}
+</code></pre>        | <p><strong>filter_empty_object</strong></p><pre class="language-json"><code class="lang-json">{
+        "title": "",
+        "name": false,
+        "width": 0,
+        "items": [],
+        "info": null
+}
+</code></pre>       |
+| <pre class="language-json"><code class="lang-json"><strong>{
+</strong>        "title": "",
+        "name": false,
+        "width": 0,
+        "items": [],
+        "data": {},
+        "info": null
+}
+</code></pre>        | <p><strong>filter_empty_text</strong></p><pre class="language-json"><code class="lang-json">{
+        "name": false,
+        "width": 0,
+        "items": [],
+        "data": {},
+        "info": null
+}
+</code></pre>          |
+| <pre class="language-json"><code class="lang-json"><strong>{
+</strong>        "title": "",
+        "name": false,
+        "width": 0,
+        "items": [],
+        "data": {},
+        "info": null
+}
+</code></pre>        | <p><strong>filter_false</strong></p><pre class="language-json"><code class="lang-json">{
+        "title": "",
+        "width": 0,
+        "items": [],
+        "data": {},
+        "info": null
+}
+</code></pre>                 |
+| <pre class="language-json"><code class="lang-json"><strong>{
+</strong>        "title": "",
+        "name": false,
+        "width": 0,
+        "items": [],
+        "data": {},
+        "info": null
+}
+</code></pre>        | <p><strong>filter_null</strong></p><pre class="language-json"><code class="lang-json">{
+        "title": "",
+        "name": false,
+        "width": 0,
+        "items": [],
+        "data": {}
+}
+</code></pre>                 |
+| <pre class="language-json"><code class="lang-json"><strong>{
+</strong>        "title": "",
+        "name": false,
+        "width": 0,
+        "items": [],
+        "data": {},
+        "info": null
+}
+</code></pre>        | <p><strong>filter_zero</strong></p><pre class="language-json"><code class="lang-json">{
+        "title": "",
+        "name": false,
+        "items": [],
+        "data": {},
+        "info": null
+}
+</code></pre>               |
+
+***
+
+
+
 ### flatten
 
 Flattens a multi-level array into a single-level array.

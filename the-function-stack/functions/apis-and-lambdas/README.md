@@ -4,7 +4,7 @@
 [external-api-request.md](external-api-request.md)
 {% endcontent-ref %}
 
-{% content-ref url="lambda-functions/" %}
-[lambda-functions](lambda-functions/)
+{% content-ref url="lambda-functions.md" %}
+[lambda-functions.md](lambda-functions.md)
 {% endcontent-ref %}
 

@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Fundamentals
 
 ## How do frontend connections work?

@@ -1,8 +1,4 @@
----
-hidden: true
----
-
-# lambda-with-deno
+# Lambda Functions
 
 ## What are Lambda Functions?
 

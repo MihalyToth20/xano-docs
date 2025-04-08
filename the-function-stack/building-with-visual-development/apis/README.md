@@ -26,6 +26,10 @@ When adding a new API endpoint in Xano, you have four options to choose from —
 
 These are database operations for reading, adding, and updating data in your database.
 
+{% hint style="info" %}
+Please note that our default **PATCH** endpoint is designed to automatically filter out any null values or empty text strings that are typically sent by most frontend platforms. If you don't need these, you can remove the filters **filter\_null** and **filter\_empty\_text** from the Patch Record function.
+{% endhint %}
+
 ### Authentication
 
 These are APIs that handle login, signup, and checking an authenticated user's information.

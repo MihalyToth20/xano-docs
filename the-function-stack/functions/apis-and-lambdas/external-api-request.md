@@ -1,5 +1,11 @@
 # External API Request
 
+## What is an external API request?
+
+The External API Request function is used to send requests to external APIs. You'll use this anytime you want to interact with a third party service, such as a payment platform or email provider.
+
+## Using the External API Request Function
+
 {% stepper %}
 {% step %}
 ### Add an External API Request function
@@ -8,17 +14,19 @@
 {% endstep %}
 
 {% step %}
-### Fill in the request details
+### Use the AI Assistant to help you build your API request
 
-You can also copy cURL commands from API documentation, and paste them using ![](<../../../.gitbook/assets/CleanShot 2025-01-13 at 13.20.09.png>). Xano will build the request for you.
+{% include "../../../.gitbook/includes/ai-request-assistant.md" %}
+{% endstep %}
+
+{% step %}
+### Or, build the request manually or with a cURL command
+
+You can copy cURL commands from API documentation, and paste them using ![](<../../../.gitbook/assets/CleanShot 2025-01-13 at 13.20.09.png>). Xano will build the request for you.
 
 <table><thead><tr><th width="180">Option</th><th>Description</th></tr></thead><tbody><tr><td>url</td><td>The URL of the API you're calling, such as:<br><code>https://api.service.com/send_message</code></td></tr><tr><td>method</td><td>The verb the API is designed to respond to, such as GET, POST, DELETE, etc...</td></tr><tr><td>params</td><td>Also known as "query parameters", these are options sent along with the request, such as searching and filtering options, or other data that the request needs to execute.<br><br>You may also see this referred to as <strong>request body</strong>. <br><br>Hover over the params value space and click <mark style="color:blue;"><strong>set</strong></mark> to add a new parameter.<br><img src="../../../.gitbook/assets/CleanShot 2025-02-05 at 16.35.54.png" alt=""></td></tr><tr><td>headers</td><td>Any headers you need to send with the request, such as authentication.<br><br>Add headers by hovering over the value space and click <mark style="color:blue;"><strong>push</strong></mark><br><br><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2tWsL4o1vHmDGb2UAUDD%2Fuploads%2FpAWCEAw4h7e2OfMOAFJk%2FCleanShot%202025-02-05%20at%2016.37.28.png?alt=media&#x26;token=ba4e92fc-4b3c-4358-9e13-ccbe3e15711c" alt=""><br></td></tr><tr><td>timeout</td><td>How long Xano should allow the request to take before considering it timed out (failed)</td></tr><tr><td>follow_location</td><td><p>Determines if you wish to automatically follow the redirects (if there are any) in the API call.</p><p></p><p>An example of this would be an API that generates a file for you, then gives you a redirect to get that file.</p></td></tr></tbody></table>
 {% endstep %}
 {% endstepper %}
-
-## What is an external API request?
-
-The External API Request function is used to send requests to external APIs. You'll use this anytime you want to interact with a third party service, such as a payment platform or email provider.
 
 ## Understanding API Documentation
 
@@ -54,25 +62,7 @@ Most API documentation has a "try it out" or interactive portion that allows you
 {% endstep %}
 {% endstepper %}
 
-## Using External API Requests
-
-{% stepper %}
-{% step %}
-### Add an External API Request function
-
-
-{% endstep %}
-
-{% step %}
-### Fill in the request details
-
-You can also copy cURL commands from API documentation, and paste them using ![](<../../../.gitbook/assets/CleanShot 2025-01-13 at 13.20.09.png>). Xano will build the request for you.
-
-<table><thead><tr><th width="180">Option</th><th>Description</th></tr></thead><tbody><tr><td>url</td><td>The URL of the API you're calling, such as:<br><code>https://api.service.com/send_message</code></td></tr><tr><td>method</td><td>The verb the API is designed to respond to, such as GET, POST, DELETE, etc...</td></tr><tr><td>params</td><td>Also known as "query parameters", these are options sent along with the request, such as searching and filtering options, or other data that the request needs to execute.<br><br>You may also see this referred to as <strong>request body</strong>. <br><br>Hover over the params value space and click <mark style="color:blue;"><strong>set</strong></mark> to add a new parameter.<br><img src="../../../.gitbook/assets/CleanShot 2025-02-05 at 16.35.54.png" alt=""></td></tr><tr><td>headers</td><td>Any headers you need to send with the request, such as authentication.<br><br>Add headers by hovering over the value space and click <mark style="color:blue;"><strong>push</strong></mark><br><br><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F2tWsL4o1vHmDGb2UAUDD%2Fuploads%2FpAWCEAw4h7e2OfMOAFJk%2FCleanShot%202025-02-05%20at%2016.37.28.png?alt=media&#x26;token=ba4e92fc-4b3c-4358-9e13-ccbe3e15711c" alt=""><br></td></tr><tr><td>timeout</td><td>How long Xano should allow the request to take before considering it timed out (failed)</td></tr><tr><td>follow_location</td><td><p>Determines if you wish to automatically follow the redirects (if there are any) in the API call.</p><p></p><p>An example of this would be an API that generates a file for you, then redirects the request to the link where that generated file resides.</p></td></tr></tbody></table>
-{% endstep %}
-{% endstepper %}
-
-#### Multipart Support <a href="#multipart-support" id="multipart-support"></a>
+## Multipart (File) Support
 
 Xano has support for sending images through the external API request function. You can send a file resource - either as an input or variable - through the parameters section of the external API request as a key-value pair or as the entire parameter (depending on what the specific API requires).\
 
@@ -124,10 +114,3 @@ MIIDITCCAgmgAwIBAgIUJqrGM2rS34H8YryJJLAMarvab8AwDQYJKoZIhvcNAQEL
 BQAwIDEeMBwGA1UEAwwVbXlDdXN0b21DZXJ0aWZpY2F0ZUNKX...
 -----END CERTIFICATE-----
 ```
-
-
-
-
-
-
-

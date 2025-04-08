@@ -156,6 +156,18 @@ author.name
 
 This will tell Xano to keep the rest of the object the same, and only update the `name` field with whatever our adjustments are.
 
+### Auto-Complete / Subpath
+
+Xano keeps an understanding of the contents inside of your variables, which makes targeting data inside them easy.
+
+In this example, we have a customer variable that contains data from our database. If you want to target a specific piece of information inside of that variable, such as the customer's email or name, you can click "x properties" next to the variable name.
+
+<figure><img src="../../.gitbook/assets/CleanShot 2025-04-08 at 11.15.26.png" alt=""><figcaption></figcaption></figure>
+
+Once you do that, you'll be able to select the data you're looking for.
+
+<div align="left"><figure><img src="../../.gitbook/assets/CleanShot 2025-04-08 at 11.16.50.png" alt="" width="479"><figcaption></figcaption></figure></div>
+
 ***
 
 ## Copy and Paste

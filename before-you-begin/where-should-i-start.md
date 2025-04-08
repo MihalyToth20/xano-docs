@@ -64,7 +64,7 @@ Welcome! We're glad you're here. Xano makes it easy for someone familiar with de
 {% step %}
 ### Check out some of our developer-friendly features.
 
-* [lambda-functions](../the-function-stack/functions/apis-and-lambdas/lambda-functions/ "mention")
+* [lambda-functions.md](../the-function-stack/functions/apis-and-lambdas/lambda-functions.md "mention")
 * [external-api-request.md](../the-function-stack/functions/apis-and-lambdas/external-api-request.md "mention")
 * [Broken link](broken-reference "mention")
 * [direct-database-connector.md](../xano-features/instance-settings/direct-database-connector.md "mention")

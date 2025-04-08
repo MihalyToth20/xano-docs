@@ -83,9 +83,8 @@
   * [APIs & Lambdas](the-function-stack/functions/apis-and-lambdas/README.md)
     * [Realtime Functions](the-function-stack/functions/apis-and-lambdas/realtime-functions.md)
     * [External API Request](the-function-stack/functions/apis-and-lambdas/external-api-request.md)
-    * [Lambda Functions](the-function-stack/functions/apis-and-lambdas/lambda-functions/README.md)
+    * [Lambda Functions](the-function-stack/functions/apis-and-lambdas/lambda-functions.md)
       * [Supported Libraries](the-function-stack/functions/apis-and-lambdas/lambda-functions/supported-libraries.md)
-    * [lambda-with-deno](the-function-stack/functions/apis-and-lambdas/lambda-with-deno.md)
   * [Data Caching (Redis)](the-function-stack/functions/data-caching-redis.md)
   * [Custom Functions](the-function-stack/functions/custom-functions.md)
   * [Utility Functions](the-function-stack/functions/utility-functions.md)
@@ -198,6 +197,8 @@
 * [AI Database Assistant](xano-ai/ai-database-assistant.md)
 * [AI Lambda Assistant](xano-ai/ai-lambda-assistant.md)
 * [AI SQL Assistant](xano-ai/ai-sql-assistant.md)
+* [API Request Assistant](xano-ai/api-request-assistant.md)
+* [Template Engine](xano-ai/template-engine.md)
 * [Streaming APIs](xano-ai/streaming-apis.md)
 
 ## Xano Transform

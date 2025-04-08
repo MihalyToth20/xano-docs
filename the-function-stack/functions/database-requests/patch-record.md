@@ -42,6 +42,15 @@ However, using the **set filter** in the scenario where multiple fields **might*
 **The JSON object used for Patch should only provide the fields you want to update, and nothing more. Providing empty or null values unintentionally can result in data loss.**
 {% endhint %}
 
+{% hint style="warning" %}
+Some frontends will always send empty or null values regardless of what data points are actually defined.
+
+To make Patch work as it is normally expected, you'll want to leverage filters like:
+
+* `filter_null` to remove null values
+* `filter_empty_text` to remove empty text strings
+{% endhint %}
+
 Using a **Get All Raw Input** function along with **Patch Record** can be a perfect combination.
 
 * **Get All Raw Input** provides a JSON object of all of the input fields passed to the API.
@@ -52,3 +61,4 @@ Our final endpoint might look something like this:
 <figure><img src="../../../.gitbook/assets/CleanShot 2024-09-10 at 06.11.02.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../../.gitbook/assets/CleanShot 2024-09-10 at 06.11.28.png" alt=""><figcaption></figcaption></figure>
+

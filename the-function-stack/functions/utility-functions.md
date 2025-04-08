@@ -255,41 +255,11 @@ This function allows you to specify which data source that database operations f
 
 [ Learn about Async functions here](custom-functions.md#async-function-await)
 
+## Template Engine
 
+{% include "../../.gitbook/includes/template-engine.md" %}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{% hint style="info" %}
+You can check out some examples of the Template Engine in real-world scenarios here: [#sample-templates](../../xano-ai/template-engine.md#sample-templates "mention").
+{% endhint %}
 

@@ -17,8 +17,19 @@ title: Xano AI explainer
 * **SQL Assistant**
   * Now that your backend is up and running, maybe you'd like to add some additional, more complex database queries to your APIs. Our SQL Assistant can take your idea, generate a query to retrieve exactly the data you're looking for, and even display a list of results to make sure it's exactly what you need.\
     \
-    [ai-sql-assistant.md](../../xano-ai/ai-sql-assistant.md "mention")
+    [ai-sql-assistant.md](../../xano-ai/ai-sql-assistant.md "mention")\
 
+* **Lambda Assistant**
+  * Our Lambda Assistant is designed to help you write and iterate on Lambda functions. It can take a prompt and generate code for you, with context of the rest of your function stack, as well as importing any external NPM packages required. This is useful for scenarios where you'd like to add features to your backend that Xano doesn't support natively, such as image manipulation or PDF generation.\
+    \
+    [ai-lambda-assistant.md](../../xano-ai/ai-lambda-assistant.md "mention")
 
+***
 
-_Before using Xano AI, make sure to review our AI Terms & Conditions_ [_here_](https://legal.xano.com/ai-terms)_._\
+{% hint style="warning" %}
+# How Xano AI handles your data
+
+Your data stays yours. We process it to generate AI responses but don't store it or use it to train our models. Third parties that help run our AI only collect basic usage data for billing.
+
+**You can view our full AI Terms & Conditions** [**here**](https://legal.xano.com/ai-terms)**.**
+{% endhint %}
