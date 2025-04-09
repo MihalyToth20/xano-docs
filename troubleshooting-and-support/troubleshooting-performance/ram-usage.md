@@ -16,11 +16,11 @@ In this screenshot, we can see that this instance's Lambda RAM isn't showing ste
 
 This is something that should be investigated further.
 
-#### Reducing RAM Usage <a href="#reducing-ram-usage" id="reducing-ram-usage"></a>
+### Reducing RAM Usage <a href="#reducing-ram-usage" id="reducing-ram-usage"></a>
 
 If you are finding yourself in a situation where you are experiencing symptoms of RAM exhaustion, there are a few things you can to do try and mitigate the situation. It's important to note that in some cases, when mitigation is not possible, that may signal it's time to upgrade your Xano subscription tier to increase your available RAM. You can always reach out to Xano Support for further clarification.
 
-**Database RAM**
+### **Database RAM**
 
 Spikes in Database RAM can be caused by one or more of the following:
 
@@ -33,7 +33,7 @@ Spikes in Database RAM can be caused by one or more of the following:
   * Make sure you are using proper [indexing](../../the-database/database-performance-and-maintenance/indexing.md) on large tables
   * Use pagination on your base query
 
-**API RAM**
+### **API RAM**
 
 Spikes in API RAM can be caused by one or more of the following:
 
@@ -42,19 +42,21 @@ Spikes in API RAM can be caused by one or more of the following:
   * Move large data processing jobs to [background tasks](../../the-function-stack/building-with-visual-development/background-tasks.md)​
   * Use post processing to execute any functions that aren't necessary to deliver a response
 
-**Lambda RAM**
+### **Lambda RAM**
 
 Spikes in Lambda RAM are **incredibly rare**, and we would recommend reaching out to support if you see this happen. Lambda is only used for internal instance operability, such as facilitating Realtime.
 
-**Deno RAM**
+### **Deno RAM**&#x20;
 
 {% hint style="success" %}
-What you previously saw as Lambda functions are now listed as **Deno** in your resource usage charts. **Deno** is the engine that powers your Lambda functions behind the scenes.
+## Deno is what you previously knew as Lambda
+
+**Deno** is the engine that powers your Lambda functions behind the scenes.
 
 Previously, the Lambda pod was also responsible for some internal instance operations; this is no longer the case, which means that your instance should remain up and active even if Deno goes down.
 {% endhint %}
 
-Please note that when using Lambda functions, the contents of **all variables** are loaded into Deno memory. This is most often the cause of memory issues when using Lambda functions.
+Please note that when using Lambda functions, the contents of **all variables** are loaded into Deno memory. This is most often the cause of memory issues when using Lambda functions, and can be mitigated by wrapping your Lambda in a [custom function](../../the-function-stack/building-with-visual-development/custom-functions/) giving it access to only the data it needs to run.
 
 Spikes in Deno RAM can be caused by one or more of the following:
 
@@ -66,7 +68,7 @@ Spikes in Deno RAM can be caused by one or more of the following:
 
 To mitigate issues with Lambda RAM, try using [expressions](../../the-function-stack/data-types/expression.md) instead.
 
-**Redis RAM**
+### **Redis RAM**
 
 Spikes in Redis RAM can be caused by one or more of the following:
 
@@ -74,6 +76,6 @@ Spikes in Redis RAM can be caused by one or more of the following:
 
 If you are not using data caching functions and still experiencing spikes in Redis RAM, please reach out to support.
 
-**Tasks RAM**
+### **Tasks RAM**
 
 Spikes in task RAM should be handled as you would handle spikes in API RAM.\
