@@ -111,9 +111,20 @@ Click ![](<../.gitbook/assets/CleanShot 2025-01-03 at 11.25.43.png>)to enable th
 * **Copy** 📄 **/ Add Watch** 👁️ - Copies the variable's current contents, or adds a variable to your Watches list
 * **Breakpoints** - Hover over the icon on the left side of each function to establish a breakpoint. Breakpoints will cause the debugger to pause at that step.&#x20;
 
+## Unknown Errors and Debugger Errors
 
+{% hint style="warning" %}
+**Unknown Error**
+{% endhint %}
 
+{% hint style="warning" %}
+**The debugger encountered an error**
+{% endhint %}
 
+If you see these messages, they could indicate one of the following:
 
+* An unhandled exception in your logic
+  * This means that you've likely ran across a rare error that we don't yet have specific messaging for. Please let us know about this so we can make an adjustment.
+* Server resource issues
 
-
+For assistance with either of these errors, please reach out to our support team. You can also review our documentation on [memory usage](../troubleshooting-and-support/troubleshooting-performance/ram-usage.md) to narrow down the cause.

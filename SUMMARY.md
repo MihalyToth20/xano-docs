@@ -134,6 +134,7 @@
 
 ## Maintenance, Monitoring, and Logging
 
+* [Statement Explorer](maintenance-monitoring-and-logging/statement-explorer.md)
 * [Request History](maintenance-monitoring-and-logging/request-history.md)
 * [Instance Dashboard](maintenance-monitoring-and-logging/instance-dashboard/README.md)
   * [Memory Usage](maintenance-monitoring-and-logging/instance-dashboard/memory-usage.md)

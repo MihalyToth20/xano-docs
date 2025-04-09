@@ -189,6 +189,12 @@ To modify data, just select the cell and make your desired changes. They will be
 
 ## :heavy\_plus\_sign: Adding a new field
 
+{% hint style="danger" %}
+## When Working in Large Tables
+
+Making changes to your schema, such as renaming or adding fields in a extremely large table requires significant server resources. Please contact support if you encounter any issues.
+{% endhint %}
+
 Click the ![](<../../.gitbook/assets/CleanShot 2024-12-14 at 22.57.46.png>) to add a new field, and choose the [type of field](field-types.md) you want to add from the panel that opens.
 
 After you've selected your desired field type, you will be presented with a number of options. You can review each one of them and what they mean below.

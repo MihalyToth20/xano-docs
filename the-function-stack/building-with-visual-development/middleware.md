@@ -40,6 +40,12 @@ If your plan includes the Compliance Center, you'll also be able to access repor
 
 Pre-middleware executes before any input validation takes place. For example, if you have one of your inputs built in such a way that it requires a minimum string length, your pre-middleware won't be aware of this.
 
+{% hint style="warning" %}
+## Note
+
+Pre-middleware will only surface **defined** inputs from the API it is attached to. This means for endpoints where the payload is unpredictable, you will need to ensure that all inputs are defined in the API.
+{% endhint %}
+
 **Post-Middleware**
 
 Post-middleware executes after the function stack ends, but before the API delivers a response. The output of the middleware can be merged into the response your API generates, or replace it entirely.

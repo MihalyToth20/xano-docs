@@ -18,13 +18,13 @@ Security functions are a mix of helper functions and cryptography/encryption fun
 * [**Decrypt**](security.md#decrypt) - Decrypt a payload to its original form.
 * [**Examples and additional content**](security.md#examples)
 
-#### **UUID** <a href="#uuid" id="uuid"></a>
+### **UUID** <a href="#uuid" id="uuid"></a>
 
 Generate a globally unique identifier. The industry standard UUID (Universally Unique Identifier - version 4) i.e. 9bcc06a9-9782-4859-a69f-778a7f28d666
 
 ![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252F4w8vxhyR9p5BMuJSOrx1%252FCleanShot%25202022-01-06%2520at%252014.50.39.png%3Falt%3Dmedia%26token%3Dc97535a6-4b92-40d4-9147-032e4df7d69a\&width=768\&dpr=4\&quality=100\&sign=750395c5\&sv=2)
 
-#### **Create Authentication Token** <a href="#create-authentication-token" id="create-authentication-token"></a>
+### **Create Authentication Token** <a href="#create-authentication-token" id="create-authentication-token"></a>
 
 Create a Token used for Authentication. Authentication is an important concept in app building, you can read more about it [here](https://docs.xano.com/building-features/authentication-sign-up-and-log-in/authentication).
 
@@ -36,13 +36,13 @@ Create a Token used for Authentication. Authentication is an important concept i
 
 ![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-M8Si5XvG2QHSLi9JcVY%252F-MknkthB5fhX1Y6BifQO%252F-Mknl1cUZx2h9icUOU0K%252FCleanShot%25202021-09-29%2520at%252015.51.05.png%3Falt%3Dmedia%26token%3D8cc6d03e-923e-4ed1-b6e6-34805de36fb5\&width=768\&dpr=4\&quality=100\&sign=f81ba54c\&sv=2)
 
-#### **Validate (Check) Password** <a href="#validate-check-password" id="validate-check-password"></a>
+### **Validate (Check) Password** <a href="#validate-check-password" id="validate-check-password"></a>
 
 Return the result of a plaintext password matching a hashed password.
 
 ![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FfZO9B0UgXt9ik3AdK4mg%252FCleanShot%25202022-01-06%2520at%252014.56.32.png%3Falt%3Dmedia%26token%3D2f1d108e-db6d-4648-bb91-e14e38c9c8c6\&width=768\&dpr=4\&quality=100\&sign=47ae7892\&sv=2)
 
-#### **Generate Password** <a href="#generate-password" id="generate-password"></a>
+### **Generate Password** <a href="#generate-password" id="generate-password"></a>
 
 Generates a password.
 
@@ -56,49 +56,49 @@ Generates a password.
 * **symbol\_whitelist** - Optionally whitelist a symbol.
 * **Return** variable - Returns the generate password in a variable.
 
-#### **Random Number** <a href="#random-number" id="random-number"></a>
+### **Random Number** <a href="#random-number" id="random-number"></a>
 
 Generate a random number.
 
 ![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fassets%252F-M8Si5XvG2QHSLi9JcVY%252F-MjfpkL0AhVURZe4ZET9%252F-Mjfz4rgAO7gT0jr8oTT%252FCleanShot%25202021-09-15%2520at%252017.22.24%25402x.png%3Falt%3Dmedia%26token%3D613b9535-77f8-4adf-bb14-9fa47d0c4e3e\&width=768\&dpr=4\&quality=100\&sign=47522692\&sv=2)
 
-#### Create Secret Key <a href="#create-secret-key" id="create-secret-key"></a>
+### Create Secret Key <a href="#create-secret-key" id="create-secret-key"></a>
 
 ![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FcumBPdOUb0E8iN2xzG08%252FCleanShot%25202022-01-07%2520at%252016.00.13.png%3Falt%3Dmedia%26token%3D60aea3b2-5850-4f9e-833e-aa2073eba96b\&width=768\&dpr=4\&quality=100\&sign=6bf2bfb0\&sv=2)
 
-#### **Create RSA Secret** <a href="#create-rsa-secret" id="create-rsa-secret"></a>
+### **Create RSA Secret** <a href="#create-rsa-secret" id="create-rsa-secret"></a>
 
 ![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FrqtyxOBjCE62FDP3j2TC%252FCleanShot%25202022-01-07%2520at%252016.26.56.png%3Falt%3Dmedia%26token%3Dc2779279-93b8-4cb9-84b4-5fa337c1e702\&width=768\&dpr=4\&quality=100\&sign=af7f9573\&sv=2)
 
-#### **Create Elliptic Curve Key** <a href="#create-elliptic-curve-key" id="create-elliptic-curve-key"></a>
+### **Create Elliptic Curve Key** <a href="#create-elliptic-curve-key" id="create-elliptic-curve-key"></a>
 
 ![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FpGWMlvMfozrtye0cTumV%252FCleanShot%25202022-01-07%2520at%252016.28.55.png%3Falt%3Dmedia%26token%3Dd6421068-f97c-46bc-9aa9-e3af4e5402a5\&width=768\&dpr=4\&quality=100\&sign=c6e2bdb0\&sv=2)
 
-#### **JWE Encode** <a href="#jwe-encode" id="jwe-encode"></a>
+### **JWE Encode** <a href="#jwe-encode" id="jwe-encode"></a>
 
 Encode a payload as a JWE token.
 
-![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FZSN3NVYDpqRHhjADBdgW%252FCleanShot%25202022-01-07%2520at%252016.31.29.png%3Falt%3Dmedia%26token%3D1e87477b-22b1-4693-8975-97a6fa2919da\&width=768\&dpr=4\&quality=100\&sign=78e7b2d1\&sv=2)
+<div align="left"><figure><img src="../../.gitbook/assets/CleanShot 2025-04-09 at 08.35.13.png" alt="" width="266"><figcaption></figcaption></figure></div>
 
-#### JWE Decode <a href="#jwe-decode" id="jwe-decode"></a>
+### JWE Decode <a href="#jwe-decode" id="jwe-decode"></a>
 
 Decode a JWE token.
 
 ![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FePwv66rLYl9KD0jsQGH9%252FCleanShot%25202022-01-07%2520at%252016.34.32.png%3Falt%3Dmedia%26token%3D45d1bd58-710d-46c5-b07c-43de9ca92d2a\&width=768\&dpr=4\&quality=100\&sign=4630a275\&sv=2)
 
-#### JWS Encode <a href="#jws-encode" id="jws-encode"></a>
+### JWS Encode <a href="#jws-encode" id="jws-encode"></a>
 
-Encode a payload as aJWS token.
+Encode a payload as a JWS token.
 
 ![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FNztVyTL9v0UI4y2eYvXB%252FCleanShot%25202022-05-03%2520at%252016.32.57.png%3Falt%3Dmedia%26token%3D98e1f477-715b-42a4-83ac-97be2a6bbd56\&width=768\&dpr=4\&quality=100\&sign=f7a2b5c9\&sv=2)
 
-#### JWS Decode <a href="#jws-decode" id="jws-decode"></a>
+### JWS Decode <a href="#jws-decode" id="jws-decode"></a>
 
 Decode a JWS token.
 
 ![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FcyQM1in4fIxZUKspj5QW%252FCleanShot%25202022-05-03%2520at%252016.28.59.png%3Falt%3Dmedia%26token%3D84e1af45-12e3-4296-9b37-f1473cfe6309\&width=768\&dpr=4\&quality=100\&sign=a9f19301\&sv=2)
 
-#### Encrypt <a href="#encrypt" id="encrypt"></a>
+### Encrypt <a href="#encrypt" id="encrypt"></a>
 
 Encrypt a payload as raw binary data.
 
@@ -111,17 +111,13 @@ Encrypt a payload as raw binary data.
 
 Tip: For certain use cases when passing the encrypted value through a URL, it is recommended to use the `base64_encode_urlsafe` filter.
 
-#### Decrypt <a href="#decrypt" id="decrypt"></a>
+### Decrypt <a href="#decrypt" id="decrypt"></a>
 
 Decrypt a payload to its original form.
 
 ![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FjAyGylvniHGzCpHeeC3Q%252FCleanShot%25202022-02-22%2520at%252015.08.49.png%3Falt%3Dmedia%26token%3D951bc3a4-242a-43ca-ae84-f1a3a7678dc0\&width=768\&dpr=4\&quality=100\&sign=8e0412dd\&sv=2)
 
 ### Examples <a href="#examples" id="examples"></a>
-
-#### JWE Encode/Decode Example <a href="#jwe-encode-decode-example" id="jwe-encode-decode-example"></a>
-
-This tutorial gives an example of encrypting and decrypting data stored in Xano.
 
 #### JWS Encode/Decode Example <a href="#jws-encode-decode-example" id="jws-encode-decode-example"></a>
 
