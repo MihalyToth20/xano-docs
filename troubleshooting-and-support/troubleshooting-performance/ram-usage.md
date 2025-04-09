@@ -1,10 +1,12 @@
 # RAM Usage
 
-![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-M8Si5XvG2QHSLi9JcVY%2Fuploads%2FJpxfXYc4Mk4iqiGa7wFc%2Fimage.png?alt=media\&token=66363a03-34a6-4b6f-9c4a-ca441a0993cf)
-
 In this screenshot, we can see a usage graph showing Database RAM is almost at 100%. **This is okay.** What we should be focusing on is the consistency. All this tells us is that the database is using as much RAM as it can to do the job it needs to be doing at a steady pace. Everything looks good!
 
-Let's look at another example where we might have a problem.![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-M8Si5XvG2QHSLi9JcVY%2Fuploads%2FSVKWvQg8qjoYLskZyUCo%2Fimage.png?alt=media\&token=0373aa27-8ec2-4446-b69d-8e3997a8cfa4)
+![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-M8Si5XvG2QHSLi9JcVY%2Fuploads%2FJpxfXYc4Mk4iqiGa7wFc%2Fimage.png?alt=media\&token=66363a03-34a6-4b6f-9c4a-ca441a0993cf)
+
+Let's look at another example where we might have a problem.
+
+![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-M8Si5XvG2QHSLi9JcVY%2Fuploads%2FSVKWvQg8qjoYLskZyUCo%2Fimage.png?alt=media\&token=0373aa27-8ec2-4446-b69d-8e3997a8cfa4)
 
 In this screenshot, we can see that this instance's Lambda RAM isn't showing steady utilization -- there are significant peaks, valleys, and spikes. This tells us that there is sporadic intense load with Lambda functions we are using, and it will likely cause problems such as:
 
@@ -42,12 +44,25 @@ Spikes in API RAM can be caused by one or more of the following:
 
 **Lambda RAM**
 
-Please note that when using Lambda functions, the contents of **all variables** are loaded into Lambda memory. This is most often the cause of memory issues when using Lambda functions.
+Spikes in Lambda RAM are **incredibly rare**, and we would recommend reaching out to support if you see this happen. Lambda is only used for internal instance operability, such as facilitating Realtime.
 
-Spikes in Lambda RAM can be caused by one or more of the following:
+**Deno RAM**
+
+{% hint style="success" %}
+What you previously saw as Lambda functions are now listed as **Deno** in your resource usage charts. **Deno** is the engine that powers your Lambda functions behind the scenes.
+
+Previously, the Lambda pod was also responsible for some internal instance operations; this is no longer the case, which means that your instance should remain up and active even if Deno goes down.
+{% endhint %}
+
+Please note that when using Lambda functions, the contents of **all variables** are loaded into Deno memory. This is most often the cause of memory issues when using Lambda functions.
+
+Spikes in Deno RAM can be caused by one or more of the following:
 
 * Contents of other variables are too large for the Lambda to handle during processing
 * Using file resources in conjunction with Lambdas
+* Loading large or multiple NPM packages in your functions. Any library you call will be loaded into memory.
+  * If you use packages frequently, they may be retained in memory for increased speed.
+  * If you hit your RAM limit for Deno, the "pod" or section of your instance that is responsible for Lambda functions will clear memory and restart, which will potentially cause Out Of Memory errors or timeout errors.
 
 To mitigate issues with Lambda RAM, try using [expressions](../../the-function-stack/data-types/expression.md) instead.
 
