@@ -2,7 +2,7 @@
 title: Filter Template (not XS)
 ---
 
-# first\_notempty
+# unescape
 
 Applies the first value that is not **empty** (0, null, "", empty string)
 

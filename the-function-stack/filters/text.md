@@ -135,6 +135,20 @@ Inputs:
 | "Tab.    Separated"     | "Tab\tSeparated"      |
 | "Quotes "quoted""       | "Quotes \\"quoted\\"" |
 
+## unescape
+
+Converts escaped variants of characters back into their unescaped variants.
+
+### Examples
+
+| Example               | Output            |
+| --------------------- | ----------------- |
+| "Line1\\\nLine2"      | "Line1\nLine2"    |
+| "Tab\\\tSeparated"    | "Tab\tSeparated"  |
+| "Quotes \\"quoted\\"" | "Quotes "quoted"" |
+
+***
+
 ## from\_utf8
 
 Convert the supplied text from UTF-8 to its binary form (ISO-8859-1).
@@ -500,6 +514,100 @@ Inputs:
 | "Hello World"        | 11     |
 | ""                   | 0      |
 | "12345"              | 5      |
+
+## sql\_alias
+
+Safely wrap text intended for use as table names or aliases in SQL queries.
+
+Useful if you are dynamically constructing SQL queries and you want to ensure prevention of SQL injection attacks. `sql_alias` puts **double quotes** around things like table names and escapes existing double quotes inside to keep the database from getting confused and executing unintended commands.&#x20;
+
+Let's say your sentence structure is:
+
+`"Show me the data from the" [BLANK] "table."`
+
+Now, a user provides the name of the table they want to see.
+
+*   **Without `sql_alias`:** If the user types in `users`, your sentence becomes:
+
+    `"Show me the data from the users table."` - This looks fine.
+*   **Without `sql_alias`:** If a malicious user types in something like:
+
+    `users; DROP TABLE important_data;`
+
+    Your sentence would become:
+
+    `"Show me the data from the users; DROP TABLE important_data; table."`
+
+    In the world of SQL, the `;` often separates different commands. So, instead of just looking at the `users` table, the database might also try to `DROP TABLE important_data;` which could delete crucial information! This is a **SQL Injection** attack.
+
+| Parameter    | Purpose           | Example   |
+| ------------ | ----------------- | --------- |
+| parent value | The value to wrap | `"users"` |
+
+### Examples
+
+| Input                | Output                 | Explanation                                                                   |
+| -------------------- | ---------------------- | ----------------------------------------------------------------------------- |
+| `users`              | `"users"`              | Simple table name, wrapped in double quotes.                                  |
+| `order details`      | `"order details"`      | Table name with a space, safely wrapped.                                      |
+| `user"info"`         | `"user""info"`         | Existing double quote within the name is escaped by doubling.                 |
+| `schema.products`    | `"schema.products"`    | Qualified table name, safely wrapped.                                         |
+| `` `special` ``      | ``"`special`"``        | Backticks are treated as regular characters and are wrapped in double quotes. |
+| `SELECT * FROM data` | `"SELECT * FROM data"` | While a SQL fragment, it's still wrapped in double quotes.                    |
+
+***
+
+## sql\_esc
+
+Safely wrap text intended for use as values within SQL queries. It wraps the input in single quotes (`'`) and escapes any existing single quotes within the input by doubling them.
+
+`sql_esc` puts **single quotes** around data values and escapes existing single quotes inside to make sure the database treats everything within those quotes as a single piece of data, not as parts of the SQL structure.
+
+For example, let's say your sentence structure is:
+
+`"Find all records where the name is" [BLANK] "."`
+
+Now, a user provides the name they want to search for.
+
+*   **Without `sql_esc`:** If the user types in `John Doe`, your sentence becomes:
+
+    `"Find all records where the name is John Doe."` - This looks fine.
+*   **Without `sql_esc`:** If a user types in a name with a single quote, like:
+
+    `O'Malley`
+
+    Your sentence would become:
+
+    `"Find all records where the name is O'Malley."`
+
+    In SQL, single quotes are often used to mark the beginning and end of a text value. The single quote in `O'Malley` could confuse the database and potentially lead to errors or security vulnerabilities.
+*   **Without `sql_esc` (Bigger Problem!):** What if a malicious user types:
+
+    `' OR 1=1 --`
+
+    Your sentence would become:
+
+    `"Find all records where the name is ' OR 1=1 -- ."`
+
+    In SQL, `'` starts a string, `OR 1=1` is always true, and `--` starts a comment (ignoring the rest). This could make the database return _all_ records, bypassing the intended search! This is another form of SQL Injection.
+
+| Parameter    | Purpose             | Example     |
+| ------------ | ------------------- | ----------- |
+| parent value | The value to escape | "User Name" |
+
+### Examples
+
+| Input                 | Output                  | Explanation                                                    |
+| --------------------- | ----------------------- | -------------------------------------------------------------- |
+| `John Doe`            | `'John Doe'`            | Simple string value, wrapped in single quotes.                 |
+| `O'Malley`            | `'O''Malley'`           | Existing single quote within the value is escaped by doubling. |
+| `user input`          | `'user input'`          | Value with a space, safely wrapped.                            |
+| `123`                 | `'123'`                 | Numeric value treated as a string and wrapped.                 |
+| `true`                | `'true'`                | Boolean value treated as a string and wrapped.                 |
+| `hello'world'`        | `'hello''world'''`      | Multiple single quotes are all escaped.                        |
+| `SELECT * FROM users` | `'SELECT * FROM users'` | While a SQL fragment, it's still wrapped in single quotes.     |
+
+***
 
 ## substr
 
