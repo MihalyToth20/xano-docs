@@ -27,4 +27,3 @@ The assistant can help you write queries against your Xano database.
 You can also make your own modifications to the query, such as adding ? characters to represent dynamic values.
 {% endstep %}
 {% endstepper %}
-

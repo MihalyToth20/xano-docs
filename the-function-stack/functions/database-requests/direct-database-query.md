@@ -81,6 +81,8 @@ In the following query, there are two statement arguments. The input `search` wi
 Arguments can not, at this time, be anything other than single values. Arguments can not also replace functions; they can only serve as query values at this time.
 {% endhint %}
 
+{% include "../../../.gitbook/includes/sql-injection.md" %}
+
 ### SQL Query Wizard
 
 The SQL Query Wizard generates simple SQL queries. **It is not designed to support complex statements or joins but basic statements** to help get you started.

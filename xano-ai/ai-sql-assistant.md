@@ -4,4 +4,7 @@ icon: sparkles
 
 # AI SQL Assistant
 
+{% include "../.gitbook/includes/sql-injection.md" %}
+
 {% include "../.gitbook/includes/using-the-ai-sql-assistant.md" %}
+
