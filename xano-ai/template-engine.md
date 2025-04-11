@@ -104,6 +104,8 @@ Use an HTML template in combination with our [#http-header](../the-function-stac
 
 **Context**: A flexible database query generator that adapts to user roles and filtering requirements for a multi-tenant application.
 
+{% include "../.gitbook/includes/sql-injection.md" %}
+
 ```twig
 SELECT 
     id, 
