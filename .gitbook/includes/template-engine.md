@@ -21,7 +21,7 @@ At its core, think of the Template Engine as text replacement and manipulation o
 * JSON
 * SQL queries
 
-The template engine is powered by Twig, which you can learn more about here.
+The template engine is powered by Twig, which you can learn more about [here](https://twig.symfony.com/).
 
 # When should I use the Template Engine instead of other text filters?
 
