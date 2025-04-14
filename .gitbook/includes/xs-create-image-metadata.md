@@ -5,7 +5,8 @@ title: XS - Create Image Metadata
 # <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Create Image Metadata <a href="#xs-createimage" id="xs-createimage"></a>
 
 ```javascript
-storage.create_image access=public {
+storage.create_image {
+  access=public 
   value = $input.file
   filename = ""
 } as image_metadata

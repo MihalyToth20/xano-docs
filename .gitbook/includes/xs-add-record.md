@@ -12,7 +12,7 @@ db.add user {
         email: $input.email,
         password: $input.password
     }
-} as recordAdd
+} as $recordAdd
 ```
 
 | Parameter | Purpose                                                    | Example                                     |

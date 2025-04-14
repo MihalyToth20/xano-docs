@@ -5,7 +5,8 @@ title: XS - Create Video Metadata
 # <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Create Video Metadata <a href="#xs-createvideo" id="xs-createvideo"></a>
 
 ```javascript
-storage.create_video access=public {
+storage.create_video {
+  access=public 
   value = $image_metadata
   filename = ""
 } as x1

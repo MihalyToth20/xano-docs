@@ -10,7 +10,7 @@ title: XS - Get Record
 db.get test_data {
       field_name = "id"
       field_value = $input.id
-    } as foundRecord
+    } as $foundRecord
 }
 ```
 
@@ -23,7 +23,7 @@ db.get color_pair {
       field_name = "id"
       field_value = $input.id
       output = ["id", "created_at", "user"]
-} as color_pair1
+} as $color_pair1
 ```
 
 | Parameter | Purpose                                                 | Example                        |

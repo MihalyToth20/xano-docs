@@ -9,7 +9,7 @@ title: XS - Query All Records
 Get all records from a table
 
 ```javascript
-   db.query table as variable
+   db.query table as $variable
 ```
 
 <table><thead><tr><th width="175">Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>table</td><td>The name of the table to query</td><td>user</td></tr><tr><td>as</td><td>The variable to store the result</td><td>allUsers</td></tr></tbody></table>
@@ -19,7 +19,7 @@ Get all records from a table
 ```javascript
     db.query user {
       search = `$db.user.id == 1`
-    } as user1
+    } as $user1
 ```
 
 | Parameter | Purpose          | Example                                   |
@@ -41,7 +41,7 @@ Get all records from a table
         }
       ]
     
-    } as user1
+    } as $user1
 ```
 
 <table><thead><tr><th width="136">Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>bind</td><td>The array to contain each join</td><td>Each item should be contained in an object inside of the array</td></tr><tr><td>as</td><td>The internal name of the joined table</td><td>user_2</td></tr><tr><td>name</td><td>The name of the table being joined</td><td>user</td></tr><tr><td>join</td><td>The type of join. This can be either left, inner, or right</td><td>left</td></tr><tr><td>search</td><td>The conditional query to perform when matching records in the join</td><td><pre><code>`$db.user.id == $db.user_2.id`
@@ -53,7 +53,7 @@ Get all records from a table
     db.query user {
       search = `$db.user.id == 1` 
       output = ["id", "name"]
-    } as user1
+    } as $user1
 ```
 
 | Parameter | Purpose                                                 | Example         |

@@ -64,6 +64,20 @@ Text must be wrapped in double or single quotes.
 ```
 'Hello'
 ```
+
+Alternative text syntax if you need a line with the triple double quotes
+
+```
+var $x1 {
+  value = '''
+    here is some text
+    """
+    here is another line of text
+      here is text indented
+    here is more text
+    '''
+}
+```
 {% endhint %}
 
 {% hint style="info" %}
@@ -101,21 +115,24 @@ This is how XanoScript handles it.
 {% hint style="info" %}
 ## Multiline Text
 
-For longer text that spans multiple lines, XanoScript provides the `<<` delimiter. These allow you to write text naturally without escape characters for line breaks. This is similiar to how multiline text is supported within YAML, where the common spacing to the left is removed from the end result. This allows you to keep the block of text in the relavent spot without having to indent everything to the far left of your file. Note that multiline text blocks cannot be used with filters or transformations.
+XanoScript supports multiline text using triple quotes (`"""`). This allows you to write text across multiple lines without needing escape characters for line breaks.
 
-```
-value = << 
-    This is a multiline text value
-    that can span multiple lines
-    without needing escape characters
-    for line breaks.
+The indentation of the closing `"""` determines the common whitespace that is removed from each line of the text. This is similar to multiline string handling in YAML, and it allows you to maintain the text block's position within your code without needing to left-align every line.
+
+```json
+var $x1 {
+    value = """
+        here is some text
+        here is another line of text
+            here is text indented
+        here is more text
+    """
+}
 ```
 
-Multiline is **not** supported when using filters. Instead, you should use escaped line break characters.
+**Important:** Multiline text defined using `"""` cannot be used directly with filters or transformations. If you need to apply filters or transformations to multiline text, you must use escaped line break characters () instead.
 
-```
-"Dear John,\nYour order will arrive by Friday.\nRegards,\nCustomer Service"|to_upper
-```
+`"Dear John,\nYour order will arrive by Friday.\nRegards,\nCustomer Service"|to_upper`
 {% endhint %}
 
 ### Boolean (true/false) Values
@@ -213,12 +230,25 @@ Commas are not required, and XanoScript also supports trailing commas.
 Xano's [Expression data type](../the-function-stack/data-types/expression.md) is fully supported in XanoScript. Expressions should be wrapped in `` ` `` characters.
 
 ```
-`{a:1, b:2}`
+{a:1, b:2}
 ```
 
 ```
-`123|add:1`
+123|add:1
 ```
+
+We also have support for multiline expressions using triple ticks ` ``` `
+
+````
+var $x1 {
+  value = ```
+    ($input.end_point.data.lat|sub:$input.start_point.data.lat)
+    |multiply:0.017453292519943
+    |sin
+    |pow:2
+    ```
+}
+````
 
 ## Type Casting
 
@@ -258,6 +288,10 @@ value = !int "123"
 value = !int 123
 ```
 {% endhint %}
+
+## Variables
+
+All variable references must start with a `$`.
 
 ## Getting Started
 

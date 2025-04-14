@@ -14,7 +14,7 @@ db.edit user {
         name: $input.name,
         list: $listVar
     }
-} as user2
+} as $user2
 ```
 
 ## Parameters

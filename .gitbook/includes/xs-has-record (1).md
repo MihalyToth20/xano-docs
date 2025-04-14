@@ -8,7 +8,7 @@ title: XS - Has Record
     db.has user {
       field_name = "id"
       field_value = $input.id
-    } as user1
+    } as $user1
 ```
 
 <table><thead><tr><th width="175">Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>field_name</td><td>The length of the key generated. Common values are 1024, 2048, 4096, etc...</td><td>1024</td></tr><tr><td>field_value</td><td>The format of the key generated. This can be either <strong>object</strong> or <strong>base64</strong></td><td>"object"</td></tr></tbody></table>

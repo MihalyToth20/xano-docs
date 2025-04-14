@@ -5,7 +5,8 @@ title: XS - Create audio metadata
 # <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Create Audio Metadata <a href="#xs-createaudio" id="xs-createaudio"></a>
 
 ```javascript
-storage.create_audio access=public {
+storage.create_audio {
+  access=public 
   value = $input.file
   filename = ""
 } as x2

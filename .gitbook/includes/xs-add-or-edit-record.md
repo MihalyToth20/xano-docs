@@ -9,7 +9,7 @@ db.add_or_edit user {
     field_name = "id"
     field_value = $input.id
     data = {name: $input.name}
-} as recordAddOrEdit
+} as $recordAddOrEdit
 ```
 
 | Parameter    | Purpose                                   | Example          |

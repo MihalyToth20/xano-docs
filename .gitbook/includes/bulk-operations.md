@@ -12,7 +12,7 @@ title: Bulk Operations
 db.bulk.add user {
     allow_id_field = false
     items = $input.arrayData
-} as bulkAdd
+} as $bulkAdd
 ```
 
 | Parameter        | Purpose                       | Example                            |
@@ -46,7 +46,7 @@ db.bulk.add user {
 ```javascript
 db.bulk.update user {
     items = $input.arrayData
-} as updateBulk
+} as $updateBulk
 ```
 
 | Parameter | Purpose                    | Example                                          |
@@ -73,7 +73,7 @@ db.bulk.update user {
 ```javascript
 db.bulk.patch user {
     items = $input.arrayData
-} as patchBulk
+} as $patchBulk
 ```
 
 | Parameter | Purpose                   | Example                                          |
@@ -99,7 +99,7 @@ db.bulk.patch user {
 ```javascript
 db.bulk.delete user {
     search = `$db.user.id >= 100 && $db.user.id <= 150`
-} as deleteBulk
+} as $deleteBulk
 ```
 
 | Parameter | Purpose                      | Example              |

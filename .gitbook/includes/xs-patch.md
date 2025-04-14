@@ -9,7 +9,7 @@ db.patch user {
     field_name = "id"
     field_value = $input.id
     data = {}|set:"name":$input.name
-} as patchRecord
+} as $patchRecord
 ```
 
 | Parameter    | Purpose                            | Example          |

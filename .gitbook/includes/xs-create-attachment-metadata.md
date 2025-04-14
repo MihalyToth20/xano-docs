@@ -5,7 +5,8 @@ title: XS - Create Attachment Metadata
 # <img src="../assets/docuBadge (11).png" alt="" data-size="line"> Create Attachment Metadata <a href="#xs-createaudio" id="xs-createaudio"></a>
 
 ```javascript
-storage.create_attachment access=public {
+storage.create_attachment {
+  access=public 
   value = $input.file
   filename = ""
 } as x3
