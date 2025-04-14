@@ -25,9 +25,9 @@ Depending on how you use a Lambda, you may have support to access some additiona
 
 {% include "../../../.gitbook/includes/using-the-lambda-ai-assistant.md" %}
 
-## Using Custom NPM Packages <a href="#npm" id="npm"></a>
+## Using NPM Packages <a href="#npm" id="npm"></a>
 
-If you have a custom NPM package you'd like to use in your Lambda functions, you can import it using the following format:
+If you have an NPM package you'd like to use in your Lambda functions, you can import it using the following format:
 
 ```typescript
 const { default: Decamelize } = await import ("npm:decamelize");
@@ -37,6 +37,12 @@ When we want to utilize the functions imported from the package listed, we can d
 
 ```typescript
 return Decamelize($input.test);
+```
+
+Native Node libraries that are native can be accessed with a `node:` prefix instead of `npm:`
+
+```javascript
+const { request } = await import("node:https");
 ```
 
 {% hint style="info" %}
