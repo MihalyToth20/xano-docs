@@ -201,6 +201,10 @@ In this example, our users are uploading a zip file, as well as specifying a fil
 
 ### Creating a zip file from scratch <a href="#creating-a-zip-file-from-scratch" id="creating-a-zip-file-from-scratch"></a>
 
+{% hint style="info" %}
+See [#serving-file-downloads](file-storage.md#serving-file-downloads "mention") to learn how to provide a download of a created ZIP file.
+{% endhint %}
+
 In this example, our users are uploading multiple files, and we want to store them inside of a zip file.
 
 **From multiple file resource inputs**

@@ -31,3 +31,11 @@ You can review previous login history for your Xano account by clicking the icon
 ![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-M8Si5XvG2QHSLi9JcVY%2Fuploads%2FUVbKKlAoaUppfSsRNm0E%2FCleanShot%202023-06-19%20at%2016.59.42.png?alt=media\&token=662b8e0d-4280-403d-ae87-3685af10f87a)
 
 From this screen, you can view details about each login request.![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-M8Si5XvG2QHSLi9JcVY%2Fuploads%2FEqxR1sJLJGriH5y6CjST%2FCleanShot%202023-06-19%20at%2017.00.55.png?alt=media\&token=81abc6cc-ef38-4998-864b-b916f3791a03)
+
+## Account Transfer
+
+To transfer your account to a different email address, you can update it in your account settings. An email will be sent to the new address, which will need to be verified.
+
+{% hint style="warning" %}
+The new email can't be associated with an existing Xano account. If it is, the account holder will need to contact support to proceed.
+{% endhint %}

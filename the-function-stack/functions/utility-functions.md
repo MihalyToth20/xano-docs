@@ -92,8 +92,6 @@ Debug Log allows you to output specific information in a new debug logging secti
 
 {% embed url="https://www.youtube.com/watch?v=rQiO-QkcdTM" %}
 
-
-
 This can be especially helpful for debugging data errors with loops or otherwise just giving you a quick view of a variable's contents during execution. You can insert whatever data you'd like into Debug Logs; they will accept any data type, and can also have filters applied.
 
 ![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FfkzLyb7SOy1WPb7iu051%252FCleanShot%25202023-08-16%2520at%252009.46.37.png%3Falt%3Dmedia%26token%3D2284fa85-07b0-42bd-9334-9069ed3544d0\&width=768\&dpr=4\&quality=100\&sign=13613d68\&sv=2)
@@ -102,11 +100,9 @@ In the below example, we're looping through results from a Query All Records sta
 
 ![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FNqGUuWQClxPcc9yVo3Fs%252FCleanShot%25202023-08-16%2520at%252009.42.28.png%3Falt%3Dmedia%26token%3Dc57276c1-49d9-4a3c-ab69-c4cef58717a9\&width=768\&dpr=4\&quality=100\&sign=7a2fb26\&sv=2)
 
-And the result is available in the new Debug Log tab of the Debugger when we run.
+And the result is available in the new Debug Log section of the debugger
 
-![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FysUINURJcXSPe9LbxoJ3%252FCleanShot%25202023-08-16%2520at%252009.44.08.png%3Falt%3Dmedia%26token%3Dc8d4961f-0bed-4019-a571-821ebf120316\&width=768\&dpr=4\&quality=100\&sign=fe51a38c\&sv=2)
-
-
+<div align="left"><figure><img src="../../.gitbook/assets/CleanShot 2025-04-14 at 17.42.31.png" alt="" width="289"><figcaption></figcaption></figure></div>
 
 ## Precondition
 

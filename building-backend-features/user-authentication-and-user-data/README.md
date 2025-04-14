@@ -169,7 +169,7 @@ When testing endpoints with authentication enabled, the quick token generator wi
 
 If you need to provide a secondary authentication header that takes precedence over the original Xano authentication, you can do so by sending the **X-Xano-Authorization-Only** header along with your requests. This will allow you to move the Xano authentication token to its own header, keeping the original standard **Authorization** header for something else.
 
-You would want to utilize the **X-Xano-Autborization-Only** header if you are sending requests to your Xano APIs from another source that uses the **Authorization** header key for something else on both public and authentication required endpoints that are using the **Authorization** header for something other than Xano authentication.
+You would want to utilize the **X-Xano-Authorization-Only** header if you are sending requests to your Xano APIs from another source that uses the **Authorization** header key for something else on both public and authentication required endpoints that are using the **Authorization** header for something other than Xano authentication.
 
 **Example:**
 

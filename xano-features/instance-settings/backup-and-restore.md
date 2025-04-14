@@ -8,34 +8,6 @@ You also have the ability to take and restore backups manually.
 
 If you are on a free plan, please note that **no backups are available**.
 
-## Restoring a Backup
-
-{% stepper %}
-{% step %}
-### From your [instance selection screen](https://app.xano.com/instance?mode=master), click ![](<../../.gitbook/assets/CleanShot 2025-02-06 at 06.10.48.png>) next to the instance you want to restore a backup of.&#x20;
-
-
-{% endstep %}
-
-{% step %}
-### In the panel that opens, choose Database Backup.
-
-
-{% endstep %}
-
-{% step %}
-### Click Download and Restore
-
-
-{% endstep %}
-
-{% step %}
-### Choose the backup you'd like to restore and click ![](<../../.gitbook/assets/CleanShot 2025-02-06 at 06.13.01.png>)
-
-
-{% endstep %}
-{% endstepper %}
-
 ## Creating a Backup
 
 {% stepper %}
@@ -65,6 +37,40 @@ Please note that media storage should only be backed up if absolutely necessary,
 
 {% step %}
 ### Click ![](<../../.gitbook/assets/CleanShot 2025-02-06 at 06.15.33.png>) to start the process.
+
+
+{% endstep %}
+{% endstepper %}
+
+## Restoring a Backup
+
+{% hint style="danger" %}
+## WARNING
+
+It is **strongly advised** that you first create a backup before restoring another, just in case you need to roll back.
+{% endhint %}
+
+{% stepper %}
+{% step %}
+### From your [instance selection screen](https://app.xano.com/instance?mode=master), click ![](<../../.gitbook/assets/CleanShot 2025-02-06 at 06.10.48.png>) next to the instance you want to restore a backup of.&#x20;
+
+
+{% endstep %}
+
+{% step %}
+### In the panel that opens, choose Database Backup.
+
+
+{% endstep %}
+
+{% step %}
+### Click Download and Restore
+
+
+{% endstep %}
+
+{% step %}
+### Choose the backup you'd like to restore and click ![](<../../.gitbook/assets/CleanShot 2025-02-06 at 06.13.01.png>)
 
 
 {% endstep %}

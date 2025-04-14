@@ -11,8 +11,7 @@ title: XS Filter - array_pop
 <summary>Examples</summary>
 
 ```javascript
-[1,2,3]|pop    // Returns [1,2]
-[]|pop         // Returns []
+[1,2,3]|pop    // Returns 3
 ```
 
 </details>

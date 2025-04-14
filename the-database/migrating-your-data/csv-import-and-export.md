@@ -6,7 +6,9 @@
 
 Xano's CSV file import is ultra-robust. Import your file with confidence, even if you have millions of records. The import process runs on Xano's special import service, which has dedicated resources separate from your instance, so it can handle all of your data no matter how large it is.
 
-The CSV file import allows you to create a brand new table from scratch and will generate the schema automatically. Additionally, you can edit existing records if the file can be mapped to a primary key or append data to an existing table.&#x20;
+The CSV file import allows you to create a brand new table from scratch and will generate the schema automatically.&#x20;
+
+Additionally, you can edit existing records if the file can be mapped to a primary key or append data to an existing table.&#x20;
 
 Uploads of over 5,000 records will be performed in the background. You can easily monitor the import's progress in the settings of your workspace and will be notified on Xano and via email when the import is complete.&#x20;
 

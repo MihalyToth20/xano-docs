@@ -28,8 +28,8 @@ Joins are an advanced concept that allows you to find matching records between t
 
 You have two tables with the following data:
 
-**`Customers`**: Names and their favorite color\
-&#xNAN;**`Orders`**: Color and price of items sold
+`Customers`: Names and their favorite color\
+`Orders`: Color and price of items sold
 
 When you join these tables using the color as the connection point, you can see which customers bought items matching their favorite color.
 
@@ -42,6 +42,14 @@ There are different ways to combine these lists:
 So if Sarah likes blue and there's a blue sweater order, an inner join would connect them. But if Tom likes green and he hasn't placed any orders with green items, he'd only appear in a left join.
 
 Joins are useful because they allow you to consolidate all of this into a single database operation, instead of querying multiple tables and manually matching the data in several additional steps.
+
+### Evals
+
+Evals are used to add additional fields from joined tables as part of your response.
+
+In the below example, we have two tables: **sales** and **product**. We've queried the **sales** table and joined it with **product** so we can retrieve product data for each sale. Our eval adds the product name to the response for each sales record returned.
+
+<figure><img src="../../../../.gitbook/assets/CleanShot 2025-04-14 at 17.38.50.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Output" %}
@@ -219,9 +227,15 @@ To define your external parameters using simple mode, just specify your desired 
 
 
 
+
+
 ## Using Addons
 
 Addons are a way for you to enrich a query's result with related data from other tables, such as getting product information and orders together. This is usually facilitated by using [table reference fields](../../../../the-database/database-basics/field-types.md#table-reference).
+
+{% hint style="info" %}
+Please note that addons that are empty (do not retrieve any data) will not be provided in the response.
+{% endhint %}
 
 {% @arcade/embed flowId="nfASxadnsB4PjVoo4L2s" url="https://app.arcade.software/share/nfASxadnsB4PjVoo4L2s" %}
 
