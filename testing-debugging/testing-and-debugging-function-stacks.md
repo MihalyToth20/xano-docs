@@ -23,6 +23,8 @@ This information will be used to test your workflow. If you're copying and pasti
 
 {% step %}
 ### Click ![](<../.gitbook/assets/CleanShot 2025-01-03 at 10.57.23.png>)to execute the workflow.
+
+{% include "../.gitbook/includes/safe-mode.md" %}
 {% endstep %}
 
 {% step %}
@@ -126,5 +128,9 @@ If you see these messages, they could indicate one of the following:
 * An unhandled exception in your logic
   * This means that you've likely ran across a rare error that we don't yet have specific messaging for. Please let us know about this so we can make an adjustment.
 * Server resource issues
+
+You can also try running your function stack in Safe Mode.
+
+{% include "../.gitbook/includes/safe-mode.md" %}
 
 For assistance with either of these errors, please reach out to our support team. You can also review our documentation on [memory usage](../troubleshooting-and-support/troubleshooting-performance/ram-usage.md) to narrow down the cause.
