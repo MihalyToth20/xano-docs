@@ -8,7 +8,7 @@ icon: starship
 
 Xano's self-serve plans should address a majority of application development needs. However, if you represent an organization with more comprehensive needs, Xano's tailored Enterprise Plan may be the right choice for you.
 
-## Why choose Xano Enterprise?
+## Why choose Xano for Enterprise?
 
 ### Server Portability
 
@@ -24,11 +24,14 @@ Deploy Xano instances within your existing cloud provider (AWS, Azure, or Google
 
 #### On-Premise Deployment
 
-For organizations requiring maximum security control, deploy Xano instances within your internal infrastructure. This configuration provides complete isolation and compliance with strict security protocols.
+Deploy Xano within your own internal infrastructure
+
+* Complete isolation
+* Strict security protocols
 
 #### High Availability Configuration
 
-Multi-zone deployment designed for critical production applications:
+Multi-zone deployment designed for critical production applications
 
 * Ensures continuous operation through redundant systems
 * Implements cross-zone data backups
@@ -39,7 +42,7 @@ Multi-zone deployment designed for critical production applications:
 
 #### Auto-Scaling
 
-Dynamically adjusts compute resources based on application traffic patterns and usage metrics.
+* Dynamically adjusts compute resources based on application traffic patterns and usage metrics.
 
 #### Database Architecture
 
@@ -50,7 +53,7 @@ Dynamically adjusts compute resources based on application traffic patterns and 
 
 #### Connector System
 
-Pre-built integrations with common CRM and CDP systems enable unified data management across platforms.
+* Pre-built integrations with common CRM and CDP systems enable unified data management across platforms.
 
 #### Microservice Support
 
@@ -60,7 +63,7 @@ Pre-built integrations with common CRM and CDP systems enable unified data manag
 
 #### Identity Management
 
-Supports custom SSO implementation and policy enforcement for organizational authentication standards.
+* Supports custom SSO implementation and policy enforcement for organizational authentication standards.
 
 #### Development Environment Management
 
@@ -101,4 +104,4 @@ Supports custom SSO implementation and policy enforcement for organizational aut
 * 24/7 emergency support for service outages
 * Proactive health and release monitoring
 * Database migration assistance
-* Technical consultation services
+* Technical consultation services with a Solutions Engineer

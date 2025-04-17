@@ -234,6 +234,7 @@
 * [Xano for Enterprise](enterprise/xano-for-enterprise.md)
 * [Enterprise Features](enterprise/enterprise-features/README.md)
   * [Microservices](enterprise/enterprise-features/microservices.md)
+  * [Tenant Center](enterprise/enterprise-features/tenant-center.md)
   * [Compliance Center](enterprise/enterprise-features/compliance-center.md)
   * [Security Policy](enterprise/enterprise-features/security-policy.md)
   * [Instance Activity](enterprise/enterprise-features/instance-activity.md)
