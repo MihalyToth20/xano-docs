@@ -1,136 +1,277 @@
 # Microservices
 
+## What's possible with Microservices?
+
+* Deploy a custom service right alongside your Xano instance to extend the functionality of what you can do without the data leaving your environment
+  * LLMs and AI models _**(GPU-based deployment is available!)**_
+  * PDF generation (great for secure data requirements like HIPAA)
+  * Media conversion and processing
+* Bring a legacy system into the modern age by deploying it inside of a Docker container alongside your Xano instance
+* Let separate teams develop specific services to be used in your Xano environment while other developers and product owners work directly inside of Xano
+
+### Microservice Examples and Tutorials
+
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Unoconv</strong></td><td>Deploy secure file conversation as a part of your Xano environment</td><td><a href="../../.gitbook/assets/unoconv.png">unoconv.png</a></td><td><a href="https://www.youtube.com/watch?v=W2kSIFqzB_4">https://www.youtube.com/watch?v=W2kSIFqzB_4</a></td></tr></tbody></table>
+
 {% hint style="success" %}
-The Microservice feature is an additional add-on. Please contact your Xano representative or support for details.&#x20;
+The Microservice feature is available as an add-on. Please contact your Xano representative or support for details.&#x20;
 {% endhint %}
 
-Xano can host 3rd party microservices using Kubernetes, which is the same infrastructure and architecture that powers Xano and makes it possible to scale.&#x20;
+## Deploying a Microservice
 
-Xano provides an [admin panel](microservices.md#microservice-management-center) to configure all aspects of these microservices, including CPU/RAM/GPU resources, persistent storage, load balancing, and network port mapping. Each microservice is isolated internally within the Xano instance and accessible through the Xano function stack.
+{% stepper %}
+{% step %}
+### Open the Microservice Management Center
 
-The following details include how to [create a deployment](microservices.md#deployments-deploy-a-microservice) a microservice and how you can [interact with a microservice](microservices.md#using-a-microservice-in-the-function-stack) via the Function Stack.
+From your instance selection screen, click the :gear: icon and choose Microservices from the panel that opens.
+{% endstep %}
 
-## Microservice Management Center
+{% step %}
+### Review your deployment needs before proceeding
 
-When the microservice feature is enabled, click the menu icon on the instance to access the microservice management center.
+#### Deployments
 
-<figure><img src="../../.gitbook/assets/CleanShot 2022-12-28 at 14.48.08.png" alt=""><figcaption></figcaption></figure>
+This is where you'll actually deploy your Docker containers
 
-From the Microservice Management Center, you can manage:&#x20;
+#### Persistent Volumes
 
-* [Deployments](microservices.md#deployments-deploy-a-microservice)
-* [Persistent Volumes](microservices.md#persistent-volumes)
-* [Configs](microservices.md#configs)
-* And monitor the [Status](microservices.md#status) of deployed microservices
+If you need persistent storage for one of your microservices, you'll do that here before deployment.
 
-<figure><img src="../../.gitbook/assets/CleanShot 2022-12-29 at 11.21.51.png" alt=""><figcaption></figcaption></figure>
+#### Configs
 
-### Deployments: Deploy a Microservice
+Most microservices will come with a standard configuration. In this section, you can add a customized configuration that better suits your specific needs, if applicable.
 
-To create a deployment a Docker Image is required; Docker Images are either publicly available or through a private repository.&#x20;
+You would need to provide a config if you'd like to deploy a Docker image from a private repo.
+{% endstep %}
 
-In the below example, a public Docker Image is shown. The example uses an echo server, which like its name allows you to send something to it and it will send it back.&#x20;
+{% step %}
+### Add a persistent volume, if necessary.
 
-#### Deployment
+Click **+Add** under the **Persistent Volumes** section.
 
-<figure><img src="../../.gitbook/assets/CleanShot 2022-12-29 at 11.32.43.png" alt=""><figcaption></figcaption></figure>
+**Name:** Provide a descriptive name for your persistent volume. This will help you identify it later.
 
-* **Name** - the name of the microservice deployment (this will be used to identify the microservice in the Function Stack).
-* **Replicas -** number of copies of the docker image - a Replica tends to be considered equivalent to a server. Replicas are load balanced, which means that if you have the same API request more than once, it will be distributed to different Replicas. Your application must be tolerant of such a configuration. (_Typically, it is recommended to keep Replicas to 1 to get things working_).
-* **Docker Config** - Public or private. (Private configs are shown when configured in the [Configs](microservices.md#configs) section).
-* **Strategy** - how updates are handled and their downtimes: **RollingUpdate** - bring up another Replica first with the new update, and then remove the old one. **Recreate** - take the existing one down right away and then create a new one.
+**Size (Gi):** Please be aware that Xano uses **Gibibytes (Gi)** to denote the size of persistent volumes. A Gibibyte is slightly larger than a Gigabyte (1 GiB = 1024 MiB, while 1 GB = 1000 MB). When planning your storage needs, ensure you are considering the capacity in Gibibytes.
 
-#### Containers
+**Type:** Select the type of storage you want to use.
 
-<figure><img src="../../.gitbook/assets/CleanShot 2022-12-29 at 11.40.20.png" alt=""><figcaption></figcaption></figure>
+* **SSD (Solid State Drive):** SSD storage offers significantly faster read and write speeds compared to standard storage.
+  * **Use Cases:**
+    * **Databases:** Ensuring quick query responses and transaction processing.
+    * **Caching Layers:** Providing rapid access to frequently used data.
+    * **High-IOPS Applications:** Applications that perform a large number of input/output operations.
+* **Standard:** Standard storage provides a cost-effective solution for data where fast access speeds are not critical for the application's core functionality.
+  * **Use Cases:**
+    * **Media Storage:** Storing images, videos, and other large files where retrieval speed is less critical.
+    * **Logs:** Archiving application logs.
+    * **Backups:** Storing backup data.
+    * **Less Frequently Accessed Data:** Data that doesn't require immediate or frequent reads/writes.
 
-* **Name** - often the same name as the deployment but since a deployment can have multiple containers, this gives you the ability to identify additional containers.
-* **Docker Image** - The URL to the actual Docker Image: either public or private.
+**Choosing the Right Storage Type:**
 
-{% hint style="info" %}
-You can have multiple containers when your deployment needs more than one container. For example, a PHP container for an API layer and a PostgreSQL container for a database that needs to be treated as a single deployment.
-{% endhint %}
+Carefully consider the access patterns and performance requirements of your microservice's data when selecting the storage type. Choosing SSD for performance-sensitive workloads like databases will significantly impact responsiveness. Conversely, using Standard storage for less critical data can help optimize costs.
 
-#### Ports
+By configuring persistent volumes, you ensure that your microservice's valuable data persists even if the underlying container or instance is restarted or redeployed.
+{% endstep %}
 
-<figure><img src="../../.gitbook/assets/CleanShot 2022-12-29 at 11.40.53.png" alt=""><figcaption></figcaption></figure>
+{% step %}
+### Add a config file, if necessary.
 
-* **Container Port** - the port that the Docker Image uses.
-* **Service Port** - the port that the Function Stack uses.
+Click **+Add** under Configs
 
-{% hint style="info" %}
-Both ports can be the same, but if you have multiple containers, you will need to use different ports because you can't have more than one of the same Service Port.
-{% endhint %}
+**Available Config Types and Use Cases:**
 
-#### Environment Variables
+The **Type** dropdown offers a variety of options, each suited for different kinds of configuration data:
 
-<figure><img src="../../.gitbook/assets/CleanShot 2022-12-29 at 11.41.16.png" alt=""><figcaption></figcaption></figure>
+* **Docker Config:**
+  * **Description:** This config type is specifically designed to securely store credentials for private Docker container registries. When your microservice's Docker image is hosted in a private registry, Xano needs the necessary username and password (or access token) to pull the image during deployment.
+  * **Use Cases:**
+    * **Private Registry Access:** Your organization hosts its Docker images in a private registry on platforms like Docker Hub Private Repositories, Amazon Elastic Container Registry (ECR), Google Container Registry (GCR), or other private registry solutions.
+    * **Secure Credential Management:** Avoid embedding registry credentials directly in your deployment scripts or environment variables, which can be less secure. Docker Config provides a centralized and secure way to manage these sensitive details within Xano.
+  * **Example:** You have a private Docker Hub repository `myorg/my-app`. To deploy this microservice in Xano, you would create a Docker Config named `dockerhub-credentials` and provide your Docker Hub username and personal access token. Xano will then use these credentials to pull the `myorg/my-app` image during deployment.
+* **Text File:**
+  * **Description:** A simple way to store plain text configurations. This is useful for basic settings or configuration formats that don't adhere to specific structured formats.
+  * **Use Cases:**
+    * **Simple Configuration Flags:** Storing basic on/off switches or textual parameters for your application.
+    * **License Keys:** Holding software license keys as plain text.
+    * **Custom Script Parameters:** Providing arguments to shell scripts executed within your microservice.
+  * **Example:** You might have a microservice that reads a `config.txt` file containing a debug flag: `DEBUG=true`. You can store this in a Text File config named `debug-settings`.
+* **JSON File:**
+  * **Description:** Stores configuration data in the widely used JSON (JavaScript Object Notation) format. This is ideal for structured data that can be easily parsed by most programming languages.
+  * **Use Cases:**
+    * **API Endpoint Configurations:** Defining base URLs and specific endpoint paths for external APIs your microservice interacts with.
+    * **Feature Flags:** Managing the enablement or disablement of specific features within your application.
+    * **Database Connection Strings (non-sensitive parts):** Storing parts of database connection strings that are not sensitive credentials.
+  *   **Example:** You might have a microservice that needs to connect to a third-party analytics service. You could store the API key and base URL in a JSON config named `analytics-config`:
 
-Environment Variables allow you to include basic variables for the container. If there are a lot of these, then it tends to be more useful to use a [Config](microservices.md#configs) file.&#x20;
+      ```json
+      {
+        "api_key": "your_api_key_here",
+        "base_url": "[https://api.analytics.com/v1](https://api.analytics.com/v1)"
+      }
+      ```
+* **YAML File:**
+  * **Description:** Stores configuration data in YAML, a human-readable data serialization language. Often preferred for its cleaner syntax compared to JSON for more complex configurations.
+  * **Use Cases:**
+    * **Orchestration Configuration:** Defining how different components of your microservice interact.
+    * **Complex Application Settings:** Managing numerous configuration options with hierarchical structures.
+    * **Data Pipeline Definitions:** Specifying the steps and parameters for data processing workflows.
+  *   **Example:** You might configure logging levels and output formats for your microservice using a YAML config named `logging`:
 
-{% hint style="info" %}
-The possible values for the Environment Variables would be defined by the Docker Image - otherwise, Environment Variables can be ignored.
-{% endhint %}
+      ```yaml
+      level: INFO
+      format: '%(asctime)s - %(levelname)s - %(message)s'
+      outputs:
+        - type: console
+        - type: file
+          path: /var/log/app.log
+      ```
+* **XML File:**
+  * **Description:** Stores configuration data in XML. While less common for modern configurations, some legacy systems or specific libraries might still rely on XML.
+  * **Use Cases:**
+    * **Integration with Legacy Systems:** Configuring interactions with older systems that use XML for configuration.
+    * **Specific Library Requirements:** Utilizing libraries within your microservice that expect configuration in XML format.
+  * **Example:** Configuring a Java-based application that reads its settings from an `app-config.xml` file.
+* **Shell File:**
+  * **Description:** Allows you to store and execute shell scripts. This provides a way to automate setup tasks or provide dynamic configurations based on script output.
+  * **Use Cases:**
+    * **Environment Variable Setup:** Generating and exporting environment variables needed by your microservice.
+    * **Initialization Scripts:** Running setup commands or data migrations during microservice startup.
+    * **Dynamic Configuration Generation:** Creating configuration files based on external factors or other Configs.
+  * **Example:** You could have a `setup.sh` script in a Shell File config that checks for the existence of a directory and creates it if it doesn't exist. The output of this script could then be used by your microservice.
+* **HTML File:**
+  * **Description:** Stores HTML content. While not typically used for core application configuration, it could be useful for microservices that serve web content or require embedding HTML snippets.
+  * **Use Cases:**
+    * **Custom Error Pages:** Providing custom HTML for error responses.
+    * **Email Templates:** Storing the HTML structure for emails sent by your microservice.
+    * **Small Web Content Snippets:** Including static HTML content within your application's responses.
+  * **Example:** You might have a microservice that sends out welcome emails. The HTML structure of this email could be stored in an HTML File config named `welcome-email-template`.
+* **CSS File:**
+  * **Description:** Stores CSS (Cascading Style Sheets) for styling web content served by your microservice.
+  * **Use Cases:**
+    * **Styling Embedded Web Interfaces:** If your microservice exposes a basic web interface, you can manage its styles using CSS Configs.
+    * **Generating Styled Content:** If your microservice generates HTML, you can store the associated styles separately.
+  * **Example:** A simple monitoring dashboard exposed by your microservice could have its styles defined in a CSS File config named `dashboard-styles.css`.
+* **SCSS File:**
+  * **Description:** Stores SCSS, a CSS preprocessor that adds features like variables, nesting, and mixins, making CSS more maintainable and powerful.&#x20;
+  * **Use Cases:**
+    * **Advanced Web Interface Styling:** For more complex web interfaces or components within your microservice.
+    * **Themed Applications:** Managing different visual themes for your microservice's web elements.
+  * **Example:** You could define color palettes and reusable style rules in an SCSS File config named `theme.scss`.&#x20;
 
-#### Volumes
+**Helpers for Adding Configs:**
 
-<figure><img src="../../.gitbook/assets/CleanShot 2022-12-29 at 11.44.50.png" alt=""><figcaption></figcaption></figure>
+Xano provides helper buttons to simplify the process of adding certain types of configurations:
 
-* **Name** - the name of the Volume.
-* **Type** -&#x20;
-  * **Scratch**: temporary storage that disappears when the container restarts.&#x20;
-  * **Persistent Volume**: commonly used for database storage.&#x20;
-  * **Config File**: the configuration for the Docker Image - the contents of this file would be determined by the Docker Image.
-    * **Config** - a reference to the configuration in the [Config](microservices.md#configs) panel.
-* **Mount Path** - the path to the config file within the Docker Image as specified by the Docker Image.
+* **FROM USER/PASS:** This helper is a shortcut for creating a **Docker Config** by directly prompting you for a username and password.
+* **FROM GOOGLE SERVICE ACCOUNT:** This helper assists in configuring access to Google Cloud services containing the necessary service account credentials.
+* **FROM AWS:** This helps in configuring access to Amazon Web Services, making it easier to reterieve AWS access keys and secret keys.
 
-#### Resources
+By understanding the different Config types and their potential use cases, you can effectively manage your microservice's settings, credentials, and other necessary data within Xano, leading to more robust, secure, and maintainable deployments. Remember to choose the Config type that best suits the format and purpose of your configuration data.
+{% endstep %}
 
-<figure><img src="../../.gitbook/assets/CleanShot 2022-12-29 at 11.50.13.png" alt=""><figcaption></figcaption></figure>
+{% step %}
+### Finally, set up your deployment.
 
-Resources are the min/max for CPU and RAM. Also, the GPU, which is used for Machine Learning applications.
+The **Deployment** section is where you define how your microservice, packaged as a Docker image, will be run and managed within Xano. Think of a deployment as the active instance of your microservice.
 
-#### Docker Entrypoint
+**Key Concepts:**
 
-<figure><img src="../../.gitbook/assets/CleanShot 2022-12-29 at 11.52.21.png" alt=""><figcaption></figcaption></figure>
+* **Docker Image:** The foundational building block of your microservice. It's a standalone package that includes everything needed to run your application: code, runtime, system tools, system libraries, and settings. Docker images can be hosted in public or private repositories.
+* **Replicas:** These are the individual running instances of your Docker image. Increasing the number of replicas enhances the availability and scalability of your microservice by distributing incoming requests across multiple instances.
+* **Load Balancing:** When you have multiple replicas, Xano automatically distributes incoming API requests across these instances. This ensures that no single instance is overwhelmed and improves the overall performance and resilience of your microservice. Your application should be designed to handle multiple concurrent requests and statelessness to function correctly with replicas.
 
-Docker Entrypoint Command and Argument are advanced settings to override Docker Entrypoints.
+**Deployment Configuration:**
 
-#### Affinity and Tolerations
+* **Name:** A unique identifier for this specific microservice deployment within your Xano Function Stack. This name will be used to reference your microservice when building your APIs.
+* **Replicas:** Specify the desired number of running instances (replicas) of your Docker image.
+  * **Recommendation:** It's often best to start with **1 Replica** while you are initially setting up and testing your microservice. Once it's stable, you can increase the number of replicas for better performance and fault tolerance, if your deployment supports them.
+* **Docker Config:** Select the configuration to use for accessing your Docker image repository.
+  * **Public Repo:** Choose this if your Docker image is hosted in a public repository (no authentication required).
+  * **\<Your Private Config Name>:** If your Docker image is in a private repository, the Docker Configs you've set up in the **Configs** section will appear here. Select the appropriate config containing the necessary credentials to pull the image.
+* **Strategy:** Defines how updates to your microservice deployment are handled with minimal downtime.
+  * **RollingUpdate:** This strategy gradually updates your replicas. It brings up a new replica with the updated Docker image before taking down an old one. This ensures minimal interruption to your service.
+  * **Recreate:** This strategy first takes down all existing replicas and then creates new ones with the updated Docker image. This will result in a period of downtime during the update.
 
-<figure><img src="../../.gitbook/assets/CleanShot 2022-12-29 at 11.54.13.png" alt=""><figcaption></figcaption></figure>
+**Containers:**
 
-Affinity and Tolerations are advanced Kubernetes concepts that allow your containers to use the appropriate resources provided by servers. For example, you may need a container on a server with a 16core CPU. Another example is you need a container on a server with a GPU but you don't want other containers to take that spot.
+A deployment can consist of one or more containers. This is useful for running tightly coupled applications that require multiple processes.
 
+* **Name:** A name to identify this specific container within the deployment. This can be the same as the deployment name for single-container deployments or a more specific name for multi-container setups.
+* **Type:** Specifies the type of container to run:
+  * **Standard:** The primary type for running your main application processes. These containers will run continuously as part of your microservice deployment.
+  * **Initialize Only:** This type of container is designed to run a specific task or set of tasks to completion _before_ the Standard containers in the deployment are started. Once the Initialize Only container finishes its execution successfully, it will terminate, and the Standard containers will then be launched.
+* **Docker Image:** The URL or identifier of the Docker image to run for this container. This can be a public or private image (authentication for private images is handled at the Deployment level via the "Docker Config").
+  * **Multi-Container Example:** Imagine a web application that requires a PHP application server and a PostgreSQL database. You could define two containers within the same deployment: one running the PHP Docker image and another running the PostgreSQL Docker image. These containers can then communicate with each other within the deployment's network.
 
+**Ports:**
 
-### Persistent Volumes
+This section defines how network traffic is routed to your container(s).
 
-<figure><img src="../../.gitbook/assets/CleanShot 2022-12-29 at 11.57.14.png" alt=""><figcaption></figcaption></figure>
+* **+ Add Port:** Click this to define a new port mapping.
+* **Container Port:** The port that your application _inside_ the Docker container is listening on. This is defined by how your Docker image is built.
+* **Service Port:** The port that Xano's Function Stack will use to expose your microservice externally. When you make an API request to your microservice in Xano, you will target this service port.
+  * **Port Mapping:** You can have the Container Port and the Service Port be the same. However, in multi-container deployments, each container that needs to be accessible externally must have a unique Service Port. The Container Port will be specific to the application within each container.
 
-Persistent Volumes are commonly used for a microservice that is a database. This is because typically database storage needs to stick around, or in other words, be persistent. So in the event, the server crashes and reboots the Persistent Volume is still there.&#x20;
+**Environment Variables:**
 
-### Configs
+Environment variables provide a way to configure your containerized application dynamically. These are key-value pairs that can influence the behavior of your application at runtime.
 
-<figure><img src="../../.gitbook/assets/CleanShot 2022-12-29 at 12.00.17.png" alt=""><figcaption></figcaption></figure>
+* **+ Add environment variable:** Click this to add a new environment variable.
+* **Name:** The name of the environment variable.
+* **Value:** The value assigned to the environment variable.
+  * **Use Cases:** You can use environment variables to pass database connection details (excluding sensitive credentials, which are better managed with Configs), API keys (for non-critical services), or feature flags to your application.
+  * **Best Practice:** For a large number of configuration parameters, especially sensitive ones, consider using **Config Files** instead of environment variables for better organization and security. The specific environment variables your Docker image expects will be documented by the image provider.
 
-Configs allow for an easy way to have configuration files for your microservice application. Microservices may often have a standard configuration that you may want to customize. For example, Postgres would come with a standard config file but their may be some customization that you specifically need to tailor to your application's needs.&#x20;
+**Volumes:**
 
-There are various different types of Config files. Docker Config will allow you to interact with a private repository if your Docker Image lives there.&#x20;
+Volumes provide persistent storage or configuration files to your containers.
 
-### Status
+* **+ Add volume:** Click this to add a new volume mount.
+* **Name:** A name for this volume mount within the deployment.
+* **Type:** Specifies the type of volume to mount:
+  * **Scratch:** Provides temporary storage that is local to the container instance and is deleted when the container restarts. Useful for ephemeral data like temporary files or caches that don't need to persist.
+  * **Persistent Volume:** Mounts a persistent storage volume that you configured in the **Persistent Volumes** section. This is essential for data that needs to survive container restarts and deployments, such as database files or uploaded media.
+  * **Config File:** Mounts a configuration file from the **Configs** section into your container.
+* **Config:** If you selected "Config File" as the **Type**, this dropdown will appear, allowing you to choose a specific configuration you've created in the **Configs** section.
+* **Mount Path:** The path _inside_ the Docker container where the volume or config file will be accessible to your application. This path is determined by how your Docker image is designed to look for these resources.
 
-The status of the deployment can be monitored by clicking on Status of the Microservice Management Center.
+**Resources:**
 
-<figure><img src="../../.gitbook/assets/CleanShot 2022-12-28 at 15.21.34.png" alt=""><figcaption></figcaption></figure>
+This section allows you to define the minimum and maximum CPU and RAM resources that can be allocated to your container(s). You can also specify the number of GPUs (Graphics Processing Units) if your application requires them for tasks like machine learning.
 
-By selecting the name, you can confirm all the different settings.
+* **Min CPU:** The minimum amount of CPU that will be reserved for each container instance (e.g., 250m represents 0.25 CPU core).
+* **Max CPU:** The maximum amount of CPU that each container instance can utilize (e.g., 1000m represents 1 CPU core).
+* **Min RAM:** The minimum amount of RAM (memory) that will be reserved for each container instance (e.g., 1024Mi represents 1024 Megabytes).
+* **Max RAM:** The maximum amount of RAM that each container instance can utilize (e.g., 2048Mi represents 2048 Megabytes).
+* **GPU:** The number of GPUs to allocate to the container (typically used for machine learning workloads).
+  * **Resource Management:** Properly configuring resource limits helps ensure that your microservice has the resources it needs to run efficiently and prevents a single microservice from consuming all available resources on the underlying infrastructure.
 
-<figure><img src="../../.gitbook/assets/CleanShot 2022-12-28 at 15.47.41.png" alt=""><figcaption><p>View the various settings of the deployed microservice.</p></figcaption></figure>
+**Docker Entrypoint Command override:**
 
-And retrieve logs.
+This is an advanced setting that allows you to override the default entrypoint command defined in your Docker image. The entrypoint is the first command that runs when a container starts.
 
-<figure><img src="../../.gitbook/assets/CleanShot 2022-12-28 at 15.49.14.gif" alt=""><figcaption><p>Retrieve the logs of the deployed microservice. </p></figcaption></figure>
+* **+ Add command:** Click to specify a new entrypoint command.
+  * **Use Case:** You might use this to run a different executable or script as the main process for your container.
+
+**Docker Entrypoint Arguments override:**
+
+This advanced setting allows you to provide arguments to the overridden entrypoint command.
+
+* **+ Add argument:** Click to add an argument for the overridden entrypoint.
+
+**Affinity and Tolerations:**
+
+These are advanced Kubernetes concepts that control how pods (groups of containers) are scheduled onto nodes (servers).
+
+* **Affinity:** Allows you to define rules about which nodes your pods should or should not be placed on based on labels of other nodes or pods.
+  * **Use Case:** You might want to ensure that all replicas of a particular microservice are deployed on different nodes for high availability or that certain containers are placed on nodes with specific hardware.
+* **Tolerations:** Allow pods to be scheduled onto nodes that have specific taints applied to them. Taints are used to prevent pods from being scheduled onto certain nodes.
+  * **Use Case:** If you have specialized nodes (e.g., with GPUs), you might apply a taint to them. Only pods with a corresponding toleration can be scheduled onto these nodes.
+
+These advanced settings provide fine-grained control over the placement and scheduling of your microservice containers within the underlying infrastructure. Understanding these concepts can be beneficial for optimizing resource utilization, ensuring high availability, and meeting specific hardware requirements.
+{% endstep %}
+{% endstepper %}
 
 ### Using a Microservice in the Function Stack
 

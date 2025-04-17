@@ -12,7 +12,7 @@ Every Xano workspace includes Real-Time Collaboration which enables you to edit 
 
 Real-time presence informs you when a team member is working on the same Function Stack as you at the top of the page with their initials. Each team member’s initials will be displayed on the function stack item they are currently editing.&#x20;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Example of real-time presence</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Example of real-time presence</p></figcaption></figure>
 
 
 

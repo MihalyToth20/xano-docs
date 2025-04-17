@@ -4,104 +4,130 @@ icon: starship
 
 # Xano for Enterprise
 
-## About Xano for Enterprise
-
-Xano's self-serve plans should address a majority of application development needs. However, if you represent an organization with more comprehensive needs, Xano's tailored Enterprise Plan may be the right choice for you.
-
 ## Why choose Xano for Enterprise?
-
-### Server Portability
-
-#### Bring Your Own Cloud (BYOC)
-
-Deploy Xano instances within your existing cloud provider (AWS, Azure, or Google Cloud). This enables:
-
-* Complete data sovereignty and infrastructure control
-* Regional deployment flexibility
-* Custom scaling configurations
-* Direct resource access through RBAC
-* Multiple instance deployment capability within a single cloud account
-
-#### On-Premise Deployment
 
 Deploy Xano within your own internal infrastructure
 
 * Complete isolation
 * Strict security protocols
 
-#### High Availability Configuration
-
 Multi-zone deployment designed for critical production applications
 
-* Ensures continuous operation through redundant systems
-* Implements cross-zone data backups
-* Provides automatic failover capabilities
-* Supports organizational SLA requirements
-
-### Performance Features <a href="#performance" id="performance"></a>
-
-#### Auto-Scaling
-
 * Dynamically adjusts compute resources based on application traffic patterns and usage metrics.
-
-#### Database Architecture
-
-* Direct PostgreSQL database access for integration with external systems
-* Horizontal scaling capabilities for high-volume query handling across regions
-
-### Platform Integration
-
-#### Connector System
-
 * Pre-built integrations with common CRM and CDP systems enable unified data management across platforms.
-
-#### Microservice Support
-
-* Hosts third-party microservices within Xano infrastructure
-* Provides isolation and resource management
-* Integrates with existing function stack
-
-#### Identity Management
-
 * Supports custom SSO implementation and policy enforcement for organizational authentication standards.
-
-#### Development Environment Management
-
-* Supports multiple environment types (Dev/QA/Staging/Prod)
-* Enables custom API branching with automatic documentation
-* Provides flexible database source configuration
-
-#### Monitoring and Control
-
-* Enhanced API request logging with customizable retention
-* Resource usage tracking and optimization capabilities
-* Private function marketplace for standardized development
-
-### Security Framework
-
-#### Access Control
-
-* Role-Based Access Control (RBAC) for granular permission management
-* Team collaboration controls
-* Customizable security policies including inactivity logout, 2FA, and SSO enforcement
-
-#### Infrastructure Security
-
-* Cloud Armor integration for DDoS protection
-* Enhanced penetration testing protocols
-* Regular security audits
-
-### Compliance Standards
-
-* HIPAA compliance with BAA availability
-* GDPR compliance with DPA support
-* SOC 2 Type 2 & SOC 3 certification
-* ISO 27001:2013 certification for information security management
-* ISO 9001:2015 certification for quality management
-
-### Support Structure
-
 * 24/7 emergency support for service outages
 * Proactive health and release monitoring
 * Database migration assistance
 * Technical consultation services with a Solutions Engineer
+* 24/7 emergency support for service outages
+* Proactive health and release monitoring
+* Database migration assistance
+* Technical consultation services
+
+## What's possible with Xano for Enterprise?
+
+Xano's standard plans are designed to meet a wide range of application development needs.
+
+However, organizations with more complex requirements find that Xano for Enterprise offers the advanced capabilities and dedicated support necessary for large-scale projects and demanding environments.
+
+## Key Capabilities of Xano for Enterprise
+
+### Flexible Infrastructure Options
+
+**Bring Your Own Cloud (BYOC) Deployment**
+
+Xano Enterprise allows you to deploy your Xano instances within your preferred cloud provider (AWS, Azure, or Google Cloud). This provides significant advantages in terms of:
+
+* **Data Sovereignty:** Maintain direct control over the location and governance of your data.
+* **Regional Compliance:** Deploy in specific geographic regions to meet regulatory requirements.
+* **Custom Resource Allocation:** Tailor your infrastructure resources to optimize performance and cost.
+* **Granular Access Control:** Manage team permissions and access to resources through Role-Based Access Control (RBAC).
+* **Scalable Architecture:** Deploy multiple instances within a single cloud account to support growing application demands.
+
+**On-Premise Deployment Option**
+
+For organizations with stringent security and compliance needs, Xano for Enterprise can be deployed within your own internal infrastructure, offering a completely isolated environment.
+
+**High Availability Configuration for Critical Applications**
+
+Ensure the continuous operation of your most important applications with our multi-zone deployment architecture, featuring:
+
+* **Redundancy:** Eliminate single points of failure to maximize uptime.
+* **Data Protection:** Implement cross-zone data backups for disaster recovery.
+* **Automated Recovery:** Benefit from automatic failover mechanisms to maintain service continuity.
+* **Service Level Agreement (SLA) Support:** Meet your organization's defined uptime requirements.
+
+### Performance and Scalability Features
+
+**Dynamic Resource Management with Auto-Scaling**
+
+Xano for Enterprise automatically adjusts compute resources based on your application's traffic patterns and usage, ensuring optimal performance without manual intervention.
+
+**Robust Database Architecture**
+
+* **Direct PostgreSQL Access:** Facilitates integration with external systems and provides greater control over your data.
+* **Horizontal Scaling Capabilities:** Enables your database to handle high volumes of queries and data across multiple regions.
+
+### Platform Integration and Extensibility
+
+**Seamless Integration with Enterprise Systems**
+
+Our connector system provides pre-built integrations with popular CRM and CDP platforms, streamlining data management across your organization.
+
+**Microservice Integration**
+
+Xano for Enterprise allows you to host and manage third-party microservices within our infrastructure, providing isolation and efficient resource allocation. This enables integration with your existing technology stack and enables extending the functionality of not only your Xano environment, but also allows for seamlessly integrating legacy systems and code.
+
+**Enhanced Identity Management**
+
+Supports the implementation of custom Single Sign-On (SSO) and the enforcement of organizational authentication policies for secure access.
+
+**Comprehensive Development Environment Management**
+
+* **Multiple Environment Support:** Manage your application lifecycle effectively with dedicated environments for development, testing, staging, and production.
+* **API Branching and Documentation:** Enables parallel development efforts with automated API documentation for each branch.
+* **Flexible Database Configuration:** Connect to different database sources for various development stages.
+
+**Advanced Monitoring and Control**
+
+* **Detailed API Request Logging:** Provides enhanced visibility into application usage with customizable log retention policies.
+* **Resource Usage Tracking and Optimization:** Offers tools to monitor and optimize resource consumption for cost efficiency.
+* **Private Function Marketplace:** Allows organizations to create and share standardized functions for consistent development practices.
+
+### Security and Compliance
+
+**Comprehensive Access Control Mechanisms**
+
+* **Role-Based Access Control (RBAC):** Enables fine-grained control over user permissions and access to resources.
+* **Team Collaboration Features:** Facilitates secure collaboration among development teams.
+* **Customizable Security Policies:** Allows the enforcement of organizational security standards, including inactivity timeouts, two-factor authentication (2FA), and SSO.
+
+**Infrastructure Security Measures**
+
+* **DDoS Protection:** Integrated Cloud Armor protection against distributed denial-of-service attacks.
+* **Enhanced Security Testing:** Regular and rigorous penetration testing protocols to identify and address potential vulnerabilities.
+* **Regular Security Audits:** Independent security audits to ensure adherence to industry best practices.
+
+#### Commitment to Compliance Standards
+
+Xano for Enterprise is designed to help organizations meet various regulatory and industry compliance standards, including:
+
+* **HIPAA Compliance:** With the availability of a Business Associate Agreement (BAA).
+* **GDPR Compliance:** Supported through a Data Processing Agreement (DPA).
+* **SOC 2 Type 2 & SOC 3 Certification:** Demonstrating our commitment to security, availability, processing integrity, confidentiality, and privacy.
+* **ISO 27001:2013 Certification:** For information security management systems.
+* **ISO 9001:2015 Certification:** For quality management systems.
+
+### Dedicated Enterprise Support
+
+Our Enterprise plan offers a dedicated support structure to ensure your success:
+
+* **24/7 Emergency Support:** Priority support for critical service disruptions.
+* **Proactive Health and Release Monitoring:** We actively monitor your Xano instances to ensure optimal performance and smooth updates.
+* **Database Migration Assistance:** Expert guidance and support for migrating your existing data to Xano.
+* **Technical Consultation Services:** Access to our technical experts for architectural guidance and best practices.
+
+This overview provides a glimpse into the advanced capabilities offered by Xano for Enterprise. If your organization requires the flexibility, scalability, security, and support outlined above, we encourage you to reach out to our team to discuss your specific needs and explore how Xano can empower your next generation of applications.
+
+### Click [here](https://www.xano.com/enterprise/) to contact us and learn more. <a href="#contact" id="contact"></a>
