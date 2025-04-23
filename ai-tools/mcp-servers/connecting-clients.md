@@ -48,7 +48,11 @@ In our example, we have a tool that checks if a user is marked as an administrat
 {% endstep %}
 {% endstepper %}
 
-## <img src="../../.gitbook/assets/cursorlogo.png" alt="" data-size="line"> Cursor (per-project with authentication) <a href="#cursor" id="cursor"></a>
+## <img src="../../.gitbook/assets/cursorlogo.png" alt="" data-size="line"> Cursor (per-project) <a href="#cursor" id="cursor"></a>
+
+{% hint style="danger" %}
+**Please note that Cursor does not currently support authentication headers for SSE connections. You can only use tools that do not require authentication.**
+{% endhint %}
 
 {% stepper %}
 {% step %}
@@ -77,10 +81,6 @@ If the file is blank, start with the basic structure and replace the placeholder
   }
 }
 ```
-
-{% hint style="danger" %}
-**Please note that Cursor does not currently support authentication headers for SSE connections. You can only use tools that do not require authentication.**
-{% endhint %}
 
 You can add multiple entries if you have multiple MCP servers. See the below example.
 
@@ -326,6 +326,12 @@ You can add multiple entries if you have multiple MCP servers. See the below exa
   }
 }
 ```
+{% endstep %}
+
+{% step %}
+### Click the Refresh button, and you should see your MCP server(s) available
+
+
 {% endstep %}
 {% endstepper %}
 
