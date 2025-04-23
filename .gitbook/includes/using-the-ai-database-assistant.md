@@ -4,7 +4,7 @@ title: Using the AI Database Assistant
 
 {% stepper %}
 {% step %}
-## Click the ![](<../assets/CleanShot 2025-02-26 at 13.11.37@2x.png>) button anywhere inside the database.
+## Click the <mark style="background-color:purple;">Database Assistant</mark> button anywhere inside the database.
 
 
 {% endstep %}
@@ -28,9 +28,27 @@ Here are some examples of things you can ask the AI assistant:
 {% endstep %}
 {% endstepper %}
 
-{% hint style="warning" %}
-**Note**
+## What else can I do with the Database Assistant?
 
-To ensure data integrity and safety, the database assistant is currently unable to delete any data, tables, or fields.&#x20;
-{% endhint %}
+{% stepper %}
+{% step %}
+## Ask it to critique your database design
 
+The Database Assistant is designed to ensure that best practices for database design are followed. If you've already built your database and just want to have it looked over, you can ask the assistant to check and make recommendations.
+{% endstep %}
+
+{% step %}
+## Modify existing schema faster
+
+The database assistant has the ability to create and delete table columns, allowing you to modify your database tables even faster.
+{% endstep %}
+
+{% step %}
+## Create default [#auto-generated-apis](../../the-function-stack/building-with-visual-development/apis/#auto-generated-apis "mention")
+
+When creating database tables, the Database Assistant can create default CRUD API endpoints for you.\
+\
+On the Create Table step, click the dropdown to select creating CRUD API endpoints with the table.\
+![](<../assets/CleanShot 2025-04-21 at 12.13.59.png>)
+{% endstep %}
+{% endstepper %}

@@ -58,9 +58,11 @@ This block will provide individual timings for each step, allowing you to quickl
 {% step %}
 ### What's next?
 
-Run it again by clicking ![](<../.gitbook/assets/CleanShot 2025-01-03 at 11.07.37.png>), reset everything back to the initial state by clicking ![](<../.gitbook/assets/CleanShot 2025-01-03 at 11.08.15.png>), or activate the debugger with ![](<../.gitbook/assets/CleanShot 2025-01-03 at 11.08.39.png>).
+Run it again by clicking <mark style="background-color:blue;">Run Again</mark> , reset everything back to the initial state by clicking <mark style="background-color:blue;">Reset</mark> , or activate the debugger with <mark style="background-color:blue;">Activate Debugger</mark> .
 
+You can also use this opportunity to define sample inputs and responses for your [swagger-openapi-documentation.md](../the-function-stack/building-with-visual-development/apis/swagger-openapi-documentation.md "mention").
 
+{% include "../.gitbook/includes/swagger-defining-examples.md" %}
 {% endstep %}
 {% endstepper %}
 

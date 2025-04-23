@@ -2,7 +2,7 @@
 title: 🔄 Function stack
 ---
 
-### 🔄 Function stack
+## 🔄 Function stack
 
 This is where all of the magic happens. All of the business logic that is performed lives here.
 

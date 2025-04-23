@@ -8,7 +8,7 @@ icon: recycle
 
 ## The Anatomy of the Visual Builder
 
-The builder will be comprised of up to three different sections — **inputs**, the **function stack**, and the **response**. Different function stack types may not contain all of the available sections listed below.
+The builder will be comprised of **up to** three different sections — **inputs**, the **function stack**, and the **response**. Different function stack types may not contain all of the available sections listed below.
 
 <figure><img src="../../.gitbook/assets/function stack sample.png" alt=""><figcaption></figcaption></figure>
 
@@ -91,6 +91,10 @@ To revert a change, select the change you wish to revert back to. You can also r
 Before reverting a change, you are able to see a difference comparison snapshot of the previous draft version. This provides context in the differences of the previous version compared to the current draft you are on.
 
 <figure><img src="../../.gitbook/assets/CleanShot 2024-01-16 at 15.43.31.png" alt=""><figcaption><p>Comparing differences of a previous version to the current draft.</p></figcaption></figure>
+
+Comparing versions in function stacks using [lambda-functions.md](../functions/apis-and-lambdas/lambda-functions.md "mention") or [template-engine.md](../../xano-ai/template-engine.md "mention") will show your specific code changes in a specialized format for easy readability.
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 Once you're ready to revert, select **Restore this version**.
 

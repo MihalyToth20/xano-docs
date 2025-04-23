@@ -254,3 +254,5 @@ You can insert comments into your templates by wrapping them in {# and #}. They 
 ```twig
 {# This is a hidden comment #}
 ```
+
+You can check out some examples of the Template Engine in real-world scenarios here: [#sample-templates](../../xano-ai/template-engine.md#sample-templates "mention").

@@ -55,6 +55,7 @@
   * [Configuring Expressions](the-function-stack/building-with-visual-development/configuring-expressions.md)
   * [Working with Data](the-function-stack/building-with-visual-development/working-with-data.md)
 * [Functions](the-function-stack/functions/README.md)
+  * [AI Tools](the-function-stack/functions/ai-tools.md)
   * [Database Requests](the-function-stack/functions/database-requests/README.md)
     * [Query All Records](the-function-stack/functions/database-requests/query-all-records/README.md)
       * [External Filtering Examples](the-function-stack/functions/database-requests/query-all-records/external-filtering-examples.md)
@@ -155,6 +156,7 @@
 * [Connecting to External Systems & Services](building-backend-features/connecting-to-external-systems-and-services.md)
 * [Custom Report Generation](building-backend-features/custom-report-generation.md)
 * [Fuzzy Search](building-backend-features/fuzzy-search.md)
+* [Chatbots](building-backend-features/chatbots.md)
 
 ## Connecting to a Front-end
 
@@ -193,7 +195,7 @@
 
 ## Xano AI
 
-* [Building a Backend with AI](xano-ai/building-a-backend-with-ai.md)
+* [Building a Backend Using AI](xano-ai/building-a-backend-using-ai.md)
 * [Get Started Assistant](xano-ai/get-started-assistant.md)
 * [AI Database Assistant](xano-ai/ai-database-assistant.md)
 * [AI Lambda Assistant](xano-ai/ai-lambda-assistant.md)
@@ -201,6 +203,12 @@
 * [API Request Assistant](xano-ai/api-request-assistant.md)
 * [Template Engine](xano-ai/template-engine.md)
 * [Streaming APIs](xano-ai/streaming-apis.md)
+
+## AI Tools
+
+* [MCP Servers](ai-tools/mcp-servers/README.md)
+  * [Connecting Clients](ai-tools/mcp-servers/connect.md)
+  * [MCP Functions](ai-tools/mcp-servers/mcp-functions.md)
 
 ## Xano Transform
 

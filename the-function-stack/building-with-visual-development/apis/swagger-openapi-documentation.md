@@ -10,10 +10,6 @@ Xano automatically generates documentation for your APIs using [Swagger](https:/
 
 Using these standardized methods allows for easy import of your API information into other platforms, such as your frontend of choice, as well as AI chatbots and large-language models for development assistance. In addition, it provides you an easy way to send API specifications to other developers you might be working with, without giving them access to the rest of your Xano workspace.
 
-{% hint style="warning" %}
-Please note that customized response structures may not be accurately displayed in your Swagger documentation. You can still use Swagger to its full extent in spite of this.
-{% endhint %}
-
 ## Accessing the Documentation
 
 Documentation is generated for each API group. At the top of the API group page, just click ![](<../../../.gitbook/assets/CleanShot 2024-12-26 at 09.16.30.png>) to access the auto-generated documentation for that group.
@@ -65,6 +61,12 @@ You can review the response given below.
 {% endstepper %}
 
 ## Additional Features
+
+### Defining Sample Inputs and Responses
+
+{% include "../../../.gitbook/includes/release-rollout-note.md" %}
+
+{% include "../../../.gitbook/includes/swagger-defining-examples.md" %}
 
 ### Copy / Copy as cURL
 
