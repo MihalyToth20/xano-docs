@@ -207,7 +207,7 @@
 ## AI Tools
 
 * [MCP Servers](ai-tools/mcp-servers/README.md)
-  * [Connecting Clients](ai-tools/mcp-servers/connect.md)
+  * [Connecting Clients](ai-tools/mcp-servers/connecting-clients.md)
   * [MCP Functions](ai-tools/mcp-servers/mcp-functions.md)
 
 ## Xano Transform

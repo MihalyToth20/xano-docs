@@ -194,9 +194,9 @@ Now that you've built an MCP server and added some tools to it, you can connect 
 
 If you're new to MCP servers, we recommend starting with Cursor.
 
-#### [<img src="../../.gitbook/assets/cursorlogo.png" alt="" data-size="line"> Cursor](connect.md#cursor) <a href="#cursor" id="cursor"></a>
+#### [<img src="../../.gitbook/assets/cursorlogo.png" alt="" data-size="line"> Cursor](connecting-clients.md#cursor) <a href="#cursor" id="cursor"></a>
 
-#### [<img src="../../.gitbook/assets/image (90).png" alt="" data-size="line"> Claude Desktop](connect.md#claudedesktop) <a href="#claudedesktop" id="claudedesktop"></a>
+#### [<img src="../../.gitbook/assets/image (90).png" alt="" data-size="line"> Claude Desktop](connecting-clients.md#claudedesktop) <a href="#claudedesktop" id="claudedesktop"></a>
 
 ***
 
