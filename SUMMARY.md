@@ -283,6 +283,7 @@
 
 * [Increasing Plan Limits](increasing-plan-limits.md)
 * [API Rate Limit](api-rate-limit.md)
+* [Tool Rate Limit](tool-rate-limit.md)
 
 ## Security
 
