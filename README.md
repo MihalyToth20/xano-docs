@@ -1,6 +1,6 @@
 # 👋 Welcome to Xano!
 
-Xano is the premier [visual development](#user-content-fn-1)[^1] backend to power and scale any application. We provide a fast, scalable server powered by a PostgreSQL database and our own fully-featured No-Code API builder, enabling anyone from product owners to traditional developers to build and scale their back-end. Xano manages the complicated parts for you, so you can just log in and build.
+Xano is the premier [visual development](#user-content-fn-1)[^1] backend to power and scale any application. We provide a fast, scalable server powered by a PostgreSQL database and our own fully-featured No-Code API builder, enabling anyone from product owners to traditional developers to build and scale their backend. Xano manages the complicated parts for you, so you can just log in and build.
 
 ## Why use a separate backend?
 
