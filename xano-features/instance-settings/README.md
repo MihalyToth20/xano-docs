@@ -15,7 +15,7 @@ Xano has support for users on the Launch, Scale and Enterprise plans to set up a
 3. Carefully read and follow the instructions to update your DNS records: Create a CNAME record to the address provided, set the TTL to 5 minutes, and depending on your provider allow time for your DNS to propagate properly.&#x20;
 4. Enter your custom domain name at the bottom and click submit.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>To use your custom domain, navigate to your Instances page and follow the given instructions. </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>To use your custom domain, navigate to your Instances page and follow the given instructions. </p></figcaption></figure>
 
 Once completed, you can use your custom domain on your API endpoints.
 

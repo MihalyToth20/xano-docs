@@ -94,7 +94,7 @@ Before reverting a change, you are able to see a difference comparison snapshot 
 
 Comparing versions in function stacks using [lambda-functions.md](../functions/apis-and-lambdas/lambda-functions.md "mention") or [template-engine.md](../../xano-ai/template-engine.md "mention") will show your specific code changes in a specialized format for easy readability.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
 
 Once you're ready to revert, select **Restore this version**.
 
