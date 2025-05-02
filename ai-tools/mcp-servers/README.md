@@ -30,7 +30,7 @@ Xano's **MCP Servers** feature allows you to build tools just like you build any
 
 MCP stands for **Model Context Protocol**.
 
-At its core, MCP is a standardized framework that enables seamless communication and interaction between AI models (especially Large Language Models, or LLMs) and external services. Think of it as a universanguage and set of rules that allows AI models to go beyond their internal knowledge and capabilities by intelligently leveraging external data sources, tools, and functionalities.
+At its core, MCP is a standardized framework that enables seamless communication and interaction between AI models (especially Large Language Models, or LLMs) and external services. Think of it as a universal language and set of rules that allows AI models to go beyond their internal knowledge and capabilities by intelligently leveraging external data sources, tools, and functionalities.
 
 Traditionally, interacting with external services from an AI model required complex and often proprietary integrations built into specific clients. MCP simplifies this by providing a consistent and structured way for client applications to describe available tools and instruct AI models on how to use them. This includes defining the tool's purpose, its input parameters, and how the AI model can expect to receive results.
 
