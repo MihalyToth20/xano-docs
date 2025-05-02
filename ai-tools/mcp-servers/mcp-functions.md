@@ -1,7 +1,5 @@
 # MCP Functions
 
-{% include "../../.gitbook/includes/release-rollout-note.md" %}
-
 ## Run API Endpoint
 
 Executes an API endpoint as part of an MCP Server Tool function stack

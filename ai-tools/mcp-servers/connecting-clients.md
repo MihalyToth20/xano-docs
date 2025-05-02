@@ -1,7 +1,5 @@
 # Connecting Clients
 
-{% include "../../.gitbook/includes/release-rollout-note.md" %}
-
 ## <img src="../../.gitbook/assets/cursorlogo.png" alt="" data-size="line"> Cursor <a href="#cursor" id="cursor"></a>
 
 The below instructions will allow you to connect your Xano MCP server to Cursor and make them available across any project. The below method does not support authentication. If you need authentication or want to define per-project MCPs, use these instructions instead.

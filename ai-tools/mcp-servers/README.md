@@ -4,8 +4,6 @@ icon: server
 
 # MCP Servers
 
-{% include "../../.gitbook/includes/release-rollout-note.md" %}
-
 {% hint style="success" %}
 #### **Not looking for MCP servers, and just want to build chatbots or connect to your favorite AI models, like ChatGPT?**
 
