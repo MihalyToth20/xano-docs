@@ -136,6 +136,30 @@ After deployment, the **Release Stats** table at the top will give you quick vis
 
 ***
 
+## RBAC: Tenant Center
+
+The Tenant Center addon includes additional [role-based-access-control-rbac.md](../../team-collaboration/role-based-access-control-rbac.md "mention") settings you can use to manage tenant-related permissions.
+
+These permissions include:
+
+* **Tenant Center** - Enables access to the Tenant Center
+* **Tenant Center RBAC** - Enables access to Tenant Center RBAC settings
+* **Tenant Center Logs** - Enables access to the logs inside of the Tenant Center
+* **Tenant Center Backup** - Determines if a user can modify backup settings or perform backup/restore operations for tenants
+* **Tenant Center Deploy** - Determines if a user can deploy releases to tenants
+* **Tenant Center Impersonate** - Determines if a user can impersonate (access directly) a tenant
+* **Tenant Center Secrets** - Enables access to secrets for a tenant, such as [environment-variables.md](../../the-function-stack/environment-variables.md "mention")
+
+### RBAC Override
+
+From the **Edit Tenant** panel, you can enable **RBAC Override**. This option allows you to specify individual user permissions for each tenant by clicking  <mark style="background-color:blue;">**RBAC**</mark>  at the top of the Tenant Center.
+
+<div align="left"><figure><img src="../../.gitbook/assets/CleanShot 2025-05-05 at 16.30.55.png" alt="" width="375"><figcaption><p>Enabling the RBAC Override option</p></figcaption></figure></div>
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>An example of available permissions with RBAC Override enabled</p></figcaption></figure>
+
+***
+
 ## Best Practices
 
 {% stepper %}

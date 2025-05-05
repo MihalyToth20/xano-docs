@@ -8,4 +8,4 @@ Xano leverages Kubernetes to manage the entire release cycle of all the Docker c
 \
 Here’s how Kubernetes fits into a typical software development environment:
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
