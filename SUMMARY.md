@@ -122,6 +122,10 @@
 * [Unit Tests](testing-debugging/unit-tests.md)
 * [Test Suites](testing-debugging/test-suites.md)
 
+***
+
+* [CI/CD](ci-cd.md)
+
 ## File Storage
 
 * [File Storage in Xano](file-storage/file-storage-in-xano.md)

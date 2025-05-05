@@ -75,3 +75,11 @@ We can see by running all of our workflow tests the following information:
 * When adding a Run Stack, you can click the ![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FLlcWXlYGhURhcWz07Mbc%252FCleanShot%25202024-11-21%2520at%252011.43.16.png%3Falt%3Dmedia%26token%3D17af8493-034e-43d0-8dc5-42820e33f8e1\&width=300\&dpr=4\&quality=100\&sign=fedad151\&sv=2) icon to open that function stack being tested in a new window or tab and quickly make changes.
 * When you test a function stack that currently is in draft mode, your workflow test will run the drafted version.
 * You can change the data source that all of your workflow test's functions run against by clicking the ![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FNJ4vUPWG333vjoeSxdLp%252FCleanShot%25202024-11-21%2520at%252011.45.12.png%3Falt%3Dmedia%26token%3De0ad1fa9-ecb2-4877-83d6-b601e13b7335\&width=300\&dpr=4\&quality=100\&sign=f1fe621f\&sv=2) button at the top of the workflow test function stack.
+
+## Databases in Workflow Tests
+
+<figure><img src="../.gitbook/assets/CleanShot 2025-05-02 at 12.54.41 (1).png" alt=""><figcaption><p>Selecting a Data Source for a Workflow Test</p></figcaption></figure>
+
+When you select a data source for your Workflow Test, it's important to note that a **copy** of the database is generated to ensure that no live data is impacted. This usually means that selecting your live database is not recommended — if your database is large in size, this can cause complications during testing.
+
+It is recommended to use separate [data-sources.md](../the-database/database-basics/data-sources.md "mention") for running tests.

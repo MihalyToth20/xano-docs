@@ -55,3 +55,23 @@ Once inside the testing suite, you can perform the following actions:
 * Run all tests at once.
 
 For complex applications with a significant number of objects, you have the ability to dial down further into checking coverage and tests for functions, APIs, and middleware separately. You can also filter your tests by tested / untested only, or failed only, to quickly understand where your attention should be to ensure 100% coverage and success.
+
+## Mocking Responses
+
+For each of the functions in your function stack, you can add _mock responses_ to assist in the consistency of your unit tests.
+
+{% stepper %}
+{% step %}
+### Right-click on a function and choose Mock Test Response
+
+<figure><img src="../.gitbook/assets/CleanShot 2025-05-02 at 15.04.53.png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
+
+{% step %}
+### In the panel that opens on the right, you can add mock data for this function that will be used during your unit test.
+
+You can specify different pieces of data for each individual unit test you've built for this function stack.
+
+<div align="left"><figure><img src="../.gitbook/assets/CleanShot 2025-05-02 at 15.08.22.png" alt="" width="449"><figcaption></figcaption></figure></div>
+{% endstep %}
+{% endstepper %}
