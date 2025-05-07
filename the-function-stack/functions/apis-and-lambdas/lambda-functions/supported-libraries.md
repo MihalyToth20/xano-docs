@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Supported Libraries
 
 ## Math.js

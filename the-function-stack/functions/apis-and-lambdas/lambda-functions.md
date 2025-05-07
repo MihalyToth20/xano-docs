@@ -27,6 +27,12 @@ Depending on how you use a Lambda, you may have support to access some additiona
 
 ## Using NPM Packages <a href="#npm" id="npm"></a>
 
+{% hint style="warning" %}
+## Before you begin
+
+It is **highly recommended** that you include version numbers in your imports to ensure code stability; this will allow you time to verify updates to packages and avoid any potential issues.
+{% endhint %}
+
 If you have an NPM package you'd like to use in your Lambda functions, you can import it using the following format:
 
 ```typescript
