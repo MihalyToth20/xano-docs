@@ -1,66 +1,167 @@
 # Array
 
-* [**append**](array.md#append) **-** Push an element on to the end of an array within an object and return the updated object
-* [**count**](array.md#count) **-** Return the number of items of an array
-* [**diff**](array.md#diff-diff_assoc) **-** Return values from the first array not present in the second. Only values are used for matching.
-* [**diff\_assoc**](array.md#diff-diff_assoc) **-** Return values from the first array not present in the second. Keys and values are used for matching.
-* [**filter\_empty**](array.md#filter_empty) **-** Returns a new array with only entries that are not empty ("", null, 0, \[])
-* [**first**](array.md#first) **-** Returns the first item of an array
-* [**flatten**](array.md#flatten) **-** Flattens a multi-dimensional array
-* [**intersect**](array.md#intersect-intersect_assoc) **-** Return values from the first array that are present in the second. Only values are used for matching.
-* [**interesct\_assoc**](array.md#intersect-intersect_assoc) **-** Return values from the first array that are present in the second. Keys and values are used for matching.
-* [**join**](array.md#join) **-** Joins an array into a text string via the separator and returns the result
-* [**last**](array.md#last) **-** Returns the last item of an array
-* [**merge**](array.md#merge) **-** Merges two arrays
-* [**merge\_recursive**](array.md#merge_recursive) **-** Merge all levels of both arrays
-* [**pop**](array.md#pop) **-** Pops the last element of an array off and returns it
-* [**prepend**](array.md#prepend) **-** Prepend an element on to the beginning of an array
-* [**push**](array.md#push) **-** Push an element on to the end of an array
-* [**range**](array.md#range) **-** Returns array of values between the specified start/stop
-* [**remove**](array.md#remove) **-** Remove any elements from the array that match the supplied value and return the new array
-* [**safe\_array**](array.md#safe_array) **-** Always return an array from the specified value
-* [**shift**](array.md#shift) **-** Shifts the first element off the Array and returns it
-* [**shuffle**](array.md#shuffle) **-** Returns the array in a randomized order
-* [**slice**](array.md#slice) **-** Extracts a specific section of an array
-* [**sort**](array.md#sort) **-** Sorts an array
-* [**unique**](array.md#unique) **-** Returns the array with duplicate values removed
-* [**unshift**](array.md#unshift) **-** Push an element to the beginning of an Array and return the new array
-* [**pick**](array.md#pick-unpick) **-** Pick keys from the object to create a new object of just those keys.
-* [**unpick**](array.md#pick-unpick) **-** Remove keys from the object to create a new object of the remaining keys.
+{% include "../../.gitbook/includes/filter-note.md" %}
+
+```
+[
+    {
+        "name": "Chris"
+        },
+    {
+        "name": "Shawn"
+        }
+]
+```
 
 ### append
 
-Push an element on to the end of an Array within an object and return the updated object.
+Adds a new element to the end of the array, and return the updated array
 
 <figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.19.19.png" alt=""><figcaption></figcaption></figure>
+
+| Parameter    | Purpose                                  | Example    |
+| ------------ | ---------------------------------------- | ---------- |
+| parent value | The original array you'd like to modify  | \[1,2,3,4] |
+| value        | The value to add to the end of the array | 5          |
+
+| Example                                                                                                                                                                                                                                                               | Result                                                                                                                                                                    |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>parent value: <code>[1, 2, 3, 4]</code><br>value: 5</p>                                                                                                                                                                                                            | `[1, 2, 3, 4, 5]`                                                                                                                                                         |
+| <p>parent value: <code>["Think Visually", "Build Confidently"]</code><br>value: "Deploy Securely"</p>                                                                                                                                                                 | `["Think Visually, Build Confidently, "Deploy Securely"]`                                                                                                                 |
+| <p>parent value:</p><pre class="language-json"><code class="lang-json">[
+<strong>    {
+</strong>        "name": "Chris"
+        },
+    {
+        "name": "Shawn"
+        }
+]
+</code></pre><p>value:</p><pre><code>{
+        "name": "Cameron"
+        }
+</code></pre> | <pre><code>[
+<strong>    {
+</strong>        "name": "Chris"
+        },
+    {
+        "name": "Shawn"
+        },
+    {
+        "name": "Cameron"
+        }
+]
+</code></pre> |
 
 ***
 
 ### count
 
-Return the number of items of an Array.
+Returns the number of items in an array
 
 <figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.19.47.png" alt=""><figcaption></figcaption></figure>
+
+<table><thead><tr><th width="140.059326171875">Paremeter</th><th width="180.9156494140625">Purpose</th><th>Example</th></tr></thead><tbody><tr><td>parent value</td><td>The array to count</td><td><code>[1, 2, 3, 4, 5]</code></td></tr><tr><td></td><td></td><td><pre class="language-json"><code class="lang-json">[
+<strong>    {"name": "Chris"},
+</strong>    {"name": "Shawn"}
+]
+</code></pre></td></tr></tbody></table>
+
+| Example                                                                                                                            | Output |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| <pre class="language-json"><code class="lang-json">[
+<strong>    {"name": "Chris"},
+</strong>    {"name": "Shawn"}
+]
+</code></pre> | 2      |
+| `[1, 2, 3, 4, 5]`                                                                                                                  | 5      |
 
 ***
 
 ### diff / diff\_assoc
 
-These filters will return values in the first array that are not present in the second array.
+### intsersect / intersect\_assoc
 
-* **diff** will only use values for matching
-*   **diff\_assoc** will use keys and values for matching\
+These filters are used to compare arrays.
 
+* **diff** is used to show values from the first array that **are not** in the second array
+* **intersect** is used to show values from the first array that **are** in the second array
 
-    <figure><img src="../../.gitbook/assets/CleanShot 2023-08-30 at 13.58.25.png" alt=""><figcaption></figcaption></figure>
+Use the basic filter for value arrays, and the **\_assoc** version for arrays of objects.
+
+<figure><img src="../../.gitbook/assets/CleanShot 2025-05-07 at 17.12.19.png" alt="" width="375"><figcaption></figcaption></figure>
+
+<table><thead><tr><th width="146.95941162109375">Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>parent value</td><td>The first array to compare</td><td><code>[1, 2, 3, 4, 5]</code></td></tr><tr><td></td><td></td><td><pre class="language-json"><code class="lang-json">[
+<strong>    {"name": "Chris"},
+</strong>    {"name": "Shawn"}
+]
+</code></pre></td></tr><tr><td>value</td><td>The second array to compare</td><td>Same as above</td></tr></tbody></table>
+
+| Example                                                                                                                                                                                                                                                                                                                                                         | Output                                                                                                            |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| <p>Using <strong>diff:</strong><br>parent value: <code>[1,2,3,4,5]</code><br>value: <code>[3,4,5,6,7]</code></p>                                                                                                                                                                                                                                                | `[1, 2]`                                                                                                          |
+| <p>Using <strong>diff_assoc:</strong><br>parent value:</p><pre class="language-json"><code class="lang-json"><strong>[
+</strong>    {"name": "Chris"},
+    {"name": "Shawn"},
+    {"name": "Cameron"}
+]
+</code></pre><p>value:</p><pre class="language-json"><code class="lang-json">[
+    {"name": "Chris"},
+    {"name": "Shawn"}
+]
+</code></pre>             | <pre class="language-json"><code class="lang-json">[
+    {"name":"Cameron"}
+]
+</code></pre>                       |
+| <p>Using <strong>intersect:</strong><br>parent value: <code>[1,2,3,4,5]</code><br>value: <code>[3,4,5,6,7]</code></p>                                                                                                                                                                                                                                           | `[3, 4, 5]`                                                                                                       |
+| <p></p><p>Using <strong>intersect_assoc:</strong><br>parent value:</p><pre class="language-json"><code class="lang-json"><strong>[
+</strong>    {"name": "Chris"},
+    {"name": "Shawn"}
+]
+</code></pre><p>value:</p><pre class="language-json"><code class="lang-json">[
+    {"name": "Chris"},
+    {"name": "Shawn"},
+    {"name": "Cameron"}
+]
+</code></pre> | <pre class="language-json"><code class="lang-json">[
+    {"name": "Chris"},
+    {"name": "Shawn"}
+]
+</code></pre> |
 
 ***
 
 ### filter\_empty
 
-Returns a new Array with only entries that are not empty ("", null, 0, \[]). Use the **path** option if you want to search inside of objects.
+Returns a new srray with only entries that are not empty.
+
+An **empty** value can be `[]`, `{}`, `0`, `null`, `""`, or `false`.
 
 <figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.20.28.png" alt=""><figcaption></figcaption></figure>
+
+| Parameter    | Purpose                                                                                                       | Example                                                                                                                 |
+| ------------ | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| parent value | The array to filter                                                                                           | `[1, 0, 2, 0, 3]`                                                                                                       |
+|              |                                                                                                               | <pre class="language-json"><code class="lang-json">[
+    {"name":"Chris"},
+    {},
+    {"name":"Shawn"}
+]
+</code></pre> |
+| path         | When filtering arrays of objects, you can specify a path to optionally use a specific key to judge emptiness. |                                                                                                                         |
+
+| Example                                                                                                                 | Output                                                                                                          |
+| ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| <pre class="language-json"><code class="lang-json">[
+    {"name":"Chris"},
+    {},
+    {"name":"Shawn"}
+]
+</code></pre> | <pre class="language-json"><code class="lang-json">[
+    {"name":"Chris"},
+    {"name":"Shawn"}
+]
+</code></pre> |
+| `[1, 0, 2, 0, 3]`                                                                                                       | `[1, 2, 3]`                                                                                                     |
 
 ***
 
@@ -69,6 +170,22 @@ Returns a new Array with only entries that are not empty ("", null, 0, \[]). Use
 Get the first entry of an Array.
 
 <figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.21.09.png" alt=""><figcaption></figcaption></figure>
+
+<table><thead><tr><th width="129.734375">Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>parent value</td><td>The array to retrieve the first entry from</td><td><code>[1, 2, 3]</code></td></tr><tr><td></td><td></td><td><pre><code>[
+    {"name":"Chris"},
+    {"name":"Shawn"}
+]
+</code></pre></td></tr></tbody></table>
+
+| Example                                                                                                         | Output                                                                            |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `[1, 2, 3]`                                                                                                     | 1                                                                                 |
+| <pre class="language-json"><code class="lang-json">[
+    {"name":"Chris"},
+    {"name":"Shawn"}
+]
+</code></pre> | <pre class="language-json"><code class="lang-json">{"name":"Chris"}
+</code></pre> |
 
 ***
 
@@ -84,16 +201,14 @@ Get the first entry of an Array.
 
 ### filter\_zero
 
-These filters are designed to remove the corresponding values from an object or an array. Useful in scenarios where something is calling your APIs that you don't have full control over, such as a frontend platform.
+These filters are designed to remove the corresponding values from an object or an array. Useful in scenarios where something is sending data to your APIs that you don't have full control over, such as a frontend platform that always sends empty strings or null values.
 
 | Parameter    | Purpose                       |
 | ------------ | ----------------------------- |
 | parent value | The array or object to target |
 
-### Examples
-
-| Example                                                                                                                                                                                                                    | Output                                                                                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Example                                                                                                                                                                                                                    | Output                                                                                                                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <p></p><pre class="language-json"><code class="lang-json"><strong>{
 </strong>        "title": "",
         "name": false,
@@ -102,14 +217,14 @@ These filters are designed to remove the corresponding values from an object or 
         "data": {},
         "info": null
 }
-</code></pre> | <p><strong>filter_empty_array</strong></p><pre class="language-json"><code class="lang-json">       {
-         "title": "",
+</code></pre> | <p><strong>filter_empty_array</strong></p><pre class="language-json"><code class="lang-json">{
+        "title": "",
         "name": false,
         "width": 0,
         "data": {},
         "info": null
 }
-</code></pre> |
+</code></pre>   |
 | <pre class="language-json"><code class="lang-json"><strong>{
 </strong>        "title": "",
         "name": false,
@@ -125,7 +240,7 @@ These filters are designed to remove the corresponding values from an object or 
         "items": [],
         "info": null
 }
-</code></pre>       |
+</code></pre> |
 | <pre class="language-json"><code class="lang-json"><strong>{
 </strong>        "title": "",
         "name": false,
@@ -141,7 +256,7 @@ These filters are designed to remove the corresponding values from an object or 
         "data": {},
         "info": null
 }
-</code></pre>          |
+</code></pre>    |
 | <pre class="language-json"><code class="lang-json"><strong>{
 </strong>        "title": "",
         "name": false,
@@ -157,7 +272,7 @@ These filters are designed to remove the corresponding values from an object or 
         "data": {},
         "info": null
 }
-</code></pre>                 |
+</code></pre>           |
 | <pre class="language-json"><code class="lang-json"><strong>{
 </strong>        "title": "",
         "name": false,
@@ -173,7 +288,7 @@ These filters are designed to remove the corresponding values from an object or 
         "items": [],
         "data": {}
 }
-</code></pre>                 |
+</code></pre>           |
 | <pre class="language-json"><code class="lang-json"><strong>{
 </strong>        "title": "",
         "name": false,
@@ -189,36 +304,86 @@ These filters are designed to remove the corresponding values from an object or 
         "data": {},
         "info": null
 }
-</code></pre>               |
+</code></pre>         |
 
 ***
-
-
 
 ### flatten
 
 Flattens a multi-level array into a single-level array.
 
-<figure><img src="../../.gitbook/assets/CleanShot 2023-08-30 at 14.16.22.png" alt=""><figcaption></figcaption></figure>
+<table><thead><tr><th width="118.7906494140625">Parameter</th><th width="174.70306396484375">Purpose</th><th>Example</th></tr></thead><tbody><tr><td>parent value</td><td>The array to flatten</td><td><pre class="language-json"><code class="lang-json">[
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+]
+</code></pre></td></tr></tbody></table>
 
-***
-
-### intersect / intersect\_assoc
-
-Returns the entries from the first array that are present in the second array.
-
-* **intersect** will use values for matching
-* **intersect\_assoc** will use keys and values for matching
-
-<figure><img src="../../.gitbook/assets/CleanShot 2024-04-15 at 13.36.41.png" alt=""><figcaption></figcaption></figure>
+| Example                                                                                                                                                                                                                                                                                                  | Output                                                                                                                                                                                                                                                                                                                                             |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <pre class="language-json"><code class="lang-json">[
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+]
+</code></pre>                                                                                                                                                                                               | <pre class="language-json"><code class="lang-json">[1, 2, 3, 4, 5, 6, 7, 8, 9]
+</code></pre>                                                                                                                                                                                                                                                       |
+| <pre class="language-json"><code class="lang-json">[
+  {
+    id: 1,
+    name: "John",
+    pets: [
+      { type: "dog", name: "Rex" },
+      { type: "cat", name: "Whiskers" }
+    ]
+  },
+  {
+    id: 2,
+    name: "Sarah",
+    pets: [
+      { type: "bird", name: "Tweety" }
+    ]
+  }
+]]
+</code></pre> | <pre class="language-json"><code class="lang-json">[
+  {
+    ownerId: 1,
+    ownerName: "John",
+    petType: "dog",
+    petName: "Rex"
+  },
+  {
+    ownerId: 1,
+    ownerName: "John",
+    petType: "cat",
+    petName: "Whiskers"
+  },
+  {
+    ownerId: 2,
+    ownerName: "Sarah",
+    petType: "bird",
+    petName: "Tweety"
+  }
+]
+</code></pre> |
 
 ***
 
 ### join
 
-Joins an array into a text string via the separator and returns the result
+Converts an array into a text string by _joining_ each value and using a separator.
 
 <figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.24.28 (1).png" alt=""><figcaption></figcaption></figure>
+
+| Parameter                     | Purpose                                                         | Example                                             |
+| ----------------------------- | --------------------------------------------------------------- | --------------------------------------------------- |
+| parent value                  | The array to join                                               | \["a", "b", "c"]                                    |
+| separator <sup>optional</sup> | The character or characters to place in between each array item | Can be any text value, or even a single empty space |
+
+| Example                                                           | Output  |
+| ----------------------------------------------------------------- | ------- |
+| <p>parent value: <code>["a", "b", "c"]</code><br>separator: _</p> | `a_b_c` |
+| <p>parent value: [1, 2, 3, 4, 5]<br>separator:</p>                | `12345` |
 
 ***
 
@@ -228,41 +393,49 @@ Get the last entry of an Array.
 
 <figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.25.08.png" alt=""><figcaption></figcaption></figure>
 
+| Parameter    | Purpose                            | Example      |
+| ------------ | ---------------------------------- | ------------ |
+| parent value | The array to get the last entry of | \[`1, 2, 3]` |
+
+| Example     | Output |
+| ----------- | ------ |
+| `[1, 2, 3]` | `3`    |
+
 ***
 
 ### merge
 
-Merge the first level of elements of both Arrays together and return the new array.
+### merge\_recursive
+
+Merge two arrays or objects together and return the new item.
+
+* Use **merge** to merge single level data.
+* Use **merge\_recursive** to merge multi-level data.
 
 <figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.26.58.png" alt=""><figcaption></figcaption></figure>
 
-***
+| Parameter    | Purpose                   | Example    |
+| ------------ | ------------------------- | ---------- |
+| parent value | The first array to merge  | \[1, 2, 3] |
+| value        | The second array to merge | \[4, 5, 6] |
 
-### merge\_recursive
-
-Merge the elements from all levels of both Arrays together and return the new Array.
-
-First array:
-
-```
-{
-"a": "test",
-"b": ["a","b"]
+| Example                                                                                                                                                                                                                                                                                                                             | Output                                                                                                                          |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| <p>using <strong>merge</strong></p><p>parent value: <code>["a", "b", "c"]</code><br>value: <code>["d", "e", "f"]</code></p>                                                                                                                                                                                                         | `["a", "b", "c", "d", "e", "f"]`                                                                                                |
+| <p>using <strong>merge_recursive</strong></p><p>parent value: </p><pre class="language-json"><code class="lang-json">{
+    "a": "test",
+    "b": ["a","b"]
 }
-```
-
-Second array:
-
-```
-{
-"c": "hi",
-"b": ["c","d"]
+</code></pre><p><br>value:</p><pre class="language-json"><code class="lang-json"><strong>{
+</strong><strong>    "c": "hi",
+</strong>    "b": ["c","d"]
 }
-```
-
-We will then set up our filter as follows:
-
-<figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.31.18.png" alt=""><figcaption></figcaption></figure>
+</code></pre> | <pre class="language-json"><code class="lang-json">{
+    "a": "test",
+    "b": ["a","b","c","d"]
+    "c": "hi",
+}
+</code></pre> |
 
 ***
 
@@ -271,7 +444,7 @@ We will then set up our filter as follows:
 Pops the last element of the Array off and returns it.
 
 {% hint style="warning" %}
-Please note that Xano's **pop** filter does NOT remote the item from the array.
+Please note that Xano's **pop** filter does NOT remove the item from the array.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.34.27.png" alt=""><figcaption></figcaption></figure>

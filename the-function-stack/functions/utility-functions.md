@@ -160,7 +160,7 @@ CSV Stream is a much simpler alternative to the previously established method of
 
 ## JSONL Stream
 
-
+JSONL Stream is a powerful function allowing you to 'stream' chunks of JSON in sequence to your function stack, allowing for processing of large data sets, similar to the CSV Stream function above.
 
 ## HTTP Header
 

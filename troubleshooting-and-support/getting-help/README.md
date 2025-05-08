@@ -57,11 +57,10 @@ Support Package Enhancements are priced per instance. (i.e. Gold support for 10 
 
 Premium support is offered through Intercom support chat for tracking and auditing purposes. Any updates to an issue should be recorded in the original conversation -- not a new one. Support through any other official channel will be handled with the Basic Support response time of up to 72 hours.
 
-|                    Support Packages                   | Submission Window |                                      Response Time\*                                     |
-| :---------------------------------------------------: | :---------------: | :--------------------------------------------------------------------------------------: |
-| <p><strong>Bronze Package</strong><br><br>$150/mo</p> |      24x7x365     |      <p>Business Day: 8 hr</p><p>After Hours: NA<br>Weekends: NA<br>Holidays: NA</p>     |
-| <p><strong>Silver Package</strong><br><br>$350/mo</p> |      24x7x365     |    <p>Business Day: 8 hr</p><p>After Hours: NA<br>Weekends: 24 hr<br>Holidays: NA</p>    |
-|  <p><strong>Gold Package</strong><br><br>$750/mo</p>  |      24x7x365     | <p>Business Day: 4 hr</p><p>After Hours: 12 hr<br>Weekends: 24 hr<br>Holidays: 24 hr</p> |
+|                                Support Packages                                | Submission Window |                                      Response Time\*                                     |
+| :----------------------------------------------------------------------------: | :---------------: | :--------------------------------------------------------------------------------------: |
+|              <p><strong>Bronze Package</strong><br><br>$150/mo</p>             |      24x7x365     |      <p>Business Day: 8 hr</p><p>After Hours: NA<br>Weekends: NA<br>Holidays: NA</p>     |
+| <p><strong>Gold Package</strong><br><br>Included with our Enterprise plans</p> |      24x7x365     | <p>Business Day: 4 hr</p><p>After Hours: 12 hr<br>Weekends: 24 hr<br>Holidays: 24 hr</p> |
 
 _\* From initial contact. Response time ≠ resolution time._\
 \

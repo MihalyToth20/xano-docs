@@ -26,3 +26,6 @@ You should proceed with any additional work by accessing the client's instance d
 
 
 
+{% hint style="warning" %}
+For larger workspaces, transferring this way may not be possible. If you run into trouble, please reach out to support so we can process the migration for you.
+{% endhint %}

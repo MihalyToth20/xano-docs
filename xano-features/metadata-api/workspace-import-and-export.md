@@ -12,7 +12,9 @@ Imports overwrite the entire contents of the destination workspace.
 These endpoints will only function properly on **paid Xano plans**.
 {% endhint %}
 
-
+{% hint style="warning" %}
+For large workspaces, import may not function properly using the Metadata API. In these cases, reach out to support and we can assist with the import process.
+{% endhint %}
 
 {% embed url="https://youtu.be/Tv0puLXd6B0" %}
 

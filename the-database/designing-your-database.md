@@ -48,7 +48,7 @@ Consider how these pieces connect. A book has one or more authors, and an author
 
 For our book store example, let's visualize the relationships between our tables.
 
-{% @arcade/embed flowId="eYYLSo6Vi1ZVYOkLk5i8" url="https://app.arcade.software/share/eYYLSo6Vi1ZVYOkLk5i8" %}
+{% @arcade/embed flowId="eYYLSo6Vi1ZVYOkLk5i8" url="https://app.arcade.software/share/eYYLSo6Vi1ZVYOkLk5i8" fullWidth="false" %}
 
 ## Database Fields
 
@@ -68,6 +68,9 @@ For example, book prices change frequently, so you might want both a "currentPri
 
 **Watch out for duplicate information.**\
 If you're storing an author's contact details, store them once and reference them when needed, rather than copying them into every book record. This is like having one toolbox in your garage instead of keeping duplicate tools in every room. In Xano, this is accomplished with [table reference fields](database-basics/field-types.md#table-reference).
+
+**How many fields is 'too many'?**\
+This is not a black-and-white question to answer. Some tables can have a significant number of fields, but the dataset is small — this is usually okay. If you expect this table to grow in size over time, it's always better to split data types into separate tables — for example, if users have companies attached, you should probably store those companies in a separate table and use [relationships](designing-your-database.md#table-relationships).
 
 ## Planning for the Future
 

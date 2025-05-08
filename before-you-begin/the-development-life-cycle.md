@@ -1,8 +1,8 @@
 ---
-icon: recycle
 description: >-
   Learn more about the fundamentals of application development and the software
   development life cycle.
+icon: recycle
 ---
 
 # The Development Life Cycle
@@ -69,7 +69,7 @@ This might sound easier than it seems, but it's essential to test all the differ
 * **Unit testing** Does every part of your app work the way it's supposed to?
 * **Usability testing** Do your users actually understand how to use your app?
 
-**Xano provides a few features to help you in this phase**. Using Unit Tests and [Data Sources](https://docs.xano.com/database/data-sources) can help you use dummy data without affecting what will be live in production. We support drafts to help you and your team get things right before Publishing. [Branches](https://docs.xano.com/api/branches-and-merging) can be used to create separate testing environments (Development, Staging, Production). For more complex use cases, Xano also supports [Xano Link](https://docs.xano.com/enterprise-plan/xano-link), which allows you to keep all of your Workspaces and Instances in sync with a master so your customers have a consistent experience.
+**Xano provides a few features to help you in this phase**. Using [unit-tests.md](../testing-debugging/unit-tests.md "mention"), [test-suites.md](../testing-debugging/test-suites.md "mention") and [data-sources.md](../the-database/database-basics/data-sources.md "mention") can help you use dummy data without affecting what will be live in production. We support drafts to help you and your team get things right before Publishing. [Branches](https://docs.xano.com/api/branches-and-merging) can be used to create separate testing environments (Development, Staging, Production). For more complex use cases, Xano also supports [Xano Link](https://docs.xano.com/enterprise-plan/xano-link), which allows you to keep all of your Workspaces and Instances in sync with a master so your customers have a consistent experience.
 
 </details>
 

@@ -52,6 +52,10 @@ Xano offers several different data types that you can use, and you can review th
 * **integer** - Any number that does not include a decimal point
 * **boolean** - A true or false value
 
+{% content-ref url="field-types.md" %}
+[field-types.md](field-types.md)
+{% endcontent-ref %}
+
 ### How is data added to a database table?
 
 Typically, your data comes from one of the following sources:

@@ -30,7 +30,7 @@ This includes:
   &#xNAN;_&#x57;hat fields you've set and the settings that accompany them_
 * Records\
   &#xNAN;_&#x54;his is your actual data that you are storing in your database._
-* Indexes\
+* [indexing.md](indexing.md "mention")\
   &#xNAN;_&#x53;ome indexes are auto-generated and required to maintain your table. Others are manually added by you, and can take up a varying amount of space._
-* Task and Request History\
+* [request-history.md](../../maintenance-monitoring-and-logging/request-history.md "mention")\
   &#xNAN;_&#x57;hen you make requests to your Xano APIs or run background tasks, this history is logged on a 24-hour rolling cycle. Sometimes, if you have an exceptional amount of history, this will be reflected as used database storage, as it is stored in a similar fashion to your database records behind the scenes._

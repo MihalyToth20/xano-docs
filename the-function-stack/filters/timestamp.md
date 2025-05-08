@@ -60,9 +60,9 @@ Inputs:
 
 | Primary Value (timestamp) | Other Value (format) | Output (formatted string)   |
 | ------------------------- | -------------------- | --------------------------- |
-| 1698710400000             | "YYYY-MM-DD"         | "2023-10-31"                |
-| 1698710400000             | "MMM D, YYYY h:mm A" | "Oct 31, 2023 12:00 AM"     |
-| 1698710400000             | "dddd, MMMM D, YYYY" | "Tuesday, October 31, 2023" |
+| 1698710400000             | "Y-MM-DD"            | "2023-10-31"                |
+| 1698710400000             | "MMM D, Y h:mm A"    | "Oct 31, 2023 12:00 AM"     |
+| 1698710400000             | "dddd, MMMM D, Y"    | "Tuesday, October 31, 2023" |
 
 ## parse\_timestamp
 

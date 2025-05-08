@@ -38,7 +38,10 @@ You can track the status of your referrals on your Referral Dashboard.
 <figure><img src="../.gitbook/assets/image (83).png" alt=""><figcaption></figcaption></figure>
 
 **My referral forgot to use my referral link. Is there a way to track it back to my account?** \
-We’re unable to track referrals back to your account if they did not use your referral link at the time they signed up. \
+We’re unable to track referrals back to your account if they did not use your referral link at the time they signed up.&#x20;
+
+**Can referrals be transferred to another account?**\
+No.\
 
 
 **When and how will I get paid?**&#x20;
