@@ -234,8 +234,8 @@ The two examples below demonstrate this and would return the same result.
 {
   "expression": [
     {
+      "or": false,
       "statement": {
-        "or": false,
         "left": {
           "tag": "col",
           "operand": "users.id"
