@@ -143,7 +143,8 @@ The Tenant Center addon includes additional [role-based-access-control-rbac.md](
 These permissions include:
 
 * **Tenant Center** - Enables access to the Tenant Center
-* **Tenant Center RBAC** - Enables access to Tenant Center RBAC settings
+* **Tenant Center RBAC** - Enables access to Tenant Center RBAC Override settings\
+  &#xNAN;_&#x4E;ote: This does not disable the ability to disable/enable Tenant Center RBAC Overrides, but does disable access to editing the specific override settings._
 * **Tenant Center Logs** - Enables access to the logs inside of the Tenant Center
 * **Tenant Center Backup** - Determines if a user can modify backup settings or perform backup/restore operations for tenants
 * **Tenant Center Deploy** - Determines if a user can deploy releases to tenants
