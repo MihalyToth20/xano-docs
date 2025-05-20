@@ -40,47 +40,51 @@ Inputs:
 | 1698710400000             | -60                   | 1698710340000      |
 | 1698710400000             | 3600                  | 1698714000000      |
 
-## format\_timestamp
+### format\_timestamp
 
-Converts a timestamp into a human readable formatted date based on the supplied format
+Converts a timestamp into a human-readable formatted date based on the supplied format.
 
 {% hint style="info" %}
-**This format follows the** [**PHP DateTime format**](https://www.php.net/manual/en/datetime.format.php)**: see the** [**full list of formatting options**](https://www.php.net/manual/en/datetime.formats.php#datetime.formats.relative)**.**
+**This format follows the** [**PHP DateTime::format syntax**](https://www.php.net/manual/en/datetime.format.php)**. Please refer to the official PHP documentation for the full list of formatting characters.**
 
 [Timezone regions are listed here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 {% endhint %}
 
-The format\_timestamp filter is essential when displaying dates and times in user interfaces, reports, or any output where timestamps need to be presented in a human-readable format.
+The `format_timestamp` filter is essential when displaying dates and times in user interfaces, reports, or any output where timestamps need to be presented in a human-readable format.
 
-Inputs:
+**Inputs:**
 
-* primary value: The timestamp to format (epoch in milliseconds)
-* format: The format string specifying how the timestamp should be displayed
-* timezone: The timezone to provide the formatted timestamp in
+* `primary value`: The timestamp to format (epoch in milliseconds, typically UTC).
+* `format`: The PHP DateTime::format string specifying how the timestamp should be displayed (e.g., `"Y-m-d H:i:s"`).
+* `timezone`: The target timezone for the outputted formatted date (e.g., "America/New\_York").
 
-| Primary Value (timestamp) | Other Value (format) | Output (formatted string)   |
-| ------------------------- | -------------------- | --------------------------- |
-| 1698710400000             | "Y-MM-DD"            | "2023-10-31"                |
-| 1698710400000             | "MMM D, Y h:mm A"    | "Oct 31, 2023 12:00 AM"     |
-| 1698710400000             | "dddd, MMMM D, Y"    | "Tuesday, October 31, 2023" |
+| Primary Value (timestamp) | Format String    | Output (formatted string)     |
+| ------------------------- | ---------------- | ----------------------------- |
+| `1698710400000`           | `"Y-m-d"`        | `"2023-10-31"`                |
+| `1698710400000`           | `"M j, Y h:i A"` | `"Oct 31, 2023 12:00 AM"`     |
+| `1698710400000`           | `"l, F j, Y"`    | `"Tuesday, October 31, 2023"` |
 
-## parse\_timestamp
+***
 
-Parse a timestamp from a flexible format.
+### parse\_timestamp
 
-The parse\_timestamp filter is valuable when working with dates and times in various string formats from different sources, allowing you to convert human-readable date strings into the epoch millisecond timestamp format used throughout Xano for storage or further processing.
+Parses a date/time string from various formats into an epoch millisecond timestamp (UTC).
 
-Inputs:
+The `parse_timestamp` filter is valuable when working with dates and times from different string sources. It allows you to convert human-readable date strings into the standard epoch millisecond timestamp format used throughout Xano for storage or further processing.
 
-* primary value: The date/time string to parse
-* format: String specifying the format of the provided timestamp
-* timezone: The timezone to provide the formatted timestamp in
+**Inputs:**
 
-| Primary Value (date string) | Other Value (format)  | Output (timestamp) |
-| --------------------------- | --------------------- | ------------------ |
-| "10/31/2023"                | null                  | 1698710400000      |
-| "October 31, 2023 2:30 PM"  | null                  | 1698765000000      |
-| "2023-10-31 14:30:15"       | "YYYY-MM-DD HH:mm:ss" | 1698765015000      |
+* `primary value`: The date/time string to parse (e.g., `"2023-10-31 14:30:00"`).
+* `format`: A string specifying the format of the input date/time string, adhering to [PHP's DateTime::createFromFormat() syntax](https://www.php.net/manual/en/datetime.createfromformat.php).
+* `timezone`: The timezone that the input `primary value` (date/time string) should be interpreted in, especially if the string itself does not contain timezone offset information (e.g., `"America/New_York"`).&#x20;
+
+| Primary Value (date string)  | Format String  | Output (timestamp, UTC) |
+| ---------------------------- | -------------- | ----------------------- |
+| `"10/31/2023"`               | `m/d/Y`        | `1698777018000`         |
+| `"October 31, 2023 2:30 PM"` | `F j, Y g:i A` | `1698762600000`         |
+| `"2023-10-31 14:30:15"`      | `Y-m-d H:i:s`  | `1698762615000`         |
+
+***
 
 ## transform\_timestamp
 
