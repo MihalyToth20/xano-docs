@@ -2,10 +2,10 @@
 icon: server
 ---
 
-# MCP Servers
+# MCP Builder
 
 {% hint style="success" %}
-#### **Not looking for MCP servers, and just want to build chatbots or connect to your favorite AI models, like ChatGPT?**
+#### **Not looking for MCP, and just want to build chatbots or connect to your favorite AI models, like ChatGPT?**
 
 **Check out this resource instead:** [chatbots.md](../../building-backend-features/chatbots.md "mention")
 {% endhint %}
@@ -19,12 +19,12 @@ Think about the typical flow every time you interact with an AI. You, the **user
 
 With MCP in the mix, clients are able to take your input, and instruct an LLM on how to interact with _other_ services and tools, like your Xano database, for example. Each separate task that is exposed to the client via the MCP standard is called a **tool**.
 
-Xano's **MCP Servers** feature allows you to build tools just like you build any other function stack and expose them to any client that supports the MCP standard, opening up the opportunity to build for AI, using the power of visual development in Xano.
+Xano's **MCP Builder** feature allows you to build tools just like you build any other function stack and expose them to any client that supports the MCP standard, opening up the opportunity to build for AI, using the power of visual development in Xano.
 {% endhint %}
 
 <table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/yt (3).png" alt="" data-size="line"> <strong>Introduction to MCP</strong></td><td><a href="../../.gitbook/assets/mcp intro.png">mcp intro.png</a></td><td><a href="https://youtu.be/VQGjbBBY96s">https://youtu.be/VQGjbBBY96s</a></td></tr><tr><td><img src="../../.gitbook/assets/yt (3).png" alt="" data-size="line"> <strong>Build an MCP Server in 10min or Less</strong></td><td><a href="../../.gitbook/assets/mcp in 10 or less.png">mcp in 10 or less.png</a></td><td><a href="https://youtu.be/5-K4nCW1YHE">https://youtu.be/5-K4nCW1YHE</a></td></tr><tr><td><img src="../../.gitbook/assets/yt (3).png" alt="" data-size="line"> <strong>MCP Tools and Functions</strong></td><td><a href="../../.gitbook/assets/mcp tools and functions.png">mcp tools and functions.png</a></td><td><a href="https://youtu.be/5k6VcKu0AJU">https://youtu.be/5k6VcKu0AJU</a></td></tr><tr><td><img src="../../.gitbook/assets/yt (3).png" alt="" data-size="line"> <strong>Building an MCP Server &#x26; Client</strong></td><td><a href="../../.gitbook/assets/end to end.png">end to end.png</a></td><td><a href="https://youtu.be/5M6Qx6-rcbo">https://youtu.be/5M6Qx6-rcbo</a></td></tr></tbody></table>
 
-## Introduction to MCP Servers in Xano <a href="#intro" id="intro"></a>
+## Introduction to building MCP Servers in Xano <a href="#intro" id="intro"></a>
 
 MCP stands for **Model Context Protocol**.
 
@@ -34,7 +34,7 @@ Traditionally, interacting with external services from an AI model required comp
 
 ## Why would I build MCP Servers in Xano?
 
-Building MCP Servers in Xano offers a fundamental shift in how you integrate AI capabilities into your applications. Instead of being limited to building traditional REST APIs for standard web or mobile interactions, Xano's MCP Servers empower you to create **AI-native functionalities**.
+Building MCP Servers in Xano offers a fundamental shift in how you integrate AI capabilities into your applications. Instead of being limited to building traditional REST APIs for standard web or mobile interactions, Xano's MCP Builder empowers you to create **AI-native functionalities**.
 
 You can build function stacks in Xano specifically designed to be used by AI models. This means that you can create tools for your AI to:
 
@@ -54,7 +54,7 @@ You can build function stacks in Xano specifically designed to be used by AI mod
 * Interact with your own APIs and services you've already built in Xano through the AI\
 
 
-## What's supported with Xano's MCP servers?
+## What's supported with Xano's MCP Builder?
 
 We have built our current MCP support using the SSE transport method. Only tools are available at this time.
 
@@ -64,7 +64,7 @@ As MCP is an evolving protocol, we aim to continue to expand the functionality a
 
 ***
 
-## Getting Started with MCP Servers
+## Getting Started with MCP Builder
 
 ### First, create an MCP Server. <a href="#servers" id="servers"></a>
 
@@ -180,11 +180,35 @@ Your MCP tools can have authentication enabled. The method of authentication is 
 
 If you are building a publicly available application with its own user base, and need to make sure that your tools work across your set of users and separates data properly, you'll need to serve your own client that can handle dynamic authentication.
 
-Our end-to-end MCP Server tutorial, linked below, walks you through one example of building your own server and client, both using Xano.
+Our end-to-end MCP Server tutorial walks you through one example of building your own server and client, both using Xano.
 
-
+{% embed url="https://youtu.be/5M6Qx6-rcbo" %}
 
 ***
+
+## MCP Variables
+
+When working with data as part of an MCP tool function stack, you have access to two special variables.
+
+#### token
+
+The Token variable contains a token that is passed as part of the connection URL. This token can be used for building custom authentication, or any other purpose that you see fit.
+
+`https://your-xano-instance.xano.io/x2/mcp/67Dx5RNL/`**`token_here`**`/sse`
+
+#### params
+
+You can also pass URL parameters as a part of your connection URL, such as `?beta=true`
+
+`https://yourxano.stage.xano.io/x2/mcp/67Dx5RNL/token_here/sse`**`?beta=true&param=here`**
+
+You can use the URL parameters in your tool function stacks to determine the behavior of the tool(s).
+
+{% hint style="info" %}
+## Hint
+
+Use the token and / or params in combination with [triggers.md](../../the-function-stack/building-with-visual-development/triggers.md "mention") for building powerful and complex MCP logic.
+{% endhint %}
 
 ## Connecting to your MCP Server
 

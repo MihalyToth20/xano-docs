@@ -1,5 +1,5 @@
 ---
-icon: x
+icon: webhook
 ---
 
 # Metadata API

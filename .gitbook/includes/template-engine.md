@@ -64,7 +64,7 @@ Sign off with the name of their account manager: {{ $accountManager.name }}
 {% endstep %}
 
 {% step %}
-## Once you add the Template Engine to your function stack, click the :pencil2: button in the panel to open the editor.
+## Once you add the Template Engine to your function stack, click the :pencil2: button in the panel to open the editor, or use the AI assistant to help write a template for you
 {% endstep %}
 
 {% step %}

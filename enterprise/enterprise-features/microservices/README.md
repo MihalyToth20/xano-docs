@@ -11,7 +11,7 @@
 
 ### Microservice Examples and Tutorials
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Unoconv</strong></td><td>Deploy secure file conversation as a part of your Xano environment</td><td><a href="../../.gitbook/assets/unoconv.png">unoconv.png</a></td><td><a href="https://www.youtube.com/watch?v=W2kSIFqzB_4">https://www.youtube.com/watch?v=W2kSIFqzB_4</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Unoconv</strong></td><td>Deploy secure file conversation as a part of your Xano environment</td><td><a href="../../../.gitbook/assets/unoconv.png">unoconv.png</a></td><td><a href="https://www.youtube.com/watch?v=W2kSIFqzB_4">https://www.youtube.com/watch?v=W2kSIFqzB_4</a></td></tr></tbody></table>
 
 {% hint style="success" %}
 The Microservice feature is available as an add-on. Please contact your Xano representative or support for details.&#x20;
@@ -277,11 +277,11 @@ These advanced settings provide fine-grained control over the placement and sche
 
 Once deployed, you can interact with the microservice in the Xano Function Stack.
 
-<figure><img src="../../.gitbook/assets/CleanShot 2022-12-28 at 15.58.50.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CleanShot 2022-12-28 at 15.58.50.png" alt=""><figcaption></figcaption></figure>
 
-The Microservice function will be similar to an [external API request](../../the-function-stack/functions/apis-and-lambdas/external-api-request.md) function. Although the settings of the function are similar, it's important to call out that the **microservice is all internal traffic, making the interaction secure**.
+The Microservice function will be similar to an [external API request](../../../the-function-stack/functions/apis-and-lambdas/external-api-request.md) function. Although the settings of the function are similar, it's important to call out that the **microservice is all internal traffic, making the interaction secure**.
 
-<figure><img src="../../.gitbook/assets/CleanShot 2022-12-28 at 16.00.37.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CleanShot 2022-12-28 at 16.00.37.png" alt=""><figcaption></figcaption></figure>
 
 * **Import Curl** - allows Xano to automatically build the microservice call via a curl command.
 * **Host** - Select from a list of your deployments.&#x20;
@@ -292,5 +292,5 @@ The Microservice function will be similar to an [external API request](../../the
 * **Timeout** - Defines how long the Function Stack will wait in seconds before it considers the Function to be timed out.
 * **Follow\_location -** determines if you wish to automatically follow the redirects (if there are any) in the microservice.
 
-For more on Import Curl, Method, Params, Headers, Timeout, and Follow\_location check out the [External API Request](../../the-function-stack/functions/apis-and-lambdas/external-api-request.md) page.
+For more on Import Curl, Method, Params, Headers, Timeout, and Follow\_location check out the [External API Request](../../../the-function-stack/functions/apis-and-lambdas/external-api-request.md) page.
 

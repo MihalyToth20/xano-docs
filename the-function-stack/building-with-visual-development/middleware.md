@@ -26,7 +26,7 @@ All of our paid plans can utilize the free version of Middleware. In the free ve
 
 **Paid Version**
 
-The paid version of Middleware is included with our Scale plan. The premium version allows for unlimited creation and assignment of Middleware on APIs, functions, or tasks. Additional defaults are supported at the API group level, which can either be customized or inherited from workspace defaults.
+The paid version of Middleware is included with our Scale plan. The premium version allows for unlimited creation and assignment of Middleware on APIs, functions, MCP tools, or tasks. Additional defaults are supported at the API group level, which can either be customized or inherited from workspace defaults.
 
 If your plan includes the Compliance Center, you'll also be able to access reporting on middleware usage from there.
 
@@ -134,3 +134,4 @@ Middleware can be much more flexible in certain scenarios, such as input validat
 One of the key benefits to using middleware, as opposed to using a custom function for example, is the methods at which middleware can be applied. Having the ability to insert both PRE and POST middleware in your function stacks offers more versatile and controlled execution of the logic contained within them.
 
 Not only that, Middleware can also be applied at a workspace or API group level, giving you a one-swing approach to applying middleware to all of your API endpoints at once, instead of having to go through each API one at a time to apply a custom function.
+

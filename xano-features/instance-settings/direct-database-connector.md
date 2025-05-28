@@ -47,10 +47,14 @@ From this panel, you can also **revoke and re-generate** your database credentia
 
 You can use any application you'd like that is capable of connecting to a PostgreSQL database. In this example, we'll be using Navicat.
 
-Select 'Connection' in the top-left, and fill in your credentials and the IP recieved from Xano.
+Select 'Connection' in the top-left, and fill in your credentials and the IP received from Xano.
 
 ![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FFUiRBkNbG1G0TQL97a3C%252FCleanShot%25202023-08-16%2520at%252013.39.09.png%3Falt%3Dmedia%26token%3D65e31cd1-2a78-4034-8486-645a51b3011d\&width=768\&dpr=4\&quality=100\&sign=6188df4\&sv=2)
 
 Click 'Save' to save the connection. We can now navigate the PostgreSQL database from Xano using Navicat. We can even add / update data, run queries, etc...
 
 ![](https://docs.xano.com/~gitbook/image?url=https%3A%2F%2F3176331816-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M8Si5XvG2QHSLi9JcVY%252Fuploads%252FVOIm1fX5IgwBKIL7bUtd%252FCleanShot%25202023-08-16%2520at%252013.41.35.gif%3Falt%3Dmedia%26token%3D77716497-f44c-4896-a2f2-3bda1a11f951\&width=768\&dpr=4\&quality=100\&sign=782a399b\&sv=2)
+
+{% include "../../.gitbook/includes/table-format.md" %}
+
+{% include "../../.gitbook/includes/table-names.md" %}

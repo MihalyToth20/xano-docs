@@ -184,6 +184,7 @@
   * [Direct Database Connector](xano-features/instance-settings/direct-database-connector.md)
   * [Backup and Restore](xano-features/instance-settings/backup-and-restore.md)
   * [Security Policy](xano-features/instance-settings/security-policy.md)
+* [Workspace Settings](xano-features/workspace-settings.md)
 * [Advanced Back-end Features](xano-features/advanced-back-end-features/README.md)
   * [Xano Link](xano-features/advanced-back-end-features/xano-link.md)
   * [Developer API (Deprecated)](xano-features/advanced-back-end-features/developer-api-deprecated.md)
@@ -197,7 +198,7 @@
   * [Workspace Import and Export](xano-features/metadata-api/workspace-import-and-export.md)
   * [Token Scopes Reference](xano-features/metadata-api/token-scopes-reference.md)
 
-## Xano AI
+## Build With AI <a href="#xano-ai" id="xano-ai"></a>
 
 * [Building a Backend Using AI](xano-ai/building-a-backend-using-ai.md)
 * [Get Started Assistant](xano-ai/get-started-assistant.md)
@@ -208,11 +209,16 @@
 * [Template Engine](xano-ai/template-engine.md)
 * [Streaming APIs](xano-ai/streaming-apis.md)
 
-## AI Tools
+***
 
-* [MCP Servers](ai-tools/mcp-servers/README.md)
-  * [Connecting Clients](ai-tools/mcp-servers/connecting-clients.md)
-  * [MCP Functions](ai-tools/mcp-servers/mcp-functions.md)
+* [Using AI Builders with Xano](using-ai-builders-with-xano.md)
+
+## Build For AI <a href="#ai-tools" id="ai-tools"></a>
+
+* [MCP Builder](ai-tools/mcp-builder/README.md)
+  * [Connecting Clients](ai-tools/mcp-builder/connecting-clients.md)
+  * [MCP Functions](ai-tools/mcp-builder/mcp-functions.md)
+* [Xano MCP Server](ai-tools/xano-mcp-server.md)
 
 ## Xano Transform
 
@@ -245,7 +251,9 @@
 
 * [Xano for Enterprise](enterprise/xano-for-enterprise.md)
 * [Enterprise Features](enterprise/enterprise-features/README.md)
-  * [Microservices](enterprise/enterprise-features/microservices.md)
+  * [Microservices](enterprise/enterprise-features/microservices/README.md)
+    * [Ollama](enterprise/enterprise-features/microservices/ollama/README.md)
+      * [Choosing a Model](enterprise/enterprise-features/microservices/ollama/choosing-a-model.md)
   * [Tenant Center](enterprise/enterprise-features/tenant-center.md)
   * [Compliance Center](enterprise/enterprise-features/compliance-center.md)
   * [Security Policy](enterprise/enterprise-features/security-policy.md)

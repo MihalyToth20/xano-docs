@@ -157,7 +157,7 @@ From the **Edit Tenant** panel, you can enable **RBAC Override**. This option al
 
 <div align="left"><figure><img src="../../.gitbook/assets/CleanShot 2025-05-05 at 16.30.55.png" alt="" width="375"><figcaption><p>Enabling the RBAC Override option</p></figcaption></figure></div>
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>An example of available permissions with RBAC Override enabled</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (93).png" alt=""><figcaption><p>An example of available permissions with RBAC Override enabled</p></figcaption></figure>
 
 ***
 

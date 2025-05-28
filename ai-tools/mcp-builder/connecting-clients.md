@@ -48,10 +48,6 @@ In our example, we have a tool that checks if a user is marked as an administrat
 
 ## <img src="../../.gitbook/assets/cursorlogo.png" alt="" data-size="line"> Cursor (per-project) <a href="#cursor" id="cursor"></a>
 
-{% hint style="danger" %}
-**Please note that Cursor does not currently support authentication headers for SSE connections. You can only use tools that do not require authentication.**
-{% endhint %}
-
 {% stepper %}
 {% step %}
 ### In your project's root directory, create a new folder called `.cursor`
@@ -69,12 +65,17 @@ If the file is blank, start with the basic structure and replace the placeholder
 ```json
 {
   "mcpServers": {
-    "YOUR SERVER NAME HERE": {
+    "xano": {
       "command": "npx",
       "args": [
         "mcp-remote",
-        "YOUR CONNECTION URL HERE"
-      ]
+        "YOUR CONNECTION URL HERE",
+        "--header",
+        "Authorization:${AUTH_TOKEN}"
+      ],
+      "env": {
+        "AUTH_TOKEN": "Bearer YOUR AUTH TOKEN HERE"
+      }
     }
   }
 }
@@ -187,6 +188,19 @@ If any of your tools require authentication, you can add that to your config fil
   }
 }
 ```
+
+{% hint style="danger" %}
+**Windows Users:**
+
+Claude Desktop currently has a bug related to spaces inside of headers. To mitigate this, change the authentication section of your config file to look like the following:
+
+```
+        "Authorization:${AUTH_TOKEN}"
+      ],
+      "env": {
+        "AUTH_TOKEN": "Bearer YOUR AUTH TOKEN HERE"
+```
+{% endhint %}
 
 You can add multiple entries if you have multiple MCP servers. See the below example.
 
@@ -332,6 +346,24 @@ You can add multiple entries if you have multiple MCP servers. See the below exa
 
 {% endstep %}
 {% endstepper %}
+
+***
+
+## Methods
+
+### Streaming
+
+Streaming connections allow your MCP server to deliver responses in smaller chunks. Great for emulating the typical chatbot experience, where you can provide the experience of the response being 'typed'.
+
+### SSE
+
+SSE connections may be more compatible with certain systems, but deliver the entire response as a whole once its ready, instead of in smaller pieces.
+
+{% hint style="success" %}
+## Which one should I use?
+
+It depends on your use case and what you're using to connect to the MCP server. Streaming connections allow for a more organic, "chatbot-like" experience and means that your users won't have to wait as long to start seeing the response. However, whatever is connecting to your MCP server needs to support streaming responses for this to work.
+{% endhint %}
 
 ***
 

@@ -36,6 +36,28 @@ Zero-dependency means Actions do not contain:
 _\*Settings registry is available for actions for API keys and other sensitive tokens or keys._
 {% endhint %}
 
+### Browsing ans Using Actions
+
+{% stepper %}
+{% step %}
+### From the left-hand navigation menu, click Actions
+
+
+{% endstep %}
+
+{% step %}
+### Browse for and add new actions from here, or at [xano.com/actions](https://xano.com/actions)
+
+
+{% endstep %}
+
+{% step %}
+### From any function stack, under the Actions category, you'll see your installed actions available for use
+
+<div align="left"><figure><img src="../.gitbook/assets/CleanShot 2025-05-22 at 10.57.31.png" alt="" width="563"><figcaption></figcaption></figure></div>
+{% endstep %}
+{% endstepper %}
+
 ### Creating an Action
 
 <div align="left"><figure><img src="../.gitbook/assets/CleanShot 2024-10-10 at 09.52.49@2x.png" alt="" width="375"><figcaption></figcaption></figure></div>

@@ -24,57 +24,36 @@ When the right panel opens up, select **Import Data** and choose the **CSV** fil
 
 Next, drag and drop a CSV file onto the uploader or browse the files on your computer for the file you wish to upload.
 
-![](<../../.gitbook/assets/CleanShot 2021-12-07 at 15.57.02.png>)
+<figure><img src="../../.gitbook/assets/CleanShot 2025-05-15 at 10.24.16.png" alt=""><figcaption></figcaption></figure>
 
-Once you select a CSV file, the preview of your CSV will open up. The preview will display the first 100 rows of your file. You can make any final adjustments here before uploading the file to Xano.
+Once you select a CSV file, the preview of your CSV will open up. The preview will display the first 100 rows of your file. You can make any final adjustments to the data types, primary key, or table name here before beginning the import.
 
-#### Choose a table name
-
-![](<../../.gitbook/assets/CleanShot 2021-12-07 at 16.02.28.png>)
-
-#### Set a field as the Primary Key
+<figure><img src="../../.gitbook/assets/CleanShot 2025-05-15 at 10.26.30.png" alt=""><figcaption></figcaption></figure>
 
 Xano will try to automatically detect a primary key field. Currently, only integers are supported for the primary key field. The drop-down will show any fields compatible to be a primary key. If there is no primary key, then Xano will create the primary key automatically.&#x20;
 
-![](<../../.gitbook/assets/CleanShot 2021-12-07 at 16.06.03.png>)
+Once you are ready, click <mark style="background-color:blue;">Upload</mark> . If you are uploading over 5,000 records, then your upload will be performed in the background. You can monitor the progress of your upload from the settings page of your workspace. Once your background upload is complete a green banner will appear notifying you to refresh your browser and an email notification will be sent with confirmation of a successful import.&#x20;
 
-#### Make any changes
+{% hint style="info" %}
+## Add to an Existing Table
 
-Lastly, you can select a column to change its data type, disable it (if you do not want it included in the upload), or re-order the column's position.&#x20;
+You can import a CSV to an existing table if you'd like to add records to it. The process is the same as importing to a new table — just access the import option from inside of the database table you want to add to. \
+\
+![](<../../.gitbook/assets/image (95).png>)
 
-![](<../../.gitbook/assets/CleanShot 2021-12-07 at 16.07.09.png>)
+During the import, make sure to review the columns and make sure they are mapped to the right columns that already exist in your database table.\
 
-#### Upload and finish!
 
-Once you are ready select upload! If you are uploading over 5,000 records then your upload will be performed in the background. You can monitor the progress of your upload from the settings page of your workspace. Once your background upload is complete a green banner will appear notifying you to refresh your browser and an email notification will be sent with confirmation of a successful import.&#x20;
+![](<../../.gitbook/assets/image (96).png>)
+{% endhint %}
 
-### Add to an Existing Table
+{% hint style="info" %}
+## Edit Records in an Existing Table
 
-Choose the table you want to add data to via a CSV, select the menu icon in the top-right, and select CSV Import.&#x20;
+Just like adding records to an existing table, you can also use a CSV upload to **edit records** in a table.
 
-![](<../../.gitbook/assets/CleanShot 2021-12-07 at 16.29.56.png>)
-
-Drag and drop a CSV file onto the uploader or choose a file from your computer.&#x20;
-
-![](<../../.gitbook/assets/CleanShot 2021-12-07 at 16.33.02.png>)
-
-Next, a preview of your CSV will appear. The first 100 records will be displayed. Review the mapped columns before selecting upload. Any column headers in green will show automatically detected mapped fields. To make a change, select a column and choose a different column to map to. You can also select create a new column if you need to create new schema for the table.
-
-![](<../../.gitbook/assets/CleanShot 2021-12-07 at 16.34.17.png>)
-
-Hit upload and finish!&#x20;
-
-### Edit Records in an Existing Table
-
-To edit an existing record the CSV file must have a primary key. The primary key will be mapped to the primary key of the existing records to make the updates. Currently, only integers are supported for the primary key field.
-
-If there is no primary key to map to the existing id field the CSV file will add new records to the table.
-
-**Be sure to review the column mappings before uploading**. Xano will search for a column in the file called ID. However, double check this field. If your ID field is called something else, click on the column and choose to map the column to the existing ID field.&#x20;
-
-You can make changes to any of the columns mapping's by clicking on the column header. Green will show a compatible mapping to a field. Any red headers indicate an unmapped column. Finally, you can also select create the column if you need to create a new column on the table.
-
-![](<../../.gitbook/assets/CleanShot 2021-12-07 at 16.48.41.png>)
+The only difference between adding a new table or adding to an existing table is that you'll need to make sure your CSV contains an `id` field. This is what Xano will use to find the records to apply changes to.
+{% endhint %}
 
 ### Valid CSV Format
 

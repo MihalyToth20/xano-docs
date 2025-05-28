@@ -303,6 +303,14 @@ Click ![](<../../.gitbook/assets/CleanShot 2024-12-15 at 12.14.22.png>)to access
 
 <table><thead><tr><th width="183">Setting Name</th><th>Description</th></tr></thead><tbody><tr><td>Authentication</td><td>Determines whether or not this table is used for <a href="../../building-backend-features/user-authentication-and-user-data/">user authentication</a>.</td></tr><tr><td>Security</td><td>Change the table <a data-footnote-ref href="#user-content-fn-10">GUID</a>.</td></tr><tr><td>Versions</td><td>Xano maintains a version history of your table schema. You can roll back to a previous version of your schema if you've made changes that you want to undo.<br><br><strong>Note</strong>: This does not change the data in your table, only the fields. If you need to restore a backup of your table data, see <a href="../../xano-features/instance-settings/backup-and-restore.md">this document</a>.</td></tr><tr><td>Triggers</td><td>Access your <a data-footnote-ref href="#user-content-fn-11">database triggers</a>. </td></tr><tr><td>Auto-complete</td><td>Access your <a data-footnote-ref href="#user-content-fn-12">auto-complete</a> settings.</td></tr><tr><td>Clear all records</td><td>Deletes all records in the table. You can also choose to reset the primary ID back to 1 on tables that use a sequential ID.</td></tr><tr><td>Clone table</td><td>Cloning copies the table schema. Cloning <strong>does not</strong> copy existing data.</td></tr><tr><td>Export data</td><td>Export your table data using the current view as a CSV</td></tr><tr><td>Import data</td><td>Import records from a CSV <span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span><a href="../migrating-your-data/csv-import-and-export.md"> <strong>Learn More</strong></a></td></tr></tbody></table>
 
+***
+
+{% include "../../.gitbook/includes/table-format.md" %}
+
+***
+
+{% include "../../.gitbook/includes/table-names.md" %}
+
 [^1]: When naming your table, it's considered best practice to use camelCase for multiple words, and to not use plurals in the table name.\
     \
     For example, a table of dog breeds would be named `dogBreed`
