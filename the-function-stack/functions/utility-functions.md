@@ -225,6 +225,10 @@ Returns all of the inputs sent to the API in a single object.
 
 Returns all data sent to the API, even if they are not defined inputs. You'd use this function when building a **Webhook,** or you otherwise aren't sure what data will be sent to this endpoint.
 
+{% hint style="info" %}
+Exclude Middleware Modification should be set to `false` if you intend on using the raw data in your function stack **before** it's modified by Middleware.
+{% endhint %}
+
 ## Get Environment Variables
 
 Returns all of your [environment variables](../environment-variables.md) in a single object.
