@@ -57,7 +57,7 @@ A persistent volume is just a place that the microservice can store data that re
 {% hint style="info" %}
 ## How much storage do I need?
 
-When browsing Ollama models, use the Size column for your chosen model to determine how large of a volume you should deploy.
+When browsing Ollama models, use the Size column for your chosen model to determine how large of a volume you should deploy. Make sure to add a little extra when creating your volume, just for some breathing room.
 
 ![](<../../../../.gitbook/assets/image (94).png>)
 {% endhint %}
@@ -72,7 +72,91 @@ Name the volume `ollama`, select the size, and choose `SSD` as the storage class
 
 Click <mark style="background-color:blue;">Add</mark> under Deployments
 
+Fill out the following information. For this example, we'll be deploying the `phi3:mini` model, which should work with the following example values.
 
+| Parameter              | Purpose                                                                | Example Value          |
+| ---------------------- | ---------------------------------------------------------------------- | ---------------------- |
+| Deployment Name        | Name of the deployment                                                 | `ollama`               |
+| Replicas               | Number of container instances                                          | `1`                    |
+| Docker Config          | Source of the Docker image                                             | `public repo`          |
+| Deployment Strategy    | Update strategy                                                        | `RollingUpdate`        |
+| Container Name         | Name of the container                                                  | `ollama`               |
+| Container Type         | Container type                                                         | `Standard`             |
+| Docker Image           | Docker image to use                                                    | `ollama/ollama`        |
+| Container Port         | Port the container listens on                                          | `11434`                |
+| Service Port           | Port exposed to the service                                            | `11434`                |
+| Persistent Volume Name | Name of the persistent storage volume you created in the previous step | `ollama`               |
+| Volume Type            | Volume type                                                            | `Persistent Volume`    |
+| Mount Path             | Path in container where volume is mounted                              | `/root/.ollama/models` |
+| Min CPU                | Minimum CPU allocation                                                 | `500m`                 |
+| Max CPU                | Maximum CPU allocation                                                 | `2000m`                |
+| Min RAM                | Minimum RAM allocation                                                 | `4096Mi`               |
+| Max RAM                | Maximum RAM allocation                                                 | `8192Mi`               |
+
+Click <mark style="background-color:blue;">Add</mark> and then <mark style="background-color:blue;">Update & Deploy</mark>&#x20;
+{% endstep %}
+
+{% step %}
+### Deploy your chosen model
+
+All interactions with Xano microservices are facilitated by the Microservice function, which is a REST API request to your chosen microservice.
+
+Use the cURL below to get started. Add a Microservice function to your function stack, and click <mark style="color:blue;">Import cURL</mark>
+
+```bash
+curl -X POST http://localhost:11434/api/pull \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "phi3:mini"
+}'
+```
+
+{% hint style="warning" %}
+Please note that the **`Content-Type: application/json`** header is **required**, or your requests will fail.
+{% endhint %}
+
+Click on the `host` dropdown and choose your deployment, likely called `ollama`
+
+Change the timeout to a value that will allow you to monitor the deployment right inside of Xano. Below are some recommended values. You can also monitor the deployment via the logs of the microservice, available from your instance settings where you deployed the microservice earlier.
+
+| `phi3:mini` (\~5 GB) | 10–60 seconds | **5 min (300s)** |
+| -------------------- | ------------- | ---------------- |
+
+| `mistral:7b` (\~8 GB) | 30–120 seconds | **5–10 min (300–600s)** |
+| --------------------- | -------------- | ----------------------- |
+
+| `llama3:70b` (\~40 GB) | 5–20 minutes or more | **15–30 min** |
+| ---------------------- | -------------------- | ------------- |
+
+Once the model has downloaded, you'll be returned a 200 status response, as shown below. The model will be saved to your persistent storage volume, so you should only have to do this once.
+
+<div align="left"><figure><img src="../../../../.gitbook/assets/CleanShot 2025-06-02 at 11.06.14@2x.png" alt="" width="563"><figcaption></figcaption></figure></div>
+{% endstep %}
+
+{% step %}
+### Interact with your Ollama deployment
+
+You're ready to receive generations from your Ollama microservice. Here's an example cURL command to get you started.
+
+```bash
+curl -X POST http://localhost:11434/api/generate \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "phi3:mini",
+    "prompt": "Explain the difference between supervised and unsupervised learning.",
+    "stream": false
+}'
+```
+
+The above command will return an output like the one shown below.
+
+<figure><img src="../../../../.gitbook/assets/CleanShot 2025-06-02 at 11.10.46@2x.png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
+
+{% step %}
+### What's next?
+
+Ollama offers a set of standard commands that can be issued via REST API endpoints. You can review them [here](https://www.postman.com/postman-student-programs/ollama-api/documentation/suc47x8/ollama-rest-api), and use them as necessary inside of your function stacks.
 {% endstep %}
 {% endstepper %}
 
