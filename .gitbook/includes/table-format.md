@@ -21,10 +21,26 @@ Your tables can be created using one of two formats:
 
 If you are using the [direct-database-connector.md](../../xano-features/instance-settings/direct-database-connector.md "mention"), Standard SQL format is usually recommended.
 
+## **When to Convert to Standard SQL Format:**
+
+* You need direct database connections with third-party tools that aren't friendly to JSONB format, such as Tableau or PowerBI
+* You want faster performance for non-indexed queries
+* You're frequently adding new fields (faster column additions)
+* You plan to use SQL analytics tools or run complex reports directly against your database
+
+## **When to Keep JSONB Format:**
+
+* You're satisfied with current performance
+* You don't need direct database connections
+
 ## Converting Tables from JSONB to standard SQL
 
 {% hint style="warning" %}
 This change is **permanent**. Most users will not need to adjust these settings, and they only impact your experience if you are connecting to your database directly via third-party tools.
+{% endhint %}
+
+{% hint style="info" %}
+Using standard SQL does not mean you can't use JSONB — you have the ability to mix and match table types, if you prefer. You can also still use JSON fields on any table type for more complex, dynamic field structure.
 {% endhint %}
 
 {% stepper %}
