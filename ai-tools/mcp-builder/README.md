@@ -32,6 +32,13 @@ At its core, MCP is a standardized framework that enables seamless communication
 
 Traditionally, interacting with external services from an AI model required complex and often proprietary integrations built into specific clients. MCP simplifies this by providing a consistent and structured way for client applications to describe available tools and instruct AI models on how to use them. This includes defining the tool's purpose, its input parameters, and how the AI model can expect to receive results.
 
+### Get Started
+
+Jump right to the section you're looking for, or keep scrolling to learn more!
+
+| <a href="./#intro" class="button primary">Creating an MCP Server</a> | <a href="./#tools" class="button primary">Creating MCP Tools</a> |
+| :------------------------------------------------------------------: | :--------------------------------------------------------------: |
+
 ## Why would I build MCP Servers in Xano?
 
 Building MCP Servers in Xano offers a fundamental shift in how you integrate AI capabilities into your applications. Instead of being limited to building traditional REST APIs for standard web or mobile interactions, Xano's MCP Builder empowers you to create **AI-native functionalities**.
