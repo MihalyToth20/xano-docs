@@ -36,7 +36,7 @@ Zero-dependency means Actions do not contain:
 _\*Settings registry is available for actions for API keys and other sensitive tokens or keys._
 {% endhint %}
 
-### Browsing ans Using Actions
+### Browsing and Using Actions
 
 {% stepper %}
 {% step %}
