@@ -50,6 +50,22 @@ Evals are used to add additional fields from joined tables as part of your respo
 In the below example, we have two tables: **sales** and **product**. We've queried the **sales** table and joined it with **product** so we can retrieve product data for each sale. Our eval adds the product name to the response for each sales record returned.
 
 <figure><img src="../../../../.gitbook/assets/CleanShot 2025-04-14 at 17.38.50.png" alt=""><figcaption></figcaption></figure>
+
+### Null Coalesce
+
+This is a special filter available in a Query All Records statements that allows you to, when looking for values that represent `null` in your database, specify an additional value to look for and treat as `null`.
+
+In real-world use cases, this is useful for things like when you want to find records where a status field is either 'active' or not set (treating unset as active by default).
+
+For example, in the following table:
+
+&#x20;![](<../../../../.gitbook/assets/CleanShot 2025-06-18 at 16.28.28.png>)
+
+If we wanted to find all records that are `null`, but know that records with `hello` also mean the same thing as `null` in our application's context, we would use the `coalesce` filter to account for this when querying the table.
+
+In the example below on this table, the query returns records with `id: 1 (value='hello')` and `id: 4 (value=null)`, but excludes `id: 2 (value='goodbye')`.
+
+<figure><img src="../../../../.gitbook/assets/image (97).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Output" %}
