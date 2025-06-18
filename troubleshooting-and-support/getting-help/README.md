@@ -66,7 +66,7 @@ _\* From initial contact. Response time ≠ resolution time._\
 \
 Business days are defined as Monday-Friday as long as they don't fall on a USA holiday. Any day that falls on a holiday would have a different response time associated with it based on the support plan. Business hours are defined as 9 AM to 5 PM PT on any Business day.
 
-Xano support is available 24 hours per day during the work week (M-F). If a ticket submission happens during a business day at a time where there are not enough business hours available within the window, then the response time would by paused and resumed at the start of the following business day.
+Xano support is typically available from 2AM - 6PM PST (M-F). If a ticket submission happens during a business day at a time where there are not enough business hours available within the window, then the response time would by paused and resumed at the start of the following business day.
 
 Additional support options are available to be customized through the [Enterprise plan](broken-reference).
 
