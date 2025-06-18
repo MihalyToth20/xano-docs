@@ -8,7 +8,7 @@ Apart from the documentation we provide, we strive to provide comprehensive educ
 
 * [**Basic Support**](./#basic-support)  (Included with all plans)
 * [**Premium Support**](./#premium-support)
-* [**Support from Xano Partners**](./#xano-certified-developers)
+* [**Hire a Certified Expert**](./#hire-a-certified-expert)
 
 ## Basic Support
 
@@ -16,7 +16,7 @@ Basic support comes standard with all self-serve plans and includes the followin
 
 ### Community Support&#x20;
 
-_Participation requires adhering to the_ [_Community Code of Conduct_](broken-reference)
+_Participation requires adhering to the_ [_Community Code of Conduct_](community-code-of-conduct.md)
 
 * [**Xano Community**](https://community.xano.com/)
 
@@ -53,7 +53,7 @@ Additionally, a [White House Escalation](./#white-house-emergency-escalation) se
 
 All prices are in $USD and response times are within USA Pacific Time (PT).
 
-Support Package Enhancements are priced per instance. (i.e. Gold support for 10 Scale Plans would be 10x Gold Packages.) Volume discounts are possible by contacting your Xano Account Representative.
+Support Package Enhancements are priced per instance. (i.e. Gold support for 10 Scale Plans would be 10x Gold Packages.) Volume discounts may be available for you by contacting our support team, or your dedicated Xano representative if available.
 
 Premium support is offered through Intercom support chat for tracking and auditing purposes. Any updates to an issue should be recorded in the original conversation -- not a new one. Support through any other official channel will be handled with the Basic Support response time of up to 72 hours.
 
@@ -74,58 +74,59 @@ Additional support options are available to be customized through the [Enterpris
 
 #### Get one-on-one help from a Xano team member to help you solve your issue and get back to building.
 
-We always encourage our users to visit both the Xano community forum as well as our weekly free office hours sessions when they need help. However, we understand that some problems just require special or extended attention, and for that we offer one-on-one support calls with a Xano team member directly. To proceed, just fill out [this form](https://forms.clickup.com/9010156981/f/8cgr5dn-30257/HT2A141XONMDOI2KMV) and a Xano team member will reach out to you.
+We encourage users to visit the Xano Community Forum or join our free weekly office hours for assistance. For issues needing special attention, we offer one-on-one support calls with a Xano team member.
 
-These sessions are designed to help give you the attention you need to solve specific issues with your Xano project. While we can't build for you or solve issues with 3rd parties, we can certainly provide the attention you need to get past any Xano roadblocks you're facing along the way.
+**One-on-One Support Details:**
 
-* 2 x Zoom Support Sessions (up to 30 minutes per session) - $250
+* **2 Zoom Sessions** (30 minutes each): $250
 
-While we will do our best to answer your questions with the allotted time, there may be some questions that need to be escalated offline. If this is required, our engineers will do their best to either identify it as a bug with a proposed timeline to fix, or provide a recommendation on what to try exploring next. This will be communicated back to you through support channels.
+These sessions focus on addressing specific Xano project challenges. While we don't build for you or resolve third-party issues, we help overcome Xano-specific roadblocks. If additional investigation is needed, our engineers will escalate the issue, providing solutions or future steps via normal support channels and timelines.
+
+To schedule a session, just fill out [this form](https://forms.clickup.com/9010156981/f/8cgr5dn-30257/HT2A141XONMDOI2KMV) and a Xano team member will reach out to you.
 
 ### White House Emergency Escalation
 
-Typically, White House Escalation is only available for Enterprise Plans -- to inquire please fill out the form on [xano.com/enterprise](https://www.xano.com/enterprise/).&#x20;
+White House Escalation is exclusively available for Enterprise Plans. To inquire, please fill out the form on [xano.com/enterprise](https://xano.com/enterprise). This escalation service is limited to addressing service outages, not standard support issues. If minimizing downtime is critical for your business, this service is ideal. During a service outage, you can page the on-call engineer, with typical response times under an hour.
 
-This support service gives you access to the **Xano Bat Phone**. This escalation procedure is restricted to service outages only and not standard support. If minimizing downtime is essential to the health of your business, then this service is for you. In the event that there is a service outage for your instance, then you will have the ability to page the engineer on call to look into this immediately. Typical response times from initial contact are under an hour.
+**Common causes of system instability include:**
 
-**Common problems to system instability include the following:**
-
-* Increased traffic that is overloading the system
-* Increased data volume that is adding new stress on the database
+* Increased traffic overloading the system
+* Increase in data volume stressing the database
 * Denial of service attacks
-* User error within the function stack
+* User errors within the function stack
 * Hardware problems
 
-**Possible solutions include the following:**
+**Possible solutions include:**
 
 * Issue diagnosis
-* Temporarily increase server resources
-* Assistance with database indexes to speed up performance
-* Assistance with rate limiting for denial of service attacks
-* Longer-term recommendations on functionality changes and/or plan changes to offer better protection against attacks and/or increased traffic demands
+* Temporary increase in server resources
+* Database index optimization for performance
+* Rate limiting assistance for denial of service attacks
+* Long-term recommendations for functionality changes or plan upgrades to enhance protection against attacks and increased traffic
 
 **How to initiate White House escalation:**
 
-To initiate a White House escalation, open the support chat and **start a new conversation**. Two options will appear: normal premium support or emergency support - **select the emergency support option**.\
-&#xNAN;_\*Note: this option will only appear if the White House support service is enabled on your plan._
+To initiate a White House escalation, open the support chat and **start a new conversation**. Two options will appear: normal premium support or emergency support - **select the emergency support option**.
+
+{% hint style="info" %}
+This option will only appear if the White House support service is enabled on your plan.
+{% endhint %}
 
 This method must be used in order for auditing purposes and emergency alert notifications to reach the Xano engineer on call. The use of other channels cannot guarantee the outlined response times.&#x20;
 
-## Xano Certified Developers
+### Hire a Certified Expert
 
-Xano has a partner program that vets the best Xano builders to help others succeed in building their backends. Some services they offer:
-
-* **Solving problems** - Most of our users want to use Xano to build on their own. Partners can help overcome challenges or hurdles you might be facing while building
-* **Migrating from other data sources** - Coming from another database or no-code tool and want to bring in your data? Partners can help you do this easily.
-* **Building Integrations** - Some 3rd party services can be complex to integrate with. Our partners can help build the integrations for you so you can focus on other parts of the business.
-
-Interested in getting help from a Certified Developer? Head to the [Marketplace](https://xano.com/marketplace).\
+Whether you need a quick coaching session, help solving complex problems, or a full project build, Xano's Certified Partners are ready to step in. Every expert in our directory has been vetted by Xano, so you can trust them to deliver quality work and practical solutions.\
+\
+Need help figuring out who’s the right fit? Use our [matchmaking form](https://dwdr6.share.hsforms.com/2n_WuBYW3RVqqtJhwVGg7Lg) to share your project details, and we’ll connect you with a few certified experts we think match your needs best. From there, you can discuss your project directly and decide how hands-on you want them to be.\
+\
+Some ways our Certified Experts can help:\
 
 
-## Agency Build Partners
+* Troubleshoot challenges and guide you past roadblocks
+* Migrate data from other tools or databases
+* Build custom integrations with other services
+* Fully design and build your backend (and even your frontend, if needed)
 
-Xano has a network of agencies and freelancers that can help build a part or your entire backend at a fraction of what it would cost to hire a development team.  Furthermore, this network of partners also specializes in no-code front-end tools so if you'd like to build both your front-end and backend through an Agency partner, it's completely possible.
-
-Interested in getting help from an Agency Build Partner? Head to the [Marketplace](https://xano.com/marketplace).
-
-Are you an Agency? Check out the [Xano Agency Plan](https://www.xano.com/agency/) to see the benefits
+\
+Ready to get started? Visit our [Certified Partner directory](https://www.xano.com/partner/browse/?acceptingNew=true) and find the help you need today.\
