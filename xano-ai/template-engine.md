@@ -20,7 +20,6 @@ Use these sample templates to get started with templates quickly and understand 
 You are an AI assistant tasked with {{ $task.description }}.
 
 Context:
-{% raw %}
 {% if $context %}
 {{ $context }}
 {% else %}
@@ -37,7 +36,6 @@ Constraints:
 {% for $constraint in $task.constraints %}
 - {{ $constraint }}
 {% endfor %}
-{% endraw %}
 
 Output Format:
 {{ $output.format }}
@@ -66,8 +64,7 @@ Example Expected Output:
         </header>
         
         <nav>
-            {% raw %}
-{% if $user.isLoggedIn %}
+            {% if $user.isLoggedIn %}
                 <a href="/profile">My Profile</a>
                 <a href="/logout">Logout</a>
             {% else %}
@@ -88,7 +85,6 @@ Example Expected Output:
                     {% endif %}
                 </div>
             {% endfor %}
-{% endraw %}
         </main>
     </body>
 </html>
@@ -112,8 +108,7 @@ SELECT
     {{ $select_columns|join(', ') }} 
 FROM {{ $table_name }}
 WHERE 
-    {% raw %}
-{% if $user.role == 'admin' %}
+    {% if $user.role == 'admin' %}
         1=1
     {% else %}
         organization_id = {{ $user.organization_id }}
@@ -127,7 +122,6 @@ ORDER BY
     {% else %}
         created_at DESC
     {% endif %}
-{% endraw %}
 LIMIT {{ $limit|default(10) }}
 ```
 
@@ -144,7 +138,6 @@ Just type `?:raw` into the query editor and point the statement argument to the 
 **Context**: A Twig template for generating raw Markdown code with dynamic content and metadata.
 
 ```twig
-{% raw %}
 {% if $document.title %}# {{ $document.title }}{% endif %}
 {% if $author.name %}Author: {{ $author.name }}{% endif %}
 {% if $document.date %}Date: {{ $document.date|date('Y-m-d') }}{% endif %}
@@ -182,7 +175,6 @@ Just type `?:raw` into the query editor and point the statement argument to the 
 [^{{ loop.index }}]: {{ $footnote }}
 {% endfor %}
 {% endif %}
-{% endraw %}
 
 ```
 
@@ -191,7 +183,6 @@ Just type `?:raw` into the query editor and point the statement argument to the 
 **Context**: A flexible email template system that supports personalized messaging, dynamic sections, and optional signatures.
 
 ```twig
-{% raw %}
 {% if $document.title %}# {{ $document.title }}{% endif %}
 
 {% if $author.name %}Author: {{ $author.name }}{% endif %}
@@ -230,6 +221,5 @@ Just type `?:raw` into the query editor and point the statement argument to the 
 [^{{ loop.index }}]: {{ $footnote }}
 {% endfor %}
 {% endif %}
-{% endraw %}
 ```
 

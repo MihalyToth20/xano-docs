@@ -97,13 +97,11 @@ Conditionals are helpful if you want to dynamically determine what the end resul
 Conditionals are wrapped in \{% and %\} and have support for `else` and `else if`
 
 ```twig
-{% raw %}
 {% if $user1.vip == true %}
   Hey, {{ $user1.name }}! Thanks for being a part of our VIP program.
 {% else %}
   Hey, {{ $user1.name }}! Thanks for reading.
 {% endif %}
-{% endraw %}
 ```
 
 > In the above example, for this user:
@@ -122,7 +120,6 @@ Conditionals are wrapped in \{% and %\} and have support for `else` and `else if
 > ```
 
 ```twig
-{% raw %}
 {% if $score >== 90 %}
   Your grade is an A
 {% elseif $score >== 80 %}
@@ -132,7 +129,6 @@ Conditionals are wrapped in \{% and %\} and have support for `else` and `else if
 {% else %}
   Your grade is an F
 {% endif %}
-{% endraw %}
 ```
 
 > In the above example, for this score:
@@ -152,11 +148,9 @@ Conditionals are wrapped in \{% and %\} and have support for `else` and `else if
 You can use loops to populate lists of data without having to write out separate lines for each item, or knowing how many items you'll need to populate.
 
 ```twig
-{% raw %}
 {% for item in $order.items %}
   - {{ item.quantity }}x {{ item.name }} at ${{ item.price }} each
 {% endfor %}
-{% endraw %}
 ```
 
 <table data-full-width="true"><thead><tr><th>Data</th><th>Sample Output</th></tr></thead><tbody><tr><td><pre class="language-json"><code class="lang-json">[
@@ -181,13 +175,11 @@ You can use loops to populate lists of data without having to write out separate
 You can also use an Else statement at the end of your For loop to determine what action to take if no items are found. In the next example, if `$list` contains no items, the template will return `No items found.`
 
 ```twig
-{% raw %}
 {% for item in $list %}
   {{ item }}
 {% else %}
   No items found.
 {% endfor %}
-{% endraw %}
 ```
 
 ## Filters
@@ -209,9 +201,7 @@ When you specify a format (like `e('html')`, `e('js')`, `e('url')`, etc.), you'r
 ### HTML Escaping
 
 ```twig
-{% raw %}
 {% set $user_input = '<script>alert("XSS");</script>' %}
-{% endraw %}
 {{ $user_input|e('html') }}
 
 Outputs: &lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;
@@ -220,9 +210,7 @@ Outputs: &lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;
 ### JavaScript Escaping
 
 ```twig
-{% raw %}
 {% set $js_string = 'Hello "world"! \n New line' %}
-{% endraw %}
 {{ $js_string|e('js') }}
 {# Outputs: Hello \"world\"! \\n New line #}
 ```
@@ -230,9 +218,7 @@ Outputs: &lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;
 ### URL Escaping
 
 ```twig
-{% raw %}
 {% set $search_query = 'hello world & special chars' %}
-{% endraw %}
 {{ $search_query|e('url') }}
 {# Outputs: hello+world+%26+special+chars #}
 ```
@@ -240,9 +226,7 @@ Outputs: &lt;script&gt;alert(&quot;XSS&quot;);&lt;/script&gt;
 ### CSS Escaping
 
 ```twig
-{% raw %}
 {% set $css_value = 'expression(alert("XSS"))' %}
-{% endraw %}
 {{ $css_value|e('css') }}
 {# Outputs: expression\28 alert\28 "XSS"\29 \29 #}
 ```

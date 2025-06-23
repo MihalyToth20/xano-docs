@@ -2,6 +2,20 @@
 
 With Instance Activity, you can easily review critical actions inside of your Xano instance.
 
+{% stepper %}
+{% step %}
+### From your Instance selection screen, click the :gear: icon
+
+<div align="left"><figure><img src="../../.gitbook/assets/CleanShot 2025-06-23 at 11.28.07@2x.png" alt="" width="375"><figcaption></figcaption></figure></div>
+{% endstep %}
+
+{% step %}
+### In the panel that opens on the right side, click Instance Activity
+
+<div align="left"><figure><img src="../../.gitbook/assets/CleanShot 2025-06-23 at 11.30.01@2x.png" alt="" width="375"><figcaption></figcaption></figure></div>
+{% endstep %}
+{% endstepper %}
+
 The following types of information are available from this panel:
 
 * Login
