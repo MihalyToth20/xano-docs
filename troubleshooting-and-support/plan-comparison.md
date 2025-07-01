@@ -16,25 +16,26 @@ noIndex: true
 | ------------------------ | ------------------------------ | ------------------------------ |
 | **Pricing**              | $29/month ($25/month annually) | $99/month ($85/month annually) |
 | **CPU**                  | 1 CPU                          | 3 CPU                          |
-| **Rate Limiting**        | No rate limit                  | No limit                       |
+| **Rate Limiting**        | No rate limit                  | No rate limit                  |
 | **Database Records**     | No limit                       | No limit                       |
-| **Database Storage**     | 10GB                           | 3GB                            |
-| **Image/File Storage**   | 100GB (no watermark)           | 10GB                           |
-| **File Bandwidth**       | 250GB                          | 25GB                           |
+| **Database Storage**     | 10GB                           | 10GB                           |
+| **Image/File Storage**   | 100GB (no watermark)           | 100GB                          |
+| **File Bandwidth**       | 250GB                          | 250GB                          |
 | **Workspaces**           | 1 (upgrade available)          | 3                              |
 | **Team Size**            | 1                              | 1                              |
 | **Custom Domain**        | ✅ Included                     | ✅ Included                     |
 | **Private File Storage** | ❌ No                           | ❌ No                           |
-| **Background Tasks**     | 10                             | 5 (upgrade available)          |
-| **Data Sources**         | 3                              | 2                              |
-| **Middleware**           | 10                             | 5                              |
+| **Background Tasks**     | 10                             | 10                             |
+| **Data Sources**         | 3                              | 3                              |
+| **Middleware**           | 10                             | 10                             |
 | **Database Connector**   | Add-on                         | Add-on                         |
 | **API Versioning**       | ✅ Yes                          | ✅ Yes                          |
-| **Redis Caching**        | ✅ Yes                          | ❌ No                           |
-| **Sub-Minute Tasks**     | ✅ Yes                          | ❌ No                           |
-| **Automatic Backups**    | 7-day rolling                  | 3-day rolling                  |
+| **Redis Caching**        | ❌ No                           | ❌ No                           |
+| **Sub-Minute Tasks**     | ❌ No                           | ❌ No                           |
+| **Automatic Backups**    | 7-day rolling                  | 7-day rolling                  |
 | **Load Balanced**        | ❌ No                           | ❌ No                           |
 | **Auto Scaling**         | ❌ No                           | ❌ No                           |
+| **GDPR**                 | ✅ Yes                          | ✅ Yes                          |
 | **ISO 27001/SOC2**       | ❌ No                           | ✅ Yes                          |
 | **RBAC Permissions**     | ❌ No                           | ❌ No                           |
 | **Compliance Center**    | ❌ No                           | ❌ No                           |
@@ -44,33 +45,34 @@ noIndex: true
 
 ### Pro Plan (New) vs Scale Plan (Deprecating)
 
-| Feature                  | Pro Plan (New)                   | Scale Plan (Current)             |
-| ------------------------ | -------------------------------- | -------------------------------- |
-| **Pricing**              | $249/month ($224/month annually) | $225/month ($199/month annually) |
-| **CPU**                  | Same as Scale 1X today           | Depends on Scale tier            |
-| **Rate Limiting**        | No rate limit                    | No limit                         |
-| **Database Records**     | No limit                         | No limit                         |
-| **Database Storage**     | 25GB                             | 10GB                             |
-| **Image/File Storage**   | 250GB                            | 50GB                             |
-| **File Bandwidth**       | 250GB                            | 25GB                             |
-| **Workspaces**           | 5                                | 5                                |
-| **Team Size**            | 10                               | 3                                |
-| **Custom Domain**        | ✅ Included                       | ✅ Included                       |
-| **Private File Storage** | ✅ Yes                            | ✅ Yes                            |
-| **Background Tasks**     | Unlimited                        | Unlimited                        |
-| **Data Sources**         | 3                                | 2                                |
-| **Middleware**           | Unlimited                        | Yes                              |
-| **Database Connector**   | ✅ Included                       | Add-on                           |
-| **API Versioning**       | ✅ Yes                            | ✅ Yes                            |
-| **Redis Caching**        | ✅ Yes                            | ✅ Yes                            |
-| **Sub-Minute Tasks**     | ✅ Yes                            | ✅ Yes                            |
-| **Automatic Backups**    | 14-day rolling                   | 3-day rolling                    |
-| **Load Balanced**        | ✅ Yes                            | ✅ Yes                            |
-| **Auto Scaling**         | ❌ No (upgrade available)         | ✅ Yes                            |
-| **ISO 27001/SOC2**       | ✅ Yes                            | ✅ Yes                            |
-| **RBAC Permissions**     | ✅ Yes                            | ✅ Yes                            |
-| **Compliance Center**    | ✅ Yes                            | ✅ Yes                            |
-| **Xano Link**            | ✅ Included                       | Add-on                           |
+| Feature                  | Pro Plan (New)                                           | Scale Plan (Current)             |
+| ------------------------ | -------------------------------------------------------- | -------------------------------- |
+| **Pricing**              | $249/month ($224/month annually)                         | $225/month ($199/month annually) |
+| **CPU**                  | Same as Scale 1X today                                   | Depends on Scale tier            |
+| **Rate Limiting**        | No rate limit                                            | No rate limit                    |
+| **Database Records**     | No limit                                                 | No limit                         |
+| **Database Storage**     | 25GB                                                     | 25GB                             |
+| **Image/File Storage**   | 250GB                                                    | 250GB                            |
+| **File Bandwidth**       | 250GB                                                    | 250GB                            |
+| **Workspaces**           | 5                                                        | 5                                |
+| **Team Size**            | 10                                                       | 10                               |
+| **Custom Domain**        | ✅ Included                                               | ✅ Included                       |
+| **Private File Storage** | ✅ Yes                                                    | ✅ Yes                            |
+| **Background Tasks**     | Unlimited                                                | Unlimited                        |
+| **Data Sources**         | 3                                                        | 3                                |
+| **Middleware**           | Unlimited                                                | Unlimited                        |
+| **Database Connector**   | ✅ Included                                               | Add-on                           |
+| **API Versioning**       | ✅ Yes                                                    | ✅ Yes                            |
+| **Redis Caching**        | ✅ Yes                                                    | ✅ Yes                            |
+| **Sub-Minute Tasks**     | ✅ Yes                                                    | ✅ Yes                            |
+| **Automatic Backups**    | 14-day rolling                                           | 14-day rolling                   |
+| **Load Balanced**        | ✅ Yes                                                    | ✅ Yes                            |
+| **Auto Scaling**         | ❌ No (CPU Boost + Autoscale Protection add-on available) | ✅ On scale 2x and above          |
+| **GDPR**                 | ✅ Yes                                                    | ✅ Yes                            |
+| **ISO 27001/SOC2**       | ✅ Yes                                                    | ✅ Yes                            |
+| **RBAC Permissions**     | ✅ Yes                                                    | ✅ Yes                            |
+| **Compliance Center**    | ✅ Yes                                                    | ✅ Yes                            |
+| **Xano Link**            | ✅ Included                                               | Add-on                           |
 
 ***
 
@@ -86,11 +88,11 @@ noIndex: true
 
 #### Q: Are there any promotions or benefits available to current users?
 
-**A:** tbd
+**A:** Existing Launch and Scale users who have subscribed prior to July 1, 2025 should have received an exclusive discount via email. If you qualify and did not receive this, please reach out to our support team.
 
 **Q: What happens to any promos or offers I currently have applied to my account if I switch plans?**
 
-**A:** tbd
+**A:** Promotions do not stack, so you can choose to retain your current promotion, or change plans.
 
 ***
 
@@ -98,16 +100,7 @@ noIndex: true
 
 #### Q: Should I switch to the new Starter plan?
 
-**A:** On the new Starter plan, you'll get:
-
-* **10x more database storage** (10GB vs 3GB)
-* **10x more file storage** (100GB vs 10GB)
-* **10x more bandwidth** (250GB vs 25GB)
-* **More background tasks** (10 vs 5)
-* **New performance features** like Redis caching and sub-minute task scheduling
-* **Better backup retention** (7-day vs 3-day rolling backups)
-
-It depends on your current needs — there are some features that you currently have access to on Launch that are not available on Starter, and some offerings are reduced (such as the amount of included workspaces).
+**A:** Existing Launch plan users have received upgrades to include what is offered in Starter, plus all of the great benefits you're already used to on your Launch plan. There is no advantage in moving from Launch to Starter at this time, unless you desire a lower-cost plan with fewer resources.
 
 #### Q: What am I giving up by moving to Starter?
 
@@ -131,16 +124,7 @@ It depends on your current needs — there are some features that you currently 
 
 #### Q: Which new plan should I choose?
 
-**A:** We strongly recommend the **Pro Plan**, which provides significant upgrades:
-
-* **100% dedicated infrastructure**
-* **2.5x more database storage** (25GB vs 10GB)
-* **5x more file storage** (250GB vs 50GB)
-* **10x more bandwidth** (250GB vs 25GB)
-* **More team collaboration** (10 team members vs 3)
-* **Database Connector included** (was a paid add-on)
-* **Xano Link included** (was a paid add-on)
-* **Better compliance features** and security controls
+**A:** Existing Scale plan users have received upgrades to include what is offered in Pro, plus all of the great benefits you're already used to on your Scale plan. The only advantage to the Pro plan over your current Scale plan is the inclusion of the Database Connector and Xano Link.
 
 #### Q: What happens to auto-scaling?
 
@@ -152,10 +136,6 @@ It depends on your current needs — there are some features that you currently 
 
 * **Database Connector** (previously extra cost)
 * **Xano Link** (previously extra cost)
-* **Dedicated infrastructure** with better performance guarantees
-* **Significantly more storage and bandwidth**
-
-Many users will find the Pro plan provides better overall value even before considering the included add-ons, but we are keeping both plans available to you to ensure that your specific needs are met in the best way possible.
 
 ***
 
