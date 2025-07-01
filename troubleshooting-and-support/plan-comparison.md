@@ -2,6 +2,7 @@
 description: >-
   Information for when you're on a legacy plan and want to know how the current
   offerings stack up
+hidden: true
 noIndex: true
 ---
 
