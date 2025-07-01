@@ -23,7 +23,7 @@ These agents can process data, make decisions, and execute actions without human
 
 <table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><img src="../.gitbook/assets/yt (3).png" alt="" data-size="line"> <strong>Introduction to AI Agents</strong></td><td><a href="../.gitbook/assets/ai agents.png">ai agents.png</a></td><td></td></tr><tr><td><img src="../.gitbook/assets/yt (3).png" alt="" data-size="line"> <strong>Tools for Agents &#x26; MCP Servers</strong></td><td><a href="../.gitbook/assets/ai tools.png">ai tools.png</a></td><td><a href="https://youtu.be/D1HtzC6yiO4">https://youtu.be/D1HtzC6yiO4</a></td></tr></tbody></table>
 
-{% embed url="https://youtu.be/iEn20cy5LUw" %}
+{% embed url="https://youtu.be/iEn20cy5LUw?refresh=yes" %}
 
 ## What are Agents?
 
