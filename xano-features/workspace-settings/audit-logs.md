@@ -83,12 +83,6 @@ Audit Logs provide detailed and searchable information about any changes or acti
 * **Delete Table** - Remove tables
 * **Restore Table** - Recover deleted tables
 * **Truncate Table** - Clear all data from tables
-
-
-
-
-
-*
 {% endtab %}
 
 {% tab title="Function Stacks" %}
