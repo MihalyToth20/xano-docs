@@ -179,14 +179,7 @@ flowchart TD
     style J fill:#ffebee
 ```
 
-#### 4. Subscription Cancellation
-
-_"I want to cancel my subscription"_
-
-```mermaid
-```
-
-#### 5. Technical Issue
+#### 4. Technical Issue
 
 _"The app keeps crashing on my phone"_
 
