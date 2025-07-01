@@ -63,6 +63,7 @@ When disabled, users can still access non-live data source content (if Workspace
 * Workspace Marketplace - allows access to workspace Marketplace.
 * Workspace Request History - allows access to workspace API Request History.
 * Workspace Task - allows access to workspace Background Tasks.
+* Workspace Logs - allows access to Audit Logging
 * Additional objects coming soon.
 
 #### Create a Custom Role

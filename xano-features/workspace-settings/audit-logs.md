@@ -143,6 +143,10 @@ Depending on your plan, you'll be able to retain different amounts of audit logs
 
 ## Accessing and Using Audit Logs
 
+{% hint style="danger" %}
+Please note that if your instance has [rbac-role-based-access-control.md](../../enterprise/enterprise-features/rbac-role-based-access-control.md "mention") enabled, any users that you want to be able to view the logs need to have the **Workspace Logs** permission applied.
+{% endhint %}
+
 {% stepper %}
 {% step %}
 ### From the workspace dashboard, click the three dots in the top-right corner, and choose Audit Logs
