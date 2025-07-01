@@ -6,7 +6,7 @@ icon: head-side-brain
 
 ![](<../.gitbook/assets/non profit1.jpg>)
 
-Verified non-profits are eligible to receive a 50% discount for our Starter and Pro plans. You will need to provide your company EIN number or 501(c)(3) status by the IRS.&#x20;
+Verified non-profits are eligible to receive a 50% discount for our Pro plan. You will need to provide your company EIN number or 501(c)(3) status by the IRS.&#x20;
 
 For non-U.S. based non profits, we would need proof of qualifications, registrations, or other filings to be considered.&#x20;
 
