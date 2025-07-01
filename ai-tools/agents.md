@@ -197,6 +197,5 @@ flowchart TD
     style A fill:#e1f5fe
     style F fill:#e8f5e8
     style H fill:#ffebee
-  Mermaid --> Diagram
 ```
 
