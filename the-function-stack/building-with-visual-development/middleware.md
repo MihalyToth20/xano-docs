@@ -1,10 +1,12 @@
 # Middleware
 
-Middleware offers powerful functionality to control the behavior of your APIs at pivotal points of execution.
+{% hint style="info" %}
+## Quick Summary
 
-All plans include **one** instance of middleware at no charge.
+Middleware are separate pieces of logic that can run before something is executed, or just before it delivers a response (if applicable). It's designed for things like input validation, custom security or authentication implementations, logging, and output customization.
 
-Our **Scale** and higher plans include unlimited middleware.
+Middleware requires a **Starter plan** or higher.
+{% endhint %}
 
 ## What is middleware? <a href="#what-is-middleware" id="what-is-middleware"></a>
 

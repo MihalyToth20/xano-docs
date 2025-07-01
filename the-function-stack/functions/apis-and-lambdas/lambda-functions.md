@@ -1,10 +1,12 @@
 # Lambda Functions
 
-## What are Lambda Functions?
+{% hint style="info" %}
+## Quick Summary
 
 Lambda functions allow you to execute JavaScript or TypeScript inside of your Xano function stacks. You may prefer to do this if you are porting old workflows to Xano and already have the code written, or maybe you just prefer to write code instead of using the function stack.
 
 You can also use Lambda functions to leverage custom NPM packages.
+{% endhint %}
 
 ## How do I write Lambda functions in Xano?
 

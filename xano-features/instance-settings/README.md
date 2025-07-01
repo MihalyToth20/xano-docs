@@ -32,7 +32,7 @@ In some cases, you may still want to connect to your Xano instance via the origi
 
 
 {% hint style="info" %}
-Database Connector is a premium add-on that is available for Launch and Scale plans. Please visit your Billing page for the most up-to-date pricing for this additional feature.
+The Database Connector requires an add-on to our **Starter plan** or is included with the **Pro plan**.
 {% endhint %}
 
 You have the option to connect your Xano instance's PostgreSQL database directly with an external application or service. This can be useful if there is a platform for manipulating your database that you prefer to use over the Xano interface, creating custom backup and restore solutions, or even performing data analytics.

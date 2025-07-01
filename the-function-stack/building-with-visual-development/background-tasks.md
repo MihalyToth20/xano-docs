@@ -4,9 +4,13 @@ description: Build and run workflows on a set schedule
 
 # Background Tasks
 
-## What are background tasks?
+{% hint style="info" %}
+## Quick Summary
 
 Background tasks, or sometimes referred to as "cron jobs" are workflows that run on a set schedule. Background tasks are great for things like sending out marketing emails, report generation, analytics, and large data processing jobs.
+
+Background Tasks are available on our **Starter plan** and higher.
+{% endhint %}
 
 ## Building and Using Background Tasks
 

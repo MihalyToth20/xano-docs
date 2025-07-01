@@ -4,7 +4,9 @@ icon: store-lock
 
 # Private File Storage
 
-Private file storage is available as a premium add-on for our Launch plans, or included with **Scale** or HIPAA compliance.
+{% hint style="info" %}
+Private file storage is available as a premium add-on for our **Pro** plans.
+{% endhint %}
 
 All files stored as private files are only accessible through on-demand time sensitive URL generation. This means that all files in your Private Storage are inaccessible until you generate a new URL in your function stack.
 

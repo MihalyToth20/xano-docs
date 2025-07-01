@@ -2,9 +2,9 @@
 icon: starship
 ---
 
-# Xano for Enterprise
+# Xano for Enterprise (Custom Plans)
 
-## Why choose Xano for Enterprise?
+## Why choose a Custom plan?
 
 Deploy Xano within your own internal infrastructure
 
@@ -25,13 +25,13 @@ Multi-zone deployment designed for critical production applications
 * Database migration assistance
 * Technical consultation services
 
-## What's possible with Xano for Enterprise?
+## What's possible with Xano's Custom plan?
 
 Xano's standard plans are designed to meet a wide range of application development needs.
 
 However, organizations with more complex requirements find that Xano for Enterprise offers the advanced capabilities and dedicated support necessary for large-scale projects and demanding environments.
 
-## Key Capabilities of Xano for Enterprise
+## Key Capabilities of the Xano Custom plan
 
 ### Flexible Infrastructure Options
 
@@ -119,7 +119,7 @@ Xano for Enterprise is designed to help organizations meet various regulatory an
 * **ISO 27001:2013 Certification:** For information security management systems.
 * **ISO 9001:2015 Certification:** For quality management systems.
 
-### Dedicated Enterprise Support
+### Dedicated Support
 
 Our Enterprise plan offers a dedicated support structure to ensure your success:
 

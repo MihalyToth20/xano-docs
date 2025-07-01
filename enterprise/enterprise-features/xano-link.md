@@ -1,7 +1,7 @@
 # Xano Link
 
 {% hint style="success" %}
-The Xano Link feature is an additional add-on. Please contact your Xano representative or support for details.&#x20;
+Xano Link requires a **Pro** plan or higher.
 {% endhint %}
 
 ### What is Single-Tenancy vs Multi-Tenancy

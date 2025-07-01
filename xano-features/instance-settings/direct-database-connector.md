@@ -7,7 +7,7 @@ description: Establish a direct connection to your instance's PostgreSQL databas
 {% hint style="info" %}
 ## Note
 
-Direct Database Connector is available as a paid add-on. Please visit your [Billing page](https://app.xano.com/billing?mode=master) to add this to your plan.
+Direct Database Connector is available as a paid add-on for our **Starter** plan or included with our **Pro** plan.
 {% endhint %}
 
 Database Connector is a premium add-on that is available for Launch and Scale plans. Please visit your Billing page for the most up-to-date pricing for this additional feature.

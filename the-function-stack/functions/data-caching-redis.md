@@ -1,10 +1,14 @@
 # Data Caching (Redis)
 
-## What is Data Caching?
+{% hint style="info" %}
+## Quick Summary
 
 Xano provides a data caching service, powered by Redis, that allows you to temporarily store data in memory for high-performance data retrieval and storage purposes. This is great for storing temporary data that needs to be quickly generated and accessed for a period of time.
 
 If you are retrieving data from a database or an external API, for example, that you know never, or very infrequently, changes, using data caching can be incredibly valuable.
+
+Data Caching functions require a **Starter plan** or higher.
+{% endhint %}
 
 ### **How long can I store data in the Data Cache?** <a href="#how-long-can-i-store-data-in-the-data-cache" id="how-long-can-i-store-data-in-the-data-cache"></a>
 

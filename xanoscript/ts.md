@@ -1,5 +1,6 @@
 ---
 hidden: true
+noIndex: true
 ---
 
 # XanoScript for Background Tasks

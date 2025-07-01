@@ -22,7 +22,7 @@ With MCP in the mix, clients are able to take your input, and instruct an LLM on
 Xano's **MCP Builder** feature allows you to build tools just like you build any other function stack and expose them to any client that supports the MCP standard, opening up the opportunity to build for AI, using the power of visual development in Xano.
 {% endhint %}
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/yt (3).png" alt="" data-size="line"> <strong>Introduction to MCP</strong></td><td><a href="../../.gitbook/assets/mcp intro.png">mcp intro.png</a></td><td><a href="https://youtu.be/VQGjbBBY96s">https://youtu.be/VQGjbBBY96s</a></td></tr><tr><td><img src="../../.gitbook/assets/yt (3).png" alt="" data-size="line"> <strong>Build an MCP Server in 10min or Less</strong></td><td><a href="../../.gitbook/assets/mcp in 10 or less.png">mcp in 10 or less.png</a></td><td><a href="https://youtu.be/5-K4nCW1YHE">https://youtu.be/5-K4nCW1YHE</a></td></tr><tr><td><img src="../../.gitbook/assets/yt (3).png" alt="" data-size="line"> <strong>MCP Tools and Functions</strong></td><td><a href="../../.gitbook/assets/mcp tools and functions.png">mcp tools and functions.png</a></td><td><a href="https://youtu.be/5k6VcKu0AJU">https://youtu.be/5k6VcKu0AJU</a></td></tr><tr><td><img src="../../.gitbook/assets/yt (3).png" alt="" data-size="line"> <strong>Building an MCP Server &#x26; Client</strong></td><td><a href="../../.gitbook/assets/end to end.png">end to end.png</a></td><td><a href="https://youtu.be/5M6Qx6-rcbo">https://youtu.be/5M6Qx6-rcbo</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/yt (3).png" alt="" data-size="line"> <strong>Introduction to MCP</strong></td><td><a href="../../.gitbook/assets/mcp intro.png">mcp intro.png</a></td><td><a href="https://youtu.be/VQGjbBBY96s">https://youtu.be/VQGjbBBY96s</a></td></tr><tr><td><img src="../../.gitbook/assets/yt (3).png" alt="" data-size="line"> <strong>Build an MCP Server in 10min or Less</strong></td><td><a href="../../.gitbook/assets/mcp in 10 or less.png">mcp in 10 or less.png</a></td><td><a href="https://youtu.be/5-K4nCW1YHE">https://youtu.be/5-K4nCW1YHE</a></td></tr><tr><td><img src="../../.gitbook/assets/yt (3).png" alt="" data-size="line"> <strong>MCP Tools and Functions</strong></td><td><a href="../../.gitbook/assets/ai tools.png">ai tools.png</a></td><td><a href="https://youtu.be/D1HtzC6yiO4">https://youtu.be/D1HtzC6yiO4</a></td></tr><tr><td><img src="../../.gitbook/assets/yt (3).png" alt="" data-size="line"> <strong>Building an MCP Server &#x26; Client</strong></td><td><a href="../../.gitbook/assets/end to end.png">end to end.png</a></td><td><a href="https://youtu.be/5M6Qx6-rcbo">https://youtu.be/5M6Qx6-rcbo</a></td></tr></tbody></table>
 
 ## Introduction to building MCP Servers in Xano <a href="#intro" id="intro"></a>
 
@@ -104,7 +104,7 @@ To build MCP servers in Xano, we'll first need to create a server that will hous
 
 ### After you've created a server, add some tools. <a href="#tools" id="tools"></a>
 
-#### What is a tool?
+## What is a tool?
 
 Tools are essentially individual actions that your MCP server can perform, such as querying a database,  adding new records, or calling an external API. You'll build tools just like you build any other function stack.
 
@@ -138,7 +138,7 @@ Instructions are important to have so the AI models and clients interacting with
 
 {% stepper %}
 {% step %}
-#### In your MCP Server, click <mark style="background-color:blue;">+ Add Tool</mark>&#x20;
+#### From the left-hand navigation menu, click Tools, then <mark style="background-color:blue;">+ Add Tool</mark>&#x20;
 {% endstep %}
 
 {% step %}
@@ -161,11 +161,7 @@ Instructions are important to have so the AI models and clients interacting with
 {% step %}
 #### Build your tool's function stack
 
-If you haven't already, make sure you're familiar with Xano's [visual builder](../../the-function-stack/building-with-visual-development/).
-
-We also have some specific functions that may be useful to you when building tools that allow you to interact with existing function stacks.
-
-[mcp-functions.md](mcp-functions.md "mention")
+If you haven't already, make sure you're familiar with [building-with-visual-development](../../the-function-stack/building-with-visual-development/ "mention")
 {% endstep %}
 
 {% step %}

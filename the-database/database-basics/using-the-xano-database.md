@@ -259,33 +259,9 @@ Deleting a column is irreversible. Proceed with caution.
 
 ## :1234: Adding Data
 
-### Generate Test Data using AI
+### Generate Test Data
 
-After you've created your database schema[^9], you can generate some sample data to use right away by clicking ![](<../../.gitbook/assets/CleanShot 2025-03-18 at 09.52.05.png>)
-
-This option is located at the **bottom** of your database records — so, if you have no records, you should see it right at the top.
-
-<figure><img src="../../.gitbook/assets/CleanShot 2025-03-18 at 09.52.47.png" alt=""><figcaption></figcaption></figure>
-
-The record generation will look at the name and the data type for each of your fields and try to auto-suggest what they should be filled with.
-
-<figure><img src="../../.gitbook/assets/CleanShot 2025-03-18 at 09.53.20.png" alt=""><figcaption></figcaption></figure>
-
-You can click on one of those data types to change what that field is populated with, or specific settings related to that data type.
-
-<figure><img src="../../.gitbook/assets/CleanShot 2025-03-18 at 09.54.50.png" alt="" width="365"><figcaption></figcaption></figure>
-
-In the bottom-right corner, you can change the number of records generated, up to 100 at a time.
-
-When you're ready, click "Generate" and you should see your new sample data populated. You can always generate more records if you'd like.
-
-<figure><img src="../../.gitbook/assets/CleanShot 2025-03-18 at 09.56.43.png" alt="" width="563"><figcaption></figcaption></figure>
-
-{% hint style="success" %}
-## Hint
-
-Want to clear out all of the sample data? There's a quick "Clear All Records" shortcut in the upper-right settings menu. **This will delete all records in the table in one swing.**
-{% endhint %}
+{% include "../../.gitbook/includes/generating-test-data.md" %}
 
 ### Adding Data Manually
 
@@ -301,7 +277,7 @@ You can also click ![](<../../.gitbook/assets/CleanShot 2025-03-18 at 09.59.43.p
 
 Click ![](<../../.gitbook/assets/CleanShot 2024-12-15 at 12.14.22.png>)to access table settings after creation, including both settings detailed earlier in this document, as well as some additional options.
 
-<table><thead><tr><th width="183">Setting Name</th><th>Description</th></tr></thead><tbody><tr><td>Authentication</td><td>Determines whether or not this table is used for <a href="../../building-backend-features/user-authentication-and-user-data/">user authentication</a>.</td></tr><tr><td>Security</td><td>Change the table <a data-footnote-ref href="#user-content-fn-10">GUID</a>.</td></tr><tr><td>Versions</td><td>Xano maintains a version history of your table schema. You can roll back to a previous version of your schema if you've made changes that you want to undo.<br><br><strong>Note</strong>: This does not change the data in your table, only the fields. If you need to restore a backup of your table data, see <a href="../../xano-features/instance-settings/backup-and-restore.md">this document</a>.</td></tr><tr><td>Triggers</td><td>Access your <a data-footnote-ref href="#user-content-fn-11">database triggers</a>. </td></tr><tr><td>Auto-complete</td><td>Access your <a data-footnote-ref href="#user-content-fn-12">auto-complete</a> settings.</td></tr><tr><td>Clear all records</td><td>Deletes all records in the table. You can also choose to reset the primary ID back to 1 on tables that use a sequential ID.</td></tr><tr><td>Clone table</td><td>Cloning copies the table schema. Cloning <strong>does not</strong> copy existing data.</td></tr><tr><td>Export data</td><td>Export your table data using the current view as a CSV</td></tr><tr><td>Import data</td><td>Import records from a CSV <span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span><a href="../migrating-your-data/csv-import-and-export.md"> <strong>Learn More</strong></a></td></tr></tbody></table>
+<table><thead><tr><th width="183">Setting Name</th><th>Description</th></tr></thead><tbody><tr><td>Authentication</td><td>Determines whether or not this table is used for <a href="../../building-backend-features/user-authentication-and-user-data/">user authentication</a>.</td></tr><tr><td>Security</td><td>Change the table <a data-footnote-ref href="#user-content-fn-9">GUID</a>.</td></tr><tr><td>Versions</td><td>Xano maintains a version history of your table schema. You can roll back to a previous version of your schema if you've made changes that you want to undo.<br><br><strong>Note</strong>: This does not change the data in your table, only the fields. If you need to restore a backup of your table data, see <a href="../../xano-features/instance-settings/backup-and-restore.md">this document</a>.</td></tr><tr><td>Triggers</td><td>Access your <a data-footnote-ref href="#user-content-fn-10">database triggers</a>. </td></tr><tr><td>Auto-complete</td><td>Access your <a data-footnote-ref href="#user-content-fn-11">auto-complete</a> settings.</td></tr><tr><td>Clear all records</td><td>Deletes all records in the table. You can also choose to reset the primary ID back to 1 on tables that use a sequential ID.</td></tr><tr><td>Clone table</td><td>Cloning copies the table schema. Cloning <strong>does not</strong> copy existing data.</td></tr><tr><td>Export data</td><td>Export your table data using the current view as a CSV</td></tr><tr><td>Import data</td><td>Import records from a CSV <span data-gb-custom-inline data-tag="emoji" data-code="1f4d6">📖</span><a href="../migrating-your-data/csv-import-and-export.md"> <strong>Learn More</strong></a></td></tr></tbody></table>
 
 ***
 
@@ -338,15 +314,13 @@ Click ![](<../../.gitbook/assets/CleanShot 2024-12-15 at 12.14.22.png>)to access
     \
     :book: [**Learn More**](https://regexone.com/)
 
-[^9]: Schema is just another way to refer to the collection of fields you've added to your database, and the type of data they expect.
+[^9]: The GUID is an internal, unique identifier for this table. You will almost never have to change this, and should only do so under express direction from our support team.
 
-[^10]: The GUID is an internal, unique identifier for this table. You will almost never have to change this, and should only do so under express direction from our support team.
-
-[^11]: Database Triggers are operations that run based on changes that occur in that table, such as a record being added or updated.\
+[^10]: Database Triggers are operations that run based on changes that occur in that table, such as a record being added or updated.\
     \
     :book: [**Learn More**](broken-reference)
 
-[^12]: **Auto-complete** is used to determine what data appears in the database view when other tables reference this one.\
+[^11]: **Auto-complete** is used to determine what data appears in the database view when other tables reference this one.\
     \
     For example, maybe you're referencing an author table inside of a book table, and you want to see the author name when viewing the books.\
     \

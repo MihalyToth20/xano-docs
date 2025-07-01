@@ -6,7 +6,9 @@ You can leverage versioning to help you solve problems, see differences in your 
 
 Schema versioning is for database tables, API groups, API endpoints, functions, Addons, and background tasks. It allows you to easily roll back to a previous version in case you make a mistake.&#x20;
 
-The Launch and Scales plans have schema versioning enabled. The Launch plan tracks the 3 most recent versions of each database table, API group, API endpoint, function, Addon, and background task. The Scale plan keeps a record of 20 versions.&#x20;
+{% hint style="info" %}
+Schema Versioning is available on our **Starter** plan and higher.
+{% endhint %}
 
 ## **How to open schema version history**
 

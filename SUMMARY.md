@@ -16,33 +16,7 @@
 * [Navigating Xano](before-you-begin/navigating-xano.md)
 * [Plans & Pricing](https://www.xano.com/pricing/)
 
-## The Database
-
-* [Designing your Database](the-database/designing-your-database.md)
-* [Database Basics](the-database/database-basics/README.md)
-  * [Using the Xano Database](the-database/database-basics/using-the-xano-database.md)
-  * [Field Types](the-database/database-basics/field-types.md)
-  * [Relationships](the-database/database-basics/relationships.md)
-  * [Database Views](the-database/database-basics/database-views.md)
-  * [Export and Sharing](the-database/database-basics/export-and-sharing.md)
-  * [Data Sources](the-database/database-basics/data-sources.md)
-* [Migrating your Data](the-database/migrating-your-data/README.md)
-  * [Bubble to Xano](the-database/migrating-your-data/bubble-to-xano.md)
-  * [Airtable to Xano](the-database/migrating-your-data/airtable-to-xano.md)
-  * [Supabase to Xano](the-database/migrating-your-data/supabase-to-xano.md)
-  * [Fastgen to Xano](the-database/migrating-your-data/fastgen-to-xano.md)
-  * [Adalo to Xano](the-database/migrating-your-data/adalo-to-xano.md)
-  * [Google Sheets to Xano](the-database/migrating-your-data/google-sheets-to-xano.md)
-  * [CSV Import & Export](the-database/migrating-your-data/csv-import-and-export.md)
-  * [Add via API](the-database/migrating-your-data/add-via-api.md)
-  * [Connect to an External Database](the-database/migrating-your-data/connect-to-an-external-database.md)
-* [Database Performance and Maintenance](the-database/database-performance-and-maintenance/README.md)
-  * [Storage](the-database/database-performance-and-maintenance/storage.md)
-  * [Indexing](the-database/database-performance-and-maintenance/indexing.md)
-  * [Maintenance](the-database/database-performance-and-maintenance/maintenance.md)
-  * [Schema Versioning](the-database/database-performance-and-maintenance/schema-versioning.md)
-
-## 🛠️ The Function Stack
+## 🛠️ The Visual Builder <a href="#the-function-stack" id="the-function-stack"></a>
 
 * [Building with Visual Development](the-function-stack/building-with-visual-development/README.md)
   * [APIs](the-function-stack/building-with-visual-development/apis/README.md)
@@ -116,15 +90,62 @@
 * [Additional Features](the-function-stack/additional-features/README.md)
   * [Response Caching](the-function-stack/additional-features/response-caching.md)
 
+## Build For AI <a href="#ai-tools" id="ai-tools"></a>
+
+* [Agents](ai-tools/agents.md)
+* [MCP Builder](ai-tools/mcp-builder/README.md)
+  * [Connecting Clients](ai-tools/mcp-builder/connecting-clients.md)
+  * [MCP Functions](ai-tools/mcp-builder/mcp-functions.md)
+* [Xano MCP Server](ai-tools/xano-mcp-server.md)
+
 ## Testing and Debugging <a href="#testing-debugging" id="testing-debugging"></a>
 
 * [Testing and Debugging Function Stacks](testing-debugging/testing-and-debugging-function-stacks.md)
 * [Unit Tests](testing-debugging/unit-tests.md)
 * [Test Suites](testing-debugging/test-suites.md)
 
+## The Database
+
+* [Getting Started Shortcuts](the-database/getting-started-shortcuts.md)
+* [Designing your Database](the-database/designing-your-database.md)
+* [Database Basics](the-database/database-basics/README.md)
+  * [Using the Xano Database](the-database/database-basics/using-the-xano-database.md)
+  * [Field Types](the-database/database-basics/field-types.md)
+  * [Relationships](the-database/database-basics/relationships.md)
+  * [Database Views](the-database/database-basics/database-views.md)
+  * [Export and Sharing](the-database/database-basics/export-and-sharing.md)
+  * [Data Sources](the-database/database-basics/data-sources.md)
+* [Migrating your Data](the-database/migrating-your-data/README.md)
+  * [Bubble to Xano](the-database/migrating-your-data/bubble-to-xano.md)
+  * [Airtable to Xano](the-database/migrating-your-data/airtable-to-xano.md)
+  * [Supabase to Xano](the-database/migrating-your-data/supabase-to-xano.md)
+  * [Fastgen to Xano](the-database/migrating-your-data/fastgen-to-xano.md)
+  * [Adalo to Xano](the-database/migrating-your-data/adalo-to-xano.md)
+  * [Google Sheets to Xano](the-database/migrating-your-data/google-sheets-to-xano.md)
+  * [CSV Import & Export](the-database/migrating-your-data/csv-import-and-export.md)
+  * [Add via API](the-database/migrating-your-data/add-via-api.md)
+  * [Connect to an External Database](the-database/migrating-your-data/connect-to-an-external-database.md)
+* [Database Performance and Maintenance](the-database/database-performance-and-maintenance/README.md)
+  * [Storage](the-database/database-performance-and-maintenance/storage.md)
+  * [Indexing](the-database/database-performance-and-maintenance/indexing.md)
+  * [Maintenance](the-database/database-performance-and-maintenance/maintenance.md)
+  * [Schema Versioning](the-database/database-performance-and-maintenance/schema-versioning.md)
+
 ***
 
 * [CI/CD](ci-cd.md)
+
+## Build With AI <a href="#xano-ai" id="xano-ai"></a>
+
+* [Building a Backend Using AI](xano-ai/building-a-backend-using-ai.md)
+* [Get Started Assistant](xano-ai/get-started-assistant.md)
+* [AI Database Assistant](xano-ai/ai-database-assistant.md)
+* [AI Lambda Assistant](xano-ai/ai-lambda-assistant.md)
+* [AI SQL Assistant](xano-ai/ai-sql-assistant.md)
+* [API Request Assistant](xano-ai/api-request-assistant.md)
+* [Function Stack Assistant](xano-ai/function-stack-assistant.md)
+* [Template Engine](xano-ai/template-engine.md)
+* [Streaming APIs](xano-ai/streaming-apis.md)
 
 ## File Storage
 
@@ -184,7 +205,8 @@
   * [Direct Database Connector](xano-features/instance-settings/direct-database-connector.md)
   * [Backup and Restore](xano-features/instance-settings/backup-and-restore.md)
   * [Security Policy](xano-features/instance-settings/security-policy.md)
-* [Workspace Settings](xano-features/workspace-settings.md)
+* [Workspace Settings](xano-features/workspace-settings/README.md)
+  * [Audit Logs](xano-features/workspace-settings/audit-logs.md)
 * [Advanced Back-end Features](xano-features/advanced-back-end-features/README.md)
   * [Xano Link](xano-features/advanced-back-end-features/xano-link.md)
   * [Developer API (Deprecated)](xano-features/advanced-back-end-features/developer-api-deprecated.md)
@@ -198,27 +220,9 @@
   * [Workspace Import and Export](xano-features/metadata-api/workspace-import-and-export.md)
   * [Token Scopes Reference](xano-features/metadata-api/token-scopes-reference.md)
 
-## Build With AI <a href="#xano-ai" id="xano-ai"></a>
-
-* [Building a Backend Using AI](xano-ai/building-a-backend-using-ai.md)
-* [Get Started Assistant](xano-ai/get-started-assistant.md)
-* [AI Database Assistant](xano-ai/ai-database-assistant.md)
-* [AI Lambda Assistant](xano-ai/ai-lambda-assistant.md)
-* [AI SQL Assistant](xano-ai/ai-sql-assistant.md)
-* [API Request Assistant](xano-ai/api-request-assistant.md)
-* [Template Engine](xano-ai/template-engine.md)
-* [Streaming APIs](xano-ai/streaming-apis.md)
-
 ***
 
 * [Using AI Builders with Xano](using-ai-builders-with-xano.md)
-
-## Build For AI <a href="#ai-tools" id="ai-tools"></a>
-
-* [MCP Builder](ai-tools/mcp-builder/README.md)
-  * [Connecting Clients](ai-tools/mcp-builder/connecting-clients.md)
-  * [MCP Functions](ai-tools/mcp-builder/mcp-functions.md)
-* [Xano MCP Server](ai-tools/xano-mcp-server.md)
 
 ## Xano Transform
 
@@ -247,10 +251,10 @@
   * [Commission](agencies/agency-features/commission.md)
   * [Private Marketplace](agencies/agency-features/private-marketplace.md)
 
-## Enterprise
+## Custom Plans (Enterprise) <a href="#enterprise" id="enterprise"></a>
 
-* [Xano for Enterprise](enterprise/xano-for-enterprise.md)
-* [Enterprise Features](enterprise/enterprise-features/README.md)
+* [Xano for Enterprise (Custom Plans)](enterprise/xano-for-enterprise.md)
+* [Custom Plan Features](enterprise/enterprise-features/README.md)
   * [Microservices](enterprise/enterprise-features/microservices/README.md)
     * [Ollama](enterprise/enterprise-features/microservices/ollama/README.md)
       * [Choosing a Model](enterprise/enterprise-features/microservices/ollama/choosing-a-model.md)
@@ -280,6 +284,7 @@
   * [Granting Access](troubleshooting-and-support/getting-help/granting-access.md)
   * [Community Code of Conduct](troubleshooting-and-support/getting-help/community-code-of-conduct.md)
   * [Community Content Modification Policy](troubleshooting-and-support/getting-help/community-content-modification-policy.md)
+* [Plan Comparison](troubleshooting-and-support/plan-comparison.md)
 
 ***
 
