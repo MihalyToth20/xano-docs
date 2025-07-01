@@ -90,6 +90,7 @@ noIndex: true
 
 **A:** Existing Launch and Scale users who have subscribed prior to July 1, 2025 should have received an exclusive discount via email. If you qualify and did not receive this, please reach out to our support team.
 
+\
 **Q: What happens to any promos or offers I currently have applied to my account if I switch plans?**
 
 **A:** Promotions do not stack, so you can choose to retain your current promotion, or change plans.
