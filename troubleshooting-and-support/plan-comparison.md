@@ -8,75 +8,47 @@ noIndex: true
 
 # Plan Comparison
 
-## Xano Pricing Plan Comparison
+## Starter vs Launch Plan <a href="#docs-internal-guid-a9fa2b4e-7fff-6bbe-ec5f-fa02ed7000d2" id="docs-internal-guid-a9fa2b4e-7fff-6bbe-ec5f-fa02ed7000d2"></a>
 
-### Starter Plan (New) vs Launch Plan (Legacy)
+If you're an existing Launch subscriber, you can stay on your existing plan indefinitely, or upgrade to Pro for a limited-time discount, as long as you upgrade before October 1, 2025.
 
-| Feature                  | Starter Plan (New)             | Launch Plan (Current)          |
-| ------------------------ | ------------------------------ | ------------------------------ |
-| **Pricing**              | $29/month ($25/month annually) | $99/month ($85/month annually) |
-| **CPU**                  | 1 CPU                          | 3 CPU                          |
-| **Rate Limiting**        | No rate limit                  | No rate limit                  |
-| **Database Records**     | No limit                       | No limit                       |
-| **Database Storage**     | 10GB                           | 10GB                           |
-| **Image/File Storage**   | 100GB (no watermark)           | 100GB                          |
-| **File Bandwidth**       | 250GB                          | 250GB                          |
-| **Workspaces**           | 1 (upgrade available)          | 3                              |
-| **Team Size**            | 1                              | 1                              |
-| **Custom Domain**        | ✅ Included                     | ✅ Included                     |
-| **Private File Storage** | ❌ No                           | ❌ No                           |
-| **Background Tasks**     | 10                             | 10                             |
-| **Data Sources**         | 3                              | 3                              |
-| **Middleware**           | 10                             | 10                             |
-| **Database Connector**   | Add-on                         | Add-on                         |
-| **API Versioning**       | ✅ Yes                          | ✅ Yes                          |
-| **Redis Caching**        | ❌ No                           | ❌ No                           |
-| **Sub-Minute Tasks**     | ❌ No                           | ❌ No                           |
-| **Automatic Backups**    | 7-day rolling                  | 7-day rolling                  |
-| **Load Balanced**        | ❌ No                           | ❌ No                           |
-| **Auto Scaling**         | ❌ No                           | ❌ No                           |
-| **GDPR**                 | ✅ Yes                          | ✅ Yes                          |
-| **ISO 27001/SOC2**       | ❌ No                           | ✅ Yes                          |
-| **RBAC Permissions**     | ❌ No                           | ❌ No                           |
-| **Compliance Center**    | ❌ No                           | ❌ No                           |
-| **Xano Link**            | Not available                  | Add-on                         |
+While the Starter plan is a great way to evaluate and get started, the Launch plan has several advantages, including:
 
-***
+* 3x CPU capacity
+* 3x Workspaces
+* Dedicated enterprise-grade infrastructure
+* SOC 2 compliance
+* Access to Xano Link (via add-on)
 
-### Pro Plan (New) vs Scale Plan (Deprecating)
+**Consideration**: If you're using Launch today and want to keep your dedicated instance or add ons, you're already getting more for your dollar than you'd get stacking Starter + add-ons. If you choose to downgrade, the Launch plan will no longer be available. Any further upgrades will be to the Pro plan, which starts at $224 per month (billed annually).
 
-| Feature                  | Pro Plan (New)                                           | Scale Plan (Current)             |
-| ------------------------ | -------------------------------------------------------- | -------------------------------- |
-| **Pricing**              | $249/month ($224/month annually)                         | $225/month ($199/month annually) |
-| **CPU**                  | Same as Scale 1X today                                   | Depends on Scale tier            |
-| **Rate Limiting**        | No rate limit                                            | No rate limit                    |
-| **Database Records**     | No limit                                                 | No limit                         |
-| **Database Storage**     | 25GB                                                     | 25GB                             |
-| **Image/File Storage**   | 250GB                                                    | 250GB                            |
-| **File Bandwidth**       | 250GB                                                    | 250GB                            |
-| **Workspaces**           | 5                                                        | 5                                |
-| **Team Size**            | 10                                                       | 10                               |
-| **Custom Domain**        | ✅ Included                                               | ✅ Included                       |
-| **Private File Storage** | ✅ Yes                                                    | ✅ Yes                            |
-| **Background Tasks**     | Unlimited                                                | Unlimited                        |
-| **Data Sources**         | 3                                                        | 3                                |
-| **Middleware**           | Unlimited                                                | Unlimited                        |
-| **Database Connector**   | ✅ Included                                               | Add-on                           |
-| **API Versioning**       | ✅ Yes                                                    | ✅ Yes                            |
-| **Redis Caching**        | ✅ Yes                                                    | ✅ Yes                            |
-| **Sub-Minute Tasks**     | ✅ Yes                                                    | ✅ Yes                            |
-| **Automatic Backups**    | 14-day rolling                                           | 14-day rolling                   |
-| **Load Balanced**        | ✅ Yes                                                    | ✅ Yes                            |
-| **Auto Scaling**         | ❌ No (CPU Boost + Autoscale Protection add-on available) | ✅ On scale 2x and above          |
-| **GDPR**                 | ✅ Yes                                                    | ✅ Yes                            |
-| **ISO 27001/SOC2**       | ✅ Yes                                                    | ✅ Yes                            |
-| **RBAC Permissions**     | ✅ Yes                                                    | ✅ Yes                            |
-| **Compliance Center**    | ✅ Yes                                                    | ✅ Yes                            |
-| **Xano Link**            | ✅ Included                                               | Add-on                           |
+## Pro vs. Scale Plan (Scale 1x Users)
 
-***
+If you're on Scale 1x today, you can stay on your current plan or switch now to the new Pro Plan for no additional cost with our limited launch promotion discounts.
 
-### General Migration Questions
+The Pro Plan includes everything you have now, plus formerly paid add-ons at no extra charge:
+
+* Database Connector (included)
+* Xano Link (included)
+* Same storage, bandwidth, and feature limits
+* Full compliance coverage (SOC2, GDPR, RBAC)
+
+**Consideration**: Pro offers a single, lower-priced alternative to Scale with add-ons. If you're looking to reduce costs while keeping all the core capabilities, Pro may be the right move.&#x20;
+
+## Pro vs. Scale Plan (Scale 2x and Above)
+
+If you're on Scale 2x or higher, you're already getting more performance than the Pro Plan offers by default.
+
+Pro is priced at $249/month and includes some previously paid add-ons, but your current Scale tier provides greater compute and built-in scaling:
+
+* Auto-scaling included
+* Same resource limits (storage, bandwidth, tasks)
+* Full compliance features
+* Database Connector and Xano Link (included in Pro, add-ons in Scale)
+
+**Performance Note:** Switching to Pro means stepping down in CPU and autoscaling—unless you add the Pro + Autoscale Boost for $180/month. If you depend on performance, Scale may still offer better long-term value. Staying on Scale 2x+ is still the most seamless way to get premium performance with autoscaling and no add-ons to manage.
+
+## General Migration Questions
 
 #### Q: What's happening to my current Launch or Scale plan?
 
