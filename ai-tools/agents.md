@@ -56,6 +56,23 @@ You can leverage the same visual builder you're used to using today to create wo
 {% step %}
 ### Fill out the necessary information
 
+{% hint style="danger" %}
+## Note
+
+Please note that **not all models support certain features** such as:
+
+* Structured outputs
+* Reasoning
+* Tool calls
+
+In addition, some models may support individual features, but not **combinations of features**, such as:
+
+* Structured outputs with tool calls
+* Tool calls with reasoning
+
+This is not an issue with Xano or with your agent builds — this is dictated by the model you're using. If you encounter errors when testing your Agents, try using a different model and check to make sure that your model supports the feature(s) you have enabled, especially if you are using more than one of these features together.
+{% endhint %}
+
 <table><thead><tr><th width="173.0833740234375">Parameter Name</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>Name</td><td>Give your agent a name that describes its role or primary function</td><td>Order Processing Agent</td></tr><tr><td>Description</td><td>Internal only field for describing what your agent does</td><td>Analyzes incoming orders, decides on fulfillment priority, and triggers shipping workflows</td></tr><tr><td>Agent Settings</td><td>Define dynamic inputs the Agent can accept from Function Stack workflows and reference environment variables</td><td>Configure placeholders with <code>{{ $args.propertyName }}</code> for workflow inputs, and <code>{{ $env.variableName }}</code> for environment variables</td></tr><tr><td>Model Host</td><td>Select the AI model host for the agent</td><td>Anthropic (Claude)<br>OpenAI<br>Google Gemini</td></tr><tr><td>Max Steps</td><td>Define how many steps the Agent can execute to complete its task.</td><td>5</td></tr><tr><td>System Prompt</td><td>The core instructions that define your Agent's role, capabilities, and behavior</td><td>You are a helpful AI Agent that completes tasks accurately. When you need additional information to complete a task, use the available tools. Never make assumptions.</td></tr><tr><td>Prompt</td><td>Additional context and instructions sent with each request</td><td>Please help the customer with their inquiry: {{ $args.customer_message }}. Their account ID is {{ $args.account_id }}.</td></tr><tr><td>Structured Outputs</td><td>Configure your Agent to return responses in a specific JSON format using structured outputs and your predefined schema</td><td>Checkbox to enable/disable</td></tr><tr><td>Output Schema</td><td>Define the JSON structure for structured outputs</td><td>text, user_email</td></tr><tr><td>Tags</td><td>Categories for organizing your Agents</td><td>contact, messaging</td></tr><tr><td>Request History</td><td>Controls logging of requests to<a data-mention href="../maintenance-monitoring-and-logging/request-history.md">request-history.md</a></td><td><p>Inherit Settings: Uses workspace logging settings</p><p>Disabled: No logs recorded</p><p>Enabled: Logs requests with options for storage limits</p></td></tr></tbody></table>
 
 
