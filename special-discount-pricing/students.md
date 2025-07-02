@@ -8,7 +8,7 @@ icon: graduation-cap
 
 Xano offers an Education discount available to K-12 and higher education students & faculty.&#x20;
 
-The education 30% discount may not be combinable with other offers or plans.
+The education 30% discount may not be combined with other offers or plans, and is only available for our Pro plan.
 
 A valid **school-specific** email address is necessary to be eligible. You can apply [here](https://forms.clickup.com/9010156981/f/8cgr5dn-24917/U888MZFLEW5JHXR27M).
 
