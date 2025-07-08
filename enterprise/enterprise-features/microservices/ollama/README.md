@@ -10,6 +10,8 @@ description: Deploy LLMs as a part of your Xano instance
 Through Xano's Microservice feature, you can deploy [Ollama](https://ollama.com/) as a part of your Xano instance, enabling secure communication with an off-the-shelf or customizable LLM tailored specifically to your needs.
 {% endhint %}
 
+{% embed url="https://youtu.be/rOvBC1nppCs" %}
+
 ## What is Ollama?
 
 Ollama is a platform that enables seamless integration of large language models (LLMs) into various applications. It provides an environment where businesses can deploy pre-built or customized LLMs, facilitating secure and efficient communication tailored to specific business needs.

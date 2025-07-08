@@ -8,6 +8,8 @@ The Tenant Center allows you to deploy your current workspace to multiple tenant
 Each tenant is given a separate, isolated database and business logic, and you have the ability to selectively roll out new releases to one or more users simultaneously.
 {% endhint %}
 
+{% embed url="https://youtu.be/nWEO_SN0T0o" %}
+
 ## What is the Tenant Center?
 
 The Tenant Center is designed to bring a more traditional CI/CD[^1] workflow into Xano.

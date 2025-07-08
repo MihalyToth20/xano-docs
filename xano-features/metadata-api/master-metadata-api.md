@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: false
-  outline:
-    visible: false
-  pagination:
-    visible: true
----
-
 # Master Metadata API
 
 The master Metadata API allows you to browse and retrieve Instances of an account associated with a Personal Access Token. It is especially useful for displaying an account's different Instances in a UI.

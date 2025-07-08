@@ -3,17 +3,6 @@ description: >-
   In this section, you'll learn about the basic concepts of what a database is,
   and how it works.
 icon: table
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Database Basics

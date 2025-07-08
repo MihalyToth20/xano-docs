@@ -11,7 +11,7 @@
 
 ### Microservice Examples and Tutorials
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Unoconv</strong></td><td>Deploy secure file conversation as a part of your Xano environment</td><td><a href="../../../.gitbook/assets/unoconv.png">unoconv.png</a></td><td><a href="https://www.youtube.com/watch?v=W2kSIFqzB_4">https://www.youtube.com/watch?v=W2kSIFqzB_4</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Unoconv</strong></td><td>Deploy secure file conversation as a part of your Xano environment</td><td><a href="../../../.gitbook/assets/unoconv.png">unoconv.png</a></td><td><a href="https://www.youtube.com/watch?v=W2kSIFqzB_4">https://www.youtube.com/watch?v=W2kSIFqzB_4</a></td></tr><tr><td><strong>Ollama</strong></td><td>Deploy LLMs inside of your Xano instance, and keep them secure &#x26; compliant</td><td><a href="../../../.gitbook/assets/CleanShot 2025-07-08 at 10.55.41.png">CleanShot 2025-07-08 at 10.55.41.png</a></td><td><a href="https://youtu.be/rOvBC1nppCs">https://youtu.be/rOvBC1nppCs</a></td></tr></tbody></table>
 
 {% hint style="success" %}
 The Microservice feature is available as an add-on. Please contact your Xano representative or support for details.&#x20;
