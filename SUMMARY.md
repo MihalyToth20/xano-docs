@@ -265,6 +265,7 @@
   * [Deployment](enterprise/enterprise-features/deployment.md)
   * [RBAC (Role-based Access Control)](enterprise/enterprise-features/rbac-role-based-access-control.md)
   * [Xano Link](enterprise/enterprise-features/xano-link.md)
+  * [Resource Management](enterprise/enterprise-features/resource-management.md)
 
 ## Your Xano Account
 
