@@ -32,13 +32,11 @@ db.get user
 
 After we've defined our function, we can start providing the parameters that function requires, if any. Parameters are wrapped in {} characters. **Get Record** asks for a field\_name and a field\_value. Parameters do not require any quotation marks or other special characters for the parameter name, but may require them for the value depending on the data type (for example, `"hello"` vs `123`.
 
-| Visual Builder                                                                         | XanoScript                                                                                                                                 |
-| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| <img src="../assets/CleanShot 2025-03-10 at 08.02.32.png" alt="" data-size="original"> | <pre class="language-javascript"><code class="lang-javascript">db.get user {
+<table><thead><tr><th>Visual Builder</th><th>XanoScript</th></tr></thead><tbody><tr><td><img src="../assets/CleanShot 2025-03-10 at 08.02.32.png" alt="" data-size="original"></td><td><pre class="language-javascript"><code class="lang-javascript">db.get user {
     field_name = "id"
     field_value = 1
     }
-</code></pre> |
+</code></pre></td></tr></tbody></table>
 
 Finally, if the function outputs to a variable, we'll establish that **outside** of the parameter object.
 

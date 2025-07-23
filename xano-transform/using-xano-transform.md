@@ -101,11 +101,8 @@ Sometimes, it is easier to reference items from the top instead of the bottom. S
 }
 </code></pre>
 
-| Syntax                 | Result                                                                                                                                                                                                                                                                                                                                                                                      |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| v                      | <pre class="language-json"><code class="lang-json">10
-</code></pre>                                                                                                                                                                                                                                                                                                                         |
-| items                  | <pre class="language-json"><code class="lang-json">[
+<table><thead><tr><th>Syntax</th><th>Result</th></tr></thead><tbody><tr><td>v</td><td><pre class="language-json"><code class="lang-json">10
+</code></pre></td></tr><tr><td>items</td><td><pre class="language-json"><code class="lang-json">[
     {
       "id": 1,
       "name": "s1",
@@ -125,8 +122,7 @@ Sometimes, it is easier to reference items from the top instead of the bottom. S
       ]
     }
   ]
-</code></pre> |
-| items\[0]              | <pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td>items[0]</td><td><pre class="language-json"><code class="lang-json">{
   "id": 1,
   "name": "s1",
   "score": 100,
@@ -135,29 +131,22 @@ Sometimes, it is easier to reference items from the top instead of the bottom. S
     {"tag":"test","weight":50}
   ]
 }
-</code></pre>                                                                                                                                                                                               |
-| items\[0].id           | <pre class="language-json"><code class="lang-json">1
-</code></pre>                                                                                                                                                                                                                                                                                                                          |
-| items\[0].tags\[0]     | <pre class="language-json"><code class="lang-json">{"tag":"beta","weight":5}
-</code></pre>                                                                                                                                                                                                                                                                                                  |
-| items\[0].tags\[0].tag | <pre class="language-json"><code class="lang-json">"beta"
-</code></pre>                                                                                                                                                                                                                                                                                                                     |
+</code></pre></td></tr><tr><td>items[0].id</td><td><pre class="language-json"><code class="lang-json">1
+</code></pre></td></tr><tr><td>items[0].tags[0]</td><td><pre class="language-json"><code class="lang-json">{"tag":"beta","weight":5}
+</code></pre></td></tr><tr><td>items[0].tags[0].tag</td><td><pre class="language-json"><code class="lang-json">"beta"
+</code></pre></td></tr></tbody></table>
 
 ### Array Retrieval
 
-| Syntax         | Result                                                                                                                                                                                   |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| items.id       | <pre class="language-json"><code class="lang-json">[1,2]
-</code></pre>                                                                                                                   |
-| items.tags     | <pre class="language-json"><code class="lang-json">[
+<table><thead><tr><th>Syntax</th><th>Result</th></tr></thead><tbody><tr><td>items.id</td><td><pre class="language-json"><code class="lang-json">[1,2]
+</code></pre></td></tr><tr><td>items.tags</td><td><pre class="language-json"><code class="lang-json">[
   {"tag":"beta","weight":5},
   {"tag":"test","weight":50},
   {"tag":"abc","weight":10},
   {"tag":"def","weight":90}
 ]
-</code></pre> |
-| items.tags.tag | <pre class="language-json"><code class="lang-json">["beta","test","abc","def"]
-</code></pre>                                                                                             |
+</code></pre></td></tr><tr><td>items.tags.tag</td><td><pre class="language-json"><code class="lang-json">["beta","test","abc","def"]
+</code></pre></td></tr></tbody></table>
 
 ### Conditional Retrieval
 
@@ -167,9 +156,7 @@ The `$$` special variable is used to represent the current context of the iterat
 
 As seen below, this syntax is supported across multiple levels for deeply nested arrays.
 
-| Syntax                                       | Result                                                                                                                                                                                        |
-| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| items\[\$$.id > 1]                           | <pre class="language-json"><code class="lang-json">[{
+<table><thead><tr><th>Syntax</th><th>Result</th></tr></thead><tbody><tr><td>items[$$.id > 1]</td><td><pre class="language-json"><code class="lang-json">[{
   "id": 2,
   "name": "x9",
   "score": 87,
@@ -178,13 +165,10 @@ As seen below, this syntax is supported across multiple levels for deeply nested
     {"tag":"def","weight":90}
   ]
 }]
-</code></pre> |
-| items\[\$$.id > 1].id                        | <pre class="language-json"><code class="lang-json">[2]
-</code></pre>                                                                                                                          |
-| items\[\$$.id > 1].tags.tag                  | <pre class="language-json"><code class="lang-json">["abc","def"]
-</code></pre>                                                                                                                |
-| items\[\$$.id > 1].tags\[\$$.weight>=90].tag | <pre class="language-json"><code class="lang-json">["def"]
-</code></pre>                                                                                                                      |
+</code></pre></td></tr><tr><td>items[$$.id > 1].id</td><td><pre class="language-json"><code class="lang-json">[2]
+</code></pre></td></tr><tr><td>items[$$.id > 1].tags.tag</td><td><pre class="language-json"><code class="lang-json">["abc","def"]
+</code></pre></td></tr><tr><td>items[$$.id > 1].tags[$$.weight>=90].tag</td><td><pre class="language-json"><code class="lang-json">["def"]
+</code></pre></td></tr></tbody></table>
 
 ### Automatic Anchoring
 
@@ -198,9 +182,7 @@ This type of reference is supported through automatic anchoring. Each item eleme
 $2 and $4 have multiple values since they represent an array iteration. The example below is just showing the snapshot of one iteration of their value.
 {% endhint %}
 
-| Special Variable | Result                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| $0               | <pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th>Special Variable</th><th>Result</th></tr></thead><tbody><tr><td>$0</td><td><pre class="language-json"><code class="lang-json">{
   "v": 10,
   "items": [
     {
@@ -223,8 +205,7 @@ $2 and $4 have multiple values since they represent an array iteration. The exam
     }
   ]
 }
-</code></pre> |
-| $1               | <pre class="language-json"><code class="lang-json">[
+</code></pre></td></tr><tr><td>$1</td><td><pre class="language-json"><code class="lang-json">[
   {
     "id": 1,
     "name": "s1",
@@ -244,8 +225,7 @@ $2 and $4 have multiple values since they represent an array iteration. The exam
     ]
   }
 ]
-</code></pre>                                                     |
-| $2               | <pre class="language-json"><code class="lang-json"><strong>{
+</code></pre></td></tr><tr><td>$2</td><td><pre class="language-json"><code class="lang-json"><strong>{
 </strong>  "id": 2,
   "name": "x9",
   "score": 87,
@@ -254,42 +234,30 @@ $2 and $4 have multiple values since they represent an array iteration. The exam
     {"tag":"def","weight":90}
   ]
 }
-</code></pre>                                                                                                                                                                                                          |
-| $3               | <pre class="language-json"><code class="lang-json">[
+</code></pre></td></tr><tr><td>$3</td><td><pre class="language-json"><code class="lang-json">[
   {"tag":"abc","weight":10},,
   {"tag":"def","weight":90}
 ]
-</code></pre>                                                                                                                                                                                                                                                                                        |
-| $4               | <pre class="language-json"><code class="lang-json">{"tag":"def","weight":90}
-</code></pre>                                                                                                                                                                                                                                                                                                                            |
-| $5               | <pre class="language-json"><code class="lang-json">"def"
-</code></pre>                                                                                                                                                                                                                                                                                                                                                |
+</code></pre></td></tr><tr><td>$4</td><td><pre class="language-json"><code class="lang-json">{"tag":"def","weight":90}
+</code></pre></td></tr><tr><td>$5</td><td><pre class="language-json"><code class="lang-json">"def"
+</code></pre></td></tr></tbody></table>
 
 {% hint style="info" %}
 The \$$ special variable is available to be used as a convenience. It always represents the top most numerically indexed special variable that is available within its context.
 {% endhint %}
 
-| Syntax                                       | Result                                                                   |
-| -------------------------------------------- | ------------------------------------------------------------------------ |
-| items\[\$$.id > 1].tags\[\$$.weight>=90].tag | <pre class="language-json"><code class="lang-json">["def"]
-</code></pre> |
-| items\[$2.id > 1].tags\[\$$.weight>=90].tag  | <pre><code>["def"]
-</code></pre>                                         |
-| items\[\$$.id > 1].tags\[$4.weight>=90].tag  | <pre><code>["def"]
-</code></pre>                                         |
-| items\[$2.id > 1].tags\[$4.weight>=90].tag   | <pre><code>["def"]
-</code></pre>                                         |
+<table><thead><tr><th>Syntax</th><th>Result</th></tr></thead><tbody><tr><td>items[$$.id > 1].tags[$$.weight>=90].tag</td><td><pre class="language-json"><code class="lang-json">["def"]
+</code></pre></td></tr><tr><td>items[$2.id > 1].tags[$$.weight>=90].tag</td><td><pre><code>["def"]
+</code></pre></td></tr><tr><td>items[$$.id > 1].tags[$4.weight>=90].tag</td><td><pre><code>["def"]
+</code></pre></td></tr><tr><td>items[$2.id > 1].tags[$4.weight>=90].tag</td><td><pre><code>["def"]
+</code></pre></td></tr></tbody></table>
 
 #### Advanced Examples
 
-| Syntax                                                  | Result                                                                         |
-| ------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| items\[\$$.id > 1].tags\[\$$.weight>=$0.v].tag          | <pre class="language-json"><code class="lang-json">["abc","def"]
-</code></pre> |
-| items\[\$$.id > (\[$0.v,2,3]\|max)].id                  | <pre class="language-json"><code class="lang-json">[]
-</code></pre>            |
-| items\[\$$.id > (\[$0.v,2,3]\|min) \|\| \$$.id == 1].id | <pre class="language-json"><code class="lang-json">[1,3]
-</code></pre>         |
+<table><thead><tr><th>Syntax</th><th>Result</th></tr></thead><tbody><tr><td>items[$$.id > 1].tags[$$.weight>=$0.v].tag</td><td><pre class="language-json"><code class="lang-json">["abc","def"]
+</code></pre></td></tr><tr><td>items[$$.id > ([$0.v,2,3]|max)].id</td><td><pre class="language-json"><code class="lang-json">[]
+</code></pre></td></tr><tr><td>items[$$.id > ([$0.v,2,3]|min) || $$.id == 1].id</td><td><pre class="language-json"><code class="lang-json">[1,3]
+</code></pre></td></tr></tbody></table>
 
 ***
 
@@ -305,11 +273,8 @@ Below are some examples combining the above syntax with the SET filter.
 
 Multiple SET filters may be required for each transformation.
 
-| Syntax                                                                                                                                                                                                 | Result                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p><em>Change the value of "v"</em></p><p></p><p><strong>Path</strong>: v<br><strong>Value</strong>: 50</p>                                                                                            | <pre class="language-json"><code class="lang-json">{"v": 50,...
-</code></pre>                                                                                                                                                                                                                                                                                                                                                                                              |
-| <p><em>Change the value of all IDs in the items</em></p><p></p><p><strong>Path</strong>: items.id<br><strong>Value</strong>: 99</p>                                                                    | <pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th>Syntax</th><th>Result</th></tr></thead><tbody><tr><td><p><em>Change the value of "v"</em></p><p></p><p><strong>Path</strong>: v<br><strong>Value</strong>: 50</p></td><td><pre class="language-json"><code class="lang-json">{"v": 50,...
+</code></pre></td></tr><tr><td><p><em>Change the value of all IDs in the items</em></p><p></p><p><strong>Path</strong>: items.id<br><strong>Value</strong>: 99</p></td><td><pre class="language-json"><code class="lang-json">{
   "v": 10,
   "items": [
     {
@@ -332,8 +297,7 @@ Multiple SET filters may be required for each transformation.
     }
   ]
 }
-</code></pre>                                                    |
-| <p><em>Add 1 to all item IDs</em></p><p></p><p><strong>Path</strong>: items.id<br><strong>Value</strong>: $$+1</p>                                                                                     | <pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><p><em>Add 1 to all item IDs</em></p><p></p><p><strong>Path</strong>: items.id<br><strong>Value</strong>: $$+1</p></td><td><pre class="language-json"><code class="lang-json">{
   "v": 10,
   "items": [
     {
@@ -356,8 +320,7 @@ Multiple SET filters may be required for each transformation.
     }
   ]
 }
-</code></pre>                                                      |
-| <p><em>Uppercase all item tags</em></p><p></p><p><strong>Path</strong>: items.tags.tag<br><strong>Value</strong>: $$|to_upper</p>                                                                      | <pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><p><em>Uppercase all item tags</em></p><p></p><p><strong>Path</strong>: items.tags.tag<br><strong>Value</strong>: $$|to_upper</p></td><td><pre class="language-json"><code class="lang-json">{
   "v": 10,
   "items": [
     {
@@ -380,8 +343,7 @@ Multiple SET filters may be required for each transformation.
     }
   ]
 }
-</code></pre>                                                      |
-| <p><em>Add the value of an input to each tag weight</em></p><p></p><p><strong>Path</strong>: items.tags.weight<br><strong>Value</strong>: $input.add+$$<br><strong>Input</strong>: 500</p>             | <pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><p><em>Add the value of an input to each tag weight</em></p><p></p><p><strong>Path</strong>: items.tags.weight<br><strong>Value</strong>: $input.add+$$<br><strong>Input</strong>: 500</p></td><td><pre class="language-json"><code class="lang-json">{
   "v": 10,
   "items": [
     {
@@ -404,8 +366,7 @@ Multiple SET filters may be required for each transformation.
     }
   ]
 }
-</code></pre>                                                 |
-| <p><em>Add a new total_weight key for each item that contains the sum of all tag weights</em></p><p></p><p><strong>Path</strong>: items.total_weight<br><strong>Value</strong>: $1.tags.weight|sum</p> | <pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><p><em>Add a new total_weight key for each item that contains the sum of all tag weights</em></p><p></p><p><strong>Path</strong>: items.total_weight<br><strong>Value</strong>: $1.tags.weight|sum</p></td><td><pre class="language-json"><code class="lang-json">{
   "v": 10,
   "items": [
     {
@@ -430,7 +391,7 @@ Multiple SET filters may be required for each transformation.
     }
   ]
 }
-</code></pre> |
+</code></pre></td></tr></tbody></table>
 
 ***
 

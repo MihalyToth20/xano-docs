@@ -34,26 +34,21 @@ Create an array of a certain size with a default value.
 
 Creates an object of a certain size with a default value and a list of keys.
 
-| Parameter    | Purpose                   | Example                                                                                               |
-| ------------ | ------------------------- | ----------------------------------------------------------------------------------------------------- |
-| parent value | The default value to fill | "default value"                                                                                       |
-| keys         | The array of keys to use  | <p></p><pre class="language-json"><code class="lang-json">[
+<table><thead><tr><th>Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>parent value</td><td>The default value to fill</td><td>"default value"</td></tr><tr><td>keys</td><td>The array of keys to use</td><td><p></p><pre class="language-json"><code class="lang-json">[
 	"key1",
 	"key2",
 	"key3"
 ]
-</code></pre> |
+</code></pre></td></tr></tbody></table>
 
 ### Examples <a href="#fill_keys_examples" id="fill_keys_examples"></a>
 
-| Example                                                                                            | Output                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <img src="../../.gitbook/assets/CleanShot 2025-03-19 at 09.27.52.png" alt="" data-size="original"> | <p></p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th>Example</th><th>Output</th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/CleanShot 2025-03-19 at 09.27.52.png" alt="" data-size="original"></td><td><p></p><pre class="language-json"><code class="lang-json">{
 	"key1": "Default Value",
 	"key2": "Default Value",
 	"key3": "Default Value"
 }
-</code></pre> |
+</code></pre></td></tr></tbody></table>
 
 ***
 

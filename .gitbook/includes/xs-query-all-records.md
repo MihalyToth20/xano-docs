@@ -22,10 +22,8 @@ Get all records from a table
     } as $user1
 ```
 
-| Parameter | Purpose          | Example                                   |
-| --------- | ---------------- | ----------------------------------------- |
-| search    | The query to run | <pre><code>$db.user.id == 1
-</code></pre> |
+<table><thead><tr><th>Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>search</td><td>The query to run</td><td><pre><code>$db.user.id == 1
+</code></pre></td></tr></tbody></table>
 
 ## Joins
 
@@ -138,19 +136,15 @@ Returns are defined immediately before `} as returnVariable`
 
 <summary>Examples</summary>
 
-| Visual Builder                                                                                                                                                                     | XanoScript                                                                                                                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>Return any user records with an ID that matches the input <code>userId</code></p><p><img src="../assets/CleanShot 2025-03-07 at 08.42.46.png" alt="" data-size="original"></p>  | <pre class="language-javascript"><code class="lang-javascript">    db.query user {
+<table><thead><tr><th>Visual Builder</th><th>XanoScript</th></tr></thead><tbody><tr><td><p>Return any user records with an ID that matches the input <code>userId</code></p><p><img src="../assets/CleanShot 2025-03-07 at 08.42.46.png" alt="" data-size="original"></p></td><td><pre class="language-javascript"><code class="lang-javascript">    db.query user {
       search = `$db.user.id == $input.userId`
       return_exists = {}
     } as user1
-</code></pre>                                                  |
-| <p>Return any user records with an ID that matches the input <code>userId</code> that are also admins<br><img src="../assets/CleanShot 2025-03-07 at 09.17.24 (1).png" alt=""></p> | <p></p><pre class="language-javascript"><code class="lang-javascript">    db.query user {
+</code></pre></td></tr><tr><td>Return any user records with an ID that matches the input <code>userId</code> that are also admins<br><img src="../assets/CleanShot 2025-03-07 at 09.17.24 (1).png" alt=""></td><td><p></p><pre class="language-javascript"><code class="lang-javascript">    db.query user {
       search = `$db.user.id == $input.userId &#x26;&#x26; $db.user.userRole == "admin"`
       return_exists = {}
     } as user1
-</code></pre> |
-|                                                                                                                                                                                    |                                                                                                                                                                                                                                         |
+</code></pre></td></tr><tr><td></td><td></td></tr></tbody></table>
 
 
 

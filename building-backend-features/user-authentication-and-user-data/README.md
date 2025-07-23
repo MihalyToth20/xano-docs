@@ -163,6 +163,54 @@ The extras payload is an optional setting that allows you to store additional in
 When testing endpoints with authentication enabled, the quick token generator will not include extras or any other customization present in your login or signup endpoints.
 {% endhint %}
 
+Extras are added as a part of the Create Authentication Token function, and are typically stored inside of a JSON object, shown below.
+
+<figure><img src="../../.gitbook/assets/CleanShot 2025-07-23 at 10.34.05.png" alt="" width="323"><figcaption></figcaption></figure>
+
+## Refresh Tokens
+
+Refresh tokens are like spare keys for your online accounts. When a user logs in, they are issued an authentication token. This token eventually expires for security reasons, assuming you've specified an expiry time in your Create Authentication Token functions.
+
+Once this token expires, additional user requests will fail and your frontend would probably redirect them back to the login screen. You can utilize refresh tokens to avoid having your users log in again, while maintaining the shorter expiry that is standard for an authentication token. It's a dance of logic between your backend and frontend to make this work as expected.
+
+Below, you'll find a flowchart that details this process, and an interactive tutorial for how to add refresh token support to your Xano backend.
+
+{% @arcade/embed flowId="R4QKSn4i8piWp5ZSIcar" url="https://app.arcade.software/share/R4QKSn4i8piWp5ZSIcar" %}
+
+```mermaid
+flowchart TD
+    A[User Login] --> B{Valid Credentials?}
+    B -->|No| C[Login Failed]
+    B -->|Yes| D[Backend Generates Access Token and Refresh Token]
+    D --> E[Frontend Stores Both Tokens]
+    
+    E --> F[User Makes API Request]
+    F --> G[Frontend Sends Access Token]
+    G --> H{Auth Token Close to Expiring?}
+    
+ 
+    
+    H -->|Yes| K[Need New Auth Token]
+   H -->|No| I[API Request Successful]
+    I --> J[Continue Using App]
+    J --> F
+
+    K --> M[Frontend Sends Refresh Token to /refresh Endpoint]
+    M --> N{Refresh Token Valid?}
+
+    N -->|No - Expired| O[Redirect to Login]
+    O --> A
+    N -->|Yes| D
+  
+
+    
+
+    
+    style D fill:#e1f5fe
+    style K fill:#ffebee
+    style O fill:#ffebee
+```
+
 ## Additional Notes
 
 #### Alternative Authentication Headers

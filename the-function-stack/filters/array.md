@@ -24,11 +24,7 @@ Adds a new element to the end of the array, and return the updated array
 | parent value | The original array you'd like to modify  | \[1,2,3,4] |
 | value        | The value to add to the end of the array | 5          |
 
-| Example                                                                                                                                                                                                                                                               | Result                                                                                                                                                                    |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>parent value: <code>[1, 2, 3, 4]</code><br>value: 5</p>                                                                                                                                                                                                            | `[1, 2, 3, 4, 5]`                                                                                                                                                         |
-| <p>parent value: <code>["Think Visually", "Build Confidently"]</code><br>value: "Deploy Securely"</p>                                                                                                                                                                 | `["Think Visually, Build Confidently, "Deploy Securely"]`                                                                                                                 |
-| <p>parent value:</p><pre class="language-json"><code class="lang-json">[
+<table><thead><tr><th>Example</th><th>Result</th></tr></thead><tbody><tr><td>parent value: <code>[1, 2, 3, 4]</code><br>value: 5</td><td><code>[1, 2, 3, 4, 5]</code></td></tr><tr><td>parent value: <code>["Think Visually", "Build Confidently"]</code><br>value: "Deploy Securely"</td><td><code>["Think Visually, Build Confidently, "Deploy Securely"]</code></td></tr><tr><td><p>parent value:</p><pre class="language-json"><code class="lang-json">[
 <strong>    {
 </strong>        "name": "Chris"
         },
@@ -39,7 +35,7 @@ Adds a new element to the end of the array, and return the updated array
 </code></pre><p>value:</p><pre><code>{
         "name": "Cameron"
         }
-</code></pre> | <pre><code>[
+</code></pre></td><td><pre><code>[
 <strong>    {
 </strong>        "name": "Chris"
         },
@@ -50,7 +46,7 @@ Adds a new element to the end of the array, and return the updated array
         "name": "Cameron"
         }
 ]
-</code></pre> |
+</code></pre></td></tr></tbody></table>
 
 ***
 
@@ -66,14 +62,11 @@ Returns the number of items in an array
 ]
 </code></pre></td></tr></tbody></table>
 
-| Example                                                                                                                            | Output |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| <pre class="language-json"><code class="lang-json">[
+<table><thead><tr><th>Example</th><th>Output</th></tr></thead><tbody><tr><td><pre class="language-json"><code class="lang-json">[
 <strong>    {"name": "Chris"},
 </strong>    {"name": "Shawn"}
 ]
-</code></pre> | 2      |
-| `[1, 2, 3, 4, 5]`                                                                                                                  | 5      |
+</code></pre></td><td>2</td></tr><tr><td><code>[1, 2, 3, 4, 5]</code></td><td>5</td></tr></tbody></table>
 
 ***
 
@@ -96,10 +89,7 @@ Use the basic filter for value arrays, and the **\_assoc** version for arrays of
 ]
 </code></pre></td></tr><tr><td>value</td><td>The second array to compare</td><td>Same as above</td></tr></tbody></table>
 
-| Example                                                                                                                                                                                                                                                                                                                                                         | Output                                                                                                            |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| <p>Using <strong>diff:</strong><br>parent value: <code>[1,2,3,4,5]</code><br>value: <code>[3,4,5,6,7]</code></p>                                                                                                                                                                                                                                                | `[1, 2]`                                                                                                          |
-| <p>Using <strong>diff_assoc:</strong><br>parent value:</p><pre class="language-json"><code class="lang-json"><strong>[
+<table><thead><tr><th>Example</th><th>Output</th></tr></thead><tbody><tr><td>Using <strong>diff:</strong><br>parent value: <code>[1,2,3,4,5]</code><br>value: <code>[3,4,5,6,7]</code></td><td><code>[1, 2]</code></td></tr><tr><td><p>Using <strong>diff_assoc:</strong><br>parent value:</p><pre class="language-json"><code class="lang-json"><strong>[
 </strong>    {"name": "Chris"},
     {"name": "Shawn"},
     {"name": "Cameron"}
@@ -108,12 +98,10 @@ Use the basic filter for value arrays, and the **\_assoc** version for arrays of
     {"name": "Chris"},
     {"name": "Shawn"}
 ]
-</code></pre>             | <pre class="language-json"><code class="lang-json">[
+</code></pre></td><td><pre class="language-json"><code class="lang-json">[
     {"name":"Cameron"}
 ]
-</code></pre>                       |
-| <p>Using <strong>intersect:</strong><br>parent value: <code>[1,2,3,4,5]</code><br>value: <code>[3,4,5,6,7]</code></p>                                                                                                                                                                                                                                           | `[3, 4, 5]`                                                                                                       |
-| <p></p><p>Using <strong>intersect_assoc:</strong><br>parent value:</p><pre class="language-json"><code class="lang-json"><strong>[
+</code></pre></td></tr><tr><td>Using <strong>intersect:</strong><br>parent value: <code>[1,2,3,4,5]</code><br>value: <code>[3,4,5,6,7]</code></td><td><code>[3, 4, 5]</code></td></tr><tr><td><p></p><p>Using <strong>intersect_assoc:</strong><br>parent value:</p><pre class="language-json"><code class="lang-json"><strong>[
 </strong>    {"name": "Chris"},
     {"name": "Shawn"}
 ]
@@ -122,11 +110,11 @@ Use the basic filter for value arrays, and the **\_assoc** version for arrays of
     {"name": "Shawn"},
     {"name": "Cameron"}
 ]
-</code></pre> | <pre class="language-json"><code class="lang-json">[
+</code></pre></td><td><pre class="language-json"><code class="lang-json">[
     {"name": "Chris"},
     {"name": "Shawn"}
 ]
-</code></pre> |
+</code></pre></td></tr></tbody></table>
 
 ***
 
@@ -138,30 +126,23 @@ An **empty** value can be `[]`, `{}`, `0`, `null`, `""`, or `false`.
 
 <figure><img src="../../.gitbook/assets/CleanShot 2025-02-06 at 16.20.28.png" alt=""><figcaption></figcaption></figure>
 
-| Parameter    | Purpose                                                                                                       | Example                                                                                                                 |
-| ------------ | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| parent value | The array to filter                                                                                           | `[1, 0, 2, 0, 3]`                                                                                                       |
-|              |                                                                                                               | <pre class="language-json"><code class="lang-json">[
+<table><thead><tr><th>Parameter</th><th>Purpose</th><th>Example</th></tr></thead><tbody><tr><td>parent value</td><td>The array to filter</td><td><code>[1, 0, 2, 0, 3]</code></td></tr><tr><td></td><td></td><td><pre class="language-json"><code class="lang-json">[
     {"name":"Chris"},
     {},
     {"name":"Shawn"}
 ]
-</code></pre> |
-| path         | When filtering arrays of objects, you can specify a path to optionally use a specific key to judge emptiness. |                                                                                                                         |
+</code></pre></td></tr><tr><td>path</td><td>When filtering arrays of objects, you can specify a path to optionally use a specific key to judge emptiness.</td><td></td></tr></tbody></table>
 
-| Example                                                                                                                 | Output                                                                                                          |
-| ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| <pre class="language-json"><code class="lang-json">[
+<table><thead><tr><th>Example</th><th>Output</th></tr></thead><tbody><tr><td><pre class="language-json"><code class="lang-json">[
     {"name":"Chris"},
     {},
     {"name":"Shawn"}
 ]
-</code></pre> | <pre class="language-json"><code class="lang-json">[
+</code></pre></td><td><pre class="language-json"><code class="lang-json">[
     {"name":"Chris"},
     {"name":"Shawn"}
 ]
-</code></pre> |
-| `[1, 0, 2, 0, 3]`                                                                                                       | `[1, 2, 3]`                                                                                                     |
+</code></pre></td></tr><tr><td><code>[1, 0, 2, 0, 3]</code></td><td><code>[1, 2, 3]</code></td></tr></tbody></table>
 
 ***
 
@@ -177,15 +158,12 @@ Get the first entry of an Array.
 ]
 </code></pre></td></tr></tbody></table>
 
-| Example                                                                                                         | Output                                                                            |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `[1, 2, 3]`                                                                                                     | 1                                                                                 |
-| <pre class="language-json"><code class="lang-json">[
+<table><thead><tr><th>Example</th><th>Output</th></tr></thead><tbody><tr><td><code>[1, 2, 3]</code></td><td>1</td></tr><tr><td><pre class="language-json"><code class="lang-json">[
     {"name":"Chris"},
     {"name":"Shawn"}
 ]
-</code></pre> | <pre class="language-json"><code class="lang-json">{"name":"Chris"}
-</code></pre> |
+</code></pre></td><td><pre class="language-json"><code class="lang-json">{"name":"Chris"}
+</code></pre></td></tr></tbody></table>
 
 ***
 
@@ -207,9 +185,7 @@ These filters are designed to remove the corresponding values from an object or 
 | ------------ | ----------------------------- |
 | parent value | The array or object to target |
 
-| Example                                                                                                                                                                                                                    | Output                                                                                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p></p><pre class="language-json"><code class="lang-json"><strong>{
+<table><thead><tr><th>Example</th><th>Output</th></tr></thead><tbody><tr><td><p></p><pre class="language-json"><code class="lang-json"><strong>{
 </strong>        "title": "",
         "name": false,
         "width": 0,
@@ -217,15 +193,14 @@ These filters are designed to remove the corresponding values from an object or 
         "data": {},
         "info": null
 }
-</code></pre> | <p><strong>filter_empty_array</strong></p><pre class="language-json"><code class="lang-json">{
+</code></pre></td><td><p><strong>filter_empty_array</strong></p><pre class="language-json"><code class="lang-json">{
         "title": "",
         "name": false,
         "width": 0,
         "data": {},
         "info": null
 }
-</code></pre>   |
-| <pre class="language-json"><code class="lang-json"><strong>{
+</code></pre></td></tr><tr><td><pre class="language-json"><code class="lang-json"><strong>{
 </strong>        "title": "",
         "name": false,
         "width": 0,
@@ -233,15 +208,14 @@ These filters are designed to remove the corresponding values from an object or 
         "data": {},
         "info": null
 }
-</code></pre>        | <p><strong>filter_empty_object</strong></p><pre class="language-json"><code class="lang-json">{
+</code></pre></td><td><p><strong>filter_empty_object</strong></p><pre class="language-json"><code class="lang-json">{
         "title": "",
         "name": false,
         "width": 0,
         "items": [],
         "info": null
 }
-</code></pre> |
-| <pre class="language-json"><code class="lang-json"><strong>{
+</code></pre></td></tr><tr><td><pre class="language-json"><code class="lang-json"><strong>{
 </strong>        "title": "",
         "name": false,
         "width": 0,
@@ -249,15 +223,14 @@ These filters are designed to remove the corresponding values from an object or 
         "data": {},
         "info": null
 }
-</code></pre>        | <p><strong>filter_empty_text</strong></p><pre class="language-json"><code class="lang-json">{
+</code></pre></td><td><p><strong>filter_empty_text</strong></p><pre class="language-json"><code class="lang-json">{
         "name": false,
         "width": 0,
         "items": [],
         "data": {},
         "info": null
 }
-</code></pre>    |
-| <pre class="language-json"><code class="lang-json"><strong>{
+</code></pre></td></tr><tr><td><pre class="language-json"><code class="lang-json"><strong>{
 </strong>        "title": "",
         "name": false,
         "width": 0,
@@ -265,15 +238,14 @@ These filters are designed to remove the corresponding values from an object or 
         "data": {},
         "info": null
 }
-</code></pre>        | <p><strong>filter_false</strong></p><pre class="language-json"><code class="lang-json">{
+</code></pre></td><td><p><strong>filter_false</strong></p><pre class="language-json"><code class="lang-json">{
         "title": "",
         "width": 0,
         "items": [],
         "data": {},
         "info": null
 }
-</code></pre>           |
-| <pre class="language-json"><code class="lang-json"><strong>{
+</code></pre></td></tr><tr><td><pre class="language-json"><code class="lang-json"><strong>{
 </strong>        "title": "",
         "name": false,
         "width": 0,
@@ -281,15 +253,14 @@ These filters are designed to remove the corresponding values from an object or 
         "data": {},
         "info": null
 }
-</code></pre>        | <p><strong>filter_null</strong></p><pre class="language-json"><code class="lang-json">{
+</code></pre></td><td><p><strong>filter_null</strong></p><pre class="language-json"><code class="lang-json">{
         "title": "",
         "name": false,
         "width": 0,
         "items": [],
         "data": {}
 }
-</code></pre>           |
-| <pre class="language-json"><code class="lang-json"><strong>{
+</code></pre></td></tr><tr><td><pre class="language-json"><code class="lang-json"><strong>{
 </strong>        "title": "",
         "name": false,
         "width": 0,
@@ -297,14 +268,14 @@ These filters are designed to remove the corresponding values from an object or 
         "data": {},
         "info": null
 }
-</code></pre>        | <p><strong>filter_zero</strong></p><pre class="language-json"><code class="lang-json">{
+</code></pre></td><td><p><strong>filter_zero</strong></p><pre class="language-json"><code class="lang-json">{
         "title": "",
         "name": false,
         "items": [],
         "data": {},
         "info": null
 }
-</code></pre>         |
+</code></pre></td></tr></tbody></table>
 
 ***
 
@@ -319,16 +290,13 @@ Flattens a multi-level array into a single-level array.
 ]
 </code></pre></td></tr></tbody></table>
 
-| Example                                                                                                                                                                                                                                                                                                  | Output                                                                                                                                                                                                                                                                                                                                             |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <pre class="language-json"><code class="lang-json">[
+<table><thead><tr><th>Example</th><th>Output</th></tr></thead><tbody><tr><td><pre class="language-json"><code class="lang-json">[
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9]
 ]
-</code></pre>                                                                                                                                                                                               | <pre class="language-json"><code class="lang-json">[1, 2, 3, 4, 5, 6, 7, 8, 9]
-</code></pre>                                                                                                                                                                                                                                                       |
-| <pre class="language-json"><code class="lang-json">[
+</code></pre></td><td><pre class="language-json"><code class="lang-json">[1, 2, 3, 4, 5, 6, 7, 8, 9]
+</code></pre></td></tr><tr><td><pre class="language-json"><code class="lang-json">[
   {
     id: 1,
     name: "John",
@@ -345,7 +313,7 @@ Flattens a multi-level array into a single-level array.
     ]
   }
 ]]
-</code></pre> | <pre class="language-json"><code class="lang-json">[
+</code></pre></td><td><pre class="language-json"><code class="lang-json">[
   {
     ownerId: 1,
     ownerName: "John",
@@ -365,7 +333,7 @@ Flattens a multi-level array into a single-level array.
     petName: "Tweety"
   }
 ]
-</code></pre> |
+</code></pre></td></tr></tbody></table>
 
 ***
 
@@ -419,10 +387,7 @@ Merge two arrays or objects together and return the new item.
 | parent value | The first array to merge  | \[1, 2, 3] |
 | value        | The second array to merge | \[4, 5, 6] |
 
-| Example                                                                                                                                                                                                                                                                                                                             | Output                                                                                                                          |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| <p>using <strong>merge</strong></p><p>parent value: <code>["a", "b", "c"]</code><br>value: <code>["d", "e", "f"]</code></p>                                                                                                                                                                                                         | `["a", "b", "c", "d", "e", "f"]`                                                                                                |
-| <p>using <strong>merge_recursive</strong></p><p>parent value: </p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th>Example</th><th>Output</th></tr></thead><tbody><tr><td><p>using <strong>merge</strong></p><p>parent value: <code>["a", "b", "c"]</code><br>value: <code>["d", "e", "f"]</code></p></td><td><code>["a", "b", "c", "d", "e", "f"]</code></td></tr><tr><td><p>using <strong>merge_recursive</strong></p><p>parent value: </p><pre class="language-json"><code class="lang-json">{
     "a": "test",
     "b": ["a","b"]
 }
@@ -430,12 +395,12 @@ Merge two arrays or objects together and return the new item.
 </strong><strong>    "c": "hi",
 </strong>    "b": ["c","d"]
 }
-</code></pre> | <pre class="language-json"><code class="lang-json">{
+</code></pre></td><td><pre class="language-json"><code class="lang-json">{
     "a": "test",
     "b": ["a","b","c","d"]
     "c": "hi",
 }
-</code></pre> |
+</code></pre></td></tr></tbody></table>
 
 ***
 
