@@ -6,20 +6,59 @@ icon: gears
 
 ## Custom Domain
 
-Xano has support for users on the Launch, Scale and Enterprise plans to set up a custom domain to be used on the URLs of their API endpoints.&#x20;
+Xano has support for users on any of our paid plans to set up a custom domain to be used for the URLs of their API endpoints.&#x20;
 
-#### How to set up your custom domain in Xano:
+{% embed url="https://youtu.be/St_sqV5VWRI" %}
 
-1. Navigate to your Instances page.&#x20;
-2. Open the menu on your instance and select Custom Domain, a panel on the right will open like below.
-3. Carefully read and follow the instructions to update your DNS records: Create a CNAME record to the address provided, set the TTL to 5 minutes, and depending on your provider allow time for your DNS to propagate properly.&#x20;
-4. Enter your custom domain name at the bottom and click submit.
-
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>To use your custom domain, navigate to your Instances page and follow the given instructions. </p></figcaption></figure>
-
-Once completed, you can use your custom domain on your API endpoints.
+{% stepper %}
+{% step %}
+### Head to the instance selection page and click the :gear:icon next to your instance
 
 
+{% endstep %}
+
+{% step %}
+### Choose 'Custom Domain' from the panel that opens
+
+
+{% endstep %}
+
+{% step %}
+### Update the DNS records with your domain registrar
+
+For more information on this process, consult your registrar's documentation. Quick links are provided below for your convenience.
+
+* [GoDaddy](https://www.godaddy.com/help/manage-dns-records-680)
+* [Namecheap](https://www.namecheap.com/support/knowledgebase/article.aspx/767/10/how-to-change-dns-for-a-domain/)
+* [Cloudflare](https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/)
+* [Squarespace (formerly Google Domains)](https://support.squarespace.com/hc/en-us/articles/205812348-Accessing-your-Squarespace-managed-domain-s-DNS-settings)
+* [Hover](https://support.hover.com/support/solutions/articles/201000064728-managing-dns-records)
+* [Network Solutions](https://www.networksolutions.com/help/article/manage-dns-adns-records)
+* [1&1 IONOS](https://www.ionos.com/help/domains/dns-settings/)
+* [Bluehost](https://www.bluehost.com/help/article/dns-management-add-edit-or-delete-dns-entries)
+* [HostGator](https://www.hostgator.com/help/article/changing-dns-records)
+* [Porkbun](https://kb.porkbun.com/article/68-how-to-edit-dns-records)
+* [Dynadot](https://www.dynadot.com/community/help/question/set-up-DNS)
+* [Name.com](https://www.name.com/support/articles/206127137-adding-dns-records-and-templates)
+* [Gandi](https://docs.gandi.net/en/domain_names/common_operations/dns_records.html)
+{% endstep %}
+
+{% step %}
+### Check for propagation and update the domain in Xano once complete
+
+Once you add the DNS record, those changes need to propagate across the globe to various DNS servers. You can check the status of propagation at whatismydns.net.
+
+The more green checkmarks you see here, the better. You are free to proceed at any time, but please note that in areas where propagation has not completed, your APIs may not be accessible.
+
+<div align="left"><figure><img src="../../.gitbook/assets/CleanShot 2025-07-24 at 13.34.43.png" alt="" width="563"><figcaption></figcaption></figure></div>
+{% endstep %}
+
+{% step %}
+### Add your custom domain to the configuration panel
+
+Add your domain and save your changes. They will be immediately applied, and your APIs and /Xano instance will be available at your new custom domain.
+{% endstep %}
+{% endstepper %}
 
 ### Connect via Xano Domain
 
@@ -28,8 +67,6 @@ In some cases, you may still want to connect to your Xano instance via the origi
 <figure><img src="../../.gitbook/assets/CleanShot 2023-03-15 at 09.31.14.png" alt=""><figcaption></figcaption></figure>
 
 ## Database Connector
-
-
 
 {% hint style="info" %}
 The Database Connector requires an add-on to our **Starter plan** or is included with the **Pro plan**.
