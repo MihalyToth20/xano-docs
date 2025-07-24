@@ -138,6 +138,20 @@ After deployment, the **Release Stats** table at the top will give you quick vis
 
 ***
 
+## Accessing Tenant APIs
+
+Once you have tenants with releases deployed, you can call APIs in the tenants directly by one of the methods shown in the table below.
+
+Assume that `...` represents your Xano instance URL, such as `https://abc1-def2-xyz3.n7d.xano.io`
+
+You'll need the ID of the tenant, which is available inside the Tenant Center, as shown below.
+
+<div align="left"><figure><img src="../../.gitbook/assets/CleanShot 2025-07-24 at 08.58.36 (1).png" alt="" width="372"><figcaption></figcaption></figure></div>
+
+<table><thead><tr><th width="160.41668701171875">Method</th><th width="571.0833129882812">Example</th></tr></thead><tbody><tr><td>API Path</td><td><code>.../tenant/tenant-id/api:abc123/test</code><br><br><code>[Xano Instance URL]</code>/tenant/<code>[tenant ID]</code>/<code>[api group]</code>/<code>[api]</code></td></tr><tr><td>Query Parameter</td><td><code>.../api:abc123/test?x-tenant=tenant-id</code><br><br><code>[Xano Instance URL]</code>/<code>[API group]</code>/<code>[API]</code>?<code>x-tenant=[Tenant ID]</code></td></tr><tr><td>Header</td><td><code>.../api:abc123/test</code><br><br>In the headers of the API request, supply the following:<br><code>X-Tenant: [Tenant ID]</code></td></tr><tr><td>Custom Domain</td><td><code>https://tenant-domain.com/api:abc123/api</code><br><br>Custom domains are configured in each tenant's settings. Additional setup is required. For more information on using custom domains with Tenants, reach out to your Xano representative or our support team.</td></tr></tbody></table>
+
+***
+
 ## RBAC: Tenant Center
 
 The Tenant Center addon includes additional [role-based-access-control-rbac.md](../../team-collaboration/role-based-access-control-rbac.md "mention") settings you can use to manage tenant-related permissions.
